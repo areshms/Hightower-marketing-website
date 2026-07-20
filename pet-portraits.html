@@ -296,7 +296,58 @@
             letter-spacing: 0.02em;
         }
 
-        .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
+        /* ===== FOOTER (homepage match) ===== */
+        footer {
+            padding: 80px 0 40px;
+            background: var(--bg-deep);
+            border-top: 1px solid var(--border);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .footer-brand .logo {
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+        .footer-brand p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            max-width: 280px;
+        }
+        .footer-links h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+        }
+        .footer-links a {
+            display: block;
+            font-size: 14px;
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
     </style>
     <link rel="stylesheet" href="/aos.css">
     <script src="/aos.js"></script>
@@ -395,43 +446,44 @@
         </div>
     </section>
 
-    <section class="products-section" id="products">
-        <div class="container">
-            <p class="section-label">Products</p>
-            <h2>Choose your format.</h2>
-            <p class="section-subtitle">Digital for sharing. Prints for framing. Canvas for the statement piece.</p>
+    <section class="products-section" id="products" style="position: relative; overflow: hidden; padding: 120px 0;">
+        <div class="gold-glow" style="opacity: 0.06;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <p class="section-label fade-in-1">Products</p>
+            <h2 class="fade-in-2" style="font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 48px); font-weight: 600; letter-spacing: -0.02em; margin-bottom: 16px;">Choose your format.</h2>
+            <p class="section-subtitle fade-in-3" style="font-size: 17px; color: var(--text-secondary); max-width: 540px; margin-bottom: 64px; line-height: 1.7;">Digital for sharing. Prints for framing. Canvas for the statement piece.</p>
             
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">🖼️</div>
-                    <div class="product-info">
-                        <h3>Digital Download</h3>
-                        <p>High-resolution PNG perfect for social media, wallpapers, and printing yourself.</p>
-                        <div class="product-price">$35<span> / portrait</span></div>
-                        <br>
-                        <a href="/order-intake.html?product=pet-digital" class="btn-primary" style="display: block; text-align: center;">Order Digital</a>
+            <div class="products-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                <div class="product-card glass-card fade-in-1" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 40px; position: relative; overflow: hidden;">
+                    <div style="position: relative; z-index: 2;">
+                        <div class="product-image" style="width: 56px; height: 56px; background: rgba(217, 119, 6, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 24px;">🖼️</div>
+                        <h3 style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Digital Download</h3>
+                        <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">High-resolution PNG perfect for social media, wallpapers, and printing yourself.</p>
+                        <div class="product-price" style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 600; color: var(--accent-gold); margin-bottom: 20px;">$35<span style="font-size: 16px; color: var(--text-muted); font-family: 'Inter', sans-serif;"> / portrait</span></div>
+                        
+                        <a href="/order-intake.html?product=pet-digital" class="btn-animated" style="display: block; text-align: center;">Order Digital</a>
                     </div>
                 </div>
                 
-                <div class="product-card">
-                    <div class="product-image">📸</div>
-                    <div class="product-info">
-                        <h3>Framed Print</h3>
-                        <p>Museum-quality print on archival paper in a sleek black frame. Ready to hang.</p>
-                        <div class="product-price">$45<span> / 8×10"</span></div>
-                        <br>
-                        <a href="/order-intake.html?product=pet-print" class="btn-primary" style="display: block; text-align: center;">Order Print</a>
+                <div class="product-card glass-card fade-in-2" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 40px; position: relative; overflow: hidden;">
+                    <div style="position: relative; z-index: 2;">
+                        <div class="product-image" style="width: 56px; height: 56px; background: rgba(217, 119, 6, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 24px;">📸</div>
+                        <h3 style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Framed Print</h3>
+                        <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">Museum-quality print on archival paper in a sleek black frame. Ready to hang.</p>
+                        <div class="product-price" style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 600; color: var(--accent-gold); margin-bottom: 20px;">$45<span style="font-size: 16px; color: var(--text-muted); font-family: 'Inter', sans-serif;"> / 8×10"</span></div>
+                        
+                        <a href="/order-intake.html?product=pet-print" class="btn-animated" style="display: block; text-align: center;">Order Print</a>
                     </div>
                 </div>
                 
-                <div class="product-card">
-                    <div class="product-image">🎨</div>
-                    <div class="product-info">
-                        <h3>Canvas Gallery Wrap</h3>
-                        <p>Hand-stretched canvas with museum-quality print. The ultimate statement piece.</p>
-                        <div class="product-price">$75<span> / 16×20"</span></div>
-                        <br>
-                        <a href="/order-intake.html?product=pet-canvas" class="btn-primary" style="display: block; text-align: center;">Order Canvas</a>
+                <div class="product-card glass-card fade-in-3" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 40px; position: relative; overflow: hidden;">
+                    <div style="position: relative; z-index: 2;">
+                        <div class="product-image" style="width: 56px; height: 56px; background: rgba(217, 119, 6, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 24px;">🎨</div>
+                        <h3 style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Canvas Gallery Wrap</h3>
+                        <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">Hand-stretched canvas with museum-quality print. The ultimate statement piece.</p>
+                        <div class="product-price" style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 600; color: var(--accent-gold); margin-bottom: 20px;">$75<span style="font-size: 16px; color: var(--text-muted); font-family: 'Inter', sans-serif;"> / 16×20"</span></div>
+                        
+                        <a href="/order-intake.html?product=pet-canvas" class="btn-animated" style="display: block; text-align: center;">Order Canvas</a>
                     </div>
                 </div>
             </div>
@@ -440,35 +492,49 @@
 
 
 
-    <section class="section">
-        <div class="container">
-            <p class="section-label">How It Works</p>
-            <h2>Three simple steps.</h2>
-            <p class="section-subtitle">No studio visit needed. Just a photo from your phone.</p>
+    <section class="section" style="position: relative; overflow: hidden; padding: 120px 0;">
+        <div class="gold-glow" style="opacity: 0.06;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <p class="section-label fade-in-1">How It Works</p>
+            <h2 class="fade-in-2" style="font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 48px); font-weight: 600; letter-spacing: -0.02em; margin-bottom: 16px;">Three simple steps.</h2>
+            <p class="section-subtitle fade-in-3" style="font-size: 17px; color: var(--text-secondary); max-width: 540px; margin-bottom: 64px; line-height: 1.7;">No studio visit needed. Just a photo from your phone.</p>
             
-            <div class="steps-grid">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Upload Photo</h3>
-                    <p>Send us your favorite photo of your pet. Any angle, any lighting.</p>
+            <div class="steps-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+                <div class="step glass-card fade-in-1" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 40px; position: relative; overflow: hidden;">
+                    <div style="position: relative; z-index: 2;">
+                        <div class="step-number" style="width: 48px; height: 48px; background: var(--accent-gold); color: var(--bg-deep); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; margin-bottom: 20px;">1</div>
+                        <h3 style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Upload Photo</h3>
+                        <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6;">Send us your favorite photo of your pet. Any angle, any lighting.</p>
+                    </div>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>We Create Art</h3>
-                    <p>Our AI transforms it into a Renaissance masterpiece in 24-48 hours.</p>
+                
+                <div class="step glass-card fade-in-2" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 40px; position: relative; overflow: hidden;">
+                    <div style="position: relative; z-index: 2;">
+                        <div class="step-number" style="width: 48px; height: 48px; background: var(--accent-gold); color: var(--bg-deep); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; margin-bottom: 20px;">2</div>
+                        <h3 style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 12px;">We Create Art</h3>
+                        <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6;">Our AI transforms it into a Renaissance masterpiece in 24-48 hours.</p>
+                    </div>
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Receive Your Art</h3>
-                    <p>Digital download instantly. Prints and canvas ship within 5 days.</p>
+                
+                <div class="step glass-card fade-in-3" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 40px; position: relative; overflow: hidden;">
+                    <div style="position: relative; z-index: 2;">
+                        <div class="step-number" style="width: 48px; height: 48px; background: var(--accent-gold); color: var(--bg-deep); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; margin-bottom: 20px;">3</div>
+                        <h3 style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 12px;">Receive Your Art</h3>
+                        <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.6;">Digital download instantly. Prints and canvas ship within 5 days.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section><section class="cta-section">
-        <div class="container">
-            <h2>Gift cards available.</h2>
-            <p>Want the ultimate statement piece? Premium 24×30″ canvas — the finest option.</p>
-            <a href="/order-intake.html?product=pet-gift" class="btn-primary">Order Premium Package →</a>
+    </section>
+
+    <section class="cta-section" style="position: relative; overflow: hidden; padding: 120px 0; background: var(--bg-elevated);">
+        <div class="gold-glow" style="opacity: 0.08;"></div>
+        <div class="container" style="position: relative; z-index: 2; text-align: center;">
+            <p class="section-label fade-in-1">Gift Cards</p>
+            <h2 class="fade-in-2" style="font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 48px); font-weight: 600; letter-spacing: -0.02em; margin-bottom: 16px;">Gift cards available.</h2>
+            <p class="fade-in-3" style="font-size: 17px; color: var(--text-secondary); max-width: 540px; margin: 0 auto 40px; line-height: 1.7;">Want the ultimate statement piece? Premium 24×30″ canvas — the finest option.</p>
+            
+            <a href="/order-intake.html?product=pet-gift" class="btn-animated fade-in-4">Order Premium Package →</a>
         </div>
     </section>
 
