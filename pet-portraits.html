@@ -171,6 +171,71 @@
             transition: width 0.3s ease;
         }
         .nav-links a:hover::after { width: 100%; }
+
+        /* ===== NAVIGATION BASE (homepage match) ===== */
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+        .nav-cta {
+            background: var(--accent-gold);
+            color: var(--bg-deep);
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .nav-cta:hover {
+            background: var(--accent-gold-light);
+            transform: translateY(-1px);
+        }
+
+        /* ===== BTN SECONDARY (homepage match) ===== */
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        /* ===== MOBILE RESPONSIVE (homepage match) ===== */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .container { padding: 0 24px; }
+        }
         /* ===== GALLERY CARDS — make dark portraits visible ===== */
                 /* ===== GALLERY CARDS — light background for dark art ===== */
         .gallery-card {
