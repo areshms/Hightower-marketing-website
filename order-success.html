@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order Received — Hightower Marketing Strategies</title>
+    <meta name="description" content="Your pet portrait order has been received. We'll start creating your masterpiece.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0c0a09;
+            --bg-elevated: #1c1917;
+            --accent-gold: #d97706;
+            --accent-gold-light: #f59e0b;
+            --text-primary: #fafaf9;
+            --text-secondary: #a8a29e;
+            --text-muted: #78716c;
+            --border: rgba(250, 250, 249, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .success-container {
+            max-width: 520px;
+            padding: 40px;
+        }
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(217, 119, 6, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+            font-size: 40px;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        p {
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        .details {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+        .details h3 {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+        .details p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .timeline-dot {
+            width: 24px;
+            height: 24px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: var(--bg-deep);
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .timeline-text {
+            flex: 1;
+        }
+        .timeline-text strong {
+            color: var(--text-primary);
+            font-size: 15px;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .timeline-text span {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--bg-deep);
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: var(--accent-gold-light);
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            display: inline-block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 16px;
+            transition: color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">🎨</div>
+        <h1>Order received!</h1>
+        <p>Your pet portrait request is in our queue. We'll transform your photo into a masterpiece.</p>
+        
+        <div class="details">
+            <h3>What happens next</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot">1</div>
+                    <div class="timeline-text">
+                        <strong>Photo Review</strong>
+                        <span>We check image quality (within 24 hours)</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">2</div>
+                    <div class="timeline-text">
+                        <strong>AI Generation</strong>
+                        <span>Create your portrait (2-3 business days)</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">3</div>
+                    <div class="timeline-text">
+                        <strong>Delivery</strong>
+                        <span>High-res files + print options sent to your email</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="/" class="btn-primary">Back to Homepage →</a><br>
+        <a href="/pet-portraits" class="btn-secondary">View Gallery →</a>
+    </div>
+</body>
+</html>

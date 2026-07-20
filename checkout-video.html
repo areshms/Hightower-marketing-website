@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Checkout | Hightower Marketing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0c0a09; --bg-elevated: #1c1917; --bg-card: #292524;
+            --accent-gold: #d97706; --text-primary: #fafaf9; --text-secondary: #a8a29e;
+            --text-muted: #78716c; --border: rgba(250,250,249,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-deep); color: var(--text-primary); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 24px; }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-deep); }
+        ::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 4px; }
+        .service-card, .case-card, .blog-card, .pricing-card, .template-card {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.3s ease;
+        }
+        .service-card:hover, .case-card:hover, .blog-card:hover, .pricing-card:hover, .template-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(217, 119, 6, 0.15), 0 0 60px rgba(217, 119, 6, 0.05);
+        }
+        .btn-primary, .btn-animated {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .btn-primary:hover, .btn-animated:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(217, 119, 6, 0.4);
+        }
+        nav { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease; }
+        nav.nav-hidden { transform: translateY(-100%); }
+    
+        .checkout-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 24px; padding: 48px; max-width: 480px; width: 100%; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 20px; text-decoration: none; color: var(--text-primary); display: block; margin-bottom: 32px; }
+        .logo span { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 8px; }
+        .subtitle { color: var(--text-secondary); font-size: 15px; margin-bottom: 32px; }
+        .product-summary { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: 32px; }
+        .product-summary h3 { font-size: 16px; margin-bottom: 8px; }
+        .product-summary p { font-size: 14px; color: var(--text-secondary); margin-bottom: 4px; }
+        .product-summary .price { font-family: 'Playfair Display'; font-size: 32px; color: var(--accent-gold); margin-top: 12px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-size: 13px; font-weight: 500; margin-bottom: 8px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+        input { width: 100%; padding: 14px 16px; background: var(--bg-deep); border: 1px solid var(--border); border-radius: 12px; color: var(--text-primary); font-size: 15px; font-family: 'Inter'; transition: border-color 0.3s ease; }
+        input:focus { outline: none; border-color: var(--accent-gold); }
+        button[type="submit"] { width: 100%; padding: 16px; background: var(--accent-gold); color: var(--bg-deep); border: none; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; margin-top: 8px; }
+        button[type="submit"]:hover { background: #f59e0b; transform: translateY(-1px); }
+        button[type="submit"]:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+        .secure { text-align: center; font-size: 13px; color: var(--text-muted); margin-top: 20px; }
+        .secure::before { content: '🔒 '; }
+        .success { display: none; text-align: center; padding: 40px 0; }
+        .success h2 { font-family: 'Playfair Display'; font-size: 32px; margin-bottom: 16px; }
+        .success p { color: var(--text-secondary); margin-bottom: 24px; }
+        .back-link { color: var(--accent-gold); text-decoration: none; font-weight: 500; }
+        .error-msg { color: #ef4444; font-size: 14px; margin-top: 12px; text-align: center; }
+    </style>
+    <link rel="stylesheet" href="/aos.css">
+    <script src="/aos.js"></script>
+</head>
+<body>
+    <div class="checkout-card" id="checkout-form">
+        <a href="/" class="logo">Hightower <span>Marketing</span></a>
+        <h1>Complete your order</h1>
+        <p class="subtitle">Secure checkout powered by Stripe.</p>
+        
+        <div class="product-summary" id="product-summary"></div>
+        
+        <form id="payment-form">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="you@example.com" required>
+            </div>
+            <button type="submit" id="submit-button">Continue to Payment →</button>
+            <div class="error-msg" id="error-msg"></div>
+            <p class="secure">Payments secured by Stripe. We never store your card.</p>
+        </form>
+    </div>
+    
+    <div class="checkout-card success" id="success-message" style="display:none;">
+        <a href="/" class="logo">Hightower <span>Marketing</span></a>
+        <h2>🎉 Order confirmed!</h2>
+        <p>Thank you for your order. You'll receive a confirmation email shortly with next steps.</p>
+        <a href="/" class="back-link">← Back to homepage</a>
+    </div>
+
+    <script>
+        const PRODUCTS = {
+            'video-basic': { name: 'AI Video Ad — Basic', price: 19900, desc: '30-second video • AI-generated visuals • 1 revision • 48h delivery' },
+            'video-pro': { name: 'AI Video Ad — Professional', price: 49900, desc: '60-second video • Stock footage mix • 3 revisions • Voiceover • 48h delivery' },
+            'video-campaign': { name: 'AI Video Ad — Campaign', price: 149900, desc: '5 videos • A/B tests • Unlimited revisions • Strategy call • Priority delivery' },
+            'pet-digital': { name: 'Pet Portrait — Digital', price: 2900, desc: 'High-resolution PNG • Instant download' },
+            'pet-print': { name: 'Pet Portrait — Framed Print', price: 7900, desc: '11×14″ archival print • Black frame • Ready to hang' },
+            'pet-canvas': { name: 'Pet Portrait — Canvas Wrap', price: 14900, desc: '16×20″ hand-stretched canvas • Museum-quality' },
+            'pet-gift': { name: 'Pet Portrait — Gift Card', price: 5000, desc: '$50 gift card • Recipient chooses format' }
+        };
+        
+        const params = new URLSearchParams(window.location.search);
+        const productKey = params.get('product') || 'video-pro';
+        const product = PRODUCTS[productKey] || PRODUCTS['video-pro'];
+        
+        document.getElementById('product-summary').innerHTML = `
+            <h3>${product.name}</h3>
+            <p>${product.desc}</p>
+            <div class="price">$${(product.price / 100).toFixed(product.price >= 10000 ? 0 : 2)}</div>
+        `;
+        
+        // Handle ?success=true from Stripe redirect back
+        if (params.get('success') === 'true') {
+            document.getElementById('checkout-form').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+        }
+        
+        document.getElementById('payment-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submit-button');
+            const errorEl = document.getElementById('error-msg');
+            btn.disabled = true;
+            btn.textContent = 'Redirecting to Stripe...';
+            errorEl.textContent = '';
+            
+            try {
+                const response = await fetch('/.netlify/functions/create-checkout', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        product: productKey,
+                        email: document.getElementById('email').value
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.url) {
+                    window.location.href = data.url;
+                } else {
+                    throw new Error(data.error || 'Failed to create checkout session');
+                }
+            } catch (err) {
+                btn.disabled = false;
+                btn.textContent = 'Continue to Payment →';
+                errorEl.textContent = 'Error: ' + err.message;
+                console.error(err);
+            }
+        });
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+        }
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        if (nav) {
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    nav.classList.add('nav-hidden');
+                } else {
+                    nav.classList.remove('nav-hidden');
+                }
+                lastScroll = currentScroll;
+            });
+        }
+        const heroBg = document.querySelector('.hero-bg');
+        if (heroBg) {
+            window.addEventListener('scroll', function() {
+                heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.3) + 'px)';
+            });
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+functionsDirectory = "/Users/ares.hmsgmail.com/workspace/hightower-premium/netlify/functions"
+functionsDirectoryOrigin = "config-v1"
+headersOrigin = "config"
+plugins = []
+redirects = []
+
+[build]
+publish = "/Users/ares.hmsgmail.com/workspace/hightower-premium"
+publishOrigin = "config"
+functions = "/Users/ares.hmsgmail.com/workspace/hightower-premium/netlify/functions"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[functions]
+
+[functions."*"]
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"

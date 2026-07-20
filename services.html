@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Services — Hightower Marketing Strategies</title>
+    <meta name="description" content="Full-service AI-powered marketing: video ads, pet portraits, automation, and digital strategy for businesses that want results.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0c0a09;
+            --bg-elevated: #1c1917;
+            --bg-card: #292524;
+            --accent-gold: #d97706;
+            --accent-gold-light: #f59e0b;
+            --text-primary: #fafaf9;
+            --text-secondary: #a8a29e;
+            --text-muted: #78716c;
+            --border: rgba(250, 250, 249, 0.08);
+            --glass: rgba(28, 25, 23, 0.6);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-deep); }
+        ::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 4px; }
+        .service-card, .case-card, .blog-card, .pricing-card, .template-card {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.3s ease;
+        }
+        .service-card:hover, .case-card:hover, .blog-card:hover, .pricing-card:hover, .template-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(217, 119, 6, 0.15), 0 0 60px rgba(217, 119, 6, 0.05);
+        }
+        .btn-primary, .btn-animated {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .btn-primary:hover, .btn-animated:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(217, 119, 6, 0.4);
+        }
+        nav { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease; }
+        nav.nav-hidden { transform: translateY(-100%); }
+    
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1000;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 0 24px; }
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(12, 10, 9, 0.8);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .logo span {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--text-muted);
+            margin-left: 8px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-primary);
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 24px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 72px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(ellipse at 50% 0%, rgba(217, 119, 6, 0.1) 0%, transparent 50%),
+                var(--bg-deep);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 80px 0;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== SERVICES GRID ===== */
+        .services-section {
+            padding: 80px 0;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px 32px;
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            border-color: rgba(217, 119, 6, 0.3);
+            transform: translateY(-4px);
+        }
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        .service-card .price {
+            font-size: 14px;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .service-card a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .service-card a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+        .cta-section p {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+        .btn-primary {
+            background: var(--accent-gold);
+            color: var(--bg-deep);
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: var(--accent-gold-light);
+            transform: translateY(-2px);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 60px 0 40px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 40px;
+        }
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: 16px;
+            max-width: 280px;
+        }
+        .footer-links h4 {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .footer-links a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 12px;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+            padding-top: 24px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="/aos.css">
+    <script src="/aos.js"></script>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container">
+            <div class="nav-inner">
+                <a href="/" class="logo">Hightower <span>MARKETING</span></a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/case-studies">Case Studies</a></li>
+                    <li><a href="/ai-video-ads">AI Video Ads</a></li>
+                    <li><a href="/pet-portraits">Pet Portraits</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Everything we do, in one place.</h1>
+            <p>Four services designed to grow your business without adding work to your plate.</p>
+        </div>
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section class="services-section">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">📺</div>
+                    <h3>AI Video Ads</h3>
+                    <p>Cinematic video ads created with AI in 48 hours. No camera crew needed. Perfect for restaurants, gyms, dentists — any local business.</p>
+                    <div class="price">From $500</div>
+                    <a href="/ai-video-ads">Learn more →</a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">🎨</div>
+                    <h3>AI Pet Portraits</h3>
+                    <p>Turn your pet photos into Renaissance masterpieces. Custom digital art, prints, and canvas. Perfect gift for pet lovers.</p>
+                    <div class="price">From $35</div>
+                    <a href="/pet-portraits">Learn more →</a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Business Automation</h3>
+                    <p>Workflow automation, lead capture, email sequences, appointment booking, and CRM integration — all built for your business.</p>
+                    <div class="price">From $500/mo</div>
+                    <a href="/automation-services">Learn more →</a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">📈</div>
+                    <h3>Digital Strategy</h3>
+                    <p>Full-funnel marketing strategy, analytics setup, competitor analysis, and growth roadmaps tailored to your industry.</p>
+                    <div class="price">From $1,500/mo</div>
+                    <a href="/digital-strategy">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Not sure which service fits?</h2>
+            <p>Book a free 15-minute call. We'll audit your current marketing and recommend the right mix.</p>
+            <a href="/contact" class="btn-primary">Book Free Call →</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">Hightower <span>MARKETING</span></a>
+                    <p>AI-powered marketing and automation for businesses that want results.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="/ai-video-ads">AI Video Ads</a>
+                    <a href="/pet-portraits">AI Pet Portraits</a>
+                    <a href="/automation-services">Automation</a>
+                    <a href="/digital-strategy">Digital Strategy</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="/about">About</a>
+                    <a href="/case-studies">Case Studies</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <a href="mailto:hello@hightower-marketing.com">hello@hightower-marketing.com</a>
+                    <a href="/contact">Book a call</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Hightower Marketing Strategies LLC. Columbus, Ohio.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+        }
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        if (nav) {
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    nav.classList.add('nav-hidden');
+                } else {
+                    nav.classList.remove('nav-hidden');
+                }
+                lastScroll = currentScroll;
+            });
+        }
+        const heroBg = document.querySelector('.hero-bg');
+        if (heroBg) {
+            window.addEventListener('scroll', function() {
+                heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.3) + 'px)';
+            });
+        }
+    });
+    </script>
+</body>
+</html>

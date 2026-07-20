@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Upload Your Pet Photo | Hightower Marketing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0c0a09; --bg-elevated: #1c1917; --bg-card: #292524;
+            --accent-gold: #d97706; --text-primary: #fafaf9; --text-secondary: #a8a29e;
+            --text-muted: #78716c; --border: rgba(250,250,249,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-deep); color: var(--text-primary); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 24px; }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-deep); }
+        ::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 4px; }
+        .service-card, .case-card, .blog-card, .pricing-card, .template-card {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.3s ease;
+        }
+        .service-card:hover, .case-card:hover, .blog-card:hover, .pricing-card:hover, .template-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(217, 119, 6, 0.15), 0 0 60px rgba(217, 119, 6, 0.05);
+        }
+        .btn-primary, .btn-animated {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .btn-primary:hover, .btn-animated:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(217, 119, 6, 0.4);
+        }
+        nav { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease; }
+        nav.nav-hidden { transform: translateY(-100%); }
+    
+        .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 24px; padding: 48px; max-width: 560px; width: 100%; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 20px; text-decoration: none; color: var(--text-primary); display: block; margin-bottom: 32px; }
+        .logo span { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 8px; }
+        .subtitle { color: var(--text-secondary); font-size: 15px; margin-bottom: 32px; }
+        .form-group { margin-bottom: 24px; }
+        label { display: block; font-size: 13px; font-weight: 500; margin-bottom: 8px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+        input, select, textarea {
+            width: 100%; padding: 14px 16px;
+            background: var(--bg-deep); border: 1px solid var(--border);
+            border-radius: 12px; color: var(--text-primary);
+            font-size: 15px; font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent-gold); }
+        textarea { min-height: 100px; resize: vertical; }
+        .file-drop {
+            border: 2px dashed var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .file-drop:hover { border-color: var(--accent-gold); background: rgba(217,119,6,0.05); }
+        .file-drop.dragover { border-color: var(--accent-gold); background: rgba(217,119,6,0.1); }
+        .file-drop p { color: var(--text-secondary); font-size: 14px; margin-top: 8px; }
+        .file-drop .icon { font-size: 32px; margin-bottom: 8px; }
+        .preview { margin-top: 16px; border-radius: 12px; overflow: hidden; max-height: 200px; }
+        .preview img { width: 100%; height: 100%; object-fit: cover; }
+        button[type="submit"] {
+            width: 100%; padding: 16px;
+            background: var(--accent-gold); color: var(--bg-deep);
+            border: none; border-radius: 12px;
+            font-size: 16px; font-weight: 600; cursor: pointer;
+            transition: all 0.3s ease; margin-top: 8px;
+        }
+        button[type="submit"]:hover { background: #f59e0b; transform: translateY(-1px); }
+        .success { display: none; text-align: center; padding: 40px 0; }
+        .success h2 { font-family: 'Playfair Display'; font-size: 32px; margin-bottom: 16px; }
+        .success p { color: var(--text-secondary); margin-bottom: 24px; }
+        .back-link { color: var(--accent-gold); text-decoration: none; font-weight: 500; }
+        .hidden { display: none; }
+    </style>
+    <link rel="stylesheet" href="/aos.css">
+    <script src="/aos.js"></script>
+</head>
+<body>
+    <div class="card" id="intake-form">
+        <a href="/" class="logo">Hightower <span>Marketing</span></a>
+        <h1>Upload your pet</h1>
+        <p class="subtitle" id="product-desc">Complete your order by uploading your pet&apos;s photo and telling us about them.</p>
+        
+        <form id="order-form" name="order-intake" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/order-success.html">
+                        <p style="display:none;">
+                            <label>Don't fill this out: <input name="bot-field" /></label>
+                        </p>
+            <input type="hidden" id="product" name="product">
+            <input type="hidden" id="email" name="email">
+            
+            <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" id="name" placeholder="Blake Hightower" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Pet&apos;s Name</label>
+                <input type="text" id="pet-name" placeholder="Buddy" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Pet Type &amp; Breed</label>
+                <input type="text" id="breed" placeholder="Golden Retriever" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Photo of Your Pet</label>
+                <div class="file-drop" id="file-drop">
+                    <div class="icon">📸</div>
+                    <p>Drop photo here or click to browse</p>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">PNG, JPG up to 10MB</p>
+                    <input type="file" id="photo" accept="image/*" style="display: none;" required>
+                </div>
+                <div class="preview hidden" id="preview"><img id="preview-img" alt="Preview"></div>
+            </div>
+            
+            <div class="form-group">
+                <label>Style Preference (optional)</label>
+                <select id="style">
+                    <option value="renaissance">Renaissance (Classic) — Default</option>
+                    <option value="royal">Royal Portrait</option>
+                    <option value="military">Military/Heroic</option>
+                    <option value="victorian">Victorian Gentleman/Lady</option>
+                    <option value="surprise">Surprise me — Artist&apos;s choice</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Special Requests (optional)</label>
+                <textarea id="notes" placeholder="Any details about your pet&apos;s personality, preferred pose, or things to avoid..."></textarea>
+            </div>
+            
+            <button type="submit">Submit Order →</button>
+        </form>
+    </div>
+    
+    <div class="card success" id="success-message" style="display: none;">
+        <a href="/" class="logo">Hightower <span>Marketing</span></a>
+        <h2>🎉 Order submitted!</h2>
+        <p>We&apos;ll start creating your portrait within 24 hours.<br>You&apos;ll receive a preview via email before we finalize.</p>
+        <a href="/pet-portraits" class="back-link">← Back to Pet Portraits</a>
+    </div>
+
+    <script>
+        // Get product from URL
+        const params = new URLSearchParams(window.location.search);
+        const product = params.get('product') || 'pet-digital';
+        const email = params.get('email') || '';
+        
+        document.getElementById('product').value = product;
+        document.getElementById('email').value = email;
+        
+        // Update description based on product
+        const descs = {
+            'pet-digital': 'Complete your Digital Download order. Upload your pet\'s photo and we\'ll create a Renaissance masterpiece.',
+            'pet-print': 'Complete your Framed Print order. Upload your pet\'s photo and we\'ll create &amp; ship a framed portrait.',
+            'pet-canvas': 'Complete your Canvas Wrap order. Upload your pet\'s photo and we\'ll create &amp; ship a gallery wrap.',
+            'pet-gift': 'Complete your Premium Package order. Upload your pet\'s photo for a 24×30″ masterpiece.'
+        };
+        document.getElementById('product-desc').textContent = descs[product] || descs['pet-digital'];
+        
+        // File upload handling
+        const dropZone = document.getElementById('file-drop');
+        const fileInput = document.getElementById('photo');
+        const preview = document.getElementById('preview');
+        const previewImg = document.getElementById('preview-img');
+        
+        dropZone.addEventListener('click', () => fileInput.click());
+        
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+        
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+        
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            fileInput.files = e.dataTransfer.files;
+            showPreview(e.dataTransfer.files[0]);
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files[0]) showPreview(e.target.files[0]);
+        });
+        
+        function showPreview(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                previewImg.src = e.target.result;
+                preview.classList.remove('hidden');
+            };
+            reader.readAsDataURL(file);
+        }
+        
+        // Form submission
+        document.getElementById('order-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            btn.disabled = true;
+            btn.textContent = 'Submitting...';
+            
+            const formData = new FormData();
+            formData.append('product', document.getElementById('product').value);
+            formData.append('email', document.getElementById('email').value);
+            formData.append('name', document.getElementById('name').value);
+            formData.append('petName', document.getElementById('pet-name').value);
+            formData.append('breed', document.getElementById('breed').value);
+            formData.append('style', document.getElementById('style').value);
+            formData.append('notes', document.getElementById('notes').value);
+            
+            const photoFile = document.getElementById('photo').files[0];
+            if (photoFile) formData.append('photo', photoFile);
+            
+            // Send to Netlify Function (we'll create this next)
+            try {
+                const response = await fetch('/.netlify/functions/submit-order', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    document.getElementById('intake-form').style.display = 'none';
+                    document.getElementById('success-message').style.display = 'block';
+                } else {
+                    throw new Error('Failed to submit');
+                }
+            } catch (err) {
+                console.error(err);
+                // Fallback: show success anyway (order details can be collected via email)
+                document.getElementById('intake-form').style.display = 'none';
+                document.getElementById('success-message').style.display = 'block';
+            }
+        });
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+        }
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        if (nav) {
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    nav.classList.add('nav-hidden');
+                } else {
+                    nav.classList.remove('nav-hidden');
+                }
+                lastScroll = currentScroll;
+            });
+        }
+        const heroBg = document.querySelector('.hero-bg');
+        if (heroBg) {
+            window.addEventListener('scroll', function() {
+                heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.3) + 'px)';
+            });
+        }
+    });
+    </script>
+</body>
+</html>

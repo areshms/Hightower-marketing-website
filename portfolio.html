@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio — Hightower Marketing</title>
+    <meta http-equiv="refresh" content="0; url=/case-studies">
+    <link rel="canonical" href="https://hightower-marketing.com/case-studies">
+    <link rel="stylesheet" href="/aos.css">
+    <script src="/aos.js"></script>
+</head>
+<body>
+    <p>Redirecting to <a href="/case-studies">Case Studies</a>...</p>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+        }
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        if (nav) {
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    nav.classList.add('nav-hidden');
+                } else {
+                    nav.classList.remove('nav-hidden');
+                }
+                lastScroll = currentScroll;
+            });
+        }
+        const heroBg = document.querySelector('.hero-bg');
+        if (heroBg) {
+            window.addEventListener('scroll', function() {
+                heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.3) + 'px)';
+            });
+        }
+    });
+    </script>
+</body>
+</html>

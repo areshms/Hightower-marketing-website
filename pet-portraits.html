@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Pet Portraits | Hightower Marketing Strategies</title>
+    <meta name="description" content="Turn your pet photos into Renaissance masterpieces. Custom digital art, prints, and canvas.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0c0a09;
+            --bg-elevated: #1c1917;
+            --bg-card: #292524;
+            --accent-gold: #d97706;
+            --accent-gold-light: #f59e0b;
+            --text-primary: #fafaf9;
+            --text-secondary: #a8a29e;
+            --text-muted: #78716c;
+            --border: rgba(250, 250, 249, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Gallery card hover effects */
+        [data-aos="fade-up"] {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        [data-aos="fade-up"]:hover {
+            transform: translateY(-8px) scale(1.02) !important;
+            box-shadow: 0 25px 50px rgba(217, 119, 6, 0.2), 0 0 80px rgba(217, 119, 6, 0.1);
+        }
+    
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-deep); }
+        ::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 4px; }
+        .service-card, .case-card, .blog-card, .pricing-card, .template-card {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.3s ease;
+        }
+        .service-card:hover, .case-card:hover, .blog-card:hover, .pricing-card:hover, .template-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(217, 119, 6, 0.15), 0 0 60px rgba(217, 119, 6, 0.05);
+        }
+        .btn-primary, .btn-animated {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .btn-primary:hover, .btn-animated:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(217, 119, 6, 0.4);
+        }
+        nav { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease; }
+        /* ===== GALLERY CARDS — make dark portraits visible ===== */
+                /* ===== GALLERY CARDS — light background for dark art ===== */
+        .gallery-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid rgba(217, 119, 6, 0.4);
+            background: linear-gradient(135deg, #f8f4ed 0%, #ece5d8 50%, #e0d5c5 100%);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 80px rgba(217, 119, 6, 0.1);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            padding: 16px;
+        }
+        .gallery-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 60px rgba(217, 119, 6, 0.2);
+            border-color: rgba(217, 119, 6, 0.8);
+        }
+        .gallery-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            aspect-ratio: 1;
+        }
+        .gallery-card:hover img {
+            transform: scale(1.03);
+        }
+        .gallery-card .breed-label {
+            padding: 16px 8px 0;
+            text-align: center;
+        }
+        .gallery-card .breed-label p {
+            color: var(--bg-deep);
+            font-weight: 600;
+            font-size: 16px;
+            margin: 0;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
+    </style>
+    <link rel="stylesheet" href="/aos.css">
+    <script src="/aos.js"></script>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <div class="nav-inner">
+                <a href="/" class="logo">Hightower <span>Marketing</span></a>
+                <ul class="nav-links">
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/ai-video-ads">AI Video Ads</a></li>
+                    <li><a href="/pet-portraits">Pet Portraits</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+                <a href="/contact" class="nav-cta">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-label">🎨 AI Pet Portraits</div>
+                <h1>Turn your pet into art.</h1>
+                <p class="hero-subtitle">
+                    Upload a photo. We create a Renaissance-style masterpiece.
+                    Available as digital download, print, or canvas.
+                </p>
+                <a href="#products" class="btn-primary">See Products</a>
+                <a href="/contact" class="btn-secondary">Questions?</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY (moved to top, bigger images) -->
+    <section class="section" style="background: var(--bg-deep); padding: 80px 0;">
+        <div class="container">
+            <p class="section-label" data-aos="fade-up">Gallery</p>
+            <h2 data-aos="fade-up" data-aos-delay="100">Museum-quality portraits.</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">17th century oil painting technique — every piece is a masterpiece.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 48px;">
+                <div data-aos="fade-up" data-aos-delay="0" class="gallery-card" data-aos="fade-up">
+                    <img src="/images/portraits/golden-retriever-gallery.jpg" alt="Golden Retriever Renaissance Portrait" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="breed-label">
+                        <p >Golden Retriever</p>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="100" class="gallery-card" data-aos="fade-up">
+                    <img src="/images/portraits/french-bulldog-gallery.jpg" alt="French Bulldog Renaissance Portrait" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="breed-label">
+                        <p >French Bulldog</p>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="200" class="gallery-card" data-aos="fade-up">
+                    <img src="/images/portraits/maine-coon-gallery.jpg" alt="Maine Coon Renaissance Portrait" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="breed-label">
+                        <p >Maine Coon Cat</p>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="300" class="gallery-card" data-aos="fade-up">
+                    <img src="/images/portraits/beagle-gallery.jpg" alt="Beagle Renaissance Portrait" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="breed-label">
+                        <p >Beagle Puppy</p>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="400" class="gallery-card" data-aos="fade-up">
+                    <img src="/images/portraits/black-lab-gallery.jpg" alt="Black Lab Renaissance Portrait" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="breed-label">
+                        <p >Black Labrador</p>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="500" class="gallery-card" data-aos="fade-up">
+                    <img src="/images/portraits/german-shepherd-gallery.jpg" alt="German Shepherd Renaissance Portrait" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div class="breed-label">
+                        <p >German Shepherd</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section" id="products">
+        <div class="container">
+            <p class="section-label">Products</p>
+            <h2>Choose your format.</h2>
+            <p class="section-subtitle">Digital for sharing. Prints for framing. Canvas for the statement piece.</p>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">🖼️</div>
+                    <div class="product-info">
+                        <h3>Digital Download</h3>
+                        <p>High-resolution PNG perfect for social media, wallpapers, and printing yourself.</p>
+                        <div class="product-price">$35<span> / portrait</span></div>
+                        <br>
+                        <a href="/order-intake.html?product=pet-digital" class="btn-primary" style="display: block; text-align: center;">Order Digital</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">📸</div>
+                    <div class="product-info">
+                        <h3>Framed Print</h3>
+                        <p>Museum-quality print on archival paper in a sleek black frame. Ready to hang.</p>
+                        <div class="product-price">$45<span> / 8×10"</span></div>
+                        <br>
+                        <a href="/order-intake.html?product=pet-print" class="btn-primary" style="display: block; text-align: center;">Order Print</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">🎨</div>
+                    <div class="product-info">
+                        <h3>Canvas Gallery Wrap</h3>
+                        <p>Hand-stretched canvas with museum-quality print. The ultimate statement piece.</p>
+                        <div class="product-price">$75<span> / 16×20"</span></div>
+                        <br>
+                        <a href="/order-intake.html?product=pet-canvas" class="btn-primary" style="display: block; text-align: center;">Order Canvas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section">
+        <div class="container">
+            <p class="section-label">How It Works</p>
+            <h2>Three simple steps.</h2>
+            <p class="section-subtitle">No studio visit needed. Just a photo from your phone.</p>
+            
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Upload Photo</h3>
+                    <p>Send us your favorite photo of your pet. Any angle, any lighting.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>We Create Art</h3>
+                    <p>Our AI transforms it into a Renaissance masterpiece in 24-48 hours.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Receive Your Art</h3>
+                    <p>Digital download instantly. Prints and canvas ship within 5 days.</p>
+                </div>
+            </div>
+        </div>
+    </section><section class="cta-section">
+        <div class="container">
+            <h2>Gift cards available.</h2>
+            <p>Want the ultimate statement piece? Premium 24×30″ canvas — the finest option.</p>
+            <a href="/order-intake.html?product=pet-gift" class="btn-primary">Order Premium Package →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">Hightower <span>Marketing</span></a>
+                    <p>AI-powered marketing and automation for businesses that want results.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="/ai-video-ads">AI Video Ads</a>
+                    <a href="/pet-portraits">AI Pet Portraits</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <a href="mailto:hello@hightower-marketing.com">hello@hightower-marketing.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Hightower Marketing Strategies LLC</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+        }
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        if (nav) {
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    nav.classList.add('nav-hidden');
+                } else {
+                    nav.classList.remove('nav-hidden');
+                }
+                lastScroll = currentScroll;
+            });
+        }
+        const heroBg = document.querySelector('.hero-bg');
+        if (heroBg) {
+            window.addEventListener('scroll', function() {
+                heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.3) + 'px)';
+            });
+        }
+    });
+    </script>
+</body>
+</html>
