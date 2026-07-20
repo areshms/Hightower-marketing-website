@@ -27,34 +27,150 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
-        /* Gallery card hover effects */
-        [data-aos="fade-up"] {
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+        /* ===== NOISE TEXTURE OVERLAY (homepage match) ===== */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1000;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
         }
-        [data-aos="fade-up"]:hover {
-            transform: translateY(-8px) scale(1.02) !important;
-            box-shadow: 0 25px 50px rgba(217, 119, 6, 0.2), 0 0 80px rgba(217, 119, 6, 0.1);
-        }
-    
-        html { scroll-behavior: smooth; }
+
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg-deep); }
         ::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 4px; }
-        .service-card, .case-card, .blog-card, .pricing-card, .template-card {
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.3s ease;
+
+        /* ===== HERO BADGE (homepage match) ===== */
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: rgba(217, 119, 6, 0.1);
+            border: 1px solid rgba(217, 119, 6, 0.2);
+            border-radius: 100px;
+            font-size: 13px;
+            color: var(--accent-gold-light);
+            margin-bottom: 24px;
         }
-        .service-card:hover, .case-card:hover, .blog-card:hover, .pricing-card:hover, .template-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(217, 119, 6, 0.15), 0 0 60px rgba(217, 119, 6, 0.05);
+
+        /* ===== ANIMATED CTA BUTTON (homepage match) ===== */
+        .btn-animated {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent-gold);
+            color: var(--bg-deep);
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
         }
-        .btn-primary, .btn-animated {
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        .btn-animated::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 14px;
+            background: linear-gradient(90deg, #d97706, #f59e0b, #d97706);
+            background-size: 200% 100%;
+            z-index: -1;
+            animation: gradientShift 3s ease infinite;
         }
-        .btn-primary:hover, .btn-animated:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 30px rgba(217, 119, 6, 0.4);
+        .btn-animated:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(217, 119, 6, 0.3);
         }
-        nav { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease; }
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* ===== GLASSMORPHISM CARD (homepage match) ===== */
+        .glass-card {
+            background: rgba(28, 25, 23, 0.6);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(217, 119, 6, 0.08) 0%, transparent 60%);
+            animation: slowRotate 20s linear infinite;
+        }
+        @keyframes slowRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* ===== GOLD GLOW (homepage match) ===== */
+        .gold-glow {
+            position: absolute;
+            top: -20%; left: 50%;
+            transform: translateX(-50%);
+            width: 80%; height: 80%;
+            background: radial-gradient(ellipse 50% 50% at 50% 0%, rgba(217, 119, 6, 0.12), transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* ===== FADE IN ANIMATIONS (homepage match) ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-1 { animation: fadeInUp 0.6s ease-out 0.1s both; }
+        .fade-in-2 { animation: fadeInUp 0.6s ease-out 0.3s both; }
+        .fade-in-3 { animation: fadeInUp 0.6s ease-out 0.5s both; }
+        .fade-in-4 { animation: fadeInUp 0.6s ease-out 0.7s both; }
+
+        /* ===== MOUSE TRACKING GLOW (homepage match) ===== */
+        .product-card, .step {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .product-card::before, .step::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(217, 119, 6, 0.06), transparent 40%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+        .product-card:hover::before, .step:hover::before { opacity: 1; }
+        .product-card:hover, .step:hover {
+            transform: translateY(-4px);
+            border-color: rgba(217, 119, 6, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ===== NAV LINKS (homepage match) ===== */
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 1px;
+            background: var(--accent-gold);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after { width: 100%; }
         /* ===== GALLERY CARDS — make dark portraits visible ===== */
                 /* ===== GALLERY CARDS — light background for dark art ===== */
         .gallery-card {
@@ -119,27 +235,35 @@
         </div>
     </nav>
 
-    <section class="hero">
+    <section class="hero" style="position: relative; overflow: hidden;">
+        <div class="gold-glow"></div>
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-label">🎨 AI Pet Portraits</div>
-                <h1>Turn your pet into art.</h1>
-                <p class="hero-subtitle">
+            <div class="hero-content" style="position: relative; z-index: 2;">
+                <div class="hero-badge fade-in-1">
+                    <span>🎨</span> AI Pet Portraits
+                </div>
+                <h1 class="fade-in-2" style="font-family: 'Playfair Display', serif; font-size: clamp(40px, 5vw, 72px); font-weight: 600; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 24px;">
+                    Turn your pet into art.
+                </h1>
+                <p class="hero-subtitle fade-in-3" style="font-size: 18px; color: var(--text-secondary); max-width: 480px; margin-bottom: 40px; line-height: 1.7;">
                     Upload a photo. We create a Renaissance-style masterpiece.
                     Available as digital download, print, or canvas.
                 </p>
-                <a href="#products" class="btn-primary">See Products</a>
-                <a href="/contact" class="btn-secondary">Questions?</a>
+                <div class="cta-group fade-in-4" style="display: flex; gap: 16px; flex-wrap: wrap;">
+                    <a href="#products" class="btn-animated">See Products</a>
+                    <a href="/contact" class="btn-secondary">Questions?</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- GALLERY (moved to top, bigger images) -->
-    <section class="section" style="background: var(--bg-deep); padding: 80px 0;">
-        <div class="container">
-            <p class="section-label" data-aos="fade-up">Gallery</p>
-            <h2 data-aos="fade-up" data-aos-delay="100">Museum-quality portraits.</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">17th century oil painting technique — every piece is a masterpiece.</p>
+    <section class="section" style="background: var(--bg-deep); padding: 80px 0; position: relative; overflow: hidden;">
+        <div class="gold-glow" style="opacity: 0.06;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <p class="section-label fade-in-1" data-aos="fade-up">Gallery</p>
+            <h2 data-aos="fade-up" data-aos-delay="100" class="fade-in-2" style="font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 48px); font-weight: 600; letter-spacing: -0.02em; margin-bottom: 16px;">Museum-quality portraits.</h2>
+            <p class="section-subtitle fade-in-3" data-aos="fade-up" data-aos-delay="200" style="font-size: 17px; color: var(--text-secondary); max-width: 540px; margin-bottom: 64px; line-height: 1.7;">17th century oil painting technique — every piece is a masterpiece.</p>
             
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 48px;">
                 <div data-aos="fade-up" data-aos-delay="0" class="gallery-card" data-aos="fade-up">
