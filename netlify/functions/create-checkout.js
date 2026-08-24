@@ -12,53 +12,63 @@ exports.handler = async (event) => {
 
     try {
         const { product, email } = JSON.parse(event.body);
-        
-        // Product price mapping matching actual Obsidian project prices
-        const prices = {
-            // AI Video Ads (from AI-Video-Ad-Agency.md)
-            'video-basic': 50000,        // $500 single ad
-            'video-pro': 150000,        // $1,500 premium single
-            'video-campaign': 300000,    // $3,000 package
-            // Pet Portraits (from Pet-AI-Art-Business.md)
-            'pet-digital': 3500,         // $35 digital download
-            'pet-print': 4500,           // $45 8×10 print
-            'pet-canvas': 7500,        // $75 16×20 canvas
-            'pet-gift': 11000           // $110 24×30 premium
-        };
-        
-        const productNames = {
-            'video-basic': 'AI Video Ad — Basic (Single)',
-            'video-pro': 'AI Video Ad — Professional (Single)',
-            'video-campaign': 'AI Video Ad — Campaign Package',
-            'pet-digital': 'Pet Portrait — Digital Download',
-            'pet-print': 'Pet Portrait — 8×10″ Framed Print',
-            'pet-canvas': 'Pet Portrait — 16×20″ Canvas Wrap',
-            'pet-gift': 'Pet Portrait — 24×30″ Premium Package'
-        };
-        
-        const amount = prices[product] || 50000;
-        const name = productNames[product] || 'Hightower Marketing Service';
 
-        const session = await stripe.checkout.sessions.create({
+        // Product catalog. One-time products use mode='payment'. 're-data-refinery-monthly' is a subscription.
+        const catalog = {
+            // AI Video Ads (from AI-Video-Ad-Agency.md)
+            'video-basic': { amount: 50000, name: 'AI Video Ad — Basic (Single)', mode: 'payment', project: 'AI-Video-Ad-Agency' },
+            'video-pro': { amount: 150000, name: 'AI Video Ad — Professional (Single)', mode: 'payment', project: 'AI-Video-Ad-Agency' },
+            'video-campaign': { amount: 300000, name: 'AI Video Ad — Campaign Package', mode: 'payment', project: 'AI-Video-Ad-Agency' },
+            // Pet Portraits (from Pet-AI-Art-Business.md)
+            'pet-digital': { amount: 3500, name: 'Pet Portrait — Digital Download', mode: 'payment', project: 'Pet-AI-Art-Business' },
+            'pet-print': { amount: 4500, name: 'Pet Portrait — 8×10″ Framed Print', mode: 'payment', project: 'Pet-AI-Art-Business' },
+            'pet-canvas': { amount: 7500, name: 'Pet Portrait — 16×20″ Canvas Wrap', mode: 'payment', project: 'Pet-AI-Art-Business' },
+            'pet-gift': { amount: 11000, name: 'Pet Portrait — 24×30″ Premium Package', mode: 'payment', project: 'Pet-AI-Art-Business' },
+            // RE Data Refinery monthly subscription
+            're-data-refinery-monthly': {
+                amount: 30000,
+                name: 'RE Data Refinery — Columbus OH Monthly Sheet Access',
+                mode: 'subscription',
+                project: 'RE-Data-Refinery',
+                recurring: { interval: 'month', interval_count: 1 }
+            }
+        };
+
+        const item = catalog[product] || catalog['video-pro'];
+        const baseUrl = process.env.URL || 'https://hightower-marketing.com';
+
+        let sessionParams = {
             payment_method_types: ['card'],
             line_items: [{
                 price_data: {
                     currency: 'usd',
-                    product_data: { name: name },
-                    unit_amount: amount,
+                    product_data: { name: item.name },
+                    unit_amount: item.amount,
                 },
                 quantity: 1,
             }],
-            mode: 'payment',
-            success_url: `${process.env.URL || 'https://hightower-marketing.com'}/checkout-video.html?success=true&product=${product}`,
-            cancel_url: `${process.env.URL || 'https://hightower-marketing.com'}/checkout-video.html?canceled=true`,
+            mode: item.mode,
+            success_url: `${baseUrl}/re-data-refinery.html?success=true`,
+            cancel_url: `${baseUrl}/re-data-refinery.html?canceled=true`,
             customer_email: email || undefined,
             metadata: {
                 product: product,
                 source: 'hightower-marketing.com',
-                project: product.startsWith('pet') ? 'Pet-AI-Art-Business' : 'AI-Video-Ad-Agency'
+                project: item.project
             }
-        });
+        };
+
+        if (item.mode === 'subscription' && item.recurring) {
+            sessionParams.line_items[0].price_data.recurring = {
+                interval: item.recurring.interval,
+                interval_count: item.recurring.interval_count
+            };
+            // Subscription success URL can include session_id if needed for webhook-free lookups
+            sessionParams.success_url = `${baseUrl}/re-data-refinery-success.html?success=true&session_id={CHECKOUT_SESSION_ID}`;
+            sessionParams.cancel_url = `${baseUrl}/re-data-refinery.html?canceled=true`;
+        }
+
+        const session = await stripe.checkout.sessions.create(sessionParams);
 
         return { statusCode: 200, headers, body: JSON.stringify({ url: session.url }) };
     } catch (error) {
