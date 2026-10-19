@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Shop TrendLoop Products — Hightower Marketing</title>
+    <meta name="description" content="Shop curated TrendLoop products: cozy gifts, night lights, beauty tools and pet essentials. Fast US shipping, every item tested by our team before it lists.">
+    <link rel="canonical" href="https://www.hightower-marketing.com/products.html">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="/aos.css">
+    <script src="/aos.js"></script>
+    <!-- motion layer (lenis + gsap, security-scanned 2026-10-16) -->
+    <script src="/vendor/lenis.min.js"></script>
+    <script src="/vendor/gsap.min.js"></script>
+    <script src="/vendor/ScrollTrigger.min.js"></script>
+    <script src="/vendor/hms-motion.js" defer></script>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hightower Marketing Strategies">
+    <meta property="og:title" content="Shop TrendLoop Products — Hightower Marketing">
+    <meta property="og:description" content="Shop curated TrendLoop products: cozy gifts, night lights, beauty tools and pet essentials. Fast US shipping.">
+    <meta property="og:url" content="https://www.hightower-marketing.com/products.html">
+    <meta property="og:image" content="https://www.hightower-marketing.com/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shop TrendLoop Products — Hightower Marketing">
+    <meta name="twitter:description" content="Curated TrendLoop products: cozy gifts, night lights, beauty tools and pet essentials. Fast US shipping.">
+    <meta name="twitter:image" content="https://www.hightower-marketing.com/og-cover.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "TrendLoop Products",
+      "url": "https://www.hightower-marketing.com/products.html",
+      "description": "Curated TrendLoop products: cozy gifts, night lights, beauty tools and pet essentials."
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0c0e12; color: #e8e8e3; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        nav { background: rgba(12,14,18,0.92); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(212,175,55,0.12); }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+        .logo { color: #e8e8e3; text-decoration: none; font-size: 1.25rem; font-weight: 700; }
+        .logo span { color: #d4af37; }
+        .nav-links { list-style: none; display: flex; gap: 28px; }
+        .nav-links a { color: rgba(232,232,227,0.75); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: #d4af37; }
+        .nav-cta { background: #d4af37; color: #0c0e12; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .hero { padding: 90px 0 50px; text-align: center; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 16px; }
+        .hero h1 em { color: #d4af37; font-style: normal; }
+        .hero p { color: rgba(232,232,227,0.65); max-width: 640px; margin: 0 auto 0; font-size: 1.05rem; }
+        .hero-bar { width: 64px; height: 4px; background: #d4af37; margin: 22px auto 0; }
+        .filters { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 44px 0 40px; }
+        .filter-btn { background: transparent; border: 1px solid rgba(212,175,55,0.3); color: rgba(232,232,227,0.8); padding: 9px 20px; border-radius: 999px; cursor: pointer; font-size: 0.9rem; transition: all 0.25s; }
+        .filter-btn:hover, .filter-btn.active { background: #d4af37; color: #0c0e12; border-color: #d4af37; font-weight: 600; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 22px; padding-bottom: 90px; }
+        .product-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; overflow: hidden; transition: transform 0.3s, border-color 0.3s; }
+        .product-card:hover { transform: translateY(-4px); border-color: rgba(212,175,55,0.45); }
+        .product-card a { text-decoration: none; color: inherit; display: block; }
+        .product-img-wrap { aspect-ratio: 1; background: rgba(255,255,255,0.04); overflow: hidden; }
+        .product-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+        .product-card:hover .product-img-wrap img { transform: scale(1.04); }
+        .product-info { padding: 16px 18px 20px; }
+        .product-cat { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #d4af37; font-weight: 600; }
+        .product-title { font-size: 0.95rem; font-weight: 600; margin: 8px 0 10px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.7em; }
+        .product-price { font-size: 1.15rem; font-weight: 700; color: #e8e8e3; }
+        .product-cta { display: inline-block; margin-top: 10px; font-size: 0.82rem; color: rgba(212,175,55,0.9); font-weight: 500; }
+        .store-note { text-align: center; color: rgba(232,232,227,0.5); font-size: 0.9rem; padding-bottom: 60px; }
+        .store-note a { color: #d4af37; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .products-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-inner">
+                <a href="/" class="logo">Hightower <span>Marketing</span></a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/case-studies">Case Studies</a></li>
+                    <li><a href="/ai-video-ads">AI Video Ads</a></li>
+                    <li><a href="/pet-portraits">Pet Portraits</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+                <a href="/contact" class="nav-cta">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Shop <em>TrendLoop</em> Products</h1>
+            <div class="hero-bar"></div>
+            <p style="margin-top:22px">Curated, tested, and shipped fast from our US warehouse. We only list what we'd buy ourselves.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Beauty & Grooming">Beauty & Grooming</button>
+                    <button class="filter-btn" data-filter="Pet">Pet</button>
+                    <button class="filter-btn" data-filter="Home & Lighting">Home & Lighting</button>
+                    <button class="filter-btn" data-filter="Gifts & Cozy">Gifts & Cozy</button>
+            </div>
+            <div class="products-grid" id="grid">
+                    <div class="product-card" data-cat="Pet">
+                        <a href="https://shop.hightower-marketing.com/products/2-in-1-pet-nail-clippers-led-light-dog-cat-grooming-tool" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/1_660054e2-2929-4225-8ace-0dd6941f6679.jpg?v=1792008734" alt="2-in-1 Pet Nail Clippers LED Light Dog Cat Grooming Tool" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Pet</span>
+                                <h3 class="product-title">2-in-1 Pet Nail Clippers LED Light Dog Cat Grooming Tool</h3>
+                                <div class="product-price">$21.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Beauty & Grooming">
+                        <a href="https://shop.hightower-marketing.com/products/led-face-mask" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/hero_lifestyle_openai.png?v=1783004792" alt="7 Color LED Light Photon Face Mask Neck Rejuvenation Skin Facial Wrinkle Therapy" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Beauty & Grooming</span>
+                                <h3 class="product-title">7 Color LED Light Photon Face Mask Neck Rejuvenation Skin Facial Wrinkle Therapy</h3>
+                                <div class="product-price">$49.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Home & Lighting">
+                        <a href="https://shop.hightower-marketing.com/products/anxiety-ring-fidget-spinner-ring-moon-star-stainless-steel-rotating" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/1_69d90a4d-205e-43f1-8005-ef9430bfd19c.jpg?v=1792008750" alt="Anxiety Ring Fidget Spinner Ring Moon Star Stainless Steel Rotating" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Home & Lighting</span>
+                                <h3 class="product-title">Anxiety Ring Fidget Spinner Ring Moon Star Stainless Steel Rotating</h3>
+                                <div class="product-price">$12.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Beauty & Grooming">
+                        <a href="https://shop.hightower-marketing.com/products/blackhead-nose-patches-10pc" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/7c4a50ab-182e-477a-9be6-ec79ad98106e.jpg?v=1789045287" alt="Blackhead Nose Patches 10pc" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Beauty & Grooming</span>
+                                <h3 class="product-title">Blackhead Nose Patches 10pc</h3>
+                                <div class="product-price">$25.97</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Home & Lighting">
+                        <a href="https://shop.hightower-marketing.com/products/cartoon-deer-night-light-usb-charge-silicone-kids-bedroom" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/1_460fb9a9-7fdd-4160-8bcb-783ce205d5a4.jpg?v=1792008688" alt="Cartoon Deer Night Light USB Charge Silicone Kids Bedroom" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Home & Lighting</span>
+                                <h3 class="product-title">Cartoon Deer Night Light USB Charge Silicone Kids Bedroom</h3>
+                                <div class="product-price">$22.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Home & Lighting">
+                        <a href="https://shop.hightower-marketing.com/products/creative-double-question-mark-elegant-white-desktop-lamp" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/1_e79fc11a-dd65-4de1-ab3e-468e52e828c9.jpg?v=1792008726" alt="Creative Double Question Mark Elegant White Desktop Lamp" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Home & Lighting</span>
+                                <h3 class="product-title">Creative Double Question Mark Elegant White Desktop Lamp</h3>
+                                <div class="product-price">$34.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Home & Lighting">
+                        <a href="https://shop.hightower-marketing.com/products/crystal-water-ripple-projector" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/cfb63bd0-f491-482b-a9c6-c210315842f9.jpg?v=1783012519" alt="Crystal Water Ripple Projector" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Home & Lighting</span>
+                                <h3 class="product-title">Crystal Water Ripple Projector</h3>
+                                <div class="product-price">$24.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Pet">
+                        <a href="https://shop.hightower-marketing.com/products/cute-fruit-dog-hoodies-pet-clothes-warm-puppy-coat" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/1_42a79f67-a07b-47b4-a030-0fcc2321653f.jpg?v=1792008718" alt="Cute Fruit Dog Hoodies Pet Clothes Warm Puppy Coat" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Pet</span>
+                                <h3 class="product-title">Cute Fruit Dog Hoodies Pet Clothes Warm Puppy Coat</h3>
+                                <div class="product-price">$16.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Beauty & Grooming">
+                        <a href="https://shop.hightower-marketing.com/products/gua-sha-massager" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/electric_gua_sha_hero.png?v=1783012633" alt="Electric Gua Sha Facial Massager" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Beauty & Grooming</span>
+                                <h3 class="product-title">Electric Gua Sha Facial Massager</h3>
+                                <div class="product-price">$49.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Home & Lighting">
+                        <a href="https://shop.hightower-marketing.com/products/fireplace-simulation-flame-aromatherapy-diffuser-home-decor" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/1_3071b762-a45a-4f87-884c-a480c9cd1af9.jpg?v=1792008711" alt="Fireplace Simulation Flame Aromatherapy Diffuser Home Decor" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Home & Lighting</span>
+                                <h3 class="product-title">Fireplace Simulation Flame Aromatherapy Diffuser Home Decor</h3>
+                                <div class="product-price">$39.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Home & Lighting">
+                        <a href="https://shop.hightower-marketing.com/products/galaxy-star-projector" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/galaxy_projector_hero.png?v=1783012642" alt="Galaxy Star Projector Night Light" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Home & Lighting</span>
+                                <h3 class="product-title">Galaxy Star Projector Night Light</h3>
+                                <div class="product-price">$44.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Gifts & Cozy">
+                        <a href="https://shop.hightower-marketing.com/products/giant-black-cat-plush-pillow-70cm-long-cat-stuffed-animal" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/abf0a9f4-ec07-4684-9828-1d77972a047f.jpg?v=1792371226" alt="Giant Black Cat Plush Pillow - 70cm Long Cat Stuffed Animal" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Gifts & Cozy</span>
+                                <h3 class="product-title">Giant Black Cat Plush Pillow - 70cm Long Cat Stuffed Animal</h3>
+                                <div class="product-price">$39.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Gifts & Cozy">
+                        <a href="https://shop.hightower-marketing.com/products/i-am-enough-you-are-enough-silicone-affirmation-bracelet-gift" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/d75f4054-35c8-45c7-b451-230d23b2e6a2_fine.jpg?v=1792169363" alt="I Am Enough You Are Enough Silicone Affirmation Bracelet Gift" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Gifts & Cozy</span>
+                                <h3 class="product-title">I Am Enough You Are Enough Silicone Affirmation Bracelet Gift</h3>
+                                <div class="product-price">$9.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Home & Lighting">
+                        <a href="https://shop.hightower-marketing.com/products/magic-shadow-humidifier-projector-night-light-usb-air-aroma" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/1_4ed0b7ae-6a54-463d-a311-e839ff200a7a.jpg?v=1792008681" alt="Magic Shadow Humidifier Projector Night Light USB Air Aroma" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Home & Lighting</span>
+                                <h3 class="product-title">Magic Shadow Humidifier Projector Night Light USB Air Aroma</h3>
+                                <div class="product-price">$24.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Home & Lighting">
+                        <a href="https://shop.hightower-marketing.com/products/magic-snowy-landscape-night-light-usb-diy-desktop-decor" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/1.jpg?v=1792008672" alt="Magic Snowy Landscape Night Light - USB DIY Desktop Decor" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Home & Lighting</span>
+                                <h3 class="product-title">Magic Snowy Landscape Night Light - USB DIY Desktop Decor</h3>
+                                <div class="product-price">$24.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Gifts & Cozy">
+                        <a href="https://shop.hightower-marketing.com/products/magnetic-led-cable" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/magnetic-cable-led-magnet-charger-cable-_1788279263.png?v=1788279266" alt="Magnetic LED Charging Cable" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Gifts & Cozy</span>
+                                <h3 class="product-title">Magnetic LED Charging Cable</h3>
+                                <div class="product-price">$11.57</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Beauty & Grooming">
+                        <a href="https://shop.hightower-marketing.com/products/mens-ball-trimmer-groin-body-hair-trimmer-electric-wet-dry-cordless-usb" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/1_24b1d944-1884-4cd2-ba26-d6c62476cf67.jpg?v=1792008758" alt="Mens Ball Trimmer Groin Body Hair Trimmer Electric Wet Dry Cordless USB" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Beauty & Grooming</span>
+                                <h3 class="product-title">Mens Ball Trimmer Groin Body Hair Trimmer Electric Wet Dry Cordless USB</h3>
+                                <div class="product-price">$16.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Beauty & Grooming">
+                        <a href="https://shop.hightower-marketing.com/products/pet-hair-remover-mitt" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/202cb3f9-ed8a-478f-a5ae-bc0b6c4830e1.jpg?v=1789045270" alt="Pet Hair Remover Mitt" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Beauty & Grooming</span>
+                                <h3 class="product-title">Pet Hair Remover Mitt</h3>
+                                <div class="product-price">$18.10</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Home & Lighting">
+                        <a href="https://shop.hightower-marketing.com/products/rgb-solar-step-fence-light-waterproof-outdoor-garden" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/1_85b08222-d8ae-4f9a-ab81-d64759bb8a37.jpg?v=1792008703" alt="RGB Solar Step Fence Light Waterproof Outdoor Garden" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Home & Lighting</span>
+                                <h3 class="product-title">RGB Solar Step Fence Light Waterproof Outdoor Garden</h3>
+                                <div class="product-price">$24.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Home & Lighting">
+                        <a href="https://shop.hightower-marketing.com/products/rose-flower-led-light-bluetooth-speaker-creative-home-decor" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/1_b5058bdc-c5a3-4b1f-a4df-7dd6317e97c2.jpg?v=1792008742" alt="Rose Flower LED Light Bluetooth Speaker Creative Home Decor" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Home & Lighting</span>
+                                <h3 class="product-title">Rose Flower LED Light Bluetooth Speaker Creative Home Decor</h3>
+                                <div class="product-price">$39.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Beauty & Grooming">
+                        <a href="https://shop.hightower-marketing.com/products/self-cleaning-hair-brush" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/self-cleaning-hair-brush---one-key-remov_1788279045.png?v=1788279048" alt="Self-Cleaning Hair Brush - One-Key Removal Anti-Static Massage Comb" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Beauty & Grooming</span>
+                                <h3 class="product-title">Self-Cleaning Hair Brush - One-Key Removal Anti-Static Massage Comb</h3>
+                                <div class="product-price">$32.25</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Home & Lighting">
+                        <a href="https://shop.hightower-marketing.com/products/silicone-rabbit-touch-night-light-cute-kids-bedroom-lamp" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/1_b38a139a-a604-4f13-8029-7ab7247dd036.jpg?v=1792008696" alt="Silicone Rabbit Touch Night Light Cute Kids Bedroom Lamp" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Home & Lighting</span>
+                                <h3 class="product-title">Silicone Rabbit Touch Night Light Cute Kids Bedroom Lamp</h3>
+                                <div class="product-price">$21.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Gifts & Cozy">
+                        <a href="https://shop.hightower-marketing.com/products/silk-eye-mask" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/silk-sleep-eye-mask_1788277123.png?v=1788277127" alt="Silk Sleep Eye Mask" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Gifts & Cozy</span>
+                                <h3 class="product-title">Silk Sleep Eye Mask</h3>
+                                <div class="product-price">$24.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Beauty & Grooming">
+                        <a href="https://shop.hightower-marketing.com/products/smart-neck-massager-with-heat-tens-pulse-cordless-shoulder-pain-relief" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/78b37504-7ef5-41f2-bf28-5d59008dd9fe_trans.jpg?v=1792378012" alt="Smart Neck Massager with Heat - TENS Pulse Cordless Shoulder Pain Relief" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Beauty & Grooming</span>
+                                <h3 class="product-title">Smart Neck Massager with Heat - TENS Pulse Cordless Shoulder Pain Relief</h3>
+                                <div class="product-price">$34.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Gifts & Cozy">
+                        <a href="https://shop.hightower-marketing.com/products/teddy-bear-ears-plush-hooded-scarf-warm-faux-fur-winter-hood-beige" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/448884134321.jpg?v=1792371795" alt="Teddy Bear Ears Plush Hooded Scarf - Warm Faux Fur Winter Hood (Beige)" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Gifts & Cozy</span>
+                                <h3 class="product-title">Teddy Bear Ears Plush Hooded Scarf - Warm Faux Fur Winter Hood (Beige)</h3>
+                                <div class="product-price">$24.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Beauty & Grooming">
+                        <a href="https://shop.hightower-marketing.com/products/teeth-whitening-pen" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/0e652adf-7a63-47a3-a660-7f0294668d0b.jpg?v=1789045306" alt="Teeth Whitening Pen" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Beauty & Grooming</span>
+                                <h3 class="product-title">Teeth Whitening Pen</h3>
+                                <div class="product-price">$25.97</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Gifts & Cozy">
+                        <a href="https://shop.hightower-marketing.com/products/to-my-wife-love-letter-fleece-blanket-50x60-in-romantic-gift-for-her" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/714025617010.jpg?v=1792169357" alt="To My Wife Love Letter Fleece Blanket 50x60 in Romantic Gift for Her" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Gifts & Cozy</span>
+                                <h3 class="product-title">To My Wife Love Letter Fleece Blanket 50x60 in Romantic Gift for Her</h3>
+                                <div class="product-price">$34.99</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product-card" data-cat="Beauty & Grooming">
+                        <a href="https://shop.hightower-marketing.com/products/turmeric-acid-cleansing-pads" target="_blank" rel="noopener">
+                            <div class="product-img-wrap">
+                                <img src="https://cdn.shopify.com/s/files/1/0768/1831/7504/files/8c0ec38b-b3ca-4d54-bc9d-bdad96582d2d.jpg?v=1789045299" alt="Turmeric Acid Cleansing Pads" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <span class="product-cat">Beauty & Grooming</span>
+                                <h3 class="product-title">Turmeric Acid Cleansing Pads</h3>
+                                <div class="product-price">$46.72</div>
+                                <span class="product-cta">View in store →</span>
+                            </div>
+                        </a>
+                    </div>
+            </div>
+            <p class="store-note">All purchases are processed securely in our <a href="https://shop.hightower-marketing.com" target="_blank" rel="noopener">TrendLoop Shopify store</a> · 30-day returns · US shipping</p>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const f = btn.dataset.filter;
+                document.querySelectorAll('.product-card').forEach(c => {
+                    c.style.display = (f === 'all' || c.dataset.cat === f) ? '' : 'none';
+                });
+            });
+        });
+    </script>
+    <script src="/hms-motion.js" defer></script>
+</body>
+</html>
