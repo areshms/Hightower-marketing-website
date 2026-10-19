@@ -113,27 +113,38 @@ def categorize(p):
 # ------------------------------------------------------------------ plan
 def rebuild_plan(catalog, log):
     """Regenerate the post backlog from the live catalog: one product-guide post
-    per category (4), one service-local post per service (7). Deterministic."""
+    per category, one service-local post per service. Deterministic.
+    PRESERVES status of already-rendered/posted specs (rebuild is idempotent)."""
     os.makedirs(os.path.dirname(PLAN), exist_ok=True)
+    old_statuses = {}
+    if os.path.exists(PLAN):
+        try:
+            for s in json.load(open(PLAN)).get("posts", []):
+                if s.get("slug"):
+                    old_statuses[s["slug"]] = s.get("status", "pending")
+        except Exception:
+            pass
     plan = {"posts": [], "built": datetime.now().isoformat()}
     for cat in CATEGORIES:
         members = [p for p in catalog if categorize(p) == cat]
         if not members:
             continue
+        _slug = f"best-{cat.lower().replace(' & ', '-').replace(' ', '-')}-2026"
         plan["posts"].append({
             "type": "product_guide",
             "category": cat,
-            "slug": f"best-{cat.lower().replace(' & ', '-').replace(' ', '-')}-2026",
-            "status": "pending",
+            "slug": _slug,
+            "status": old_statuses.get(_slug, "pending"),
             "members": [m["handle"] for m in members],
         })
     for svc, path in SERVICES:
+        _slug = f"{svc.lower().replace(' ', '-')}-columbus-ohio"
         plan["posts"].append({
             "type": "service_local",
             "service": svc,
             "path": path,
-            "slug": f"{svc.lower().replace(' ', '-')}-columbus-ohio",
-            "status": "pending",
+            "slug": _slug,
+            "status": old_statuses.get(_slug, "pending"),
         })
     try:
         tmp = PLAN + ".tmp"
@@ -365,6 +376,9 @@ def update_blog_html(post, log):
     p = os.path.join(DIR, "blog.html")
     try:
         h = open(p).read()
+        if f"/blog/{post['slug']}.html" in h:
+            log(f"    blog.html: card for {post['slug']} already present — skipping")
+            return
         card = (f'<a href="/blog/{post["slug"]}.html" class="blog-card" '
                 f'data-category="guide"><div class="blog-card-img">'
                 f'<img src="/og-cover.jpg" alt="{post["title"]}" loading="lazy"></div>'

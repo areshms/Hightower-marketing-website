@@ -72,35 +72,35 @@
       "service": "Product Photography",
       "path": "/product-photography.html",
       "slug": "product-photography-columbus-ohio",
-      "status": "pending"
+      "status": "posted"
     },
     {
       "type": "service_local",
       "service": "Social Media Management",
       "path": "/social-media-management.html",
       "slug": "social-media-management-columbus-ohio",
-      "status": "pending"
+      "status": "posted"
     },
     {
       "type": "service_local",
       "service": "Web Design",
       "path": "/web-design.html",
       "slug": "web-design-columbus-ohio",
-      "status": "pending"
+      "status": "posted"
     },
     {
       "type": "service_local",
       "service": "SEO",
       "path": "/seo.html",
       "slug": "seo-columbus-ohio",
-      "status": "pending"
+      "status": "posted"
     },
     {
       "type": "service_local",
       "service": "TikTok Ads Management",
       "path": "/tiktok-ads.html",
       "slug": "tiktok-ads-management-columbus-ohio",
-      "status": "pending"
+      "status": "posted"
     },
     {
       "type": "service_local",
