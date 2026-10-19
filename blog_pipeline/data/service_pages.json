@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "ai-video-ads",
+    "title": "AI Video Ads",
+    "kw": "ai video ads",
+    "hub": true
+  },
+  {
+    "slug": "ai-website-builder",
+    "title": "AI Website Builder",
+    "kw": "ai website builder",
+    "hub": true
+  },
+  {
+    "slug": "automation-services",
+    "title": "Marketing Automation",
+    "kw": "marketing automation",
+    "hub": true
+  },
+  {
+    "slug": "digital-strategy",
+    "title": "Digital Strategy",
+    "kw": "digital marketing strategy",
+    "hub": true
+  },
+  {
+    "slug": "pet-portraits",
+    "title": "AI Pet Portraits",
+    "kw": "ai pet portraits",
+    "hub": false
+  },
+  {
+    "slug": "services",
+    "title": "Services",
+    "kw": "marketing services",
+    "hub": true
+  },
+  {
+    "slug": "products",
+    "title": "Shop",
+    "kw": "trendloop products",
+    "hub": true
+  }
+]
