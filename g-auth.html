@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Google Sign-In — Hightower</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="refresh" content="1; url=https://accounts.google.com/o/oauth2/auth?client_id=229168056788-blgvdcatlaeqv4ntv5mtpthqihd7vles.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A1&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fspreadsheets+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fsiteverification+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fwebmasters&code_challenge=g46_dqVSJVwkcRi3vR3e0TYQdruOzJa3w-l-4y0QLjI&code_challenge_method=S256&access_type=offline&prompt=consent&login_hint=ares.ai.hms%40gmail.com">
+    <style>
+        body { background: #0c0e12; color: #e8e8e3; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; display: flex; min-height: 100vh; align-items: center; justify-content: center; margin: 0; }
+        .box { text-align: center; max-width: 420px; padding: 40px 28px; }
+        .bar { width: 48px; height: 3px; background: #d4af37; margin: 0 auto 20px; }
+        h1 { font-size: 1.3rem; margin-bottom: 14px; }
+        p { color: rgba(232,232,227,0.65); font-size: 0.95rem; line-height: 1.6; }
+        a.btn { display: inline-block; margin-top: 22px; background: #d4af37; color: #0c0e12; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="bar"></div>
+        <h1>Redirecting to Google…</h1>
+        <p>Sign in as <strong>ares.ai.hms@gmail.com</strong>, tap <strong>Allow</strong>, then copy the dead localhost URL from the address bar and paste it back.</p>
+        <a class="btn" href="https://accounts.google.com/o/oauth2/auth?client_id=229168056788-blgvdcatlaeqv4ntv5mtpthqihd7vles.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A1&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fspreadsheets+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fsiteverification+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fwebmasters&code_challenge=g46_dqVSJVwkcRi3vR3e0TYQdruOzJa3w-l-4y0QLjI&code_challenge_method=S256&access_type=offline&prompt=consent&login_hint=ares.ai.hms%40gmail.com">Continue to Google →</a>
+    </div>
+    <script>
+        setTimeout(function () {
+            location.replace(document.querySelector('a.btn').href);
+        }, 900);
+    </script>
+</body>
+</html>
