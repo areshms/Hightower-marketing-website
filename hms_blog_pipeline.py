@@ -8,7 +8,8 @@ What it does (every run, exit 0, never crashes — same rules as refinery_pipeli
   3. Renders the next N posts from DETERMINISTIC templates (no LLM — content is
      composed from product data + hand-written template blocks).
   4. Updates blog.html cards + sitemap.xml automatically.
-  5. Commits + deploys to Netlify (netlify deploy --prod --dir .).
+  5. Commits + pushes to GitHub; Netlify auto-builds (when credits allow — posts queue safely
+     in the repo during credit exhaustion; the live site never breaks).
   6. Logs to data/blog_state.json.
 
 Post types (ranked by SEO impact for agency+store hybrid):
@@ -167,11 +168,21 @@ def load_plan():
 
 
 # ------------------------------------------------------------------ templates
+
+def esc(s):
+    """HTML-escape any value inserted into markup/attributes."""
+    import html as _html
+    return _html.escape(str(s), quote=True)
+
 def base_head(post):
+    post = dict(post)
+    post['title_tag'] = esc(post['title_tag'])
+    post['description'] = esc(post['description'])
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{post['title_tag']}</title>
 <meta name="description" content="{post['description']}">
 <meta name="robots" content="index, follow">
@@ -186,7 +197,7 @@ def base_head(post):
 <meta name="twitter:title" content="{post['title_tag']}">
 <meta name="twitter:description" content="{post['description']}">
 <script type="application/ld+json">
-{json.dumps(post['jsonld'], indent=2)}
+{json.dumps(post['jsonld'], indent=2).replace('</', '<\\/')}
 </script>
 <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -235,12 +246,13 @@ def render_product_guide(spec, catalog, log):
 
     blocks = []
     for i, m in enumerate(members, 1):
-        img_alt = f"{m['title']} — {cat}"
+        m_title = esc(m['title'])
+        img_alt = esc(f"{m['title']} — {cat}")
         blocks.append(f"""
-<h2 id="p{i}">{i}. {m['title']}</h2>
+<h2 id="p{i}">{i}. {m_title}</h2>
 <img src="{m['img']}" alt="{img_alt}" loading="lazy" width="600" height="600">
-<p class="price">From ${m['price']} · <a href="{STOREFRONT}/products/{m['handle']}" rel="nofollow">View on TrendLoop</a></p>
-<p>{buy_line(m, cat)}</p>
+<p class="price">From ${m['price']} · <a href="{STOREFRONT}/products/{esc(m['handle'])}" rel="nofollow">View on TrendLoop</a></p>
+<p>{esc(buy_line(m, cat))}</p>
 """)
     cat_lower = cat.lower()
     body = f"""
@@ -251,7 +263,7 @@ def render_product_guide(spec, catalog, log):
 <h2>Quick comparison</h2>
 <table class="compare">
 <tr><th>#</th><th>Product</th><th>Price</th><th>Best for</th></tr>
-{''.join(f'<tr><td>{i}</td><td><a href="#p{i}">{m["title"]}</a></td><td>${m["price"]}</td><td>{best_for(m, cat)}</td></tr>' for i, m in enumerate(members, 1))}
+{''.join(f'<tr><td>{i}</td><td><a href="#p{i}">{esc(m["title"])}</a></td><td>${m["price"]}</td><td>{esc(best_for(m, cat))}</td></tr>' for i, m in enumerate(members, 1))}
 </table>
 {''.join(blocks)}
 <h2>How to choose the right {cat_lower}</h2>
@@ -379,12 +391,14 @@ def update_blog_html(post, log):
         if f"/blog/{post['slug']}.html" in h:
             log(f"    blog.html: card for {post['slug']} already present — skipping")
             return
-        card = (f'<a href="/blog/{post["slug"]}.html" class="blog-card" '
-                f'data-category="guide"><div class="blog-card-img">'
-                f'<img src="/og-cover.jpg" alt="{post["title"]}" loading="lazy"></div>'
-                f'<div class="blog-card-body"><h3>{post["title_tag"]}</h3>'
-                f'<p>{post["description"][:120]}…</p>'
-                f'<span class="blog-card-date">{datetime.now().strftime("%B %d, %Y")}</span></div></a>\n')
+        card = (f'<a href="/blog/{post["slug"]}.html" class="blog-card" data-aos="fade-up">'
+                f'<div class="blog-thumb"><img src="/og-cover.jpg" alt="{esc(post["title"])}" loading="lazy"></div>'
+                f'<div class="blog-content"><div class="blog-meta">'
+                f'<span class="blog-category">{"Guide" if "best-" in post["slug"] else "Local SEO"}</span>'
+                f'<span class="blog-date">{datetime.now().strftime("%B %d, %Y")}</span></div>'
+                f'<h3>{esc(post["title_tag"])}</h3>'
+                f'<p>{esc(post["description"])[:120]}…</p>'
+                f'</div></a>\n')
         # insert after the opening of the grid:
         marker = 'class="blog-grid"'
         i = h.find(marker)
@@ -409,7 +423,7 @@ def update_sitemap(post, log):
     p = os.path.join(DIR, "sitemap.xml")
     try:
         s = open(p).read()
-        entry = f"<url><loc>{post['url']}</loc></url>"
+        entry = f"<url><loc>{esc(post['url'])}</loc></url>"
         if post["url"] in s:
             log("    sitemap: already present")
             return
@@ -426,8 +440,10 @@ def update_state(new_posts, log):
         if os.path.exists(STATE):
             st = json.load(open(STATE))
         st.setdefault("posts", [])
+        known = {e.get("slug") for e in st["posts"]}
         for p in new_posts:
-            st["posts"].append({"slug": p["slug"], "title": p["title_tag"], "ts": datetime.now().isoformat()})
+            if p["slug"] not in known:
+                st["posts"].append({"slug": p["slug"], "title": p["title_tag"], "ts": datetime.now().isoformat()})
         st["last_run"] = datetime.now().isoformat()
         tmp = STATE + ".tmp"
         with open(tmp, "w") as f:
@@ -439,13 +455,18 @@ def update_state(new_posts, log):
 
 # ------------------------------------------------------------------ main
 def deploy(log):
+    """Commit + push. Netlify auto-builds from GitHub when credits allow; when they
+    don't, the post sits in the repo and goes live on the next successful build —
+    nothing is lost, posts queue up safely. (Netlify CLI direct-deploy was removed
+    10/19: credit exhaustion made it flaky; git-push is the single source of truth.)"""
     try:
         r = subprocess.run(["bash", "-lc",
-            f"cd {DIR} && git add -A && git commit -m 'blog pipeline: auto-post' --quiet; "
-            f"netlify deploy --prod --dir . 2>&1 | grep -E 'Live URL|live' | head -1"],
-            capture_output=True, timeout=600)
+            f"cd {DIR} && git add blog/ blog.html sitemap.xml data/blog_plan.json data/blog_state.json && "
+            f"git commit -m 'blog pipeline: auto-post' --quiet; "
+            f"git push origin main 2>&1 | tail -1"],
+            capture_output=True, timeout=300)
         out = r.stdout.decode().strip()
-        log(f"    deploy: {out or 'committed (deploy output unclear)'}")
+        log(f"    deploy: pushed to GitHub ({out or 'up to date'})")
         return True
     except Exception as exc:
         log(f"    deploy FAILED: {exc}")
@@ -482,12 +503,20 @@ def main():
             if not post:
                 spec["status"] = "skipped"
                 continue
-            path = os.path.join(DIR, "blog", f"{post['slug']}.html")
             html_doc = base_head(post) + post["body"] + base_foot(post)
+            if args.dry_run:
+                # true dry-run: write to /tmp only, leave repo + plan untouched
+                tmp_path = f"/tmp/hms_blog_dryrun_{post['slug']}.html"
+                with open(tmp_path, "w") as f:
+                    f.write(html_doc)
+                log(f"    dry-run render: {tmp_path}")
+                made.pop()  # don't count toward deploy
+                continue
+            path = os.path.join(DIR, "blog", f"{post['slug']}.html")
             os.makedirs(os.path.dirname(path), exist_ok=True)
             with open(path, "w") as f:
                 f.write(html_doc)
-            spec["status"] = "posted" if not args.dry_run else "rendered"
+            spec["status"] = "posted"
             spec["slug"] = post["slug"]
             made.append(post)
             log(f"    rendered: {post['slug']}.html ({len(html_doc.split())} words-ish)")
