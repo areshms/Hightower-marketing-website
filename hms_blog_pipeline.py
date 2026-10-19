@@ -33,10 +33,10 @@ import time
 import urllib.request
 from datetime import datetime
 
-DIR = os.path.expanduser("~/projects/hms-site")
+DIR = os.environ.get("HMS_SITE_DIR") or os.path.expanduser("~/projects/hms-site")
 STATE = os.path.join(DIR, "data", "blog_state.json")
 PLAN = os.path.join(DIR, "data", "blog_plan.json")
-STOREFRONT = "https://shop.hightower-marketing.com"
+STOREFRONT = os.environ.get("HMS_STOREFRONT") or "https://shop.hightower-marketing.com"
 SITE = "https://www.hightower-marketing.com"
 
 # service pages for internal linking (from the nav):
@@ -459,13 +459,19 @@ def deploy(log):
     don't, the post sits in the repo and goes live on the next successful build —
     nothing is lost, posts queue up safely. (Netlify CLI direct-deploy was removed
     10/19: credit exhaustion made it flaky; git-push is the single source of truth.)"""
+    if os.environ.get("HMS_BLOG_SKIP_DEPLOY"):
+        log("    deploy: SKIPPED (HMS_BLOG_SKIP_DEPLOY set — test/sandbox mode)")
+        return True
     try:
-        r = subprocess.run(["bash", "-lc",
+        r = subprocess.run(["bash", "-c",
             f"cd {DIR} && git add blog/ blog.html sitemap.xml data/blog_plan.json data/blog_state.json && "
             f"git commit -m 'blog pipeline: auto-post' --quiet; "
             f"git push origin main 2>&1 | tail -1"],
             capture_output=True, timeout=300)
         out = r.stdout.decode().strip()
+        if "fatal" in out or "error" in out.lower() or "rejected" in out:
+            log(f"    deploy: PUSH PROBLEM ({out[:120]}) — post stays committed, will retry next run")
+            return False
         log(f"    deploy: pushed to GitHub ({out or 'up to date'})")
         return True
     except Exception as exc:
@@ -510,7 +516,6 @@ def main():
                 with open(tmp_path, "w") as f:
                     f.write(html_doc)
                 log(f"    dry-run render: {tmp_path}")
-                made.pop()  # don't count toward deploy
                 continue
             path = os.path.join(DIR, "blog", f"{post['slug']}.html")
             os.makedirs(os.path.dirname(path), exist_ok=True)
