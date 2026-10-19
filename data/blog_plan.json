@@ -2,9 +2,20 @@
   "posts": [
     {
       "type": "product_guide",
+      "category": "Pet",
+      "slug": "best-pet-2026",
+      "status": "posted",
+      "members": [
+        "2-in-1-pet-nail-clippers-led-light-dog-cat-grooming-tool",
+        "cute-fruit-dog-hoodies-pet-clothes-warm-puppy-coat",
+        "pet-hair-remover-mitt"
+      ]
+    },
+    {
+      "type": "product_guide",
       "category": "Home & Lighting",
       "slug": "best-home-lighting-2026",
-      "status": "posted",
+      "status": "pending",
       "members": [
         "creative-double-question-mark-elegant-white-desktop-lamp",
         "fireplace-simulation-flame-aromatherapy-diffuser-home-decor",
@@ -21,15 +32,13 @@
       "type": "product_guide",
       "category": "Beauty & Grooming",
       "slug": "best-beauty-grooming-2026",
-      "status": "posted",
+      "status": "pending",
       "members": [
         "smart-neck-massager-with-heat-tens-pulse-cordless-shoulder-pain-relief",
         "mens-ball-trimmer-groin-body-hair-trimmer-electric-wet-dry-cordless-usb",
-        "2-in-1-pet-nail-clippers-led-light-dog-cat-grooming-tool",
         "teeth-whitening-pen",
         "turmeric-acid-cleansing-pads",
         "blackhead-nose-patches-10pc",
-        "pet-hair-remover-mitt",
         "self-cleaning-hair-brush",
         "gua-sha-massager",
         "led-face-mask"
@@ -39,7 +48,7 @@
       "type": "product_guide",
       "category": "Gifts & Cozy",
       "slug": "best-gifts-cozy-2026",
-      "status": "posted",
+      "status": "pending",
       "members": [
         "teddy-bear-ears-plush-hooded-scarf-warm-faux-fur-winter-hood-beige",
         "giant-black-cat-plush-pillow-70cm-long-cat-stuffed-animal",
@@ -47,7 +56,6 @@
         "to-my-wife-love-letter-fleece-blanket-50x60-in-romantic-gift-for-her",
         "anxiety-ring-fidget-spinner-ring-moon-star-stainless-steel-rotating",
         "rose-flower-led-light-bluetooth-speaker-creative-home-decor",
-        "cute-fruit-dog-hoodies-pet-clothes-warm-puppy-coat",
         "magnetic-led-cable",
         "silk-eye-mask"
       ]
@@ -57,14 +65,14 @@
       "service": "AI Video Ads",
       "path": "/ai-video-ads.html",
       "slug": "ai-video-ads-columbus-ohio",
-      "status": "posted"
+      "status": "pending"
     },
     {
       "type": "service_local",
       "service": "Product Photography",
       "path": "/product-photography.html",
       "slug": "product-photography-columbus-ohio",
-      "status": "posted"
+      "status": "pending"
     },
     {
       "type": "service_local",
@@ -102,5 +110,5 @@
       "status": "pending"
     }
   ],
-  "built": "2026-10-19T03:42:18.600695"
+  "built": "2026-10-19T03:43:46.132232"
 }

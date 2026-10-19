@@ -49,11 +49,13 @@ SERVICES = [
     ("Email Marketing", "/email-marketing.html"),
 ]
 
+# NOTE: iteration order = precedence. Pet checks FIRST so pet items never leak into
+# Beauty & Grooming via the 'nail' keyword ('Pet Nail Clippers' case).
 CATEGORIES = {
+    "Pet": ["pet", "dog", "cat", "nail clipper", "hoodie", "puppy", "grooming tool"],
     "Home & Lighting": ["night light", "projector", "lamp", "flame", "diffuser", "humidifier", "fence light", "string"],
     "Beauty & Grooming": ["massager", "gua sha", "face mask", "blackhead", "teeth", "turmeric", "hair brush", "trimmer", "hair remover", "nail"],
-    "Gifts & Cozy": ["blanket", "plush", "cat", "bear", "hood", "bracelet", "ring", "wreath", "lamp gift"],
-    "Pet": ["pet", "dog", "cat", "nail clipper", "hoodie"],
+    "Gifts & Cozy": ["blanket", "plush", "bear", "hood", "bracelet", "ring", "wreath"],
 }
 
 
@@ -100,6 +102,8 @@ def slim(p):
 
 def categorize(p):
     t = (p["title"] + " " + " ".join(p["tags"])).lower()
+    if "plush" in t or "plushie" in t:
+        return "Gifts & Cozy"  # plush toys are gifts even if animal-shaped
     for cat, kws in CATEGORIES.items():
         if any(k in t for k in kws):
             return cat
