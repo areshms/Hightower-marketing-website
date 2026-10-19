@@ -15,7 +15,7 @@
       "type": "product_guide",
       "category": "Home & Lighting",
       "slug": "best-home-lighting-2026",
-      "status": "pending",
+      "status": "posted",
       "members": [
         "creative-double-question-mark-elegant-white-desktop-lamp",
         "fireplace-simulation-flame-aromatherapy-diffuser-home-decor",
@@ -32,7 +32,7 @@
       "type": "product_guide",
       "category": "Beauty & Grooming",
       "slug": "best-beauty-grooming-2026",
-      "status": "pending",
+      "status": "posted",
       "members": [
         "smart-neck-massager-with-heat-tens-pulse-cordless-shoulder-pain-relief",
         "mens-ball-trimmer-groin-body-hair-trimmer-electric-wet-dry-cordless-usb",
@@ -48,7 +48,7 @@
       "type": "product_guide",
       "category": "Gifts & Cozy",
       "slug": "best-gifts-cozy-2026",
-      "status": "pending",
+      "status": "posted",
       "members": [
         "teddy-bear-ears-plush-hooded-scarf-warm-faux-fur-winter-hood-beige",
         "giant-black-cat-plush-pillow-70cm-long-cat-stuffed-animal",
@@ -65,7 +65,7 @@
       "service": "AI Video Ads",
       "path": "/ai-video-ads.html",
       "slug": "ai-video-ads-columbus-ohio",
-      "status": "pending"
+      "status": "posted"
     },
     {
       "type": "service_local",
