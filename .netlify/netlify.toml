@@ -1,13 +1,13 @@
-functionsDirectory = "/Users/ares.hmsgmail.com/workspace/hightower-premium/netlify/functions"
+functionsDirectory = "/Users/ares.hmsgmail.com/projects/hms-site/netlify/functions"
 functionsDirectoryOrigin = "config-v1"
 headersOrigin = "config"
 plugins = []
 redirects = []
 
 [build]
-publish = "/Users/ares.hmsgmail.com/workspace/hightower-premium"
+publish = "/Users/ares.hmsgmail.com/projects/hms-site"
 publishOrigin = "config"
-functions = "/Users/ares.hmsgmail.com/workspace/hightower-premium/netlify/functions"
+functions = "/Users/ares.hmsgmail.com/projects/hms-site/netlify/functions"
 
 [build.environment]
 

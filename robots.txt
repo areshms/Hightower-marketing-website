@@ -1,0 +1,10 @@
+# Hightower Marketing Strategies — robots
+User-agent: *
+Allow: /
+Disallow: /checkout-video.html
+Disallow: /order-intake.html
+Disallow: /order-success.html
+Disallow: /contact-success.html
+Disallow: /re-data-refinery-success.html
+
+Sitemap: https://www.hightower-marketing.com/sitemap.xml
