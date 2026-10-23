@@ -1,0 +1,2326 @@
+{
+ "url": "https://www.hightower-marketing.com",
+ "at": "2026-10-23T15:26:14.560Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.86,
+    1,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 13,
+    "css": 5,
+    "transitions": 5,
+    "scripted": 3,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 3902,
+     "screens": 4.3,
+     "words": 318,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "We help businesses grow without the guesswork.",
+     "words": 7,
+     "chars": 46,
+     "lines": 4,
+     "size": 72,
+     "vw": 5,
+     "font": "Playfair Display",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.36,
+     "top": 223,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "We help businesses grow without the guesswork.",
+     "words": 7,
+     "lines": 4,
+     "size": 72,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "We help businesses grow without the guesswork.",
+      "words": 7,
+      "chars": 46,
+      "lines": 4,
+      "size": 72,
+      "vw": 5,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 223,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "HMS",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.36,
+      "top": 286,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Three ways we move the needle.",
+      "words": 6,
+      "chars": 30,
+      "lines": 1,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 1057,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Built by someone who actually runs businesses.",
+      "words": 7,
+      "chars": 46,
+      "lines": 3,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 2107,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "12+",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 56,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 2867,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "48h",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 56,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.24,
+      "top": 2867,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "99%",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 56,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.24,
+      "top": 2867,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Ready to grow your business?",
+      "words": 5,
+      "chars": 28,
+      "lines": 1,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 3136,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 4,
+     "over2Lines": 2,
+     "statements": 0,
+     "centered": 5,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      20,
+      24,
+      48,
+      56,
+      72
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6.9
+     },
+     "measureChars": 60,
+     "max": {
+      "size": 72,
+      "vw": 5,
+      "font": "Playfair Display",
+      "text": "We help businesses grow without the gues"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 4,
+     "microLabelShare": 0.016,
+     "microSamples": [
+      "What We Do",
+      "Services",
+      "Company",
+      "Contact"
+     ],
+     "upperShare": 0.03,
+     "centerShare": 0.11,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "What We Do",
+      "above": "Three ways we move the needle.",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 1020
+     },
+     {
+      "text": "About",
+      "above": "Built by someone who actually runs busin",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 17,
+      "top": 2053
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0c0a09",
+     "bodyBgHsl": {
+      "h": 20,
+      "s": 0.14,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0c0a09",
+       "top": 272,
+       "hsl": {
+        "h": 20,
+        "s": 0.14,
+        "l": 0.04
+       }
+      },
+      {
+       "color": "#1c1917",
+       "top": 900,
+       "hsl": {
+        "h": 24,
+        "s": 0.1,
+        "l": 0.1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a8a29e",
+       "share": 0.72
+      },
+      {
+       "color": "#fafaf9",
+       "share": 0.13
+      },
+      {
+       "color": "#78716c",
+       "share": 0.11
+      },
+      {
+       "color": "#0c0a09",
+       "share": 0.03
+      },
+      {
+       "color": "#d97706",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#d97706",
+      "hsl": {
+       "h": 32,
+       "s": 0.95,
+       "l": 0.44
+      },
+      "fg": "#0c0a09"
+     },
+     "lowContrast": [
+      {
+       "text": "Coming soon",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#78716c",
+       "bg": "#292524"
+      },
+      {
+       "text": "Coming soon",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#78716c",
+       "bg": "#292524"
+      },
+      {
+       "text": "Marketing",
+       "ratio": 3.6,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#78716c",
+       "bg": "#1c1917"
+      },
+      {
+       "text": "AI-powered marketing and automation for ",
+       "ratio": 3.6,
+       "need": 4.5,
+       "size": 15,
+       "fg": "#78716c",
+       "bg": "#1c1917"
+      },
+      {
+       "text": "Services",
+       "ratio": 3.6,
+       "need": 4.5,
+       "size": 13,
+       "fg": "#78716c",
+       "bg": "#1c1917"
+      },
+      {
+       "text": "Company",
+       "ratio": 3.6,
+       "need": 4.5,
+       "size": 13,
+       "fg": "#78716c",
+       "bg": "#1c1917"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 3,
+     "radius": 12,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Get Started",
+      "Explore AI Video Ads →",
+      "Contact Us"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 4,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.hero-glow → radial-gradient(50% 50% at 50% 0%, rgba(217, 119, 6, 0.12), rgba(0, 0, 0, 0) 70%)",
+      "div.hero-bg → radial-gradient(at 20% 50%, rgba(217, 119, 6, 0.08) 0%, rgba(0, 0, 0, 0) 50%), radial-gradient(at 80% 20%, rgb",
+      "div.hero-visual-inner → linear-gradient(135deg, rgba(217, 119, 6, 0.08), rgba(120, 113, 108, 0.05))",
+      "div.about-image → linear-gradient(135deg, rgb(28, 25, 23) 0%, rgb(41, 37, 36) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 4,
+     "hairlineSamples": [
+      "nav.nav-hidden 1440px",
+      "section.section-stats 1440px",
+      "footer 1440px",
+      "div.footer-bottom 1104px"
+     ],
+     "outlinedBoxes": 6,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 6,
+     "boxRadius": 20,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1271
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 10,
+     "fixed": true,
+     "height": 73,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "playfair display"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 3902,
+    "margins": {
+     "left": 168,
+     "right": 232
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 900,
+      "words": 37,
+      "media": 0,
+      "middle": 319,
+      "heading": {
+       "text": "We help businesses grow without the guesswork.",
+       "size": 72,
+       "tag": "h1"
+      },
+      "left": 168,
+      "right": 369,
+      "textLeft": 168,
+      "textRight": 369,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section-services",
+      "tag": "section",
+      "top": 900,
+      "height": 982,
+      "words": 125,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Three ways we move the needle.",
+       "size": 48,
+       "tag": "h2"
+      },
+      "left": 168,
+      "right": 232,
+      "textLeft": 168,
+      "textRight": 232,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section-about",
+      "tag": "section",
+      "top": 1882,
+      "height": 880,
+      "words": 0,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": null,
+      "right": null,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section-stats",
+      "tag": "section",
+      "top": 2762,
+      "height": 254,
+      "words": 0,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": null,
+      "right": null,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section-cta",
+      "tag": "section",
+      "top": 3016,
+      "height": 485,
+      "words": 27,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Ready to grow your business?",
+       "size": 48,
+       "tag": "h2"
+      },
+      "left": 411,
+      "right": 411,
+      "textLeft": 411,
+      "textRight": 411,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 3501,
+      "height": 401,
+      "words": 38,
+      "media": 0,
+      "middle": 161,
+      "heading": {
+       "text": "Hightower",
+       "size": 24,
+       "tag": "a"
+      },
+      "left": 168,
+      "right": 168,
+      "textLeft": 168,
+      "textRight": 168,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 732,
+      "height": 288
+     },
+     {
+      "top": 1716,
+      "height": 1424
+     }
+    ],
+    "h1s": [
+     {
+      "text": "We help businesses grow without the guesswork.",
+      "size": 72,
+      "top": 223,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 168,
+      "n": 4
+     },
+     {
+      "x": 209,
+      "n": 4
+     },
+     {
+      "x": 773,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 12,
+    "bodySize": 15,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.11,
+    "voidBox": {
+     "x": 840,
+     "y": 120,
+     "w": 600,
+     "h": 240
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.89,
+    1,
+    0.7,
+    0.29,
+    0.37
+   ],
+   "motion": {
+    "elements": 17,
+    "css": 5,
+    "transitions": 5,
+    "scripted": 7,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 4465,
+     "screens": 4.4,
+     "words": 305,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "We help businesses grow without the guesswork.",
+     "words": 7,
+     "chars": 46,
+     "lines": 2,
+     "size": 40,
+     "vw": 5.2,
+     "font": "Playfair Display",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.94,
+     "top": 399,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "We help businesses grow without the guesswork.",
+     "words": 7,
+     "lines": 2,
+     "size": 40,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "We help businesses grow without the guesswork.",
+      "words": 7,
+      "chars": 46,
+      "lines": 2,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 399,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Three ways we move the needle.",
+      "words": 6,
+      "chars": 30,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 1181,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Built by someone who actually runs businesses.",
+      "words": 7,
+      "chars": 46,
+      "lines": 3,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.42,
+      "top": 2622,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "12+",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 56,
+      "vw": 7.3,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 3432,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "48h",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 56,
+      "vw": 7.3,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.28,
+      "top": 3432,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "99%",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 56,
+      "vw": 7.3,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.28,
+      "top": 3432,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Ready to grow your business?",
+      "words": 5,
+      "chars": 28,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 3725,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 4,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      20,
+      24,
+      32,
+      40,
+      56
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6.9
+     },
+     "measureChars": 38,
+     "max": {
+      "size": 56,
+      "vw": 7.3,
+      "font": "Playfair Display",
+      "text": "12+"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 4,
+     "microLabelShare": 0.017,
+     "microSamples": [
+      "What We Do",
+      "Services",
+      "Company",
+      "Contact"
+     ],
+     "upperShare": 0.03,
+     "centerShare": 0.11,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "What We Do",
+      "above": "Three ways we move the needle.",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 1144
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0c0a09",
+     "bodyBgHsl": {
+      "h": 20,
+      "s": 0.14,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0c0a09",
+       "top": 0,
+       "hsl": {
+        "h": 20,
+        "s": 0.14,
+        "l": 0.04
+       }
+      },
+      {
+       "color": "#1c1917",
+       "top": 1024,
+       "hsl": {
+        "h": 24,
+        "s": 0.1,
+        "l": 0.1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a8a29e",
+       "share": 0.71
+      },
+      {
+       "color": "#fafaf9",
+       "share": 0.13
+      },
+      {
+       "color": "#78716c",
+       "share": 0.11
+      },
+      {
+       "color": "#0c0a09",
+       "share": 0.03
+      },
+      {
+       "color": "#d97706",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#d97706",
+      "hsl": {
+       "h": 32,
+       "s": 0.95,
+       "l": 0.44
+      },
+      "fg": "#0c0a09"
+     },
+     "lowContrast": [
+      {
+       "text": "Coming soon",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#78716c",
+       "bg": "#292524"
+      },
+      {
+       "text": "Coming soon",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#78716c",
+       "bg": "#292524"
+      },
+      {
+       "text": "Marketing",
+       "ratio": 3.6,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#78716c",
+       "bg": "#1c1917"
+      },
+      {
+       "text": "AI-powered marketing and automation for ",
+       "ratio": 3.6,
+       "need": 4.5,
+       "size": 15,
+       "fg": "#78716c",
+       "bg": "#1c1917"
+      },
+      {
+       "text": "Services",
+       "ratio": 3.6,
+       "need": 4.5,
+       "size": 13,
+       "fg": "#78716c",
+       "bg": "#1c1917"
+      },
+      {
+       "text": "Company",
+       "ratio": 3.6,
+       "need": 4.5,
+       "size": 13,
+       "fg": "#78716c",
+       "bg": "#1c1917"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 3,
+     "radius": 12,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Get Started",
+      "Explore AI Video Ads →",
+      "Contact Us"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 3,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.hero-glow → radial-gradient(50% 50% at 50% 0%, rgba(217, 119, 6, 0.12), rgba(0, 0, 0, 0) 70%)",
+      "div.hero-bg → radial-gradient(at 20% 50%, rgba(217, 119, 6, 0.08) 0%, rgba(0, 0, 0, 0) 50%), radial-gradient(at 80% 20%, rgb",
+      "div.about-image → linear-gradient(135deg, rgb(28, 25, 23) 0%, rgb(41, 37, 36) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 4,
+     "hairlineSamples": [
+      "nav 768px",
+      "section.section-stats 768px",
+      "footer 768px",
+      "div.footer-bottom 720px"
+     ],
+     "outlinedBoxes": 5,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 5,
+     "boxRadius": 20,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 73,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "playfair display"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 4465,
+    "margins": {
+     "left": 24,
+     "right": 27
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 1024,
+      "words": 36,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "We help businesses grow without the guesswork.",
+       "size": 40,
+       "tag": "h1"
+      },
+      "left": 24,
+      "right": 102,
+      "textLeft": 24,
+      "textRight": 102,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section-services",
+      "tag": "section",
+      "top": 1024,
+      "height": 1423,
+      "words": 125,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Three ways we move the needle.",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 77,
+      "textLeft": 24,
+      "textRight": 77,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section-about",
+      "tag": "section",
+      "top": 2447,
+      "height": 903,
+      "words": 74,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Built by someone who actually runs businesses.",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 433,
+      "textLeft": 24,
+      "textRight": 433,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section-stats",
+      "tag": "section",
+      "top": 3351,
+      "height": 254,
+      "words": 11,
+      "media": 0,
+      "middle": 113,
+      "heading": {
+       "text": "12+",
+       "size": 56,
+       "tag": "div"
+      },
+      "left": 60,
+      "right": 67,
+      "textLeft": 60,
+      "textRight": 67,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section-cta",
+      "tag": "section",
+      "top": 3605,
+      "height": 460,
+      "words": 27,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Ready to grow your business?",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 161,
+      "right": 161,
+      "textLeft": 161,
+      "textRight": 161,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 4064,
+      "height": 401,
+      "words": 38,
+      "media": 0,
+      "middle": 83,
+      "heading": {
+       "text": "Hightower",
+       "size": 24,
+       "tag": "a"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 680,
+      "height": 464
+     }
+    ],
+    "h1s": [
+     {
+      "text": "We help businesses grow without the guesswork.",
+      "size": 40,
+      "top": 399,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 24,
+      "n": 8
+     },
+     {
+      "x": 65,
+      "n": 8
+     }
+    ],
+    "leftBlocks": 16,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.68,
+    0.75,
+    0.75,
+    0.75,
+    0.75,
+    0.75,
+    0.75
+   ],
+   "motion": {
+    "elements": 13,
+    "css": 5,
+    "transitions": 5,
+    "scripted": 3,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 525,
+     "h": 1137
+    },
+    "page": {
+     "height": 5316,
+     "screens": 4.7,
+     "words": 305,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "We help businesses grow without the guesswork.",
+     "words": 7,
+     "chars": 46,
+     "lines": 3,
+     "size": 40,
+     "vw": 7.6,
+     "font": "Playfair Display",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.65,
+     "top": 238,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "We help businesses grow without the guesswork.",
+     "words": 7,
+     "lines": 3,
+     "size": 40,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "We help businesses grow without the guesswork.",
+      "words": 7,
+      "chars": 46,
+      "lines": 3,
+      "size": 40,
+      "vw": 7.6,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.65,
+      "top": 238,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Hightower MARKETING",
+      "words": 2,
+      "chars": 19,
+      "lines": 1,
+      "size": 24,
+      "vw": 4.6,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.42,
+      "top": 800,
+      "mixedFonts": [
+       "Playfair Display",
+       "Inter"
+      ],
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Three ways we move the needle.",
+      "words": 6,
+      "chars": 30,
+      "lines": 2,
+      "size": 32,
+      "vw": 6.1,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.65,
+      "top": 1001,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Built by someone who actually runs businesses.",
+      "words": 7,
+      "chars": 46,
+      "lines": 6,
+      "size": 32,
+      "vw": 6.1,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 2762,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "12+",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 56,
+      "vw": 10.7,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 4092,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "48h",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 56,
+      "vw": 10.7,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.18,
+      "top": 4092,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "99%",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 56,
+      "vw": 10.7,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.19,
+      "top": 4092,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Ready to grow your business?",
+      "words": 5,
+      "chars": 28,
+      "lines": 2,
+      "size": 32,
+      "vw": 6.1,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.65,
+      "top": 4409,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Hightower MARKETING",
+      "words": 2,
+      "chars": 19,
+      "lines": 2,
+      "size": 24,
+      "vw": 4.6,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.21,
+      "top": 4891,
+      "mixedFonts": [
+       "Playfair Display",
+       "Inter"
+      ],
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 6,
+     "over2Lines": 2,
+     "statements": 0,
+     "centered": 4,
+     "medianWords": 2,
+     "mixedFontHeadings": 2
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.91,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      20,
+      24,
+      32,
+      40,
+      56
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.7,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6.9
+     },
+     "measureChars": 19,
+     "max": {
+      "size": 56,
+      "vw": 10.7,
+      "font": "Playfair Display",
+      "text": "12+"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 4,
+     "microLabelShare": 0.017,
+     "microSamples": [
+      "What We Do",
+      "Services",
+      "Company",
+      "Contact"
+     ],
+     "upperShare": 0.03,
+     "centerShare": 0.11,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "What We Do",
+      "above": "Three ways we move the needle.",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 964
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0c0a09",
+     "bodyBgHsl": {
+      "h": 20,
+      "s": 0.14,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#0c0a09",
+       "top": 257,
+       "hsl": {
+        "h": 20,
+        "s": 0.14,
+        "l": 0.04
+       }
+      },
+      {
+       "color": "#1c1917",
+       "top": 844,
+       "hsl": {
+        "h": 24,
+        "s": 0.1,
+        "l": 0.1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a8a29e",
+       "share": 0.71
+      },
+      {
+       "color": "#fafaf9",
+       "share": 0.13
+      },
+      {
+       "color": "#78716c",
+       "share": 0.11
+      },
+      {
+       "color": "#0c0a09",
+       "share": 0.03
+      },
+      {
+       "color": "#d97706",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#d97706",
+      "hsl": {
+       "h": 32,
+       "s": 0.95,
+       "l": 0.44
+      },
+      "fg": "#0c0a09"
+     },
+     "lowContrast": [
+      {
+       "text": "Coming soon",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#78716c",
+       "bg": "#292524"
+      },
+      {
+       "text": "Coming soon",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#78716c",
+       "bg": "#292524"
+      },
+      {
+       "text": "Marketing",
+       "ratio": 3.6,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#78716c",
+       "bg": "#1c1917"
+      },
+      {
+       "text": "AI-powered marketing and automation for ",
+       "ratio": 3.6,
+       "need": 4.5,
+       "size": 15,
+       "fg": "#78716c",
+       "bg": "#1c1917"
+      },
+      {
+       "text": "Services",
+       "ratio": 3.6,
+       "need": 4.5,
+       "size": 13,
+       "fg": "#78716c",
+       "bg": "#1c1917"
+      },
+      {
+       "text": "Company",
+       "ratio": 3.6,
+       "need": 4.5,
+       "size": 13,
+       "fg": "#78716c",
+       "bg": "#1c1917"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 3,
+     "radius": 12,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Get Started",
+      "Explore AI Video Ads →",
+      "Contact Us"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 3,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.hero-glow → radial-gradient(50% 50% at 50% 0%, rgba(217, 119, 6, 0.12), rgba(0, 0, 0, 0) 70%)",
+      "div.hero-bg → radial-gradient(at 20% 50%, rgba(217, 119, 6, 0.08) 0%, rgba(0, 0, 0, 0) 50%), radial-gradient(at 80% 20%, rgb",
+      "div.about-image → linear-gradient(135deg, rgb(28, 25, 23) 0%, rgb(41, 37, 36) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 4,
+     "hairlineSamples": [
+      "nav.nav-hidden 525px",
+      "section.section-stats 390px",
+      "footer 390px",
+      "div.footer-bottom 342px"
+     ],
+     "outlinedBoxes": 4,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 4,
+     "boxRadius": 20,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 844
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1270
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 73,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "playfair display"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 525,
+     "h": 1137
+    },
+    "pageH": 5316,
+    "margins": {
+     "left": 24,
+     "right": 11
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 844,
+      "words": 36,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "We help businesses grow without the guesswork.",
+       "size": 40,
+       "tag": "h1"
+      },
+      "left": 24,
+      "right": 164,
+      "textLeft": 24,
+      "textRight": 164,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section-services",
+      "tag": "section",
+      "top": 844,
+      "height": 1719,
+      "words": 125,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Three ways we move the needle.",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 163,
+      "textLeft": 24,
+      "textRight": 163,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section-about",
+      "tag": "section",
+      "top": 2563,
+      "height": 1424,
+      "words": 0,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": null,
+      "right": null,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section-stats",
+      "tag": "section",
+      "top": 3987,
+      "height": 302,
+      "words": 0,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": null,
+      "right": null,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.section-cta",
+      "tag": "section",
+      "top": 4289,
+      "height": 538,
+      "words": 27,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Ready to grow your business?",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 30,
+      "right": 165,
+      "textLeft": 30,
+      "textRight": 165,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 4827,
+      "height": 489,
+      "words": 38,
+      "media": 0,
+      "middle": 40,
+      "heading": {
+       "text": "Hightower",
+       "size": 24,
+       "tag": "a"
+      },
+      "left": 24,
+      "right": 0,
+      "textLeft": 24,
+      "textRight": 0,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 2396,
+      "height": 2016
+     }
+    ],
+    "h1s": [
+     {
+      "text": "We help businesses grow without the guesswork.",
+      "size": 40,
+      "top": 238,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "hello@hightower-marketing.com",
+      "side": "right",
+      "px": 0
+     },
+     {
+      "text": "Columbus, Ohio",
+      "side": "right",
+      "px": 11
+     }
+    ],
+    "edges": [
+     {
+      "x": 65,
+      "n": 8
+     },
+     {
+      "x": 24,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 12,
+    "bodySize": 15,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 1440,
+   "message": "2 headline(s) wrap past two lines at 1440px: \"We help businesses grow without the guesswork.\" → 4 lines (7 words, 72px); \"Built by someone who actually runs businesses.\" → 3 lines (7 words, 48px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 36px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "2 eyebrow/kicker label(s) above headings: \"What We Do\" above \"Three ways we move the needle.\"; \"About\" above \"Built by someone who actually runs busin\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "4 tiny uppercase letter-spaced labels (e.g. \"What We Do\", \"Services\", \"Company\", \"Contact\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 1440,
+   "message": "4 gradient fill(s): div.hero-glow → radial-gradient(50% 50% at 50% 0%, rgba(217, 119, 6, 0.12), rgba(0, 0, 0, 0) 70%) | div.hero-bg → radial-gradient(at 20% 50%, rgba(217, 119, 6, 0.08) 0%, rgba(0, 0, 0, 0) 50%), radial-gradient(at 80% 20%, rgb | div.hero-visual-inner → linear-gradient(135deg, rgba(217, 119, 6, 0.08), rgba(120, 113, 108, 0.05))",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "4 thin rule(s)/divider line(s): nav.nav-hidden 1440px | section.section-stats 1440px | footer 1440px | div.footer-bottom 1104px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "6 boxes drawn with a 1px outline.",
+   "fix": "Define a surface by its fill (one tone step from the page) or leave the content unboxed.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "contrast",
+   "width": 1440,
+   "message": "Low-contrast text: \"Coming soon\" 3.2:1 needs 4.5:1; \"Coming soon\" 3.2:1 needs 4.5:1; \"Marketing\" 3.6:1 needs 4.5:1; \"AI-powered marketing and automation for \" 3.6:1 needs 4.5:1",
+   "fix": "Darken or lighten the text colour.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "11 different font sizes (12, 13, 14, 15, 17, 18, 20, 24, 48, 56, 72).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "grey-body",
+   "width": 1440,
+   "message": "The running text is a soft grey on its ground (6.9:1).",
+   "fix": "Set body copy in the full ink (7:1 or more). Keep the muted ink for secondary notes; pages read thin and unfinished when everything is grey.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 168px on the left, 232px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "blank-gap",
+   "width": 1440,
+   "message": "1 stretch(es) of the page hold nothing at all: 1424px at 1716px (the screen is 900px tall).",
+   "fix": "Close the gap: a section gap is 120–240px on desktop and 72–112px on a phone. Look for a min-height: 100vh on a short section, an empty grid row, a hidden element still holding its space, or a reveal that never fired. A deliberate rest is a placed picture or colour field, not nothing.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "long-pin",
+   "width": 1440,
+   "message": "The same large text stays on screen for 4 screens in a row: \"Three ways we move the needle.\"",
+   "fix": "A pinned element earns two screens, and something must change at each. Shorten the run or give every screen its own content."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 13 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 768,
+   "message": "1 headline(s) wrap past two lines at 768px: \"Built by someone who actually runs businesses.\" → 3 lines (7 words, 32px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 32px or less."
+  },
+  {
+   "level": "WARN",
+   "id": "lopsided",
+   "width": 768,
+   "message": "A section keeps its content on one side and leaves 433px of the width empty: \"Built by someone who actually runs businesses.\".",
+   "fix": "Fill the other side with what the section has (its picture, a second column, the figure), or defend the void in one sentence."
+  },
+  {
+   "level": "WARN",
+   "id": "blank-gap",
+   "width": 768,
+   "message": "A 464px stretch at 680px holds nothing.",
+   "fix": "Check that it is a deliberate rest (once per page at most); otherwise close it to the normal section gap."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "2 headline(s) wrap past two lines at 390px: \"We help businesses grow without the guesswork.\" → 3 lines (7 words, 40px); \"Built by someone who actually runs businesses.\" → 6 lines (7 words, 32px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  },
+  {
+   "level": "WARN",
+   "id": "mixed-font-headline",
+   "width": 390,
+   "message": "2 headline(s) switch typeface or to italic mid-line (the \"one italic serif word\" move).",
+   "fix": "Set the whole headline in one face. Emphasis comes from the words."
+  },
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 390,
+   "message": "2 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid."
+  },
+  {
+   "level": "FAIL",
+   "id": "edge-text",
+   "width": 390,
+   "message": "2 text block(s) sit within 12px of the screen edge: \"hello@hightower-marketing.com\" (0px from the right); \"Columbus, Ohio\" (11px from the right)",
+   "fix": "Keep text inside the page margin (16–20px). Only display type deliberately bled past the edge may touch it."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/before/desktop-fold.jpg",
+   "pages": [
+    "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/before/desktop-page-01.jpg",
+    "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/before/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/before/tablet-fold.jpg",
+   "pages": [
+    "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/before/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/before/mobile-fold.jpg",
+   "pages": [
+    "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/before/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
