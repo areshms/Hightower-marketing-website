@@ -12,9 +12,9 @@
     "semantic_hash": ""
   },
   ".taste-skill/after/report.json": {
-    "mtime": 1792777090.6335738,
-    "seen": 1792777162.933805,
-    "ast_hash": "4c58f5b396320a112e3ea9fcba81bd4f",
+    "mtime": 1792779654.1130168,
+    "seen": 1792779793.519875,
+    "ast_hash": "29ca8b610f9bb257a0ab572dcb9c8c90",
     "semantic_hash": ""
   },
   ".taste-skill/before/report.json": {
@@ -426,9 +426,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1792777046.8330073,
-    "seen": 1792777162.933839,
-    "ast_hash": "0d198fadf939a1a11578663573cd5aa0",
+    "mtime": 1792779605.851269,
+    "seen": 1792779793.5199099,
+    "ast_hash": "f3e28682f6a5315da0ba24e19d7fe3aa",
     "semantic_hash": ""
   },
   "order-intake.html": {
@@ -492,63 +492,63 @@
     "semantic_hash": ""
   },
   ".taste-skill/after/desktop-fold.jpg": {
-    "mtime": 1792777054.26221,
-    "seen": 1792777162.9338439,
-    "ast_hash": "57963c8bfd0ac87eb1306d8e90bc70d2",
+    "mtime": 1792779612.8873477,
+    "seen": 1792779793.519915,
+    "ast_hash": "bfe8d453758210cda044f83f8da6ead5",
     "semantic_hash": ""
   },
   ".taste-skill/after/desktop-page-01.jpg": {
-    "mtime": 1792777062.4307163,
-    "seen": 1792777162.933845,
-    "ast_hash": "2b35b3cc0b4add15f938036b7e410aab",
+    "mtime": 1792779623.5444958,
+    "seen": 1792779793.519916,
+    "ast_hash": "91a7c53f345accf4e4434a84f7b19cb9",
     "semantic_hash": ""
   },
   ".taste-skill/after/desktop-page-02.jpg": {
-    "mtime": 1792777062.5306325,
-    "seen": 1792777162.933845,
-    "ast_hash": "44b9d4eff6bb329ee868a8f00594d999",
+    "mtime": 1792779623.7462835,
+    "seen": 1792779793.519916,
+    "ast_hash": "9a09b74cfc5e80bd2babffc534c6c7b5",
     "semantic_hash": ""
   },
   ".taste-skill/after/desktop-page-03.jpg": {
-    "mtime": 1792777062.5974052,
-    "seen": 1792777162.933846,
-    "ast_hash": "0fcb25bb8e3e04acaad78c8860845382",
+    "mtime": 1792779623.9713137,
+    "seen": 1792779793.519917,
+    "ast_hash": "5a45df05bf18a81abf87ae1da9b6fdf4",
     "semantic_hash": ""
   },
   ".taste-skill/after/mobile-fold.jpg": {
-    "mtime": 1792777076.855173,
-    "seen": 1792777162.933847,
-    "ast_hash": "7ea90613ad1612dde5264157504600f2",
+    "mtime": 1792779639.5539725,
+    "seen": 1792779793.519917,
+    "ast_hash": "b9c83fc0fd074a41d188f55d48317a51",
     "semantic_hash": ""
   },
   ".taste-skill/after/mobile-page-01.jpg": {
-    "mtime": 1792777088.5531106,
-    "seen": 1792777162.933847,
-    "ast_hash": "195839b8d815cb332cdf2a398326674e",
+    "mtime": 1792779651.7630854,
+    "seen": 1792779793.519918,
+    "ast_hash": "9742b1b5099add1a834b2e8637e9a82f",
     "semantic_hash": ""
   },
   ".taste-skill/after/mobile-page-02.jpg": {
-    "mtime": 1792777088.6601589,
-    "seen": 1792777162.9338481,
-    "ast_hash": "686273776f75aaddf1a6dda6dab25f94",
+    "mtime": 1792779652.0817297,
+    "seen": 1792779793.519918,
+    "ast_hash": "55e856f8a4e1bb3ad38d303cec1b9ee1",
     "semantic_hash": ""
   },
   ".taste-skill/after/tablet-fold.jpg": {
-    "mtime": 1792777064.9675894,
-    "seen": 1792777162.9338481,
-    "ast_hash": "7c2252c1d20d76ba53b5ede2ce0d8035",
+    "mtime": 1792779626.2759469,
+    "seen": 1792779793.5199192,
+    "ast_hash": "d5f429786be8967ac476640dd03a852b",
     "semantic_hash": ""
   },
   ".taste-skill/after/tablet-page-01.jpg": {
-    "mtime": 1792777074.4341164,
-    "seen": 1792777162.9338481,
-    "ast_hash": "e190bc11228464f882e4aaecf5e37dec",
+    "mtime": 1792779637.0706363,
+    "seen": 1792779793.5199192,
+    "ast_hash": "c7f785282a54c38ee2b3b8727ab23e29",
     "semantic_hash": ""
   },
   ".taste-skill/after/tablet-page-02.jpg": {
-    "mtime": 1792777074.549206,
-    "seen": 1792777162.933849,
-    "ast_hash": "ef69381b7b4c05b2ebf8d217ff907e7d",
+    "mtime": 1792779637.212735,
+    "seen": 1792779793.5199192,
+    "ast_hash": "80c2f0ebcc573c8367f6ad884b4cf029",
     "semantic_hash": ""
   },
   ".taste-skill/before/desktop-fold.jpg": {
@@ -1395,6 +1395,36 @@
     "mtime": 1792378439.8497868,
     "seen": 1792777162.933907,
     "ast_hash": "283e8e9a359c81403afe3b660a7949ee",
+    "semantic_hash": ""
+  },
+  ".taste-skill/film/report.json": {
+    "mtime": 1792779273.8288333,
+    "seen": 1792779793.5198772,
+    "ast_hash": "faf3fa715fd22f777a9dfb262c46f953",
+    "semantic_hash": ""
+  },
+  ".taste-skill/RESEARCH-ai-automation-agency-websites-2026-10-23.md": {
+    "mtime": 1792778090.1138175,
+    "seen": 1792779793.519895,
+    "ast_hash": "1f4d137eec19f60e8084d60d68869e45",
+    "semantic_hash": ""
+  },
+  ".taste-skill/film/mobile-fold.jpg": {
+    "mtime": 1792779261.4578552,
+    "seen": 1792779793.519923,
+    "ast_hash": "97961b80faea6f0ab21c9c7989c12057",
+    "semantic_hash": ""
+  },
+  ".taste-skill/film/mobile-page-01.jpg": {
+    "mtime": 1792779273.3371089,
+    "seen": 1792779793.519924,
+    "ast_hash": "9788b82415ae5897eeb913efb0dd06e8",
+    "semantic_hash": ""
+  },
+  ".taste-skill/film/mobile-page-02.jpg": {
+    "mtime": 1792779273.4246101,
+    "seen": 1792779793.519924,
+    "ast_hash": "223fe12d7a05487852b5092d3acf6dd6",
     "semantic_hash": ""
   }
 }

@@ -1,17 +1,17 @@
 # Graph Report - hms-site  (2026-10-23)
 
 ## Corpus Check
-- 42 files · ~3,653,749 words
+- 44 files · ~3,682,722 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 10 file(s) not represented in the graph (top: (none) 2, .zip 2, .toml 2)
 
 ## Summary
-- 482 nodes · 902 edges · 32 communities (24 shown, 8 thin omitted)
+- 488 nodes · 907 edges · 34 communities (25 shown, 9 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 62 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f4b62303`
+- Built from commit: `a66bd6d7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -23,7 +23,7 @@
 - ScrollTrigger.min.js
 - 2. Pipeline Architecture
 - n
-- re
+- link_mesh.py
 - s
 - Cc
 - package.json
@@ -46,6 +46,8 @@
 - Vb
 - Wb
 - M
+- g_oauth_capture.py
+- Research: What high-converting AI automation agency websites have (2026-10-23)
 
 ## God Nodes (most connected - your core abstractions)
 1. `Cc()` - 18 edges
@@ -74,15 +76,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (32 total, 8 thin omitted)
+## Communities (34 total, 9 thin omitted)
 
 ### Community 0 - "render.py"
-Cohesion: 0.05
-Nodes (29): _card_html(), _iso_to_display(), ValidationLimits, commit_and_push(), deploy_netlify(), run_git(), pick_query_opportunities(), anchor_audit() (+21 more)
+Cohesion: 0.06
+Nodes (31): _card_html(), _iso_to_display(), parse_post_summary(), update_blog_cards(), ValidationLimits, pick_query_opportunities(), generate_gsc_answer(), generate_product_guide() (+23 more)
 
 ### Community 1 - "hms_blog_pipeline.py"
 Cohesion: 0.06
-Nodes (22): load_gsc_cache(), refresh_gsc_cache(), Handler, base_foot(), base_head(), best_for(), buy_line(), categorize() (+14 more)
+Nodes (23): commit_and_push(), deploy_netlify(), run_git(), load_gsc_cache(), refresh_gsc_cache(), base_foot(), base_head(), best_for() (+15 more)
 
 ### Community 2 - "lenis.min.js"
 Cohesion: 0.08
@@ -104,9 +106,9 @@ Nodes (23): 1. Post Types (Ranked by SEO Impact), 2. Pipeline Architecture, 3. I
 Cohesion: 0.31
 Nodes (19): a(), e(), i(), n(), c(), d(), f(), i() (+11 more)
 
-### Community 7 - "re"
+### Community 7 - "link_mesh.py"
 Cohesion: 0.24
-Nodes (10): parse_post_summary(), update_blog_cards(), count_h2(), count_words(), extract_title(), has_blocked_phrase(), is_duplicate_title(), passes_gates() (+2 more)
+Nodes (6): anchor_audit(), build_post_targets(), build_product_targets(), build_service_targets(), LinkTarget, select_links()
 
 ### Community 8 - "s"
 Cohesion: 0.17
@@ -172,25 +174,29 @@ Nodes (5): Bb(), Cb(), Context(), db(), gb()
 Cohesion: 0.50
 Nodes (4): ha(), Kc(), Mc(), Tb()
 
+### Community 33 - "Research: What high-converting AI automation agency websites have (2026-10-23)"
+Cohesion: 0.33
+Nodes (5): Gap list for hms-site v3 (current homepage), Honesty rules (all sources): never invent clients/numbers; label illustrative work; small real, Research: What high-converting AI automation agency websites have (2026-10-23), Sources, The universal section pattern (all sources agree)
+
 ## Knowledge Gaps
 - **1 isolated node(s):** `stripe`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 169 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 174 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `i()` connect `lenis.min.js` to `nc`?**
-  _High betweenness centrality (0.039) - this node is a cross-community bridge._
+  _High betweenness centrality (0.038) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `Cc()` (e.g. with `Gq()` and `Qq()`) actually correct?**
   _`Cc()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `stripe` to the rest of the system?**
   _1 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.05070422535211268 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05674044265593561 - nodes in this community are weakly interconnected._
 - **Why does `s()` connect `s` to `lenis.min.js`, `gsap.min.js`, `Tween`, `hf`, `ae`?**
-  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `n()` (e.g. with `c()` and `f()`) actually correct?**
   _`n()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Should `hms_blog_pipeline.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.055811571940604196 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.061581920903954805 - nodes in this community are weakly interconnected._
