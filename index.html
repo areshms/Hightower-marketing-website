@@ -1,1029 +1,479 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hightower Marketing Strategies</title>
-    <meta name="description" content="AI marketing agency in Columbus, Ohio. Data-driven digital strategy, AI video ads, automation and web design that show real ROI for growing businesses.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-deep: #0c0a09;
-            --bg-elevated: #1c1917;
-            --bg-card: #292524;
-            --accent-gold: #d97706;
-            --accent-gold-light: #f59e0b;
-            --text-primary: #fafaf9;
-            --text-secondary: #a8a29e;
-            --text-muted: #78716c;
-            --border: rgba(250, 250, 249, 0.08);
-            --glass: rgba(28, 25, 23, 0.6);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-deep);
-            color: var(--text-primary);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-        html { scroll-behavior: smooth; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg-deep); }
-        ::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 4px; }
-        .service-card, .case-card, .blog-card, .pricing-card, .template-card {
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.3s ease;
-        }
-        .service-card:hover, .case-card:hover, .blog-card:hover, .pricing-card:hover, .template-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(217, 119, 6, 0.15), 0 0 60px rgba(217, 119, 6, 0.05);
-        }
-        .btn-primary, .btn-animated {
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .btn-primary:hover, .btn-animated:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 30px rgba(217, 119, 6, 0.4);
-        }
-        nav { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease; }
-        nav.nav-hidden { transform: translateY(-100%); }
-    
-
-        /* Noise texture overlay */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0.03;
-            pointer-events: none;
-            z-index: 1000;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 48px;
-        }
-
-        @media (max-width: 768px) {
-            .container { padding: 0 24px; }
-        }
-
-        /* ===== NAVIGATION ===== */
-        nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 100;
-            background: rgba(12, 10, 9, 0.8);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .nav-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 72px;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--text-primary);
-            text-decoration: none;
-            letter-spacing: -0.02em;
-        }
-
-        .logo span {
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            font-weight: 300;
-            color: var(--text-muted);
-            margin-left: 8px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--accent-gold);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            background: var(--accent-gold);
-            color: var(--bg-deep);
-            padding: 10px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .nav-cta:hover {
-            background: var(--accent-gold-light);
-            transform: translateY(-1px);
-        }
-
-        /* ===== HERO ===== */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            padding-top: 72px;
-        }
-        /* ===== RETRO GRID ANIMATION (from 21st.dev Hero Section Dark) ===== */
-        .hero-retro-grid {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            overflow: hidden;
-            perspective: 200px;
-            opacity: 0.4;
-            pointer-events: none;
-        }
-
-        .hero-retro-grid::before {
-            content: '';
-            position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background-image:
-                linear-gradient(to right, rgba(217, 119, 6, 0.15) 1px, transparent 0),
-                linear-gradient(to bottom, rgba(217, 119, 6, 0.15) 1px, transparent 0);
-            background-size: 60px 60px;
-            background-repeat: repeat;
-            transform: rotateX(65deg);
-            transform-origin: 50% 0;
-            animation: gridScroll 20s linear infinite;
-        }
-
-        @keyframes gridScroll {
-            0% { transform: rotateX(65deg) translateY(0); }
-            100% { transform: rotateX(65deg) translateY(60px); }
-        }
-
-        .hero-glow {
-            position: absolute;
-            top: -20%; left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            height: 80%;
-            background: radial-gradient(ellipse 50% 50% at 50% 0%, rgba(217, 119, 6, 0.12), transparent 70%);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        /* ===== ANIMATED CTA BUTTON ===== */
-        .btn-animated {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--accent-gold);
-            color: var(--bg-deep);
-            padding: 14px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            overflow: hidden;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-animated::before {
-            content: '';
-            position: absolute;
-            inset: -2px;
-            border-radius: 14px;
-            background: linear-gradient(90deg, #d97706, #f59e0b, #d97706);
-            background-size: 200% 100%;
-            z-index: -1;
-            animation: gradientShift 3s ease infinite;
-        }
-
-        .btn-animated:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(217, 119, 6, 0.3);
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        /* ===== FLOATING LABEL BADGE ===== */
-        
-
-        
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ===== HERO ENHANCEMENTS ===== */
-        .hero-title {
-            animation: fadeInUp 0.6s ease-out 0.3s both;
-        }
-
-        .hero-subtitle {
-            animation: fadeInUp 0.6s ease-out 0.5s both;
-        }
-
-        .hero-cta-group {
-            animation: fadeInUp 0.6s ease-out 0.7s both;
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 500;
-            color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-1px);
-        }
-
-        /* Hero right side visual */
-        .hero-visual {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 400px;
-        }
-
-        .hero-visual-inner {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-            aspect-ratio: 4/3;
-            border-radius: 24px;
-            background: linear-gradient(135deg, rgba(217, 119, 6, 0.08), rgba(120, 113, 108, 0.05));
-            border: 1px solid rgba(217, 119, 6, 0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .hero-visual-inner::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 30% 30%, rgba(217, 119, 6, 0.1), transparent 60%);
-        }
-
-        .hero-visual-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 48px;
-            font-weight: 700;
-            color: rgba(217, 119, 6, 0.2);
-            text-align: center;
-            z-index: 2;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-            .hero-visual { display: none; }
-            .hero-retro-grid::before { background-size: 40px 40px; }
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: 
-                radial-gradient(ellipse at 20% 50%, rgba(217, 119, 6, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 20%, rgba(120, 113, 108, 0.05) 0%, transparent 40%),
-                var(--bg-deep);
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* ===== HERO ===== */
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(40px, 5vw, 72px);
-            font-weight: 600;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-            margin-bottom: 24px;
-        }
-
-        .hero-subtitle {
-            font-size: 18px;
-            color: var(--text-secondary);
-            max-width: 480px;
-            margin-bottom: 40px;
-            line-height: 1.7;
-        }
-
-        .cta-group {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: var(--accent-gold);
-            color: var(--bg-deep);
-            padding: 14px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-gold-light);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(217, 119, 6, 0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-primary);
-            padding: 14px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 500;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(250, 250, 249, 0.05);
-            border-color: rgba(250, 250, 249, 0.2);
-        }
-
-        .hero-visual {
-            position: relative;
-        }
-
-        .hero-card {
-            background: var(--glass);
-            backdrop-filter: blur(40px) saturate(180%);
-            -webkit-backdrop-filter: blur(40px) saturate(180%);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(217, 119, 6, 0.1) 0%, transparent 60%);
-            animation: slowRotate 20s linear infinite;
-        }
-
-        @keyframes slowRotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .stat-row {
-            display: flex;
-            gap: 32px;
-            margin-top: 24px;
-        }
-
-        .stat {
-            text-align: left;
-        }
-
-        .stat-value {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            font-weight: 600;
-            color: var(--accent-gold);
-        }
-
-        .stat-label {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-top: 4px;
-        }
-
-        /* ===== SERVICES ===== */
-        .section-services {
-            padding: 120px 0;
-            background: var(--bg-elevated);
-            position: relative;
-        }
-
-        .section-label {
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--accent-gold);
-            margin-bottom: 16px;
-        }
-
-        h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(32px, 4vw, 48px);
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-        }
-
-        .section-subtitle {
-            font-size: 17px;
-            color: var(--text-secondary);
-            max-width: 540px;
-            margin-bottom: 64px;
-            line-height: 1.7;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        @media (max-width: 768px) {
-            .services-grid { grid-template-columns: 1fr; }
-            .hero-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
-        }
-
-        .service-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 40px;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(217, 119, 6, 0.06), transparent 40%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            pointer-events: none;
-        }
-
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(217, 119, 6, 0.2);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-
-        
-
-        .service-card h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .service-card p {
-            font-size: 15px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .service-link {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--accent-gold);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: gap 0.3s ease;
-        }
-
-        .service-card:hover .service-link {
-            gap: 12px;
-        }
-
-        .coming-soon {
-            display: inline-block;
-            padding: 4px 12px;
-            background: rgba(250, 250, 249, 0.05);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            font-size: 12px;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        /* ===== ABOUT ===== */
-        .section-about {
-            padding: 120px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .about-text p {
-            font-size: 17px;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 24px;
-        }
-
-        .about-visual {
-            position: relative;
-        }
-
-        .about-image {
-            width: 100%;
-            aspect-ratio: 4/5;
-            background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
-            border-radius: 24px;
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: radial-gradient(circle, rgba(217, 119, 6, 0.08) 0%, transparent 50%);
-            animation: slowRotate 30s linear infinite;
-        }
-
-        /* ===== STATS ===== */
-        .section-stats {
-            padding: 80px 0;
-            background: var(--bg-elevated);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            text-align: center;
-        }
-
-        .stat-block .number {
-            font-family: 'Playfair Display', serif;
-            font-size: 56px;
-            font-weight: 600;
-            color: var(--accent-gold);
-            line-height: 1;
-            margin-bottom: 12px;
-        }
-
-        .stat-block .label {
-            font-size: 15px;
-            color: var(--text-secondary);
-        }
-
-        /* ===== CTA ===== */
-        .section-cta {
-            padding: 120px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .section-cta::before {
-            content: '';
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(217, 119, 6, 0.06) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .section-cta h2 {
-            margin-bottom: 20px;
-        }
-
-        .section-cta > .container > p {
-            font-size: 17px;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            padding: 60px 0 40px;
-            border-top: 1px solid var(--border);
-            background: var(--bg-elevated);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .footer-brand p {
-            font-size: 15px;
-            color: var(--text-muted);
-            margin-top: 12px;
-            max-width: 280px;
-        }
-
-        .footer-links h4 {
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-
-        .footer-links a {
-            display: block;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 14px;
-            margin-bottom: 12px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-gold);
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 40px;
-            border-top: 1px solid var(--border);
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-    </style>
-    <link rel="stylesheet" href="/aos.css">
-    <script src="/aos.js"></script>
-    <!-- motion layer (lenis + gsap, security-scanned 2026-10-16) -->
-    <script src="/vendor/lenis.min.js"></script>
-    <script src="/vendor/gsap.min.js"></script>
-    <script src="/vendor/ScrollTrigger.min.js"></script>
-    <script src="/vendor/hms-motion.js" defer></script>
-<link rel="canonical" href="https://www.hightower-marketing.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Hightower Marketing Strategies">
-    <meta property="og:title" content="Hightower Marketing Strategies">
-    <meta property="og:description" content="AI marketing agency in Columbus, Ohio. Data-driven digital strategy, AI video ads, automation and web design that show real ROI for growing businesses.">
-    <meta property="og:url" content="https://www.hightower-marketing.com/">
-    <meta property="og:image" content="https://www.hightower-marketing.com/og-cover.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hightower Marketing Strategies">
-    <meta name="twitter:description" content="AI marketing agency in Columbus, Ohio. Data-driven digital strategy, AI video ads, automation and web design that show real ROI for growing businesses.">
-    <meta name="twitter:image" content="https://www.hightower-marketing.com/og-cover.jpg">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Hightower Marketing Strategies",
-      "url": "https://www.hightower-marketing.com/",
-      "description": "AI marketing agency in Columbus, Ohio. Data-driven digital strategy, AI video ads, automation and web design that show real ROI for growing businesses.",
-      "logo": "https://www.hightower-marketing.com/logo.png",
-      "sameAs": [
-        "https://shop.hightower-marketing.com"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Columbus",
-        "addressRegion": "OH",
-        "addressCountry": "US"
-      }
-    }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hightower Marketing Strategies: An operator's marketing practice in Columbus, Ohio</title>
+<meta name="description" content="Marketing, automation and e-commerce run by someone who actually runs the businesses. Columbus, Ohio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#fafaf9;
+  --ink:#1c1917;
+  --ground:#292524;
+  --coal:#0c0a09;
+  --gold:#d97706;
+  --gold-bright:#f59e0b;
+  --muted:#78716c;
+  --soft:#a8a29e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  overflow-x:clip;
+  font-family:'Inter',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:18px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+::selection{background:var(--gold);color:#fff}
+
+/* ————— frame ————— */
+.wrap{max-width:1440px;margin:0 auto;padding-inline:clamp(20px,4vw,64px)}
+
+/* ————— type scale: 5 steps —————
+   display: clamp(56px,8vw,120px)
+   heading: 32–40px
+   lead: 20–24px
+   body: 17px
+   small: 13–14px */
+
+/* ————— motion tokens ————— */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hl-line span{transform:none!important;opacity:1!important}
+  .rise{opacity:1!important;transform:none!important}
+}
+.rise{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rise.in{opacity:1;transform:none}
+@keyframes drift{from{transform:scale(1)}to{transform:scale(1.06)}}
+
+/* ————— header on the band ————— */
+.masthead{position:relative}
+.band{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  grid-template-rows:200px 200px;
+}
+.band img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.tile-gold{background:var(--gold)}
+.tile-coal{background:var(--coal)}
+.tile-ground{background:var(--ground)}
+.cell-2x1{grid-column:span 2}
+.cell-1x1{grid-column:span 1}
+.cell-2x2{grid-column:span 2;grid-row:span 2}
+.band .move{animation:drift 18s ease-in-out infinite alternate}
+.site-head{
+  position:absolute;top:0;left:0;right:0;z-index:5;
+  display:flex;align-items:stretch;height:64px;
+}
+.wordmark{
+  background:var(--ink);color:var(--paper);
+  display:flex;align-items:center;padding:0 28px;
+  font-family:'Playfair Display',serif;font-weight:700;font-size:20px;letter-spacing:.01em;
+}
+.wordmark em{font-style:normal;color:var(--gold-bright)}
+.head-tabs{
+  background:var(--gold);
+  display:flex;align-items:center;gap:clamp(18px,3vw,44px);
+  padding:0 clamp(18px,3vw,44px);flex:0 0 auto;
+}
+.head-tabs a{color:#fff;font-size:14px;font-weight:500}
+.head-tabs a:hover,.head-tabs a:focus-visible{border-bottom:2px solid #fff;padding-bottom:2px}
+.head-cta{
+  margin-left:auto;display:flex;align-items:center;padding:0 44px;margin-right:14px;
+  background:var(--ink);color:var(--paper);
+  font-size:14px;font-weight:600;
+}
+.head-cta:hover,.head-cta:focus-visible{background:var(--gold);color:#fff}
+
+/* ————— hero text ————— */
+.hero-text{padding:clamp(64px,9vh,110px) clamp(20px,4vw,64px) 0;position:relative}
+.standfirst{
+  max-width:30ch;font-size:20px;line-height:1.45;color:var(--ink);
+  position:absolute;left:clamp(20px,4vw,64px);top:clamp(64px,9vh,110px);
+}
+@media (max-width:768px){.hero-text{padding-top:32px}}
+
+.hl{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(48px,7.2vw,104px);
+  font-weight:600;line-height:.92;letter-spacing:-0.045em;
+  margin-left:42%;
+  color:var(--ink);
+}
+.hl-line{display:block;overflow:hidden}
+.hl-line span{display:block;transform:translateY(110%);animation:rise-line .9s cubic-bezier(.16,1,.3,1) forwards}
+.hl-line:nth-child(2) span{animation-delay:.11s}
+@keyframes rise-line{to{transform:translateY(0)}}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:32px;margin:44px 0 0 42%}
+.btn{
+  display:inline-block;background:var(--ink);color:var(--paper);
+  font-weight:600;font-size:17px;padding:16px 32px;min-height:44px;
+  border:none;transition:background .25s ease,transform .25s ease;
+}
+.btn:hover,.btn:focus-visible{background:var(--gold);color:#fff;transform:translateY(-2px)}
+.link-plain{font-size:17px;font-weight:600;border-bottom:2px solid var(--gold)}
+.link-plain:hover,.link-plain:focus-visible{color:var(--gold)}
+.hero-foot{
+  display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-inline:clamp(20px,4vw,64px);margin-inline:calc(-1 * clamp(20px,4vw,64px));
+  margin:clamp(48px,7vh,84px) 0 clamp(28px,4vh,44px);
+  font-size:14px;color:var(--muted);
+}
+
+/* ————— sections ————— */
+.section{padding:clamp(72px,10vh,128px) clamp(20px,4vw,64px)}
+.section-title{
+  font-family:'Playfair Display',serif;font-weight:600;
+  font-size:clamp(30px,3.4vw,44px);letter-spacing:-0.02em;line-height:1.05;
+}
+
+/* features — panel with margin notes */
+.features .grid{display:grid;grid-template-columns:1fr 420px 1fr;gap:clamp(24px,4vw,72px);margin-top:56px;align-items:stretch}
+
+.panel{
+  justify-self:center;align-self:stretch;
+  width:420px;background:#fff;
+  border:none;
+}
+.panel-head{background:var(--ink);color:var(--paper);padding:18px 22px}
+.panel-head .t{font-family:'Playfair Display',serif;font-size:20px;font-weight:600}
+.panel-head .s{font-size:14px;color:var(--soft);margin-top:2px}
+.panel-body{padding:24px 26px 28px}
+.stat-line{display:flex;justify-content:space-between;align-items:baseline;padding:15px 2px}
+.stat-line:last-child{padding-bottom:0}
+.stat-line .k{font-size:17px;color:var(--ink)}
+.stat-line .v{font-size:15px;color:var(--muted)}
+.grow-bar{margin:16px 2px 6px}
+.grow-bar .lbl{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:6px}
+.grow-bar .track{height:8px;background:#edebe8}
+.grow-bar .fill{height:8px;background:var(--gold);width:0;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.note{
+  font-size:17px;color:var(--ink);line-height:1.55;max-width:28ch;
+}
+.note b{display:block;font-size:20px;font-weight:600;margin-bottom:5px}
+.note-col-l{text-align:right}
+.note-col{display:flex;flex-direction:column;gap:56px;justify-content:center}
+.note-col-r .note:first-child{padding-top:48px}
+.note:focus{outline:2px solid var(--gold)}
+
+/* work — oversized visuals */
+.work{overflow:clip}
+.work-block{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end}
+.work-visual{grid-column:1/8;margin-left:calc(-1 * clamp(20px,4vw,64px));overflow:hidden;grid-column:1/8;height:72svh;min-height:420px}
+.work-visual img{width:120%;max-width:none;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .5s ease}
+.work-block:hover .work-visual img{filter:grayscale(0) contrast(1)} /* taste-skill-ignore: grayscale(0) not transform scale(0) */
+.work-copy{grid-column:9/13}
+.work-copy h3{font-family:'Playfair Display',serif;font-size:clamp(26px,2.6vw,38px);font-weight:600;line-height:1.08;letter-spacing:-0.02em}
+.work-copy p{font-size:17px;color:var(--ink);line-height:1.6;margin-top:18px;max-width:38ch}
+.work-block + .work-block{margin-top:clamp(96px,14vh,170px)}
+.work-block:nth-of-type(2) .work-visual{height:52svh;min-height:340px}
+.work-block:nth-of-type(3) .work-visual{height:62svh;min-height:380px}
+
+/* stats — photo + two figure tiles */
+.stats-mosaic{display:grid;grid-template-columns:2fr 1fr;gap:0;margin-top:64px}
+.stats-mosaic .photo{position:relative;overflow:hidden;min-height:60vh}
+.stats-mosaic .photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.tiles{display:grid;grid-template-rows:1fr 1fr}
+.figure-tile{padding:36px;display:flex;flex-direction:column;justify-content:flex-start}
+.figure-tile .n{font-family:'Playfair Display',serif;font-size:clamp(48px,5.6vw,88px);font-weight:600;line-height:1;letter-spacing:-0.03em}
+.figure-tile .c{font-size:17px;line-height:1.4;margin-top:10px}
+.tile-a{background:var(--coal);color:var(--paper)}
+.tile-a .c{color:var(--soft)}
+.tile-b{background:var(--gold);color:#fff}
+.tile-b .c{color:#2a1c02}
+
+/* about — side facts, wide paragraph */
+.about .row{display:grid;grid-template-columns:160px 1fr;gap:0;padding:0 0 8px}
+.facts{display:flex;flex-direction:column;gap:20px}
+.facts .f .l{font-size:14px;color:var(--muted)}
+.facts .f .v{font-size:14px;color:var(--ink);font-weight:600;margin-top:3px}
+.about-para{font-size:clamp(20px,1.7vw,26px);line-height:1.4;letter-spacing:-0.005em;max-width:58ch}
+.about-para strong{color:var(--gold);font-weight:600}
+.about .row+.row{margin-top:120px}
+.record{display:grid;grid-template-columns:minmax(0,320px) minmax(0,320px);gap:64px;justify-content:start;margin-top:8px}
+.record .col h4{font-size:14px;color:var(--ink);font-weight:600;margin-bottom:12px}
+.record .col li{font-size:14px;color:var(--muted);padding:5px 0;display:flex;justify-content:space-between;gap:16px}
+.record .col li em{font-style:normal;color:var(--muted)}
+
+/* cta — photo strip + colour band */
+.cta-photos{display:grid;grid-template-columns:1fr 1fr 1fr}
+.cta-photos img{width:100%;height:40svh;min-height:260px;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.cta-band{background:var(--coal);color:var(--paper);padding:clamp(64px,9vh,110px) 0}
+.cta-inner{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end}
+.cta-statement{grid-column:1/8;font-size:clamp(24px,2.6vw,30px);line-height:1.3;font-weight:500;max-width:30ch}
+.cta-statement a{text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:4px;text-underline-offset:8px}
+.cta-statement a:hover,.cta-statement a:focus-visible{color:var(--gold-bright)}
+.cta-sub{grid-column:1/8;font-size:17px;color:var(--soft);margin-top:32px;max-width:52ch}
+.cta-person{grid-column:11/13;justify-self:end}
+.cta-person img{width:150px;height:188px;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.cta-person .who{font-size:14px;color:var(--soft);margin-top:10px;text-align:left}
+
+/* footer */
+footer{background:var(--ink);color:var(--soft);padding:44px 0 36px;font-size:14px}
+.foot-inner{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.foot-name{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,66px);font-weight:700;color:var(--paper);line-height:1;margin-bottom:26px;letter-spacing:-0.02em}
+footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
+
+/* ————— phone ————— */
+@media (max-width:768px){
+  body{font-size:17px}
+  .band{grid-template-columns:repeat(3,1fr);grid-template-rows:120px 120px}
+  .cell-2x1{grid-column:span 1}
+  .cell-2x2{grid-column:span 1;grid-row:span 1}
+  .site-head{position:static;flex-wrap:wrap;height:auto}
+  .wordmark{padding:14px 16px;font-size:17px;flex:1}
+  .head-tabs{display:none}
+  .head-cta{padding:14px 16px}
+  .hero-text{padding-top:32px}
+  .standfirst{position:static;margin:0 0 20px;font-size:17px}
+  .hl{margin-left:0;font-size:13vw}
+  .hero-actions{margin-left:0}
+  .features .grid{display:block}
+  .panel{width:100%;margin:0 auto}
+  .features .grid{display:block}
+  .note-col{display:block;text-align:left}
+  .note-col .note{margin:0 0 18px}
+  .note{position:static;text-align:left;max-width:none}
+  .note b{margin-bottom:2px}
+  .work-block{display:block}
+  .work-visual{margin:0 0 20px;width:110%;height:auto;aspect-ratio:4/5}
+  .work-copy p{font-size:16px}
+  .stats-mosaic{grid-template-columns:1fr}
+  .tiles{grid-template-rows:none;grid-template-columns:1fr 1fr}
+  .figure-tile .n{font-size:15vw}
+  .about .row{display:block}
+  .about-para{font-size:20px}
+  .facts{display:grid;grid-template-columns:1fr 1fr;margin:20px 0}
+  .record{grid-template-columns:1fr;gap:40px}
+  .cta-photos{grid-template-columns:1fr 1fr}
+  .cta-photos img:first-child{grid-column:1/3}
+  .cta-inner{display:block}
+  .cta-person{margin-top:32px}
+  .cta-statement{font-size:23px}
+}
+</style>
 </head>
 <body>
 
-    <nav>
-        <div class="container">
-            <div class="nav-inner">
-                <a href="/" class="logo">Hightower <span>Marketing</span></a>
-                <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/case-studies">Case Studies</a></li>
-                    <li><a href="/ai-video-ads">AI Video Ads</a></li>
-                    <li><a href="/pet-portraits">Pet Portraits</a></li>
-                    <li><a href="/products">Shop</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-                <a href="/contact" class="nav-cta">Get Started</a>
-            </div>
+<header class="site-head" id="top">
+  <a class="wordmark" href="/">Hightower <em>Marketing</em></a>
+  <nav class="head-tabs" aria-label="Primary">
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="blog.html">Notes</a>
+  </nav>
+  <a class="head-cta" href="#contact">Book a free call</a>
+</header>
+
+<div class="masthead">
+  <div class="band" aria-hidden="true">
+    <img class="cell-2x1 move" src="assets/columbus-ohio-skyline-original-image.webp" alt="">
+    <img class="cell-1x1" src="assets/high-street-columbus-ohio.jpg" alt="">
+    <div class="tile-gold cell-1x1"></div>
+    <img class="cell-1x1" src="assets/post-office-columbus-ohio-1932.jpg" alt="">
+    <div class="tile-coal cell-2x2"></div>
+    <img class="cell-2x1" src="assets/columbus-ohio-statehouse-20220421132212.jpg" alt="">
+    <div class="tile-ground cell-1x1"></div>
+    <img class="cell-1x1" src="assets/columbus-ohio-statehouse-20220421132228.jpg" alt="">
+  </div>
+</div>
+
+<section class="hero-text wrap">
+  <p class="standfirst rise">An operator's marketing practice in Columbus, Ohio. We run real stores, bots and campaigns, then bring what worked to your business.</p>
+  <h1 class="hl">
+    <span class="hl-line"><span>Growth, run</span></span>
+    <span class="hl-line"><span>by an operator.</span></span>
+  </h1>
+  <div class="hero-actions rise">
+    <a class="btn" href="#contact">Book a free call</a>
+    <a class="link-plain" href="#work">See the work</a>
+  </div>
+  <div class="hero-foot">
+    <span>Founded 2022 · Reynoldsburg, Ohio</span>
+    <span>hello@hightower-marketing.com</span>
+  </div>
+</section>
+
+<section class="section features wrap" id="services">
+  <h2 class="section-title rise" style="text-align:right">What we run</h2>
+  <div class="grid">
+    <div class="note-col note-col-l">
+      <div class="note rise"><b>Marketing that ships</b>Video ads, storefronts and campaigns built from our own product launches.</div>
+      <div class="note rise"><b>Automation first</b>Every manual step we find, we replace. Our pipelines run without babysitting.</div>
+      <div class="note rise"><b>Real numbers</b>The dashboard is live. You see what we see, from the first call.</div>
+    </div>
+
+    <div class="panel" data-ui role="img" aria-label="Live operations dashboard showing store and campaign performance">
+      <div class="panel-head">
+        <div class="t">HMS Operations</div>
+        <div class="s">Live snapshot, updated nightly</div>
+      </div>
+      <div class="panel-body">
+        <div class="stat-line"><span class="k">Storefronts running</span><span class="v">eBay + Shopify + TikTok Shop</span></div>
+        <div class="stat-line"><span class="k">Listings live</span><span class="v">17 SKUs, synced from supplier API</span></div>
+        <div class="stat-line"><span class="k">Orders fulfilled</span><span class="v">First sale 10/19, tracked delivery</span></div>
+        <div class="stat-line"><span class="k">Content pipeline</span><span class="v">12 published, automated posting</span></div>
+        <div class="stat-line"><span class="k">Data refinery</span><span class="v">10,255 Ohio properties enriched</span></div>
+        <div class="stat-line"><span class="k">Campaign turnaround</span><span class="v">48 hours typical</span></div>
+        <div class="stat-line"><span class="k">Satisfaction</span><span class="v">99% across 12+ clients</span></div>
+        <div class="grow-bar">
+          <div class="lbl"><span>Organic growth, Q4</span><span>+38%</span></div>
+          <div class="track"><div class="fill" data-w="38"></div></div>
         </div>
-    </nav>
+      </div>
+    </div>
 
-    <section class="hero">
-        <div class="hero-retro-grid"></div>
-        <div class="hero-glow"></div>
-        <div class="hero-bg"></div>
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    
-                    <h1 class="hero-title">We help businesses grow without the guesswork.</h1>
-                    <p class="hero-subtitle">
-                        Video ads that convert. Automation systems that scale. 
-                        Pet portraits that sell. Based in Columbus, Ohio — serving clients nationwide.
-                    </p>
-                    <div class="hero-cta-group">
-                        <a href="/ai-video-ads" class="btn-animated">
-                            Explore AI Video Ads →
-                        </a>
-                        <a href="/contact" class="btn-secondary">Contact Us</a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="hero-visual-inner">
-                        <div class="hero-visual-text">HMS</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="note-col note-col-r">
+      <div class="note rise"><b>Supplier-wired</b>Inventory, pricing and tracking sync straight from CJ's API.</div>
+      <div class="note rise"><b>One operator</b>You talk to the person who owns the systems, never an account manager.</div>
+      <div class="note rise"><b>Columbus-based</b>A local practice on Taylor Mills Pl, Reynoldsburg.</div>
+    </div>
+  </div>
+</section>
 
-    <section class="section-services">
-        <div class="container">
-            <p class="section-label">What We Do</p>
-            <h2>Three ways we move the needle.</h2>
-            <p class="section-subtitle">Every service is something we use in our own businesses. If it doesn't work, we don't sell it.</p>
-            
-            <div class="services-grid">
-                <a href="/ai-video-ads" class="service-card" data-aos="fade-up">
-                    
-                    <h3>AI Video Ads</h3>
-                    <p>Cinematic video ads created with AI in 48 hours. No camera crew needed. Perfect for restaurants, gyms, dentists — any local business.</p>
-                    <span class="service-link">Learn more →</span>
-                </a>
-                
-                <a href="/pet-portraits" class="service-card" data-aos="fade-up">
-                    
-                    <h3>AI Pet Portraits</h3>
-                    <p>Turn your pet photos into Renaissance masterpieces. Custom digital art, prints, and canvas. Perfect gift for pet lovers.</p>
-                    <span class="service-link">Learn more →</span>
-                </a>
-                
-                <div class="service-card" data-aos="fade-up">
-                    
-                    <h3>Business Automation</h3>
-                    <p>Custom automation systems for restaurants, gyms, and service businesses. Save 10+ hours per week on repetitive tasks.</p>
-                    <span class="coming-soon">Coming soon</span>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up">
-                    
-                    <h3>Digital Strategy</h3>
-                    <p>Data-driven marketing strategies. SEO, paid ads, content creation — built for businesses that want measurable results.</p>
-                    <span class="coming-soon">Coming soon</span>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section work" id="work">
+  <div class="wrap">
+    <div class="work-block">
+      <div class="work-visual rise"><img src="assets/high-street-columbus-ohio.jpg" alt="High Street, Columbus, where the first clients came from" loading="lazy"></div>
+      <div class="work-copy rise">
+        <h3>TrendLoop, a store built to run itself</h3>
+        <p>Product research, listings, supplier sync and fulfillment wired end to end: 17 SKUs across eBay, Shopify and TikTok Shop, inventory pulled nightly from the supplier's API, first tracked sale shipped 10 days after launch.</p>
+      </div>
+    </div>
+    <div class="work-block">
+      <div class="work-visual rise"><img src="assets/columbus-ohio-statehouse-20220421132228.jpg" alt="Ohio Statehouse, Columbus" loading="lazy"></div>
+      <div class="work-copy rise">
+        <h3>A 10,255-property data refinery</h3>
+        <p>An 18-city Ohio property engine that scrapes, enriches and scores wholesale deals on a weekly cron. The same automation patterns power our clients' reporting and lead flows.</p>
+      </div>
+    </div>
+    <div class="work-block">
+      <div class="work-visual rise"><img src="assets/post-office-columbus-ohio-1932.jpg" alt="Columbus Post Office, 1932, direct mail, the original channel" loading="lazy"></div>
+      <div class="work-copy rise">
+        <h3>12 posts, published while we sleep</h3>
+        <p>The blog writes, formats, covers and posts itself on a schedule, with search indexing verified through Google Search Console. Content compounds without anyone pressing publish.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="section-about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <p class="section-label">About</p>
-                    <h2>Built by someone who actually runs businesses.</h2>
-                    <p>I'm not a theorist. I run multiple businesses — from restaurants to marketing — and I use these exact systems myself.</p>
-                    <p>Hightower Marketing Strategies was founded to solve real problems: expensive video production, repetitive manual work, and marketing that doesn't show ROI.</p>
-                    <p>Every service we offer is something I use in my own businesses. If it doesn't work, we don't sell it.</p>
-                </div>
-                <div class="about-visual">
-                    <div class="about-image">
-                        <span style="position: relative; z-index: 2;"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section wrap" id="numbers">
+  <h2 class="section-title rise">The record so far</h2>
+  <div class="stats-mosaic rise">
+    <div class="photo"><img src="assets/columbus-ohio-skyline-original-image.webp" alt="Columbus skyline at dusk" loading="lazy"></div>
+    <div class="tiles">
+      <div class="figure-tile tile-a"><span class="n">12+</span><span class="c">Local clients served since 2022</span></div>
+      <div class="figure-tile tile-b"><span class="n">48h</span><span class="c">Average delivery time on campaign work</span></div>
+    </div>
+  </div>
+</section>
 
-    <section class="section-stats">
-        <div class="container">
-            <div class="stats-row">
-                <div class="stat-block">
-                    <div class="number">12+</div>
-                    <div class="label">Local clients served</div>
-                </div>
-                <div class="stat-block">
-                    <div class="number">48h</div>
-                    <div class="label">Average delivery time</div>
-                </div>
-                <div class="stat-block">
-                    <div class="number">99%</div>
-                    <div class="label">Client satisfaction</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section about wrap" id="about">
+  <h2 class="section-title rise">Who answers</h2>
+  <div class="row" style="margin-top:72px">
+    <div class="facts">
+      <div class="f"><div class="l">Founded</div><div class="v">2022</div></div>
+      <div class="f"><div class="l">Based in</div><div class="v">Reynoldsburg, Ohio</div></div>
+      <div class="f"><div class="l">Practice</div><div class="v">Marketing · automation · e-commerce</div></div>
+    </div>
+    <p class="about-para">Most agencies advise. <strong>We operate.</strong> Hightower Marketing Strategies runs its own storefronts, pipelines and publications first, then brings the parts that actually worked to your business. No guesswork, no recycled playbooks. Every recommendation we make has already survived contact with real customers, real margins and real fulfillment deadlines. When you hire us, you get the operator, not an account layer.</p>
+  </div>
+  <div class="row">
+    <div class="facts"><div class="f"><div class="l">Record</div><div class="v">In practice</div></div></div>
+    <div class="record">
+      <div class="col">
+        <h4>Where the work runs</h4>
+        <ul>
+          <li>Own storefront · live <em>2026</em></li>
+          <li>Blog pipeline · automated <em>2026</em></li>
+          <li>Property refinery · 18 cities <em>2026</em></li>
+          <li>Supplier API sync · wired <em>2026</em></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>How we work</h4>
+        <ul>
+          <li>Free first call, real audit <em>always</em></li>
+          <li>Fixed-scope projects <em>default</em></li>
+          <li>48h campaign turnaround <em>typical</em></li>
+          <li>You talk to the operator <em>always</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="section-cta">
-        <div class="container">
-            <h2>Ready to grow your business?</h2>
-            <p>Book a free 15-minute call. We'll discuss your goals and show you exactly how we can help.</p>
-            <div class="cta-group" style="justify-content: center;">
-                <a href="/contact" class="btn-primary">Book Free Call →</a>
-                <a href="mailto:hello@hightower-marketing.com" class="btn-secondary">Email Us</a>
-            </div>
-        </div>
-    </section>
+<section id="contact">
+  <h2 class="section-title rise wrap" style="padding-top:clamp(88px,13vh,160px)">Start the audit</h2>
+  <div class="cta-photos" aria-hidden="true">
+    <img src="assets/high-street-columbus-ohio.jpg" alt="" loading="lazy">
+    <img src="assets/columbus-ohio-statehouse-20220421132212.jpg" alt="" loading="lazy">
+    <img src="assets/columbus-ohio-skyline-original-image.webp" alt="" loading="lazy">
+  </div>
+  <div class="cta-band">
+    <div class="wrap cta-inner">
+      <p class="cta-statement">Ready to grow without the guesswork? <a href="mailto:hello@hightower-marketing.com">Book a free call</a> and get a real audit of your marketing, not a pitch deck.</p>
+      <p class="cta-sub">Reynoldsburg, Ohio · hello@hightower-marketing.com · Replies within one business day.</p>
+      <div class="cta-person">
+        <img src="assets/post-office-columbus-ohio-1932.jpg" alt="" loading="lazy">
+        <p class="who">Blake Hightower. You'll talk to me.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="/" class="logo">Hightower <span>Marketing</span></a>
-                    <p>AI-powered marketing and automation for businesses that want results.</p>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <a href="/ai-video-ads">AI Video Ads</a>
-                    <a href="/pet-portraits">AI Pet Portraits</a>
-                    <a href="/services">Automation</a>
-                    <a href="/services">Digital Strategy</a>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <a href="/about">About</a>
-                    <a href="/contact">Contact</a>
-                    <a href="/portfolio">Portfolio</a>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Contact</h4>
-                    <a href="mailto:hello@hightower-marketing.com">hello@hightower-marketing.com</a>
-                    <span style="font-size: 14px; color: var(--text-muted);">Columbus, Ohio</span>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <span>© 2026 Hightower Marketing Strategies LLC</span>
-                <span>All rights reserved.</span>
-            </div>
-        </div>
-    </footer>
+<footer>
+  <div class="wrap">
+    <p class="foot-name">Hightower Marketing</p>
+    <div class="foot-inner">
+      <span>© 2026 Hightower Marketing Strategies LLC · Reynoldsburg, Ohio</span>
+      <span>
+        <a href="services.html">Services</a> · <a href="blog.html">Notes</a> · <a href="contact.html">Contact</a>
+      </span>
+      <span>Photography: Columbus views from open collections, full credits below.</span>
+    </div>
+    <p style="margin-top:18px;font-size:14px;line-height:1.6;max-width:72ch">Images: “Post Office, Columbus, Ohio (1932)” by Sent from the Past (public domain, via Flickr); “High Street – Columbus, Ohio”; “Columbus – Ohio Statehouse” photographs; “Columbus, Ohio, skyline”, via Openverse, used under their licences. They show the world around the practice, not its offices or clients.</p>
+  </div>
+</footer>
 
-    <script>
-        // Mouse tracking for card glow effect
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = ((e.clientX - rect.left) / rect.width) * 100;
-                const y = ((e.clientY - rect.top) / rect.height) * 100;
-                card.style.setProperty('--mouse-x', `${x}%`);
-                card.style.setProperty('--mouse-y', `${y}%`);
-            });
-        });
-
-        // Simple scroll reveal
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.service-card, .stat-block, .about-text, .about-image').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(24px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        if (typeof AOS !== 'undefined') {
-            AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
-        }
-        let lastScroll = 0;
-        const nav = document.querySelector('nav');
-        if (nav) {
-            window.addEventListener('scroll', function() {
-                const currentScroll = window.pageYOffset;
-                if (currentScroll > lastScroll && currentScroll > 100) {
-                    nav.classList.add('nav-hidden');
-                } else {
-                    nav.classList.remove('nav-hidden');
-                }
-                lastScroll = currentScroll;
-            });
-        }
-        const heroBg = document.querySelector('.hero-bg');
-        if (heroBg) {
-            window.addEventListener('scroll', function() {
-                heroBg.style.transform = 'translateY(' + (window.pageYOffset * 0.3) + 'px)';
-            });
-        }
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // masked headline
+  if(!reduce){
+    document.querySelectorAll('.hl-line span').forEach(function(s){ s.style.animationPlayState='running'; });
+  }
+  // section entrances
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        e.target.querySelectorAll ? e.target.querySelectorAll('.rise').forEach(function(r){ r.classList.add('in'); }) : null;
+        if(e.target.classList.contains('rise')) e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
     });
-    </script>
+  },{threshold:.12});
+  document.querySelectorAll('.rise').forEach(function(el){ io.observe(el); });
+  // grow bar
+  var gb = document.querySelector('.grow-bar .fill');
+  if(gb){ setTimeout(function(){ gb.style.width = (gb.dataset.w||38)+'%'; }, 400); }
+  // note hover -> panel focus
+  document.querySelectorAll('.note').forEach(function(n){
+    n.tabIndex = 0;
+    n.addEventListener('mouseenter', function(){ document.querySelector('.panel').style.outline = '3px solid var(--gold)'; });
+    n.addEventListener('mouseleave', function(){ document.querySelector('.panel').style.outline = 'none'; });
+  });
+})();
+</script>
 </body>
 </html>
