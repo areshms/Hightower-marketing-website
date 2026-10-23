@@ -1,28 +1,30 @@
 {
  "url": "index.html",
- "at": "2026-10-23T17:37:31.476Z",
+ "at": "2026-10-23T18:01:17.591Z",
  "allow": [],
  "viewports": [
   {
    "width": 1440,
    "height": 900,
    "load": "load",
-   "screens": 9,
+   "screens": 11,
    "filled": [
-    0.53,
+    0.54,
     0.31,
-    0.45,
-    0.53,
-    0.58,
-    0.92,
-    0.18,
-    0.81,
+    0.49,
+    0.55,
+    0.32,
+    0.63,
+    0.79,
+    0.31,
+    0.22,
+    0.75,
     1
    ],
    "motion": {
-    "elements": 23,
+    "elements": 37,
     "css": 3,
-    "transitions": 20,
+    "transitions": 34,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -33,21 +35,21 @@
      "h": 900
     },
     "page": {
-     "height": 7589,
-     "screens": 8.4,
-     "words": 524,
+     "height": 9442,
+     "screens": 10.5,
+     "words": 794,
      "img": 11,
      "video": 0,
      "canvas": 0,
      "svg": 0,
-     "sections": 6,
+     "sections": 9,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 1,
+     "uiFragments": 2,
      "uiAbuse": false,
      "realPictures": 11,
      "videoCount": 0,
-     "uiPictures": 1,
+     "uiPictures": 2,
      "pictureSamples": [
       "work-pet-nail-clipper.jpg",
       "work-nose-patches.jpg",
@@ -152,7 +154,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.27,
-      "top": 2291,
+      "top": 2265,
       "tag": "h3",
       "kind": "heading"
      },
@@ -173,7 +175,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.27,
-      "top": 2912,
+      "top": 2859,
       "tag": "h3",
       "kind": "heading"
      },
@@ -194,8 +196,29 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.27,
-      "top": 3596,
+      "top": 3516,
       "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "From first call to a running system",
+      "words": 7,
+      "chars": 35,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4184,
+      "tag": "h2",
       "kind": "heading"
      },
      {
@@ -215,7 +238,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 3983,
+      "top": 4747,
       "tag": "h2",
       "kind": "heading"
      },
@@ -236,7 +259,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.26,
-      "top": 4130,
+      "top": 4893,
       "tag": "span",
       "kind": "heading"
      },
@@ -257,9 +280,51 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.26,
-      "top": 4792,
+      "top": 5555,
       "tag": "span",
       "kind": "heading"
+     },
+     {
+      "text": "What is that manual task costing you?",
+      "words": 7,
+      "chars": 37,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 6362,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "$10,920",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 72,
+      "vw": 5,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 6483,
+      "tag": "output",
+      "kind": "statement"
      },
      {
       "text": "Who answers",
@@ -278,7 +343,28 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 5598,
+      "top": 6931,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions people ask",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 7736,
       "tag": "h2",
       "kind": "heading"
      },
@@ -299,7 +385,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 6313,
+      "top": 8166,
       "tag": "h2",
       "kind": "heading"
      },
@@ -320,7 +406,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.4,
-      "top": 6917,
+      "top": 8771,
       "tag": "p",
       "kind": "statement"
      },
@@ -329,8 +415,8 @@
       "words": 1,
       "chars": 2,
       "lines": 1,
-      "size": 54,
-      "vw": 3.8,
+      "size": 58,
+      "vw": 4,
       "font": "Playfair Display",
       "weight": 600,
       "tracking": 0.02,
@@ -341,7 +427,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.1,
-      "top": 7058,
+      "top": 8912,
       "tag": "div",
       "kind": "heading"
      },
@@ -362,16 +448,16 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 7385,
+      "top": 9239,
       "tag": "p",
       "kind": "statement"
      }
     ],
     "headingSummary": {
-     "count": 13,
+     "count": 17,
      "maxLines": 3,
      "over2Lines": 0,
-     "statements": 2,
+     "statements": 3,
      "centered": 0,
      "medianWords": 3,
      "mixedFontHeadings": 0
@@ -380,30 +466,32 @@
      "families": [
       {
        "family": "Inter",
-       "share": 0.93,
+       "share": 0.94,
        "mono": false
       },
       {
        "family": "Playfair Display",
-       "share": 0.07,
+       "share": 0.06,
        "mono": false
       }
      ],
      "familyCount": 2,
      "sizes": [
       14,
+      16,
       17,
+      19,
       20,
       25,
       30,
       37,
       44,
-      54,
       58,
+      72,
       81,
       104
      ],
-     "sizeCount": 11,
+     "sizeCount": 13,
      "notLoaded": [],
      "body": {
       "font": "Inter",
@@ -444,7 +532,7 @@
      "sectionBgs": [
       {
        "color": "#0c0a09",
-       "top": 6836,
+       "top": 8690,
        "hsl": {
         "h": 20,
         "s": 0.14,
@@ -459,15 +547,15 @@
       },
       {
        "color": "#78716c",
-       "share": 0.16
+       "share": 0.26
       },
       {
        "color": "#a8a29e",
-       "share": 0.15
+       "share": 0.09
       },
       {
        "color": "#fafaf9",
-       "share": 0.06
+       "share": 0.04
       },
       {
        "color": "#2a1c02",
@@ -486,7 +574,7 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 3,
+     "count": 4,
      "inHero": 3,
      "radius": 0,
      "height": 64,
@@ -523,7 +611,7 @@
     },
     "heroMedia": [],
     "nav": {
-     "links": 6,
+     "links": 8,
      "fixed": false,
      "height": 64,
      "floatingPill": false,
@@ -539,7 +627,7 @@
      "w": 1440,
      "h": 900
     },
-    "pageH": 7589,
+    "pageH": 9442,
     "margins": {
      "left": 58,
      "right": 58
@@ -591,8 +679,8 @@
       "sel": "section#services.section.features",
       "tag": "section",
       "top": 893,
-      "height": 894,
-      "words": 141,
+      "height": 869,
+      "words": 139,
       "media": 0,
       "middle": 174,
       "heading": {
@@ -600,9 +688,9 @@
        "size": 44,
        "tag": "h2"
       },
-      "left": 69,
+      "left": 63,
       "right": 58,
-      "textLeft": 69,
+      "textLeft": 63,
       "textRight": 58,
       "fullBleed": false,
       "footer": false,
@@ -613,9 +701,9 @@
      {
       "sel": "section#work.section.work",
       "tag": "section",
-      "top": 1787,
-      "height": 2106,
-      "words": 111,
+      "top": 1762,
+      "height": 2332,
+      "words": 147,
       "media": 3,
       "middle": 0,
       "heading": {
@@ -624,9 +712,32 @@
        "tag": "h3"
       },
       "left": 58,
-      "right": 116,
-      "textLeft": 938,
-      "textRight": 116,
+      "right": 113,
+      "textLeft": 58,
+      "textRight": 113,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#process.section.wrap",
+      "tag": "section",
+      "top": 4094,
+      "height": 563,
+      "words": 123,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "From first call to a running system",
+       "size": 44,
+       "tag": "h2"
+      },
+      "left": 58,
+      "right": 72,
+      "textLeft": 58,
+      "textRight": 72,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -636,7 +747,7 @@
      {
       "sel": "section#numbers.section.wrap",
       "tag": "section",
-      "top": 3893,
+      "top": 4657,
       "height": 1615,
       "words": 17,
       "media": 1,
@@ -657,9 +768,32 @@
       "pinned": false
      },
      {
+      "sel": "section#calculator.section.wrap",
+      "tag": "section",
+      "top": 6272,
+      "height": 570,
+      "words": 57,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "$10,920",
+       "size": 72,
+       "tag": "output"
+      },
+      "left": 58,
+      "right": 292,
+      "textLeft": 58,
+      "textRight": 292,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
       "sel": "section#about.section.about",
       "tag": "section",
-      "top": 5508,
+      "top": 6841,
       "height": 805,
       "words": 131,
       "media": 0,
@@ -680,9 +814,32 @@
       "pinned": false
      },
      {
+      "sel": "section#faq.section.wrap",
+      "tag": "section",
+      "top": 7646,
+      "height": 520,
+      "words": 173,
+      "media": 0,
+      "middle": 92,
+      "heading": {
+       "text": "Questions people ask",
+       "size": 44,
+       "tag": "h2"
+      },
+      "left": 58,
+      "right": 66,
+      "textLeft": 58,
+      "textRight": 66,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
       "sel": "section#contact",
       "tag": "section",
-      "top": 6313,
+      "top": 8166,
       "height": 1028,
       "words": 43,
       "media": 3,
@@ -705,7 +862,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 7341,
+      "top": 9195,
       "height": 247,
       "words": 50,
       "media": 0,
@@ -738,12 +895,16 @@
     "edgeText": [],
     "edges": [
      {
+      "x": 58,
+      "n": 12
+     },
+     {
       "x": 938,
       "n": 6
      },
      {
-      "x": 58,
-      "n": 5
+      "x": 763,
+      "n": 4
      },
      {
       "x": 614,
@@ -754,7 +915,7 @@
       "n": 1
      }
     ],
-    "leftBlocks": 14,
+    "leftBlocks": 25,
     "bodySize": 17,
     "stage": false,
     "explains": true,
@@ -774,23 +935,25 @@
    "width": 768,
    "height": 1024,
    "load": "load",
-   "screens": 10,
+   "screens": 12,
    "filled": [
     0.55,
-    0.63,
+    0.64,
     0.71,
     0.71,
     0.74,
-    0.57,
-    0.67,
-    0.27,
-    0.88,
+    0.19,
+    0.58,
+    0.72,
+    0.33,
+    0.22,
+    0.51,
     1
    ],
    "motion": {
-    "elements": 23,
+    "elements": 37,
     "css": 3,
-    "transitions": 20,
+    "transitions": 34,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -801,21 +964,21 @@
      "h": 1024
     },
     "page": {
-     "height": 9962,
-     "screens": 9.7,
-     "words": 524,
+     "height": 12560,
+     "screens": 12.3,
+     "words": 794,
      "img": 11,
      "video": 0,
      "canvas": 0,
      "svg": 0,
-     "sections": 6,
+     "sections": 9,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 1,
+     "uiFragments": 2,
      "uiAbuse": false,
      "realPictures": 11,
      "videoCount": 0,
-     "uiPictures": 1,
+     "uiPictures": 2,
      "pictureSamples": [
       "work-pet-nail-clipper.jpg",
       "work-nose-patches.jpg",
@@ -967,6 +1130,27 @@
       "kind": "heading"
      },
      {
+      "text": "From first call to a running system",
+      "words": 7,
+      "chars": 35,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 5798,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
       "text": "The record so far",
       "words": 4,
       "chars": 17,
@@ -983,7 +1167,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 5479,
+      "top": 6538,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1004,7 +1188,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.37,
-      "top": 6670,
+      "top": 7729,
       "tag": "span",
       "kind": "heading"
      },
@@ -1025,9 +1209,51 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.37,
-      "top": 6670,
+      "top": 7729,
       "tag": "span",
       "kind": "heading"
+     },
+     {
+      "text": "What is that manual task costing you?",
+      "words": 7,
+      "chars": 37,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 8142,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "$10,920",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.18,
+      "top": 8542,
+      "tag": "output",
+      "kind": "statement"
      },
      {
       "text": "Who answers",
@@ -1046,7 +1272,28 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 7084,
+      "top": 8955,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions people ask",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 10116,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1067,7 +1314,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 8143,
+      "top": 10741,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1076,8 +1323,8 @@
       "words": 1,
       "chars": 2,
       "lines": 1,
-      "size": 54,
-      "vw": 7,
+      "size": 58,
+      "vw": 7.6,
       "font": "Playfair Display",
       "weight": 600,
       "tracking": 0.02,
@@ -1088,7 +1335,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.2,
-      "top": 9423,
+      "top": 12022,
       "tag": "div",
       "kind": "heading"
      },
@@ -1109,16 +1356,16 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 9741,
+      "top": 12339,
       "tag": "p",
       "kind": "statement"
      }
     ],
     "headingSummary": {
-     "count": 12,
+     "count": 16,
      "maxLines": 2,
      "over2Lines": 0,
-     "statements": 1,
+     "statements": 2,
      "centered": 0,
      "medianWords": 3,
      "mixedFontHeadings": 0
@@ -1127,12 +1374,12 @@
      "families": [
       {
        "family": "Inter",
-       "share": 0.93,
+       "share": 0.94,
        "mono": false
       },
       {
        "family": "Playfair Display",
-       "share": 0.07,
+       "share": 0.06,
        "mono": false
       }
      ],
@@ -1142,16 +1389,18 @@
       14,
       16,
       17,
+      19,
       20,
       23,
       26,
       30,
       31,
-      54,
+      40,
+      58,
       100,
       115
      ],
-     "sizeCount": 12,
+     "sizeCount": 14,
      "notLoaded": [],
      "body": {
       "font": "Inter",
@@ -1201,7 +1450,7 @@
       },
       {
        "color": "#0c0a09",
-       "top": 9127,
+       "top": 11725,
        "hsl": {
         "h": 20,
         "s": 0.14,
@@ -1216,15 +1465,15 @@
       },
       {
        "color": "#78716c",
-       "share": 0.16
+       "share": 0.26
       },
       {
        "color": "#a8a29e",
-       "share": 0.15
+       "share": 0.09
       },
       {
        "color": "#fafaf9",
-       "share": 0.06
+       "share": 0.04
       },
       {
        "color": "#2a1c02",
@@ -1243,7 +1492,7 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 3,
+     "count": 4,
      "inHero": 3,
      "radius": 0,
      "height": 52,
@@ -1280,7 +1529,7 @@
     },
     "heroMedia": [],
     "nav": {
-     "links": 6,
+     "links": 8,
      "fixed": false,
      "height": 100,
      "floatingPill": false,
@@ -1296,10 +1545,10 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 9962,
+    "pageH": 12560,
     "margins": {
-     "left": 16,
-     "right": 30
+     "left": 31,
+     "right": 31
     },
     "sections": [
      {
@@ -1349,7 +1598,7 @@
       "tag": "section",
       "top": 909,
       "height": 1391,
-      "words": 141,
+      "words": 139,
       "media": 0,
       "middle": 0,
       "heading": {
@@ -1368,22 +1617,98 @@
       "pinned": false
      },
      {
-      "sel": "section#work.section.work",
-      "tag": "section",
-      "top": 2300,
-      "height": 3077,
-      "words": 111,
-      "media": 3,
+      "sel": "div.work-block",
+      "tag": "div",
+      "top": 2402,
+      "height": 1081,
+      "words": 43,
+      "media": 1,
       "middle": 0,
-      "heading": {
-       "text": "TrendLoop, a store built to run itself",
-       "size": 26,
-       "tag": "h3"
-      },
+      "heading": null,
       "left": 61,
       "right": 0,
       "textLeft": 61,
       "textRight": 295,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.work-block",
+      "tag": "div",
+      "top": 3627,
+      "height": 701,
+      "words": 35,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 61,
+      "right": 0,
+      "textLeft": 61,
+      "textRight": 327,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.work-block",
+      "tag": "div",
+      "top": 4471,
+      "height": 855,
+      "words": 44,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 61,
+      "right": 0,
+      "textLeft": 61,
+      "textRight": 326,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.notes-funnel",
+      "tag": "div",
+      "top": 5389,
+      "height": 204,
+      "words": 25,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 31,
+      "right": 360,
+      "textLeft": 31,
+      "textRight": 360,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#process.section.wrap",
+      "tag": "section",
+      "top": 5696,
+      "height": 739,
+      "words": 123,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "From first call to a running system",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 42,
+      "textLeft": 31,
+      "textRight": 42,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -1393,7 +1718,7 @@
      {
       "sel": "section#numbers.section.wrap",
       "tag": "section",
-      "top": 5377,
+      "top": 6435,
       "height": 1605,
       "words": 17,
       "media": 1,
@@ -1414,9 +1739,32 @@
       "pinned": false
      },
      {
+      "sel": "section#calculator.section.wrap",
+      "tag": "section",
+      "top": 8040,
+      "height": 812,
+      "words": 57,
+      "media": 0,
+      "middle": 166,
+      "heading": {
+       "text": "$10,920",
+       "size": 40,
+       "tag": "output"
+      },
+      "left": 31,
+      "right": 59,
+      "textLeft": 31,
+      "textRight": 59,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
       "sel": "section#about.section.about",
       "tag": "section",
-      "top": 6981,
+      "top": 8852,
       "height": 1161,
       "words": 131,
       "media": 0,
@@ -1437,9 +1785,32 @@
       "pinned": false
      },
      {
+      "sel": "section#faq.section.wrap",
+      "tag": "section",
+      "top": 10014,
+      "height": 727,
+      "words": 173,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Questions people ask",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 115,
+      "textLeft": 31,
+      "textRight": 115,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
       "sel": "section#contact",
       "tag": "section",
-      "top": 8143,
+      "top": 10741,
       "height": 1554,
       "words": 43,
       "media": 3,
@@ -1462,7 +1833,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 9697,
+      "top": 12295,
       "height": 266,
       "words": 50,
       "media": 0,
@@ -1496,15 +1867,15 @@
     "edges": [
      {
       "x": 31,
-      "n": 8
+      "n": 19
      },
      {
       "x": 61,
       "n": 6
      }
     ],
-    "leftBlocks": 14,
-    "bodySize": 17,
+    "leftBlocks": 25,
+    "bodySize": 16,
     "stage": false,
     "explains": false,
     "slivers": [],
@@ -1518,24 +1889,25 @@
    "width": 390,
    "height": 844,
    "load": "load",
-   "screens": 11,
+   "screens": 12,
    "filled": [
     0.69,
+    0.6,
+    0.56,
+    0.62,
     0.59,
-    0.54,
-    0.61,
-    0.59,
-    0.66,
-    0.86,
+    0.72,
     0.4,
-    0.28,
-    1,
-    1
+    0.54,
+    0.64,
+    0.49,
+    0.46,
+    0.4
    ],
    "motion": {
-    "elements": 23,
+    "elements": 35,
     "css": 3,
-    "transitions": 20,
+    "transitions": 32,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -1546,21 +1918,21 @@
      "h": 844
     },
     "page": {
-     "height": 9165,
-     "screens": 10.9,
-     "words": 524,
+     "height": 12075,
+     "screens": 14.3,
+     "words": 794,
      "img": 11,
      "video": 0,
      "canvas": 0,
      "svg": 0,
-     "sections": 6,
+     "sections": 9,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 1,
+     "uiFragments": 2,
      "uiAbuse": false,
      "realPictures": 7,
      "videoCount": 0,
-     "uiPictures": 1,
+     "uiPictures": 2,
      "pictureSamples": [
       "work-hero-lifestyle.png",
       "work-water-projector.jpg",
@@ -1711,6 +2083,27 @@
       "kind": "heading"
      },
      {
+      "text": "From first call to a running system",
+      "words": 7,
+      "chars": 35,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5419,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
       "text": "The record so far",
       "words": 4,
       "chars": 17,
@@ -1727,7 +2120,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 5054,
+      "top": 6408,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1748,7 +2141,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.26,
-      "top": 5710,
+      "top": 7065,
       "tag": "span",
       "kind": "heading"
      },
@@ -1769,9 +2162,51 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.26,
-      "top": 5710,
+      "top": 7065,
       "tag": "span",
       "kind": "heading"
+     },
+     {
+      "text": "What is that manual task costing you?",
+      "words": 7,
+      "chars": 37,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 7457,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "$10,920",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 7889,
+      "tag": "output",
+      "kind": "statement"
      },
      {
       "text": "Who answers",
@@ -1790,7 +2225,28 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 6103,
+      "top": 8265,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions people ask",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 9607,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1811,7 +2267,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 7361,
+      "top": 10295,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1832,7 +2288,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 8253,
+      "top": 11164,
       "tag": "p",
       "kind": "statement"
      },
@@ -1841,8 +2297,8 @@
       "words": 1,
       "chars": 2,
       "lines": 1,
-      "size": 54,
-      "vw": 13.8,
+      "size": 58,
+      "vw": 14.9,
       "font": "Playfair Display",
       "weight": 600,
       "tracking": 0.02,
@@ -1853,7 +2309,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.38,
-      "top": 8513,
+      "top": 11424,
       "tag": "div",
       "kind": "heading"
      },
@@ -1874,16 +2330,16 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 8814,
+      "top": 11725,
       "tag": "p",
       "kind": "statement"
      }
     ],
     "headingSummary": {
-     "count": 13,
+     "count": 17,
      "maxLines": 4,
      "over2Lines": 0,
-     "statements": 2,
+     "statements": 3,
      "centered": 0,
      "medianWords": 3,
      "mixedFontHeadings": 0
@@ -1892,12 +2348,12 @@
      "families": [
       {
        "family": "Inter",
-       "share": 0.93,
+       "share": 0.94,
        "mono": false
       },
       {
        "family": "Playfair Display",
-       "share": 0.07,
+       "share": 0.06,
        "mono": false
       }
      ],
@@ -1907,16 +2363,18 @@
       14,
       16,
       17,
+      19,
       20,
       23,
       26,
       28,
       30,
+      40,
       51,
-      54,
+      58,
       59
      ],
-     "sizeCount": 12,
+     "sizeCount": 14,
      "notLoaded": [],
      "body": {
       "font": "Inter",
@@ -1966,7 +2424,7 @@
       },
       {
        "color": "#0c0a09",
-       "top": 8177,
+       "top": 11088,
        "hsl": {
         "h": 20,
         "s": 0.14,
@@ -1975,7 +2433,7 @@
       },
       {
        "color": "#1c1917",
-       "top": 8770,
+       "top": 11681,
        "hsl": {
         "h": 24,
         "s": 0.1,
@@ -1990,15 +2448,15 @@
       },
       {
        "color": "#78716c",
-       "share": 0.16
+       "share": 0.26
       },
       {
        "color": "#a8a29e",
-       "share": 0.15
+       "share": 0.09
       },
       {
        "color": "#fafaf9",
-       "share": 0.06
+       "share": 0.04
       },
       {
        "color": "#2a1c02",
@@ -2017,7 +2475,7 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 3,
+     "count": 4,
      "inHero": 3,
      "radius": 0,
      "height": 52,
@@ -2054,7 +2512,7 @@
     },
     "heroMedia": [],
     "nav": {
-     "links": 6,
+     "links": 8,
      "fixed": false,
      "height": 100,
      "floatingPill": false,
@@ -2070,9 +2528,9 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 9165,
+    "pageH": 12075,
     "margins": {
-     "left": 16,
+     "left": 20,
      "right": 9
     },
     "sections": [
@@ -2123,7 +2581,7 @@
       "tag": "section",
       "top": 844,
       "height": 1640,
-      "words": 141,
+      "words": 139,
       "media": 0,
       "middle": 0,
       "heading": {
@@ -2142,12 +2600,12 @@
       "pinned": false
      },
      {
-      "sel": "section#work.section.work",
-      "tag": "section",
-      "top": 2484,
-      "height": 2485,
-      "words": 111,
-      "media": 3,
+      "sel": "div.work-block",
+      "tag": "div",
+      "top": 2568,
+      "height": 674,
+      "words": 43,
+      "media": 1,
       "middle": 0,
       "heading": {
        "text": "TrendLoop, a store built to run itself",
@@ -2157,7 +2615,91 @@
       "left": 40,
       "right": 9,
       "textLeft": 40,
+      "textRight": 43,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.work-block",
+      "tag": "div",
+      "top": 3361,
+      "height": 661,
+      "words": 35,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "A 10,255-property data refinery",
+       "size": 26,
+       "tag": "h3"
+      },
+      "left": 40,
+      "right": 9,
+      "textLeft": 40,
+      "textRight": 45,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.work-block",
+      "tag": "div",
+      "top": 4140,
+      "height": 797,
+      "words": 44,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 40,
+      "right": 9,
+      "textLeft": 40,
+      "textRight": 43,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.notes-funnel",
+      "tag": "div",
+      "top": 5000,
+      "height": 250,
+      "words": 25,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 40,
+      "textLeft": 20,
       "textRight": 40,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#process.section.wrap",
+      "tag": "section",
+      "top": 5335,
+      "height": 989,
+      "words": 123,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "From first call to a running system",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 27,
+      "textLeft": 20,
+      "textRight": 27,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -2167,7 +2709,7 @@
      {
       "sel": "section#numbers.section.wrap",
       "tag": "section",
-      "top": 4970,
+      "top": 6324,
       "height": 1049,
       "words": 17,
       "media": 1,
@@ -2188,9 +2730,32 @@
       "pinned": false
      },
      {
+      "sel": "section#calculator.section.wrap",
+      "tag": "section",
+      "top": 7373,
+      "height": 808,
+      "words": 57,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "$10,920",
+       "size": 40,
+       "tag": "output"
+      },
+      "left": 20,
+      "right": 30,
+      "textLeft": 20,
+      "textRight": 30,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
       "sel": "section#about.section.about",
       "tag": "section",
-      "top": 6018,
+      "top": 8181,
       "height": 1342,
       "words": 131,
       "media": 0,
@@ -2211,28 +2776,32 @@
       "pinned": false
      },
      {
-      "sel": "h2.section-title.rise",
-      "tag": "h2",
-      "top": 7361,
-      "height": 141,
-      "words": 0,
+      "sel": "section#faq.section.wrap",
+      "tag": "section",
+      "top": 9523,
+      "height": 748,
+      "words": 150,
       "media": 0,
       "middle": 0,
-      "heading": null,
-      "left": null,
-      "right": null,
-      "textLeft": null,
-      "textRight": null,
+      "heading": {
+       "text": "Questions people ask",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 24,
+      "textLeft": 20,
+      "textRight": 24,
       "fullBleed": false,
       "footer": false,
       "hero": false,
-      "continues": true,
+      "continues": false,
       "pinned": false
      },
      {
       "sel": "div.cta-photos",
       "tag": "div",
-      "top": 7502,
+      "top": 10412,
       "height": 675,
       "words": 0,
       "media": 3,
@@ -2251,14 +2820,14 @@
      {
       "sel": "div.cta-band",
       "tag": "div",
-      "top": 8177,
+      "top": 11088,
       "height": 593,
       "words": 40,
       "media": 0,
       "middle": 0,
       "heading": {
        "text": "BH",
-       "size": 54,
+       "size": 58,
        "tag": "div"
       },
       "left": 20,
@@ -2274,7 +2843,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 8770,
+      "top": 11681,
       "height": 395,
       "words": 50,
       "media": 0,
@@ -2308,15 +2877,15 @@
     "edges": [
      {
       "x": 20,
-      "n": 8
+      "n": 17
      },
      {
       "x": 40,
       "n": 6
      }
     ],
-    "leftBlocks": 14,
-    "bodySize": 17,
+    "leftBlocks": 23,
+    "bodySize": 16,
     "stage": false,
     "explains": false,
     "slivers": [],
@@ -2332,7 +2901,7 @@
    "level": "WARN",
    "id": "size-count",
    "width": 1440,
-   "message": "11 different font sizes (14, 17, 20, 25, 30, 37, 44, 54, 58, 81, 104).",
+   "message": "13 different font sizes (14, 16, 17, 19, 20, 25, 30, 37, 44, 58, 72, 81, 104).",
    "fix": "A page needs about five: display, heading, lead, body, small.",
    "alsoAt": [
     768,
@@ -2345,6 +2914,13 @@
    "width": 1440,
    "message": "No video anywhere on the page.",
    "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "lopsided",
+   "width": 768,
+   "message": "A section keeps its content on one side and leaves 360px of the width empty: div.notes-funnel.",
+   "fix": "Fill the other side with what the section has (its picture, a second column, the figure), or defend the void in one sentence."
   }
  ],
  "images": [

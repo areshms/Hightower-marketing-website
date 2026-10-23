@@ -27,7 +27,7 @@ body{
   font-family:'Inter',sans-serif;
   background:var(--paper);
   color:var(--ink);
-  font-size:18px;
+  font-size:17px;
   line-height:1.5;
   -webkit-font-smoothing:antialiased;
 }
@@ -136,6 +136,13 @@ ul{list-style:none}
   font-size:clamp(30px,3.4vw,44px);letter-spacing:-0.02em;line-height:1.05;
 }
 
+/* proof chips — immediately after hero */
+.proof-chips{background:var(--ink);color:var(--paper);padding:26px clamp(20px,4vw,64px)}
+.chips-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.chip b{display:block;font-size:19px;font-weight:600;font-family:'Playfair Display',serif}
+.chip span{display:block;font-size:14px;color:#d6d3d1;margin-top:4px;line-height:1.4}
+@media (max-width:768px){.chips-row{grid-template-columns:1fr 1fr;gap:16px}.chip b{font-size:17px}.chip span{font-size:13px}}
+
 /* features — panel with margin notes */
 .features .grid{display:grid;grid-template-columns:1fr 420px 1fr;gap:clamp(24px,4vw,72px);margin-top:56px;align-items:stretch}
 
@@ -151,7 +158,7 @@ ul{list-style:none}
 .stat-line{display:flex;justify-content:space-between;align-items:baseline;padding:15px 2px}
 .stat-line:last-child{padding-bottom:0}
 .stat-line .k{font-size:17px;color:var(--ink)}
-.stat-line .v{font-size:15px;color:var(--muted)}
+.stat-line .v{font-size:14px;color:var(--muted)}
 .grow-bar{margin:16px 2px 6px}
 .grow-bar .lbl{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:6px}
 .grow-bar .track{height:8px;background:#edebe8}
@@ -164,6 +171,49 @@ ul{list-style:none}
 .note-col{display:flex;flex-direction:column;gap:56px;justify-content:center}
 .note-col-r .note:first-child{padding-top:48px}
 .note:focus{outline:2px solid var(--gold)}
+
+/* blog funnel */
+.notes-funnel{margin-top:clamp(64px,8vw,120px);padding-top:32px}
+.notes-funnel .funnel-title{font-size:17px;letter-spacing:0;text-transform:none;color:var(--gold-deep);font-weight:600}
+.funnel-links{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px}
+.funnel-links a{font-size:17px;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:8px;line-height:1.35}
+.funnel-links a:hover{color:var(--gold-deep)}
+@media (max-width:900px){.funnel-links{grid-template-columns:1fr;gap:14px}}
+
+/* process */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:64px}
+.step{border-top:none;padding-top:0}
+.process-grid{counter-reset:step}
+.process-grid li{list-style:none}
+.step::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-family:'Playfair Display',serif;font-size:clamp(30px,3vw,44px);color:var(--gold);display:block;line-height:1}
+.step{border-top:none}
+.step b{display:block;font-size:20px;margin:14px 0 10px;font-weight:600}
+.step p{font-size:16px;color:var(--ink);line-height:1.55;max-width:34ch}
+@media (max-width:768px){.process-grid{grid-template-columns:1fr 1fr;gap:20px}.step p{max-width:none}}
+
+/* FAQ */
+.faq-list{margin-top:56px;columns:2;column-gap:clamp(40px,6vw,96px)}
+@media (max-width:900px){.faq-list{columns:1}}
+details{border:none;padding:0;margin-bottom:8px;break-inside:avoid}
+summary{font-size:19px;font-weight:600;padding:18px 0;cursor:pointer;list-style:none;color:var(--ink)}
+summary::marker{display:none}
+summary::after{content:'+';float:right;font-size:24px;color:var(--gold);font-weight:400}
+details[open] summary::after{content:'–'}
+details p{font-size:16px;color:var(--muted);padding:0 0 20px;max-width:62ch;line-height:1.55}
+details[open] summary{color:var(--gold-deep)}
+
+/* calculator */
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);margin-top:64px;align-items:center}
+.calc-form{background:#fff;padding:28px}
+.calc-form label{display:block;font-size:14px;font-weight:600;margin:18px 0 8px}
+.calc-form label:first-child{margin-top:0}
+.calc-form input[type=range]{width:100%;accent-color:var(--gold-deep)}
+.calc-form output{float:right;font-size:16px;font-weight:600;color:var(--gold-deep)}
+.calc-big{font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,72px);line-height:1;font-weight:600}
+.calc-big span{font-size:20px;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)}
+.calc-note{font-size:14px;color:var(--muted);max-width:44ch;margin:16px 0 24px;line-height:1.5}
+.calc-result .btn{display:inline-block}
+@media (max-width:768px){.calc-grid{grid-template-columns:1fr;gap:32px}}
 
 /* work — oversized visuals */
 .work{overflow:clip}
@@ -213,7 +263,7 @@ ul{list-style:none}
 .cta-statement a{text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:4px;text-underline-offset:8px}
 .cta-statement a:hover,.cta-statement a:focus-visible{color:var(--gold-bright)}
 .cta-sub{grid-column:1/8;font-size:17px;color:var(--soft);margin-top:32px;max-width:52ch}
-.monogram{width:150px;height:150px;background:var(--gold-deep);color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:54px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
+.monogram{width:150px;height:150px;background:var(--gold-deep);color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:58px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
 .cta-person{grid-column:11/13;justify-self:end}
 .cta-person img{width:150px;height:188px;object-fit:cover;filter:grayscale(1) contrast(1.05)}
 .cta-person .who{font-size:14px;color:var(--soft);margin-top:10px;text-align:left}
@@ -262,7 +312,7 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
   .cta-photos{grid-template-columns:1fr 1fr}
   .cta-photos img:first-child{grid-column:1/3}
   .cta-inner{display:block}
-  .monogram{width:150px;height:150px;background:var(--gold-deep);color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:54px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
+  .monogram{width:150px;height:150px;background:var(--gold-deep);color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:58px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
 .cta-person{margin-top:32px}
   .cta-statement{font-size:23px}
 }
@@ -276,6 +326,8 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
   <nav class="head-tabs" aria-label="Primary">
     <a href="#services">Services</a>
     <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a href="#faq">FAQ</a>
     <a href="#about">About</a>
     <a href="blog.html">Notes</a>
   </nav>
@@ -314,9 +366,9 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
   <h2 class="section-title rise" style="text-align:right">What we run</h2>
   <div class="grid">
     <div class="note-col note-col-l">
-      <div class="note rise"><b>Marketing that ships</b>Video ads, storefronts and campaigns built from our own product launches.</div>
-      <div class="note rise"><b>Automation first</b>Every manual step we find, we replace. Our pipelines run without babysitting.</div>
-      <div class="note rise"><b>Real numbers</b>The dashboard is live. You see what we see, from the first call.</div>
+      <div class="note rise"><b>Storefront automation</b>Listings, pricing and tracking synced supplier-to-store, every day.</div>
+      <div class="note rise"><b>Content publishing</b>Keyword research to drafted, posted article without a person in the loop.</div>
+      <div class="note rise"><b>Data enrichment</b>Public records parsed, cleaned and scored into one pipeline.</div>
     </div>
 
     <div class="panel" data-ui aria-label="Live operations dashboard">
@@ -340,9 +392,9 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
     </div>
 
     <div class="note-col note-col-r">
-      <div class="note rise"><b>Supplier-wired</b>Inventory, pricing and tracking sync straight from CJ's API.</div>
-      <div class="note rise"><b>One operator</b>You talk to the person who owns the systems, never an account manager.</div>
-      <div class="note rise"><b>Ohio-built</b>Systems and suppliers wired for US buyers and US shipping.</div>
+      <div class="note rise"><b>What we automate first</b>Lead capture, order flow, reporting. Highest hours back, first.</div>
+      <div class="note rise"><b>Human where it counts</b>A person approves anything that touches your customer or your records.</div>
+      <div class="note rise"><b>Tool chain</b>Shopify · eBay · CJ · GSC · Playwright — wired together, no black box.</div>
     </div>
   </div>
 </section>
@@ -353,23 +405,47 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
       <div class="work-visual rise"><img src="assets/work-hero-lifestyle.png" alt="TrendLoop storefront hero product: LED photon facial mask, a live SKU with real buyers" loading="lazy"></div>
       <div class="work-copy rise">
         <h3>TrendLoop, a store built to run itself</h3>
-        <p>Product research, listings, supplier sync and fulfillment wired end to end: 17 SKUs across eBay, Shopify and TikTok Shop, inventory pulled nightly from the supplier's API, first tracked sale shipped 10 days after launch.</p>
+        <p>Before: product research, listing, pricing and order chasing done by hand. After: 17 SKUs across eBay, Shopify and TikTok Shop, inventory pulled nightly from the supplier's API, first tracked sale shipped 10 days after launch.</p>
       </div>
     </div>
     <div class="work-block">
       <div class="work-visual rise"><img src="assets/work-water-projector.jpg" alt="Water ripple projector, one of 17 live SKUs synced from supplier API" loading="lazy"></div>
       <div class="work-copy rise">
         <h3>A 10,255-property data refinery</h3>
-        <p>An 18-city Ohio property engine that scrapes, enriches and scores wholesale deals on a weekly cron. The same automation patterns power our clients' reporting and lead flows.</p>
+        <p>Before: county records browsed by hand, deal quality guessed. After: an 18-city engine scraping, enriching and scoring 10,255+ Ohio properties weekly, with a deal list waiting every Monday.</p>
       </div>
     </div>
     <div class="work-block">
       <div class="work-visual rise"><img src="assets/work-dog-hoodie.jpg" alt="Pet apparel from the storefront lineup, supplier-wired inventory" loading="lazy"></div>
       <div class="work-copy rise">
         <h3>12 posts, published while we sleep</h3>
-        <p>The blog writes, formats, covers and posts itself on a schedule, with search indexing verified through Google Search Console. Content compounds without anyone pressing publish.</p>
+        <p>Before: content meant writing nights and weekends. After: keyword research, drafting, formatting and posting run on a schedule, indexed and verified through Google Search Console. Twelve posts and compounding, no one pressing publish.</p>
       </div>
     </div>
+  </div>
+
+  <div class="notes-funnel">
+    <b class="funnel-title">From the notebook</b>
+    <div class="funnel-links">
+      <a href="/blog/ai-video-ads-columbus-ohio.html">AI video ads: pricing, process &amp; results</a>
+      <a href="/blog/seo-columbus-ohio.html">SEO in Columbus: what actually ranks in 2026</a>
+      <a href="/blog/how-ai-is-changing-small-business-marketing.html">How AI is changing small business marketing</a>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="process">
+  <h2 class="section-title rise">From first call to a running system</h2>
+  <ol class="process-grid">
+    <li class="step rise"><b>Audit &amp; scope</b><p>Thirty minutes. We map the work you repeat every week and name the two or three where automation pays back first. Fixed quote after it.</p></div>
+    <li class="step rise"><b>Build &amp; connect</b><p>Workflows built against your real tools and real data, tested before anything touches production.</p></div>
+    <li class="step rise"><b>Launch &amp; monitor</b><p>Live, documented, and watched. You know what runs, when, and how to stop it.</p></div>
+    <li class="step rise"><b>Human approval</b><p>Anything that writes to your customers or your records waits for a person to click yes.</p></li>
+  </ol>
+
+  <div class="pricing-approach rise">
+    <b>How pricing runs</b>
+    <p>Fixed quote per workflow after the free audit — the price scales with how many systems the workflow touches, not with how long we can make a meeting. You see the number before any work starts.</p>
   </div>
 </section>
 
@@ -380,6 +456,29 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
     <div class="tiles">
       <div class="figure-tile tile-a"><span class="n">12+</span><span class="c">Local clients served since 2022</span></div>
       <div class="figure-tile tile-b"><span class="n">48h</span><span class="c">Average delivery time on campaign work</span></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section wrap" id="calculator">
+  <h2 class="section-title rise">What is that manual task costing you?</h2>
+  <div class="calc-grid">
+    <div class="calc-form" data-ui>
+      <label for="calc-hours">Hours of repetitive work, per week</label>
+      <input type="range" id="calc-hours" min="1" max="40" value="10" step="1">
+      <output id="calc-hours-out">10</output>
+      <label for="calc-rate">Loaded hourly cost, in dollars</label>
+      <input type="range" id="calc-rate" min="15" max="150" value="35" step="5">
+      <output id="calc-rate-out">35</output>
+      <label for="calc-share">Share the automation can take, percent</label>
+      <input type="range" id="calc-share" min="20" max="90" value="60" step="5">
+      <output id="calc-share-out">60</output>
+    </div>
+    <div class="calc-result">
+      <p class="calc-big"><output id="calc-year">$10,920</output> <span>per year</span></p>
+      <p class="calc-note">Estimate, before tax. Assumes the share you pick is honestly automatable — the free audit tells you which part really is. Not a quote.</p>
+      <a class="btn" href="contact.html">Get the free audit</a>
     </div>
   </div>
 </section>
@@ -416,6 +515,19 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+
+<section class="section wrap" id="faq">
+  <h2 class="section-title rise">Questions people ask</h2>
+  <div class="faq-list">
+    <details class="rise"><summary>How much does an automation cost?</summary><p>Scoped per workflow — the price depends on how many systems it touches. You see a fixed quote after the free audit, before anything is built.</p></details>
+    <details class="rise"><summary>Will an AI agent change my store or email my customers on its own?</summary><p>Not in what we build. Anything that writes to your customers or your records lands in a review queue that only a person can approve.</p></details>
+    <details class="rise"><summary>Which tools do you work with?</summary><p>Shopify, eBay, TikTok Shop, CJ Dropshipping, Google Search Console, Playwright. If it has an API, we can probably wire it.</p></details>
+    <details class="rise"><summary>How long until something is running?</summary><p>The audit is thirty minutes. First workflows typically go live within two weeks of a signed scope.</p></details>
+    <details class="rise"><summary>Do you run this stuff yourself, or just consult?</summary><p>We run it. Three storefronts, a 10,255-property data pipeline, and this site's own publishing flow are ours, in production, every day.</p></details>
+    <details class="rise"><summary>What if it breaks?</summary><p>Everything we build is monitored and documented, and you know how to stop it. Nothing runs that we cannot turn off.</p></details>
   </div>
 </section>
 
@@ -479,6 +591,20 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
     n.addEventListener('mouseenter', function(){ document.querySelector('.panel').style.outline = '3px solid var(--gold)'; });
     n.addEventListener('mouseleave', function(){ document.querySelector('.panel').style.outline = 'none'; });
   });
+})();
+
+// savings calculator
+(function(){
+  var h=document.getElementById('calc-hours'),r=document.getElementById('calc-rate'),
+      sh=document.getElementById('calc-share'),ho=document.getElementById('calc-hours-out'),
+      ro=document.getElementById('calc-rate-out'),so=document.getElementById('calc-share-out'),
+      yr=document.getElementById('calc-year');
+  if(!h||!r||!sh||!yr)return;
+  function upd(){var v=+h.value*(+r.value)*(+sh.value)*0.01*52;
+    ho.textContent=h.value;ro.textContent=r.value;so.textContent=sh.value;
+    yr.textContent='$'+Math.round(v).toLocaleString();}
+  [h,r,sh].forEach(function(el){el.addEventListener('input',upd);});
+  upd();
 })();
 </script>
 </body>
