@@ -1,6 +1,6 @@
 {
  "url": "https://hms-site-v4-full.ares-hms.workers.dev/",
- "at": "2026-10-23T19:38:33.171Z",
+ "at": "2026-10-23T19:40:09.138Z",
  "allow": [],
  "viewports": [
   {
@@ -641,8 +641,8 @@
       "height": 332
      },
      {
-      "top": 9908,
-      "height": 368
+      "top": 9904,
+      "height": 372
      }
     ],
     "h1s": [
@@ -712,10 +712,10 @@
     0.49
    ],
    "motion": {
-    "elements": 192,
+    "elements": 194,
     "css": 3,
     "transitions": 34,
-    "scripted": 155,
+    "scripted": 157,
     "videos": 0,
     "playingVideos": 0
    },
@@ -727,7 +727,7 @@
     "page": {
      "height": 12732,
      "screens": 12.4,
-     "words": 409,
+     "words": 421,
      "img": 11,
      "video": 0,
      "canvas": 0,
@@ -737,7 +737,7 @@
      "overflowCulprits": [],
      "uiFragments": 2,
      "uiAbuse": false,
-     "realPictures": 11,
+     "realPictures": 9,
      "videoCount": 0,
      "uiPictures": 2,
      "pictureSamples": [
@@ -746,9 +746,9 @@
       "work-dog-hoodie.jpg",
       "work-question-lamp.jpg",
       "work-hero-lifestyle.png",
-      "work-water-projector.jpg",
       "work-dog-hoodie.jpg",
-      "work-hero-lifestyle.png"
+      "work-hero-lifestyle.png",
+      "work-pet-nail-clipper.jpg"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -883,12 +883,12 @@
      "families": [
       {
        "family": "Inter",
-       "share": 0.94,
+       "share": 0.95,
        "mono": false
       },
       {
        "family": "Playfair Display",
-       "share": 0.06,
+       "share": 0.05,
        "mono": false
       }
      ],
@@ -898,6 +898,7 @@
       14,
       16,
       17,
+      19,
       20,
       23,
       31,
@@ -905,7 +906,7 @@
       58,
       100
      ],
-     "sizeCount": 10,
+     "sizeCount": 11,
      "notLoaded": [],
      "body": {
       "font": "Inter",
@@ -965,20 +966,20 @@
      ],
      "textColors": [
       {
-       "color": "#1c1917",
+       "color": "#78716c",
        "share": 0.34
       },
       {
-       "color": "#78716c",
-       "share": 0.28
+       "color": "#1c1917",
+       "share": 0.33
       },
       {
        "color": "#a8a29e",
-       "share": 0.18
+       "share": 0.16
       },
       {
        "color": "#fafaf9",
-       "share": 0.09
+       "share": 0.08
       },
       {
        "color": "#d6d3d1",
@@ -1296,14 +1297,14 @@
       "tag": "section",
       "top": 10176,
       "height": 732,
-      "words": 0,
+      "words": 56,
       "media": 0,
       "middle": 0,
       "heading": null,
-      "left": null,
-      "right": null,
-      "textLeft": null,
-      "textRight": null,
+      "left": 31,
+      "right": 116,
+      "textLeft": 31,
+      "textRight": 116,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -1368,7 +1369,11 @@
      },
      {
       "top": 10060,
-      "height": 1016
+      "height": 340
+     },
+     {
+      "top": 10640,
+      "height": 436
      }
     ],
     "h1s": [
@@ -1383,10 +1388,10 @@
     "edges": [
      {
       "x": 31,
-      "n": 7
+      "n": 9
      }
     ],
-    "leftBlocks": 7,
+    "leftBlocks": 9,
     "bodySize": 14,
     "stage": false,
     "explains": false,
@@ -2102,7 +2107,7 @@
      },
      {
       "top": 9716,
-      "height": 304
+      "height": 300
      },
      {
       "top": 10164,

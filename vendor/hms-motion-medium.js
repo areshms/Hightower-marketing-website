@@ -18,9 +18,9 @@
       var lenis = null;
       if (typeof Lenis !== 'undefined') {
         lenis = new Lenis({ duration: 1.1, smoothWheel: true });
-        lenis.on('scroll', ScrollTrigger.update);
-        gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
-        gsap.ticker.lagSmoothing(0);
+        function lenisRaf(t) { lenis.raf(t); requestAnimationFrame(lenisRaf); }
+        requestAnimationFrame(lenisRaf);
+        lenis.on('scroll', function () { ScrollTrigger.update(); });
         /* keep anchor jumps working through the smooth scroller */
         document.querySelectorAll('a[href^="#"]').forEach(function (a) {
           var href = a.getAttribute('href');
@@ -110,5 +110,8 @@
       console.error('HMS Motion Medium error:', err);
     }
   }
-  whenReady(init);
+  /* Init AFTER full load (images settle layout) so ScrollTrigger never needs a
+   reverting refresh — reverting once-triggers would leave the page invisible. */
+if (document.readyState === 'complete') init();
+else window.addEventListener('load', init);
 })();
