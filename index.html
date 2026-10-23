@@ -173,12 +173,12 @@ ul{list-style:none}
 .note:focus{outline:2px solid var(--gold)}
 
 /* blog funnel */
-.notes-funnel{margin-top:clamp(64px,8vw,120px);padding-top:32px}
+.notes-funnel{margin:clamp(64px,8vw,120px) auto 0;padding:32px clamp(20px,4vw,64px) 0;max-width:1440px}
 .notes-funnel .funnel-title{font-size:17px;letter-spacing:0;text-transform:none;color:var(--gold-deep);font-weight:600}
 .funnel-links{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px}
 .funnel-links a{font-size:17px;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:8px;line-height:1.35}
 .funnel-links a:hover{color:var(--gold-deep)}
-@media (max-width:900px){.funnel-links{grid-template-columns:1fr;gap:14px}}
+@media (max-width:900px){.funnel-links{grid-template-columns:1fr;gap:14px}.features .grid{display:block}}
 
 /* process */
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:64px}
@@ -201,6 +201,11 @@ summary::after{content:'+';float:right;font-size:24px;color:var(--gold);font-wei
 details[open] summary::after{content:'–'}
 details p{font-size:16px;color:var(--muted);padding:0 0 20px;max-width:62ch;line-height:1.55}
 details[open] summary{color:var(--gold-deep)}
+
+/* pricing approach */
+.pricing-approach{margin:clamp(56px,8vw,96px) 0 0;padding-top:32px}
+.pricing-approach b{display:block;font-size:20px;font-weight:600;margin-bottom:8px}
+.pricing-approach p{font-size:17px;color:var(--muted);max-width:64ch;line-height:1.55}
 
 /* calculator */
 .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);margin-top:64px;align-items:center}
@@ -437,9 +442,9 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
 <section class="section wrap" id="process">
   <h2 class="section-title rise">From first call to a running system</h2>
   <ol class="process-grid">
-    <li class="step rise"><b>Audit &amp; scope</b><p>Thirty minutes. We map the work you repeat every week and name the two or three where automation pays back first. Fixed quote after it.</p></div>
-    <li class="step rise"><b>Build &amp; connect</b><p>Workflows built against your real tools and real data, tested before anything touches production.</p></div>
-    <li class="step rise"><b>Launch &amp; monitor</b><p>Live, documented, and watched. You know what runs, when, and how to stop it.</p></div>
+    <li class="step rise"><b>Audit &amp; scope</b><p>Thirty minutes. We map the work you repeat every week and name the two or three where automation pays back first. Fixed quote after it.</p></li>
+    <li class="step rise"><b>Build &amp; connect</b><p>Workflows built against your real tools and real data, tested before anything touches production.</p></li>
+    <li class="step rise"><b>Launch &amp; monitor</b><p>Live, documented, and watched. You know what runs, when, and how to stop it.</p></li>
     <li class="step rise"><b>Human approval</b><p>Anything that writes to your customers or your records waits for a person to click yes.</p></li>
   </ol>
 
