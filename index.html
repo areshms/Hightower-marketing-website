@@ -213,6 +213,7 @@ ul{list-style:none}
 .cta-statement a{text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:4px;text-underline-offset:8px}
 .cta-statement a:hover,.cta-statement a:focus-visible{color:var(--gold-bright)}
 .cta-sub{grid-column:1/8;font-size:17px;color:var(--soft);margin-top:32px;max-width:52ch}
+.monogram{width:150px;height:150px;background:var(--gold-deep);color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:54px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
 .cta-person{grid-column:11/13;justify-self:end}
 .cta-person img{width:150px;height:188px;object-fit:cover;filter:grayscale(1) contrast(1.05)}
 .cta-person .who{font-size:14px;color:var(--soft);margin-top:10px;text-align:left}
@@ -261,7 +262,8 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
   .cta-photos{grid-template-columns:1fr 1fr}
   .cta-photos img:first-child{grid-column:1/3}
   .cta-inner{display:block}
-  .cta-person{margin-top:32px}
+  .monogram{width:150px;height:150px;background:var(--gold-deep);color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:54px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
+.cta-person{margin-top:32px}
   .cta-statement{font-size:23px}
 }
 </style>
@@ -289,7 +291,6 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
     <div class="tile-coal cell-2x2"></div>
     <img class="cell-2x1" src="assets/work-question-lamp.jpg" alt="">
     <div class="tile-ground cell-1x1"></div>
-    <img class="cell-1x1" src="assets/work-water-projector.jpg" alt="">
   </div>
 </div>
 
@@ -427,10 +428,10 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
   </div>
   <div class="cta-band">
     <div class="wrap cta-inner">
-      <p class="cta-statement">Ready to grow without the guesswork? <a href="mailto:hello@hightower-marketing.com">Book a free call</a> and get a real audit of your marketing, not a pitch deck.</p>
+      <p class="cta-statement">Ready to grow without the guesswork? <a href="contact.html">Book a free call</a> and get a real audit of your marketing, not a pitch deck.</p>
       <p class="cta-sub">Columbus, Ohio · hello@hightower-marketing.com · Replies within one business day.</p>
       <div class="cta-person">
-        <img src="assets/work-question-lamp.jpg" alt="" loading="lazy">
+        <div class="monogram" aria-hidden="true">BH</div>
         <p class="who">Blake Hightower. You'll talk to me.</p>
       </div>
     </div>

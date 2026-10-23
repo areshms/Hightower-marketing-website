@@ -1,6 +1,6 @@
 {
  "url": "index.html",
- "at": "2026-10-23T17:32:30.297Z",
+ "at": "2026-10-23T17:37:31.476Z",
  "allow": [],
  "viewports": [
   {
@@ -9,7 +9,7 @@
    "load": "load",
    "screens": 9,
    "filled": [
-    0.57,
+    0.53,
     0.31,
     0.45,
     0.53,
@@ -33,10 +33,10 @@
      "h": 900
     },
     "page": {
-     "height": 7627,
-     "screens": 8.5,
-     "words": 523,
-     "img": 13,
+     "height": 7589,
+     "screens": 8.4,
+     "words": 524,
+     "img": 11,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -45,7 +45,7 @@
      "overflowCulprits": [],
      "uiFragments": 1,
      "uiAbuse": false,
-     "realPictures": 13,
+     "realPictures": 11,
      "videoCount": 0,
      "uiPictures": 1,
      "pictureSamples": [
@@ -53,10 +53,10 @@
       "work-nose-patches.jpg",
       "work-dog-hoodie.jpg",
       "work-question-lamp.jpg",
-      "work-water-projector.jpg",
       "work-hero-lifestyle.png",
       "work-water-projector.jpg",
-      "work-dog-hoodie.jpg"
+      "work-dog-hoodie.jpg",
+      "work-hero-lifestyle.png"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -325,6 +325,27 @@
       "kind": "statement"
      },
      {
+      "text": "BH",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 54,
+      "vw": 3.8,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0.02,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.1,
+      "top": 7058,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
       "text": "Hightower Marketing",
       "words": 2,
       "chars": 19,
@@ -341,13 +362,13 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 7423,
+      "top": 7385,
       "tag": "p",
       "kind": "statement"
      }
     ],
     "headingSummary": {
-     "count": 12,
+     "count": 13,
      "maxLines": 3,
      "over2Lines": 0,
      "statements": 2,
@@ -377,11 +398,12 @@
       30,
       37,
       44,
+      54,
       58,
       81,
       104
      ],
-     "sizeCount": 10,
+     "sizeCount": 11,
      "notLoaded": [],
      "body": {
       "font": "Inter",
@@ -493,7 +515,7 @@
      "blurred": 0,
      "roundedBoxes": 0,
      "boxRadius": 0,
-     "squareMedia": 12,
+     "squareMedia": 11,
      "roundedMedia": 0,
      "mediaRadius": 0,
      "textShadow": 0,
@@ -517,7 +539,7 @@
      "w": 1440,
      "h": 900
     },
-    "pageH": 7627,
+    "pageH": 7589,
     "margins": {
      "left": 58,
      "right": 58
@@ -529,11 +551,11 @@
       "top": 0,
       "height": 400,
       "words": 0,
-      "media": 4,
+      "media": 3,
       "middle": 0,
       "heading": null,
       "left": 480,
-      "right": 0,
+      "right": 240,
       "textLeft": null,
       "textRight": null,
       "fullBleed": false,
@@ -661,9 +683,9 @@
       "sel": "section#contact",
       "tag": "section",
       "top": 6313,
-      "height": 1066,
-      "words": 42,
-      "media": 4,
+      "height": 1028,
+      "words": 43,
+      "media": 3,
       "middle": 0,
       "heading": {
        "text": "Start the audit",
@@ -683,7 +705,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 7379,
+      "top": 7341,
       "height": 247,
       "words": 50,
       "media": 0,
@@ -739,10 +761,10 @@
     "slivers": [],
     "voidShare": 0.09,
     "voidBox": {
-     "x": 0,
-     "y": 240,
-     "w": 480,
-     "h": 240
+     "x": 1260,
+     "y": 120,
+     "w": 180,
+     "h": 660
     }
    },
    "app": null,
@@ -754,15 +776,15 @@
    "load": "load",
    "screens": 10,
    "filled": [
-    0.69,
-    0.56,
-    0.6,
-    0.69,
-    0.7,
+    0.55,
     0.63,
-    0.86,
-    0.21,
+    0.71,
+    0.71,
+    0.74,
+    0.57,
     0.67,
+    0.27,
+    0.88,
     1
    ],
    "motion": {
@@ -779,10 +801,10 @@
      "h": 1024
     },
     "page": {
-     "height": 10256,
-     "screens": 10,
-     "words": 523,
-     "img": 13,
+     "height": 9962,
+     "screens": 9.7,
+     "words": 524,
+     "img": 11,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -791,7 +813,7 @@
      "overflowCulprits": [],
      "uiFragments": 1,
      "uiAbuse": false,
-     "realPictures": 13,
+     "realPictures": 11,
      "videoCount": 0,
      "uiPictures": 1,
      "pictureSamples": [
@@ -799,10 +821,10 @@
       "work-nose-patches.jpg",
       "work-dog-hoodie.jpg",
       "work-question-lamp.jpg",
-      "work-water-projector.jpg",
       "work-hero-lifestyle.png",
       "work-water-projector.jpg",
-      "work-dog-hoodie.jpg"
+      "work-dog-hoodie.jpg",
+      "work-hero-lifestyle.png"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -827,7 +849,7 @@
      "align": "left",
      "position": "center",
      "widthRatio": 0.92,
-     "top": 746,
+     "top": 490,
      "tag": "h1",
      "kind": "heading"
     },
@@ -856,7 +878,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 746,
+      "top": 490,
       "tag": "h1",
       "kind": "heading"
      },
@@ -877,7 +899,7 @@
       "align": "right",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 1267,
+      "top": 1011,
       "tag": "h2",
       "kind": "heading"
      },
@@ -898,7 +920,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 3565,
+      "top": 3309,
       "tag": "h3",
       "kind": "heading"
      },
@@ -919,7 +941,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 4435,
+      "top": 4179,
       "tag": "h3",
       "kind": "heading"
      },
@@ -940,7 +962,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 5382,
+      "top": 5126,
       "tag": "h3",
       "kind": "heading"
      },
@@ -961,7 +983,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 5735,
+      "top": 5479,
       "tag": "h2",
       "kind": "heading"
      },
@@ -982,7 +1004,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.37,
-      "top": 6926,
+      "top": 6670,
       "tag": "span",
       "kind": "heading"
      },
@@ -1003,7 +1025,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.37,
-      "top": 6926,
+      "top": 6670,
       "tag": "span",
       "kind": "heading"
      },
@@ -1024,7 +1046,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 7340,
+      "top": 7084,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1045,8 +1067,29 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 8399,
+      "top": 8143,
       "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "BH",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 54,
+      "vw": 7,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0.02,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.2,
+      "top": 9423,
+      "tag": "div",
       "kind": "heading"
      },
      {
@@ -1066,13 +1109,13 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 10035,
+      "top": 9741,
       "tag": "p",
       "kind": "statement"
      }
     ],
     "headingSummary": {
-     "count": 11,
+     "count": 12,
      "maxLines": 2,
      "over2Lines": 0,
      "statements": 1,
@@ -1104,10 +1147,11 @@
       26,
       30,
       31,
+      54,
       100,
       115
      ],
-     "sizeCount": 11,
+     "sizeCount": 12,
      "notLoaded": [],
      "body": {
       "font": "Inter",
@@ -1148,7 +1192,7 @@
      "sectionBgs": [
       {
        "color": "#ffffff",
-       "top": 1587,
+       "top": 1331,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1157,7 +1201,7 @@
       },
       {
        "color": "#0c0a09",
-       "top": 9383,
+       "top": 9127,
        "hsl": {
         "h": 20,
         "s": 0.14,
@@ -1228,18 +1272,13 @@
      "blurred": 0,
      "roundedBoxes": 0,
      "boxRadius": 0,
-     "squareMedia": 8,
+     "squareMedia": 7,
      "roundedMedia": 0,
      "mediaRadius": 0,
      "textShadow": 0,
      "cardRows": []
     },
-    "heroMedia": [
-     {
-      "type": "img",
-      "ratio": 0.08
-     }
-    ],
+    "heroMedia": [],
     "nav": {
      "links": 6,
      "fixed": false,
@@ -1257,7 +1296,7 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 10256,
+    "pageH": 9962,
     "margins": {
      "left": 16,
      "right": 30
@@ -1267,9 +1306,9 @@
       "sel": "div.masthead",
       "tag": "div",
       "top": 100,
-      "height": 496,
+      "height": 240,
       "words": 0,
-      "media": 4,
+      "media": 3,
       "middle": 0,
       "heading": null,
       "left": 0,
@@ -1285,7 +1324,7 @@
      {
       "sel": "section.hero-text.wrap",
       "tag": "section",
-      "top": 596,
+      "top": 340,
       "height": 528,
       "words": 39,
       "media": 0,
@@ -1301,14 +1340,14 @@
       "textRight": 61,
       "fullBleed": false,
       "footer": false,
-      "hero": false,
+      "hero": true,
       "continues": false,
       "pinned": false
      },
      {
       "sel": "section#services.section.features",
       "tag": "section",
-      "top": 1165,
+      "top": 909,
       "height": 1391,
       "words": 141,
       "media": 0,
@@ -1331,7 +1370,7 @@
      {
       "sel": "section#work.section.work",
       "tag": "section",
-      "top": 2556,
+      "top": 2300,
       "height": 3077,
       "words": 111,
       "media": 3,
@@ -1354,7 +1393,7 @@
      {
       "sel": "section#numbers.section.wrap",
       "tag": "section",
-      "top": 5633,
+      "top": 5377,
       "height": 1605,
       "words": 17,
       "media": 1,
@@ -1377,7 +1416,7 @@
      {
       "sel": "section#about.section.about",
       "tag": "section",
-      "top": 7237,
+      "top": 6981,
       "height": 1161,
       "words": 131,
       "media": 0,
@@ -1400,10 +1439,10 @@
      {
       "sel": "section#contact",
       "tag": "section",
-      "top": 8399,
-      "height": 1592,
-      "words": 42,
-      "media": 4,
+      "top": 8143,
+      "height": 1554,
+      "words": 43,
+      "media": 3,
       "middle": 0,
       "heading": {
        "text": "Start the audit",
@@ -1423,7 +1462,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 9991,
+      "top": 9697,
       "height": 266,
       "words": 50,
       "media": 0,
@@ -1449,7 +1488,7 @@
      {
       "text": "Growth, run by an operator.",
       "size": 100,
-      "top": 746,
+      "top": 490,
       "firstScreen": true
      }
     ],
@@ -1479,18 +1518,17 @@
    "width": 390,
    "height": 844,
    "load": "load",
-   "screens": 12,
+   "screens": 11,
    "filled": [
-    0.7,
+    0.69,
+    0.59,
     0.54,
-    0.73,
-    0.56,
-    0.64,
-    0.7,
-    0.71,
-    0.48,
+    0.61,
+    0.59,
+    0.66,
+    0.86,
+    0.4,
     0.28,
-    0.97,
     1,
     1
    ],
@@ -1508,10 +1546,10 @@
      "h": 844
     },
     "page": {
-     "height": 9333,
-     "screens": 11.1,
-     "words": 523,
-     "img": 13,
+     "height": 9165,
+     "screens": 10.9,
+     "words": 524,
+     "img": 11,
      "video": 0,
      "canvas": 0,
      "svg": 0,
@@ -1520,7 +1558,7 @@
      "overflowCulprits": [],
      "uiFragments": 1,
      "uiAbuse": false,
-     "realPictures": 8,
+     "realPictures": 7,
      "videoCount": 0,
      "uiPictures": 1,
      "pictureSamples": [
@@ -1530,8 +1568,7 @@
       "work-hero-lifestyle.png",
       "work-pet-nail-clipper.jpg",
       "work-water-projector.jpg",
-      "work-pet-nail-clipper.jpg",
-      "work-question-lamp.jpg"
+      "work-pet-nail-clipper.jpg"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -1556,7 +1593,7 @@
      "align": "left",
      "position": "center",
      "widthRatio": 0.9,
-     "top": 620,
+     "top": 490,
      "tag": "h1",
      "kind": "heading"
     },
@@ -1585,7 +1622,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 620,
+      "top": 490,
       "tag": "h1",
       "kind": "heading"
      },
@@ -1606,7 +1643,7 @@
       "align": "right",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 1058,
+      "top": 928,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1627,7 +1664,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.79,
-      "top": 3145,
+      "top": 3015,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1648,7 +1685,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.79,
-      "top": 3949,
+      "top": 3819,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1669,7 +1706,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.79,
-      "top": 4813,
+      "top": 4683,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1690,7 +1727,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 5184,
+      "top": 5054,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1711,7 +1748,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.26,
-      "top": 5840,
+      "top": 5710,
       "tag": "span",
       "kind": "heading"
      },
@@ -1732,7 +1769,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.26,
-      "top": 5840,
+      "top": 5710,
       "tag": "span",
       "kind": "heading"
      },
@@ -1753,7 +1790,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 6233,
+      "top": 6103,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1774,7 +1811,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 7491,
+      "top": 7361,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1795,9 +1832,30 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 8383,
+      "top": 8253,
       "tag": "p",
       "kind": "statement"
+     },
+     {
+      "text": "BH",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 54,
+      "vw": 13.8,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": 0.02,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.38,
+      "top": 8513,
+      "tag": "div",
+      "kind": "heading"
      },
      {
       "text": "Hightower Marketing",
@@ -1816,13 +1874,13 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 8982,
+      "top": 8814,
       "tag": "p",
       "kind": "statement"
      }
     ],
     "headingSummary": {
-     "count": 12,
+     "count": 13,
      "maxLines": 4,
      "over2Lines": 0,
      "statements": 2,
@@ -1855,9 +1913,10 @@
       28,
       30,
       51,
+      54,
       59
      ],
-     "sizeCount": 11,
+     "sizeCount": 12,
      "notLoaded": [],
      "body": {
       "font": "Inter",
@@ -1898,7 +1957,7 @@
      "sectionBgs": [
       {
        "color": "#ffffff",
-       "top": 1457,
+       "top": 1327,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1907,7 +1966,7 @@
       },
       {
        "color": "#0c0a09",
-       "top": 8307,
+       "top": 8177,
        "hsl": {
         "h": 20,
         "s": 0.14,
@@ -1916,7 +1975,7 @@
       },
       {
        "color": "#1c1917",
-       "top": 8938,
+       "top": 8770,
        "hsl": {
         "h": 24,
         "s": 0.1,
@@ -2011,7 +2070,7 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 9333,
+    "pageH": 9165,
     "margins": {
      "left": 16,
      "right": 9
@@ -2021,7 +2080,7 @@
       "sel": "div.masthead",
       "tag": "div",
       "top": 100,
-      "height": 370,
+      "height": 240,
       "words": 0,
       "media": 0,
       "middle": 0,
@@ -2039,7 +2098,7 @@
      {
       "sel": "section.hero-text.wrap",
       "tag": "section",
-      "top": 470,
+      "top": 340,
       "height": 470,
       "words": 39,
       "media": 0,
@@ -2055,14 +2114,14 @@
       "textRight": 41,
       "fullBleed": false,
       "footer": false,
-      "hero": false,
+      "hero": true,
       "continues": false,
       "pinned": false
      },
      {
       "sel": "section#services.section.features",
       "tag": "section",
-      "top": 974,
+      "top": 844,
       "height": 1640,
       "words": 141,
       "media": 0,
@@ -2085,7 +2144,7 @@
      {
       "sel": "section#work.section.work",
       "tag": "section",
-      "top": 2614,
+      "top": 2484,
       "height": 2485,
       "words": 111,
       "media": 3,
@@ -2108,7 +2167,7 @@
      {
       "sel": "section#numbers.section.wrap",
       "tag": "section",
-      "top": 5100,
+      "top": 4970,
       "height": 1049,
       "words": 17,
       "media": 1,
@@ -2131,7 +2190,7 @@
      {
       "sel": "section#about.section.about",
       "tag": "section",
-      "top": 6148,
+      "top": 6018,
       "height": 1342,
       "words": 131,
       "media": 0,
@@ -2154,7 +2213,7 @@
      {
       "sel": "h2.section-title.rise",
       "tag": "h2",
-      "top": 7491,
+      "top": 7361,
       "height": 141,
       "words": 0,
       "media": 0,
@@ -2173,7 +2232,7 @@
      {
       "sel": "div.cta-photos",
       "tag": "div",
-      "top": 7632,
+      "top": 7502,
       "height": 675,
       "words": 0,
       "media": 3,
@@ -2192,15 +2251,15 @@
      {
       "sel": "div.cta-band",
       "tag": "div",
-      "top": 8307,
-      "height": 631,
-      "words": 39,
-      "media": 1,
+      "top": 8177,
+      "height": 593,
+      "words": 40,
+      "media": 0,
       "middle": 0,
       "heading": {
-       "text": "Ready to grow without the guesswork?",
-       "size": 23,
-       "tag": "p"
+       "text": "BH",
+       "size": 54,
+       "tag": "div"
       },
       "left": 20,
       "right": 20,
@@ -2215,7 +2274,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 8938,
+      "top": 8770,
       "height": 395,
       "words": 50,
       "media": 0,
@@ -2241,7 +2300,7 @@
      {
       "text": "Growth, run by an operator.",
       "size": 51,
-      "top": 620,
+      "top": 490,
       "firstScreen": true
      }
     ],
@@ -2273,7 +2332,7 @@
    "level": "WARN",
    "id": "size-count",
    "width": 1440,
-   "message": "10 different font sizes (14, 17, 20, 25, 30, 37, 44, 58, 81, 104).",
+   "message": "11 different font sizes (14, 17, 20, 25, 30, 37, 44, 54, 58, 81, 104).",
    "fix": "A page needs about five: display, heading, lead, body, small.",
    "alsoAt": [
     768,
