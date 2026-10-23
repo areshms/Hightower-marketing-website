@@ -141,7 +141,11 @@ ul{list-style:none}
 .chips-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .chip b{display:block;font-size:19px;font-weight:600;font-family:'Playfair Display',serif}
 .chip span{display:block;font-size:14px;color:#d6d3d1;margin-top:4px;line-height:1.4}
-@media (max-width:768px){.chips-row{grid-template-columns:1fr 1fr;gap:16px}.chip b{font-size:17px}.chip span{font-size:13px}}
+@media (max-width:768px){.chips-row{grid-template-columns:1fr 1fr;gap:16px}.chip b{font-size:17px}.chip span{font-size:13px}
+  .about .row{margin-top:48px!important}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px}
+  .about-para{margin-top:0}
+  .section-title{margin-top:0}}
 
 /* features — panel with margin notes */
 .features .grid{display:grid;grid-template-columns:1fr 420px 1fr;gap:clamp(24px,4vw,72px);margin-top:56px;align-items:stretch}
@@ -192,9 +196,10 @@ ul{list-style:none}
 @media (max-width:768px){.process-grid{grid-template-columns:1fr 1fr;gap:20px}.step p{max-width:none}}
 
 /* FAQ */
-.faq-list{margin-top:56px;columns:2;column-gap:clamp(40px,6vw,96px)}
+.faq-list{margin-top:56px;column-gap:clamp(40px,6vw,96px)}
 @media (max-width:900px){.faq-list{columns:1}}
 details{border:none;padding:0;margin-bottom:8px;break-inside:avoid}
+@media (min-width:901px){.faq-list{columns:2}}
 summary{font-size:19px;font-weight:600;padding:18px 0;cursor:pointer;list-style:none;color:var(--ink)}
 summary::marker{display:none}
 summary::after{content:'+';float:right;font-size:24px;color:var(--gold);font-weight:400}

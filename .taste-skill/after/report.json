@@ -1,6 +1,6 @@
 {
  "url": "index.html",
- "at": "2026-10-23T18:07:15.692Z",
+ "at": "2026-10-23T18:14:53.699Z",
  "allow": [],
  "viewports": [
   {
@@ -965,8 +965,8 @@
     0.41,
     0.92,
     0.36,
-    0.21,
-    0.27,
+    0.29,
+    0.51,
     1
    ],
    "motion": {
@@ -983,8 +983,8 @@
      "h": 1024
     },
     "page": {
-     "height": 12832,
-     "screens": 12.5,
+     "height": 12736,
+     "screens": 12.4,
      "words": 836,
      "img": 11,
      "video": 0,
@@ -1312,7 +1312,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 10388,
+      "top": 10292,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1333,7 +1333,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 11013,
+      "top": 10917,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1354,7 +1354,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.2,
-      "top": 12293,
+      "top": 12197,
       "tag": "div",
       "kind": "heading"
      },
@@ -1375,7 +1375,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 12611,
+      "top": 12515,
       "tag": "p",
       "kind": "statement"
      }
@@ -1469,7 +1469,7 @@
       },
       {
        "color": "#0c0a09",
-       "top": 11997,
+       "top": 11901,
        "hsl": {
         "h": 20,
         "s": 0.14,
@@ -1564,7 +1564,7 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 12832,
+    "pageH": 12736,
     "margins": {
      "left": 31,
      "right": 31
@@ -1803,7 +1803,7 @@
       "sel": "section#about.section.about",
       "tag": "section",
       "top": 9124,
-      "height": 1161,
+      "height": 1065,
       "words": 131,
       "media": 0,
       "middle": 0,
@@ -1825,7 +1825,7 @@
      {
       "sel": "section#faq.section.wrap",
       "tag": "section",
-      "top": 10285,
+      "top": 10189,
       "height": 727,
       "words": 173,
       "media": 0,
@@ -1848,7 +1848,7 @@
      {
       "sel": "section#contact",
       "tag": "section",
-      "top": 11013,
+      "top": 10917,
       "height": 1554,
       "words": 43,
       "media": 3,
@@ -1871,7 +1871,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 12567,
+      "top": 12471,
       "height": 266,
       "words": 50,
       "media": 0,
@@ -1939,13 +1939,13 @@
     0.44,
     0.77,
     0.56,
-    0.45,
-    0.15
+    0.44,
+    0.26
    ],
    "motion": {
-    "elements": 31,
+    "elements": 32,
     "css": 3,
-    "transitions": 28,
+    "transitions": 29,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -1956,8 +1956,8 @@
      "h": 844
     },
     "page": {
-     "height": 12467,
-     "screens": 14.8,
+     "height": 12371,
+     "screens": 14.7,
      "words": 836,
      "img": 11,
      "video": 0,
@@ -2284,7 +2284,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 9999,
+      "top": 9903,
       "tag": "h2",
       "kind": "heading"
      },
@@ -2305,7 +2305,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 10687,
+      "top": 10591,
       "tag": "h2",
       "kind": "heading"
      },
@@ -2326,7 +2326,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 11556,
+      "top": 11460,
       "tag": "p",
       "kind": "statement"
      },
@@ -2347,7 +2347,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.38,
-      "top": 11816,
+      "top": 11720,
       "tag": "div",
       "kind": "heading"
      },
@@ -2368,7 +2368,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 12117,
+      "top": 12021,
       "tag": "p",
       "kind": "statement"
      }
@@ -2462,7 +2462,7 @@
       },
       {
        "color": "#0c0a09",
-       "top": 11480,
+       "top": 11384,
        "hsl": {
         "h": 20,
         "s": 0.14,
@@ -2471,7 +2471,7 @@
       },
       {
        "color": "#1c1917",
-       "top": 12073,
+       "top": 11977,
        "hsl": {
         "h": 24,
         "s": 0.1,
@@ -2566,7 +2566,7 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 12467,
+    "pageH": 12371,
     "margins": {
      "left": 20,
      "right": 9
@@ -2813,7 +2813,7 @@
       "sel": "section#about.section.about",
       "tag": "section",
       "top": 8573,
-      "height": 1342,
+      "height": 1246,
       "words": 131,
       "media": 0,
       "middle": 0,
@@ -2835,9 +2835,9 @@
      {
       "sel": "section#faq.section.wrap",
       "tag": "section",
-      "top": 9915,
+      "top": 9819,
       "height": 748,
-      "words": 34,
+      "words": 72,
       "media": 0,
       "middle": 0,
       "heading": {
@@ -2846,9 +2846,9 @@
        "tag": "h2"
       },
       "left": 20,
-      "right": 32,
+      "right": 25,
       "textLeft": 20,
-      "textRight": 32,
+      "textRight": 25,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -2858,7 +2858,7 @@
      {
       "sel": "div.cta-photos",
       "tag": "div",
-      "top": 10804,
+      "top": 10708,
       "height": 675,
       "words": 0,
       "media": 3,
@@ -2877,7 +2877,7 @@
      {
       "sel": "div.cta-band",
       "tag": "div",
-      "top": 11480,
+      "top": 11384,
       "height": 593,
       "words": 40,
       "media": 0,
@@ -2900,7 +2900,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 12073,
+      "top": 11977,
       "height": 395,
       "words": 50,
       "media": 0,
@@ -2923,8 +2923,8 @@
     ],
     "gaps": [
      {
-      "top": 10248,
-      "height": 556
+      "top": 10228,
+      "height": 480
      }
     ],
     "h1s": [
@@ -2939,14 +2939,14 @@
     "edges": [
      {
       "x": 20,
-      "n": 13
+      "n": 14
      },
      {
       "x": 40,
       "n": 6
      }
     ],
-    "leftBlocks": 19,
+    "leftBlocks": 20,
     "bodySize": 16,
     "stage": false,
     "explains": false,
@@ -2978,11 +2978,11 @@
    "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
   },
   {
-   "level": "FAIL",
+   "level": "WARN",
    "id": "blank-gap",
    "width": 390,
-   "message": "1 stretch(es) of the page hold nothing at all: 556px at 10248px (the screen is 844px tall).",
-   "fix": "Close the gap: a section gap is 120–240px on desktop and 72–112px on a phone. Look for a min-height: 100vh on a short section, an empty grid row, a hidden element still holding its space, or a reveal that never fired. A deliberate rest is a placed picture or colour field, not nothing."
+   "message": "A 480px stretch at 10228px holds nothing.",
+   "fix": "Check that it is a deliberate rest (once per page at most); otherwise close it to the normal section gap."
   },
   {
    "level": "WARN",
