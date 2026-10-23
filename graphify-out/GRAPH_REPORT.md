@@ -1,17 +1,17 @@
 # Graph Report - hms-site  (2026-10-23)
 
 ## Corpus Check
-- 44 files · ~3,682,722 words
+- 49 files · ~3,800,392 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 10 file(s) not represented in the graph (top: (none) 2, .zip 2, .toml 2)
 
 ## Summary
-- 488 nodes · 907 edges · 34 communities (25 shown, 9 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 62 edges (avg confidence: 0.85)
+- 508 nodes · 929 edges · 34 communities (26 shown, 8 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 72 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a66bd6d7`
+- Built from commit: `c8354b23`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -41,7 +41,7 @@
 - db
 - Mc
 - create-checkout.js
-- raf
+- init
 - vercel.json
 - Vb
 - Wb
@@ -58,8 +58,8 @@
 6. `render_post()` - 11 edges
 7. `r()` - 11 edges
 8. `ja()` - 10 edges
-9. `o()` - 9 edges
-10. `m()` - 9 edges
+9. `init()` - 10 edges
+10. `o()` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Hk()` --indirect_call--> `c()`  [INFERRED]
@@ -76,15 +76,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (34 total, 9 thin omitted)
+## Communities (34 total, 8 thin omitted)
 
 ### Community 0 - "render.py"
 Cohesion: 0.06
-Nodes (31): _card_html(), _iso_to_display(), parse_post_summary(), update_blog_cards(), ValidationLimits, pick_query_opportunities(), generate_gsc_answer(), generate_product_guide() (+23 more)
+Nodes (30): _card_html(), _iso_to_display(), parse_post_summary(), update_blog_cards(), ValidationLimits, generate_gsc_answer(), generate_product_guide(), generate_service_educational() (+22 more)
 
 ### Community 1 - "hms_blog_pipeline.py"
 Cohesion: 0.06
-Nodes (23): commit_and_push(), deploy_netlify(), run_git(), load_gsc_cache(), refresh_gsc_cache(), base_foot(), base_head(), best_for() (+15 more)
+Nodes (24): commit_and_push(), deploy_netlify(), run_git(), load_gsc_cache(), pick_query_opportunities(), refresh_gsc_cache(), base_foot(), base_head() (+16 more)
 
 ### Community 2 - "lenis.min.js"
 Cohesion: 0.08
@@ -174,29 +174,33 @@ Nodes (5): Bb(), Cb(), Context(), db(), gb()
 Cohesion: 0.50
 Nodes (4): ha(), Kc(), Mc(), Tb()
 
+### Community 26 - "init"
+Cohesion: 0.09
+Nodes (8): init(), fmt(), runCountUp(), init(), fmt(), runCountUp(), raf(), ScrollTrigger()
+
 ### Community 33 - "Research: What high-converting AI automation agency websites have (2026-10-23)"
 Cohesion: 0.33
 Nodes (5): Gap list for hms-site v3 (current homepage), Honesty rules (all sources): never invent clients/numbers; label illustrative work; small real, Research: What high-converting AI automation agency websites have (2026-10-23), Sources, The universal section pattern (all sources agree)
 
 ## Knowledge Gaps
 - **1 isolated node(s):** `stripe`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 174 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 186 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `i()` connect `lenis.min.js` to `nc`?**
-  _High betweenness centrality (0.038) - this node is a cross-community bridge._
+- **Why does `ScrollTrigger()` connect `init` to `ScrollTrigger.min.js`?**
+  _High betweenness centrality (0.045) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `Cc()` (e.g. with `Gq()` and `Qq()`) actually correct?**
   _`Cc()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `stripe` to the rest of the system?**
   _1 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `render.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.05674044265593561 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06105834464043419 - nodes in this community are weakly interconnected._
 - **Why does `s()` connect `s` to `lenis.min.js`, `gsap.min.js`, `Tween`, `hf`, `ae`?**
-  _High betweenness centrality (0.035) - this node is a cross-community bridge._
+  _High betweenness centrality (0.040) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `n()` (e.g. with `c()` and `f()`) actually correct?**
   _`n()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Should `hms_blog_pipeline.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.061581920903954805 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05803571428571429 - nodes in this community are weakly interconnected._

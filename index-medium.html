@@ -278,6 +278,21 @@ details[open] summary{color:var(--gold-deep)}
 .cta-person img{width:150px;height:188px;object-fit:cover;filter:grayscale(1) contrast(1.05)}
 .cta-person .who{font-size:14px;color:var(--soft);margin-top:10px;text-align:left}
 
+
+/* awwwards-style micro-interactions: letter roll + underline draw + fill press */
+@media (hover: hover) {
+  .head-tabs a { background: linear-gradient(currentColor 0 0) left bottom / 0% 2px no-repeat;
+    transition: background-size .45s cubic-bezier(.165,.84,.44,1); text-decoration: none; }
+  .head-tabs a:hover, .head-tabs a:focus-visible { background-size: 100% 2px; }
+  .funnel-links a { background: linear-gradient(var(--gold) 0 0) left bottom / 100% 2px no-repeat;
+    transition: background-size .4s cubic-bezier(.165,.84,.44,1); }
+  .funnel-links a:hover { background-size: 100% .35em; color: var(--gold-deep); }
+  .btn:active { transform: scale(.97); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .head-tabs a, .funnel-links a { transition: none; }
+}
+
 /* footer */
 footer{background:var(--ink);color:var(--soft);padding:44px 0 36px;font-size:14px}
 .foot-inner{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
@@ -357,12 +372,12 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
 </div>
 
 <section class="hero-text wrap">
-  <p class="standfirst rise">An operator's marketing practice in Columbus, Ohio. We run real stores, bots and campaigns, then bring what worked to your business.</p>
+  <p class="standfirst rise" data-no-batch="1">An operator's marketing practice in Columbus, Ohio. We run real stores, bots and campaigns, then bring what worked to your business.</p>
   <h1 class="hl">
     <span class="hl-line"><span>Growth, run</span></span>
     <span class="hl-line"><span>by an operator.</span></span>
   </h1>
-  <div class="hero-actions rise">
+  <div class="hero-actions rise" data-no-batch="1">
     <a class="btn" href="contact.html">Book a free call</a>
     <a class="link-plain" href="#work">See the work</a>
   </div>
