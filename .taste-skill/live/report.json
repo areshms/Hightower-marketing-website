@@ -1,0 +1,2340 @@
+{
+ "url": "https://hms-site-v3.ares-hms.workers.dev/",
+ "at": "2026-10-23T17:12:42.747Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 8,
+   "filled": [
+    0.57,
+    0.3,
+    0.45,
+    0.53,
+    0.58,
+    0.34,
+    0.63,
+    1
+   ],
+   "motion": {
+    "elements": 23,
+    "css": 3,
+    "transitions": 20,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 6936,
+     "screens": 7.7,
+     "words": 541,
+     "img": 13,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 13,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [
+      "columbus-ohio-skyline-original-image.webp",
+      "high-street-columbus-ohio.jpg",
+      "post-office-columbus-ohio-1932.jpg",
+      "columbus-ohio-statehouse-20220421132212.jpg",
+      "columbus-ohio-statehouse-20220421132228.jpg",
+      "high-street-columbus-ohio.jpg",
+      "columbus-ohio-statehouse-20220421132228.jpg",
+      "post-office-columbus-ohio-1932.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Growth, run by an operator.",
+     "words": 5,
+     "chars": 27,
+     "lines": 2,
+     "size": 103.7,
+     "vw": 7.2,
+     "font": "Playfair Display",
+     "weight": 600,
+     "tracking": -0.045,
+     "leading": 0.92,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "right",
+     "widthRatio": 0.53,
+     "top": 481,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Growth, run by an operator.",
+     "words": 5,
+     "lines": 2,
+     "size": 103.7,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Growth, run by an operator.",
+      "words": 5,
+      "chars": 27,
+      "lines": 2,
+      "size": 103.7,
+      "vw": 7.2,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 0.92,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.53,
+      "top": 481,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What we run",
+      "words": 3,
+      "chars": 11,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 983,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "TrendLoop, a store built to run itself",
+      "words": 7,
+      "chars": 38,
+      "lines": 2,
+      "size": 37.4,
+      "vw": 2.6,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.27,
+      "top": 2291,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "A 10,255-property data refinery",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 37.4,
+      "vw": 2.6,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.27,
+      "top": 2912,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "12 posts, published while we sleep",
+      "words": 6,
+      "chars": 34,
+      "lines": 2,
+      "size": 37.4,
+      "vw": 2.6,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.27,
+      "top": 3596,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "The record so far",
+      "words": 4,
+      "chars": 17,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3983,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "12+",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 80.6,
+      "vw": 5.6,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.26,
+      "top": 4130,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "48h",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 80.6,
+      "vw": 5.6,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.26,
+      "top": 4424,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Who answers",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4863,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Start the audit",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 5578,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ready to grow without the guesswork? Book a free call and get a real audit of your marketing, not a pitch deck.",
+      "words": 22,
+      "chars": 111,
+      "lines": 3,
+      "size": 30,
+      "vw": 2.1,
+      "font": "Inter",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.3,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 6182,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Hightower Marketing",
+      "words": 2,
+      "chars": 19,
+      "lines": 1,
+      "size": 57.6,
+      "vw": 4,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 6688,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 12,
+     "maxLines": 3,
+     "over2Lines": 0,
+     "statements": 2,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      17,
+      20,
+      25,
+      30,
+      37,
+      44,
+      58,
+      81,
+      104
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 17,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 16.7
+     },
+     "measureChars": 91,
+     "max": {
+      "size": 103.7,
+      "vw": 7.2,
+      "font": "Playfair Display",
+      "text": "Growth, run"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fafaf9",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.09,
+      "l": 0.98
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0c0a09",
+       "top": 6101,
+       "hsl": {
+        "h": 20,
+        "s": 0.14,
+        "l": 0.04
+       }
+      },
+      {
+       "color": "#1c1917",
+       "top": 6644,
+       "hsl": {
+        "h": 24,
+        "s": 0.1,
+        "l": 0.1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#1c1917",
+       "share": 0.58
+      },
+      {
+       "color": "#a8a29e",
+       "share": 0.19
+      },
+      {
+       "color": "#78716c",
+       "share": 0.16
+      },
+      {
+       "color": "#fafaf9",
+       "share": 0.05
+      },
+      {
+       "color": "#2a1c02",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#1c1917",
+      "hsl": {
+       "h": 24,
+       "s": 0.1,
+       "l": 0.1
+      },
+      "fg": "#fafaf9"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 3,
+     "radius": 0,
+     "height": 64,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Hightower Marketing",
+      "Book a free call",
+      "Book a free call"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 12,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 6,
+     "fixed": false,
+     "height": 64,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "inter",
+     "playfair display"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 6936,
+    "margins": {
+     "left": 58,
+     "right": 58
+    },
+    "sections": [
+     {
+      "sel": "div.masthead",
+      "tag": "div",
+      "top": 0,
+      "height": 400,
+      "words": 0,
+      "media": 4,
+      "middle": 0,
+      "heading": null,
+      "left": 480,
+      "right": 0,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.hero-text.wrap",
+      "tag": "section",
+      "top": 400,
+      "height": 457,
+      "words": 39,
+      "media": 0,
+      "middle": 206,
+      "heading": {
+       "text": "Growth, run",
+       "size": 104,
+       "tag": "h1"
+      },
+      "left": 58,
+      "right": 115,
+      "textLeft": 58,
+      "textRight": 115,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.section.features",
+      "tag": "section",
+      "top": 893,
+      "height": 894,
+      "words": 138,
+      "media": 0,
+      "middle": 174,
+      "heading": {
+       "text": "What we run",
+       "size": 44,
+       "tag": "h2"
+      },
+      "left": 69,
+      "right": 58,
+      "textLeft": 69,
+      "textRight": 58,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#work.section.work",
+      "tag": "section",
+      "top": 1787,
+      "height": 2106,
+      "words": 111,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "TrendLoop, a store built to run itself",
+       "size": 37,
+       "tag": "h3"
+      },
+      "left": 58,
+      "right": 116,
+      "textLeft": 938,
+      "textRight": 116,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#numbers.section.wrap",
+      "tag": "section",
+      "top": 3893,
+      "height": 879,
+      "words": 17,
+      "media": 1,
+      "middle": 36,
+      "heading": {
+       "text": "12+",
+       "size": 81,
+       "tag": "span"
+      },
+      "left": 58,
+      "right": 136,
+      "textLeft": 58,
+      "textRight": 136,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.section.about",
+      "tag": "section",
+      "top": 4773,
+      "height": 805,
+      "words": 131,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Who answers",
+       "size": 44,
+       "tag": "h2"
+      },
+      "left": 58,
+      "right": 342,
+      "textLeft": 58,
+      "textRight": 342,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact",
+      "tag": "section",
+      "top": 5578,
+      "height": 1066,
+      "words": 41,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "Start the audit",
+       "size": 44,
+       "tag": "h2"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 58,
+      "textRight": 63,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 6644,
+      "height": 292,
+      "words": 75,
+      "media": 0,
+      "middle": 122,
+      "heading": {
+       "text": "Hightower Marketing",
+       "size": 58,
+       "tag": "p"
+      },
+      "left": 58,
+      "right": 58,
+      "textLeft": 58,
+      "textRight": 58,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Growth, run by an operator.",
+      "size": 104,
+      "top": 481,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 938,
+      "n": 6
+     },
+     {
+      "x": 58,
+      "n": 5
+     },
+     {
+      "x": 614,
+      "n": 2
+     },
+     {
+      "x": 218,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 14,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.09,
+    "voidBox": {
+     "x": 0,
+     "y": 240,
+     "w": 480,
+     "h": 240
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.57,
+    0.53,
+    0.6,
+    0.71,
+    0.7,
+    0.57,
+    0.54,
+    0.27,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 23,
+    "css": 3,
+    "transitions": 20,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 9745,
+     "screens": 9.5,
+     "words": 537,
+     "img": 13,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 13,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [
+      "columbus-ohio-skyline-original-image.webp",
+      "high-street-columbus-ohio.jpg",
+      "post-office-columbus-ohio-1932.jpg",
+      "columbus-ohio-statehouse-20220421132212.jpg",
+      "columbus-ohio-statehouse-20220421132228.jpg",
+      "high-street-columbus-ohio.jpg",
+      "columbus-ohio-statehouse-20220421132228.jpg",
+      "post-office-columbus-ohio-1932.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Growth, run by an operator.",
+     "words": 5,
+     "chars": 27,
+     "lines": 2,
+     "size": 99.8,
+     "vw": 13,
+     "font": "Playfair Display",
+     "weight": 600,
+     "tracking": -0.045,
+     "leading": 0.92,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 636,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Growth, run by an operator.",
+     "words": 5,
+     "lines": 2,
+     "size": 99.8,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Growth, run by an operator.",
+      "words": 5,
+      "chars": 27,
+      "lines": 2,
+      "size": 99.8,
+      "vw": 13,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 0.92,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 636,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What we run",
+      "words": 3,
+      "chars": 11,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1157,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "TrendLoop, a store built to run itself",
+      "words": 7,
+      "chars": 38,
+      "lines": 1,
+      "size": 26,
+      "vw": 3.4,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 3455,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "A 10,255-property data refinery",
+      "words": 4,
+      "chars": 31,
+      "lines": 1,
+      "size": 26,
+      "vw": 3.4,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 4325,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "12 posts, published while we sleep",
+      "words": 6,
+      "chars": 34,
+      "lines": 1,
+      "size": 26,
+      "vw": 3.4,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 5272,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "The record so far",
+      "words": 4,
+      "chars": 17,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 5625,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "12+",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 115.2,
+      "vw": 15,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.37,
+      "top": 6371,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "48h",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 115.2,
+      "vw": 15,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.37,
+      "top": 6371,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Who answers",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 6784,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Start the audit",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 7843,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Hightower Marketing",
+      "words": 2,
+      "chars": 19,
+      "lines": 1,
+      "size": 30.7,
+      "vw": 4,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 9479,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 11,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      16,
+      17,
+      20,
+      23,
+      26,
+      30,
+      31,
+      100,
+      115
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 16.7
+     },
+     "measureChars": 71,
+     "max": {
+      "size": 115.2,
+      "vw": 15,
+      "font": "Playfair Display",
+      "text": "12+"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fafaf9",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.09,
+      "l": 0.98
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 1477,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#0c0a09",
+       "top": 8827,
+       "hsl": {
+        "h": 20,
+        "s": 0.14,
+        "l": 0.04
+       }
+      },
+      {
+       "color": "#1c1917",
+       "top": 9435,
+       "hsl": {
+        "h": 24,
+        "s": 0.1,
+        "l": 0.1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#1c1917",
+       "share": 0.58
+      },
+      {
+       "color": "#a8a29e",
+       "share": 0.19
+      },
+      {
+       "color": "#78716c",
+       "share": 0.16
+      },
+      {
+       "color": "#fafaf9",
+       "share": 0.05
+      },
+      {
+       "color": "#2a1c02",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#1c1917",
+      "hsl": {
+       "h": 24,
+       "s": 0.1,
+       "l": 0.1
+      },
+      "fg": "#fafaf9"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 3,
+     "radius": 0,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Hightower Marketing",
+      "Book a free call",
+      "Book a free call"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 8,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 54,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "inter",
+     "playfair display"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 9745,
+    "margins": {
+     "left": 16,
+     "right": 30
+    },
+    "sections": [
+     {
+      "sel": "div.masthead",
+      "tag": "div",
+      "top": 54,
+      "height": 432,
+      "words": 0,
+      "media": 4,
+      "middle": 0,
+      "heading": null,
+      "left": 0,
+      "right": 0,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.hero-text.wrap",
+      "tag": "section",
+      "top": 486,
+      "height": 528,
+      "words": 39,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Growth, run",
+       "size": 100,
+       "tag": "h1"
+      },
+      "left": 31,
+      "right": 61,
+      "textLeft": 31,
+      "textRight": 61,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.section.features",
+      "tag": "section",
+      "top": 1055,
+      "height": 1391,
+      "words": 138,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What we run",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 31,
+      "textLeft": 31,
+      "textRight": 31,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#work.section.work",
+      "tag": "section",
+      "top": 2446,
+      "height": 3077,
+      "words": 111,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "TrendLoop, a store built to run itself",
+       "size": 26,
+       "tag": "h3"
+      },
+      "left": 61,
+      "right": 295,
+      "textLeft": 61,
+      "textRight": 295,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#numbers.section.wrap",
+      "tag": "section",
+      "top": 5523,
+      "height": 1159,
+      "words": 17,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "The record so far",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 31,
+      "textLeft": 31,
+      "textRight": 149,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.section.about",
+      "tag": "section",
+      "top": 6682,
+      "height": 1161,
+      "words": 131,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Who answers",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 31,
+      "right": 31,
+      "textLeft": 31,
+      "textRight": 31,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#contact",
+      "tag": "section",
+      "top": 7843,
+      "height": 1592,
+      "words": 41,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "Start the audit",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 31,
+      "textRight": 31,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 9435,
+      "height": 310,
+      "words": 75,
+      "media": 0,
+      "middle": 12,
+      "heading": {
+       "text": "Hightower Marketing",
+       "size": 31,
+       "tag": "p"
+      },
+      "left": 31,
+      "right": 31,
+      "textLeft": 31,
+      "textRight": 31,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Growth, run by an operator.",
+      "size": 100,
+      "top": 636,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 31,
+      "n": 8
+     },
+     {
+      "x": 61,
+      "n": 6
+     }
+    ],
+    "leftBlocks": 14,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.78,
+    0.57,
+    0.59,
+    0.61,
+    0.53,
+    0.71,
+    0.79,
+    0.54,
+    0.28,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 23,
+    "css": 3,
+    "transitions": 20,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 9303,
+     "screens": 11,
+     "words": 537,
+     "img": 13,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [
+      "high-street-columbus-ohio.jpg",
+      "columbus-ohio-statehouse-20220421132228.jpg",
+      "post-office-columbus-ohio-1932.jpg",
+      "columbus-ohio-skyline-original-image.webp",
+      "high-street-columbus-ohio.jpg",
+      "columbus-ohio-statehouse-20220421132212.jpg",
+      "columbus-ohio-skyline-original-image.webp",
+      "post-office-columbus-ohio-1932.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Growth, run by an operator.",
+     "words": 5,
+     "chars": 27,
+     "lines": 2,
+     "size": 50.7,
+     "vw": 13,
+     "font": "Playfair Display",
+     "weight": 600,
+     "tracking": -0.045,
+     "leading": 0.92,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 542,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Growth, run by an operator.",
+     "words": 5,
+     "lines": 2,
+     "size": 50.7,
+     "font": "Playfair Display"
+    },
+    "headings": [
+     {
+      "text": "Growth, run by an operator.",
+      "words": 5,
+      "chars": 27,
+      "lines": 2,
+      "size": 50.7,
+      "vw": 13,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 0.92,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 542,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What we run",
+      "words": 3,
+      "chars": 11,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "right",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 980,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "TrendLoop, a store built to run itself",
+      "words": 7,
+      "chars": 38,
+      "lines": 2,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 3066,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "A 10,255-property data refinery",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 3871,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "12 posts, published while we sleep",
+      "words": 6,
+      "chars": 34,
+      "lines": 2,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 4735,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "The record so far",
+      "words": 4,
+      "chars": 17,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5105,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "12+",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 58.5,
+      "vw": 15,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.26,
+      "top": 5743,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "48h",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 58.5,
+      "vw": 15,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.26,
+      "top": 5743,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Who answers",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 6136,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Start the audit",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Playfair Display",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 7393,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ready to grow without the guesswork? Book a free call and get a real audit of your marketing, not a pitch deck.",
+      "words": 22,
+      "chars": 111,
+      "lines": 4,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Inter",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.3,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 8286,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Hightower Marketing",
+      "words": 2,
+      "chars": 19,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Playfair Display",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 8885,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 12,
+     "maxLines": 4,
+     "over2Lines": 0,
+     "statements": 2,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.93,
+       "mono": false
+      },
+      {
+       "family": "Playfair Display",
+       "share": 0.07,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      16,
+      17,
+      20,
+      23,
+      26,
+      28,
+      30,
+      51,
+      59
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Inter",
+      "size": 16,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 16.7
+     },
+     "measureChars": 35,
+     "max": {
+      "size": 58.5,
+      "vw": 15,
+      "font": "Playfair Display",
+      "text": "12+"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fafaf9",
+     "bodyBgHsl": {
+      "h": 60,
+      "s": 0.09,
+      "l": 0.98
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 1378,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#0c0a09",
+       "top": 8210,
+       "hsl": {
+        "h": 20,
+        "s": 0.14,
+        "l": 0.04
+       }
+      },
+      {
+       "color": "#1c1917",
+       "top": 8841,
+       "hsl": {
+        "h": 24,
+        "s": 0.1,
+        "l": 0.1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#1c1917",
+       "share": 0.58
+      },
+      {
+       "color": "#a8a29e",
+       "share": 0.19
+      },
+      {
+       "color": "#78716c",
+       "share": 0.16
+      },
+      {
+       "color": "#fafaf9",
+       "share": 0.05
+      },
+      {
+       "color": "#2a1c02",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#1c1917",
+      "hsl": {
+       "h": 24,
+       "s": 0.1,
+       "l": 0.1
+      },
+      "fg": "#fafaf9"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 3,
+     "radius": 0,
+     "height": 54,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Hightower Marketing",
+      "Book a free call",
+      "Book a free call"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 5,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 54,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "inter",
+     "playfair display"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 9303,
+    "margins": {
+     "left": 16,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div.masthead",
+      "tag": "div",
+      "top": 54,
+      "height": 338,
+      "words": 0,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 0,
+      "right": 0,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.hero-text.wrap",
+      "tag": "section",
+      "top": 391,
+      "height": 470,
+      "words": 39,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Growth, run",
+       "size": 51,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 41,
+      "textLeft": 20,
+      "textRight": 41,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.section.features",
+      "tag": "section",
+      "top": 895,
+      "height": 1640,
+      "words": 138,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What we run",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#work.section.work",
+      "tag": "section",
+      "top": 2536,
+      "height": 2485,
+      "words": 111,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "TrendLoop, a store built to run itself",
+       "size": 26,
+       "tag": "h3"
+      },
+      "left": 40,
+      "right": 40,
+      "textLeft": 40,
+      "textRight": 40,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#numbers.section.wrap",
+      "tag": "section",
+      "top": 5021,
+      "height": 1030,
+      "words": 17,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "The record so far",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 67,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.section.about",
+      "tag": "section",
+      "top": 6051,
+      "height": 1342,
+      "words": 131,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Who answers",
+       "size": 30,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "h2.section-title.rise",
+      "tag": "h2",
+      "top": 7393,
+      "height": 141,
+      "words": 0,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": null,
+      "right": null,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.cta-photos",
+      "tag": "div",
+      "top": 7535,
+      "height": 675,
+      "words": 0,
+      "media": 3,
+      "middle": 0,
+      "heading": null,
+      "left": 0,
+      "right": 0,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.cta-band",
+      "tag": "div",
+      "top": 8210,
+      "height": 631,
+      "words": 38,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Ready to grow without the guesswork?",
+       "size": 23,
+       "tag": "p"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 8841,
+      "height": 462,
+      "words": 75,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Hightower Marketing",
+       "size": 28,
+       "tag": "p"
+      },
+      "left": 20,
+      "right": 28,
+      "textLeft": 20,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Growth, run by an operator.",
+      "size": 51,
+      "top": 542,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 8
+     },
+     {
+      "x": 40,
+      "n": 6
+     }
+    ],
+    "leftBlocks": 14,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "10 different font sizes (14, 17, 20, 25, 30, 37, 44, 58, 81, 104).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 91 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/live/desktop-fold.jpg",
+   "pages": [
+    "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/live/desktop-page-01.jpg",
+    "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/live/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/live/tablet-fold.jpg",
+   "pages": [
+    "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/live/tablet-page-01.jpg",
+    "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/live/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/live/mobile-fold.jpg",
+   "pages": [
+    "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/live/mobile-page-01.jpg",
+    "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/live/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

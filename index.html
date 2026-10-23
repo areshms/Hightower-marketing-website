@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
+  --gold-deep:#b45309;
   --paper:#fafaf9;
   --ink:#1c1917;
   --ground:#292524;
@@ -81,7 +82,7 @@ ul{list-style:none}
 }
 .wordmark em{font-style:normal;color:var(--gold-bright)}
 .head-tabs{
-  background:var(--gold);
+  background:var(--gold-deep);
   display:flex;align-items:center;gap:clamp(18px,3vw,44px);
   padding:0 clamp(18px,3vw,44px);flex:0 0 auto;
 }
@@ -92,7 +93,7 @@ ul{list-style:none}
   background:var(--ink);color:var(--paper);
   font-size:14px;font-weight:600;
 }
-.head-cta:hover,.head-cta:focus-visible{background:var(--gold);color:#fff}
+.head-cta:hover,.head-cta:focus-visible{background:var(--gold-deep);color:#fff}
 
 /* ————— hero text ————— */
 .hero-text{padding:clamp(64px,9vh,110px) clamp(20px,4vw,64px) 0;position:relative}
@@ -119,9 +120,9 @@ ul{list-style:none}
   font-weight:600;font-size:17px;padding:16px 32px;min-height:44px;
   border:none;transition:background .25s ease,transform .25s ease;
 }
-.btn:hover,.btn:focus-visible{background:var(--gold);color:#fff;transform:translateY(-2px)}
+.btn:hover,.btn:focus-visible{background:var(--gold-deep);color:#fff;transform:translateY(-2px)}
 .link-plain{font-size:17px;font-weight:600;border-bottom:2px solid var(--gold)}
-.link-plain:hover,.link-plain:focus-visible{color:var(--gold)}
+.link-plain:hover,.link-plain:focus-visible{color:var(--gold-deep)}
 .hero-foot{
   display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-inline:clamp(20px,4vw,64px);margin-inline:calc(-1 * clamp(20px,4vw,64px));
   margin:clamp(48px,7vh,84px) 0 clamp(28px,4vh,44px);
@@ -167,9 +168,9 @@ ul{list-style:none}
 /* work — oversized visuals */
 .work{overflow:clip}
 .work-block{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end}
-.work-visual{grid-column:1/8;margin-left:calc(-1 * clamp(20px,4vw,64px));overflow:hidden;grid-column:1/8;height:72svh;min-height:420px}
+.work-visual{grid-column:1/8;margin-left:calc(-1 * clamp(20px,4vw,64px));overflow:hidden;height:72svh;min-height:420px}
 .work-visual img{width:120%;max-width:none;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .5s ease}
-.work-block:hover .work-visual img{filter:grayscale(0) contrast(1)} /* taste-skill-ignore: grayscale(0) not transform scale(0) */
+.work-block:hover .work-visual img{filter:grayscale(0) contrast(1)}
 .work-copy{grid-column:9/13}
 .work-copy h3{font-family:'Playfair Display',serif;font-size:clamp(26px,2.6vw,38px);font-weight:600;line-height:1.08;letter-spacing:-0.02em}
 .work-copy p{font-size:17px;color:var(--ink);line-height:1.6;margin-top:18px;max-width:38ch}
@@ -187,7 +188,7 @@ ul{list-style:none}
 .figure-tile .c{font-size:17px;line-height:1.4;margin-top:10px}
 .tile-a{background:var(--coal);color:var(--paper)}
 .tile-a .c{color:var(--soft)}
-.tile-b{background:var(--gold);color:#fff}
+.tile-b{background:var(--gold);color:#3b2502}
 .tile-b .c{color:#2a1c02}
 
 /* about — side facts, wide paragraph */
@@ -228,20 +229,24 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
   .band{grid-template-columns:repeat(3,1fr);grid-template-rows:120px 120px}
   .cell-2x1{grid-column:span 1}
   .cell-2x2{grid-column:span 1;grid-row:span 1}
-  .site-head{position:static;flex-wrap:wrap;height:auto}
-  .wordmark{padding:14px 16px;font-size:17px;flex:1}
-  .head-tabs{display:none}
-  .head-cta{padding:14px 16px}
+  .site-head{position:static;height:auto;flex-wrap:wrap}
+  .head-tabs{order:3;width:100%;justify-content:space-around}
+  .wordmark{order:1}
+  .head-cta{order:2}
+  .wordmark{padding:14px 16px;font-size:16px}
+  .head-tabs{gap:14px;padding:14px 16px;font-size:13px;flex-wrap:wrap}
+  .head-tabs a{font-size:13px}
+  .head-cta{padding:14px 16px;font-size:13px}
   .hero-text{padding-top:32px}
   .standfirst{position:static;margin:0 0 20px;font-size:17px}
   .hl{margin-left:0;font-size:13vw}
   .hero-actions{margin-left:0}
   .features .grid{display:block}
   .panel{width:100%;margin:0 auto}
-  .features .grid{display:block}
   .note-col{display:block;text-align:left}
   .note-col .note{margin:0 0 18px}
   .note{position:static;text-align:left;max-width:none}
+  .work-visual img{width:100%}
   .note b{margin-bottom:2px}
   .work-block{display:block}
   .work-visual{margin:0 0 20px;width:110%;height:auto;aspect-ratio:4/5}
@@ -260,6 +265,7 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
   .cta-statement{font-size:23px}
 }
 </style>
+<noscript><style>.rise{opacity:1;transform:none}.hl-line span{transform:none;animation:none}</style></noscript>
 </head>
 <body>
 
@@ -271,7 +277,7 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
     <a href="#about">About</a>
     <a href="blog.html">Notes</a>
   </nav>
-  <a class="head-cta" href="#contact">Book a free call</a>
+  <a class="head-cta" href="contact.html">Book a free call</a>
 </header>
 
 <div class="masthead">
@@ -294,7 +300,7 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
     <span class="hl-line"><span>by an operator.</span></span>
   </h1>
   <div class="hero-actions rise">
-    <a class="btn" href="#contact">Book a free call</a>
+    <a class="btn" href="contact.html">Book a free call</a>
     <a class="link-plain" href="#work">See the work</a>
   </div>
   <div class="hero-foot">
@@ -312,7 +318,7 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
       <div class="note rise"><b>Real numbers</b>The dashboard is live. You see what we see, from the first call.</div>
     </div>
 
-    <div class="panel" data-ui role="img" aria-label="Live operations dashboard showing store and campaign performance">
+    <div class="panel" data-ui aria-label="Live operations dashboard">
       <div class="panel-head">
         <div class="t">HMS Operations</div>
         <div class="s">Live snapshot, updated nightly</div>
@@ -437,11 +443,11 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
     <div class="foot-inner">
       <span>© 2026 Hightower Marketing Strategies LLC · Reynoldsburg, Ohio</span>
       <span>
-        <a href="services.html">Services</a> · <a href="blog.html">Notes</a> · <a href="contact.html">Contact</a>
+        <a href="services.html">Services</a> · <a href="#work">Work</a> · <a href="about.html">About</a> · <a href="blog.html">Notes</a> · <a href="contact.html">Contact</a>
       </span>
       <span>Photography: Columbus views from open collections, full credits below.</span>
     </div>
-    <p style="margin-top:18px;font-size:14px;line-height:1.6;max-width:72ch">Images: “Post Office, Columbus, Ohio (1932)” by Sent from the Past (public domain, via Flickr); “High Street – Columbus, Ohio”; “Columbus – Ohio Statehouse” photographs; “Columbus, Ohio, skyline”, via Openverse, used under their licences. They show the world around the practice, not its offices or clients.</p>
+    <p style="margin-top:18px;font-size:14px;line-height:1.6;max-width:72ch">Images: “Post Office, Columbus, Ohio (1932)” by Sent from the Past (public domain, via Flickr); “High Street – Columbus, Ohio”; “Columbus – Ohio Statehouse” photographs; “Columbus, Ohio, skyline”, via Openverse, used under their licenses. They show the world around the practice, not its offices or clients.</p>
   </div>
 </footer>
 
@@ -469,7 +475,6 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
   if(gb){ setTimeout(function(){ gb.style.width = (gb.dataset.w||38)+'%'; }, 400); }
   // note hover -> panel focus
   document.querySelectorAll('.note').forEach(function(n){
-    n.tabIndex = 0;
     n.addEventListener('mouseenter', function(){ document.querySelector('.panel').style.outline = '3px solid var(--gold)'; });
     n.addEventListener('mouseleave', function(){ document.querySelector('.panel').style.outline = 'none'; });
   });
