@@ -1,21 +1,22 @@
 {
  "url": "index.html",
- "at": "2026-10-23T17:19:49.531Z",
+ "at": "2026-10-23T17:32:30.297Z",
  "allow": [],
  "viewports": [
   {
    "width": 1440,
    "height": 900,
    "load": "load",
-   "screens": 8,
+   "screens": 9,
    "filled": [
     0.57,
-    0.3,
+    0.31,
     0.45,
     0.53,
     0.58,
-    0.34,
-    0.63,
+    0.92,
+    0.18,
+    0.81,
     1
    ],
    "motion": {
@@ -32,9 +33,9 @@
      "h": 900
     },
     "page": {
-     "height": 6936,
-     "screens": 7.7,
-     "words": 545,
+     "height": 7627,
+     "screens": 8.5,
+     "words": 523,
      "img": 13,
      "video": 0,
      "canvas": 0,
@@ -48,14 +49,14 @@
      "videoCount": 0,
      "uiPictures": 1,
      "pictureSamples": [
-      "columbus-ohio-skyline-original-image.webp",
-      "high-street-columbus-ohio.jpg",
-      "post-office-columbus-ohio-1932.jpg",
-      "columbus-ohio-statehouse-20220421132212.jpg",
-      "columbus-ohio-statehouse-20220421132228.jpg",
-      "high-street-columbus-ohio.jpg",
-      "columbus-ohio-statehouse-20220421132228.jpg",
-      "post-office-columbus-ohio-1932.jpg"
+      "work-pet-nail-clipper.jpg",
+      "work-nose-patches.jpg",
+      "work-dog-hoodie.jpg",
+      "work-question-lamp.jpg",
+      "work-water-projector.jpg",
+      "work-hero-lifestyle.png",
+      "work-water-projector.jpg",
+      "work-dog-hoodie.jpg"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -256,7 +257,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.26,
-      "top": 4424,
+      "top": 4792,
       "tag": "span",
       "kind": "heading"
      },
@@ -277,7 +278,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 4863,
+      "top": 5598,
       "tag": "h2",
       "kind": "heading"
      },
@@ -298,7 +299,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 5578,
+      "top": 6313,
       "tag": "h2",
       "kind": "heading"
      },
@@ -319,7 +320,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.4,
-      "top": 6182,
+      "top": 6917,
       "tag": "p",
       "kind": "statement"
      },
@@ -340,7 +341,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 6688,
+      "top": 7423,
       "tag": "p",
       "kind": "statement"
      }
@@ -390,7 +391,7 @@
       "tracking": 0,
       "contrast": 16.7
      },
-     "measureChars": 91,
+     "measureChars": 46,
      "max": {
       "size": 103.7,
       "vw": 7.2,
@@ -421,39 +422,30 @@
      "sectionBgs": [
       {
        "color": "#0c0a09",
-       "top": 6101,
+       "top": 6836,
        "hsl": {
         "h": 20,
         "s": 0.14,
         "l": 0.04
-       }
-      },
-      {
-       "color": "#1c1917",
-       "top": 6644,
-       "hsl": {
-        "h": 24,
-        "s": 0.1,
-        "l": 0.1
        }
       }
      ],
      "textColors": [
       {
        "color": "#1c1917",
-       "share": 0.57
-      },
-      {
-       "color": "#a8a29e",
-       "share": 0.19
+       "share": 0.6
       },
       {
        "color": "#78716c",
        "share": 0.16
       },
       {
+       "color": "#a8a29e",
+       "share": 0.15
+      },
+      {
        "color": "#fafaf9",
-       "share": 0.05
+       "share": 0.06
       },
       {
        "color": "#2a1c02",
@@ -525,7 +517,7 @@
      "w": 1440,
      "h": 900
     },
-    "pageH": 6936,
+    "pageH": 7627,
     "margins": {
      "left": 58,
      "right": 58
@@ -578,7 +570,7 @@
       "tag": "section",
       "top": 893,
       "height": 894,
-      "words": 138,
+      "words": 141,
       "media": 0,
       "middle": 174,
       "heading": {
@@ -623,7 +615,7 @@
       "sel": "section#numbers.section.wrap",
       "tag": "section",
       "top": 3893,
-      "height": 879,
+      "height": 1615,
       "words": 17,
       "media": 1,
       "middle": 36,
@@ -645,7 +637,7 @@
      {
       "sel": "section#about.section.about",
       "tag": "section",
-      "top": 4773,
+      "top": 5508,
       "height": 805,
       "words": 131,
       "media": 0,
@@ -668,9 +660,9 @@
      {
       "sel": "section#contact",
       "tag": "section",
-      "top": 5578,
+      "top": 6313,
       "height": 1066,
-      "words": 41,
+      "words": 42,
       "media": 4,
       "middle": 0,
       "heading": {
@@ -691,11 +683,11 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 6644,
-      "height": 292,
-      "words": 77,
+      "top": 7379,
+      "height": 247,
+      "words": 50,
       "media": 0,
-      "middle": 73,
+      "middle": 127,
       "heading": {
        "text": "Hightower Marketing",
        "size": 58,
@@ -762,15 +754,15 @@
    "load": "load",
    "screens": 10,
    "filled": [
-    0.64,
-    0.66,
-    0.57,
     0.69,
-    0.73,
+    0.56,
     0.6,
-    0.57,
-    0.26,
-    1,
+    0.69,
+    0.7,
+    0.63,
+    0.86,
+    0.21,
+    0.67,
     1
    ],
    "motion": {
@@ -787,9 +779,9 @@
      "h": 1024
     },
     "page": {
-     "height": 9836,
-     "screens": 9.6,
-     "words": 545,
+     "height": 10256,
+     "screens": 10,
+     "words": 523,
      "img": 13,
      "video": 0,
      "canvas": 0,
@@ -803,14 +795,14 @@
      "videoCount": 0,
      "uiPictures": 1,
      "pictureSamples": [
-      "columbus-ohio-skyline-original-image.webp",
-      "high-street-columbus-ohio.jpg",
-      "post-office-columbus-ohio-1932.jpg",
-      "columbus-ohio-statehouse-20220421132212.jpg",
-      "columbus-ohio-statehouse-20220421132228.jpg",
-      "high-street-columbus-ohio.jpg",
-      "columbus-ohio-statehouse-20220421132228.jpg",
-      "post-office-columbus-ohio-1932.jpg"
+      "work-pet-nail-clipper.jpg",
+      "work-nose-patches.jpg",
+      "work-dog-hoodie.jpg",
+      "work-question-lamp.jpg",
+      "work-water-projector.jpg",
+      "work-hero-lifestyle.png",
+      "work-water-projector.jpg",
+      "work-dog-hoodie.jpg"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -835,7 +827,7 @@
      "align": "left",
      "position": "center",
      "widthRatio": 0.92,
-     "top": 682,
+     "top": 746,
      "tag": "h1",
      "kind": "heading"
     },
@@ -864,7 +856,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 682,
+      "top": 746,
       "tag": "h1",
       "kind": "heading"
      },
@@ -885,7 +877,7 @@
       "align": "right",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 1203,
+      "top": 1267,
       "tag": "h2",
       "kind": "heading"
      },
@@ -906,7 +898,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 3501,
+      "top": 3565,
       "tag": "h3",
       "kind": "heading"
      },
@@ -927,7 +919,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 4371,
+      "top": 4435,
       "tag": "h3",
       "kind": "heading"
      },
@@ -948,7 +940,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 5318,
+      "top": 5382,
       "tag": "h3",
       "kind": "heading"
      },
@@ -969,7 +961,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 5671,
+      "top": 5735,
       "tag": "h2",
       "kind": "heading"
      },
@@ -990,7 +982,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.37,
-      "top": 6417,
+      "top": 6926,
       "tag": "span",
       "kind": "heading"
      },
@@ -1011,7 +1003,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.37,
-      "top": 6417,
+      "top": 6926,
       "tag": "span",
       "kind": "heading"
      },
@@ -1032,7 +1024,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 6830,
+      "top": 7340,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1053,7 +1045,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 7889,
+      "top": 8399,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1074,7 +1066,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 9525,
+      "top": 10035,
       "tag": "p",
       "kind": "statement"
      }
@@ -1156,7 +1148,7 @@
      "sectionBgs": [
       {
        "color": "#ffffff",
-       "top": 1523,
+       "top": 1587,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1165,39 +1157,30 @@
       },
       {
        "color": "#0c0a09",
-       "top": 8873,
+       "top": 9383,
        "hsl": {
         "h": 20,
         "s": 0.14,
         "l": 0.04
-       }
-      },
-      {
-       "color": "#1c1917",
-       "top": 9481,
-       "hsl": {
-        "h": 24,
-        "s": 0.1,
-        "l": 0.1
        }
       }
      ],
      "textColors": [
       {
        "color": "#1c1917",
-       "share": 0.57
-      },
-      {
-       "color": "#a8a29e",
-       "share": 0.19
+       "share": 0.6
       },
       {
        "color": "#78716c",
        "share": 0.16
       },
       {
+       "color": "#a8a29e",
+       "share": 0.15
+      },
+      {
        "color": "#fafaf9",
-       "share": 0.05
+       "share": 0.06
       },
       {
        "color": "#2a1c02",
@@ -1251,7 +1234,12 @@
      "textShadow": 0,
      "cardRows": []
     },
-    "heroMedia": [],
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.08
+     }
+    ],
     "nav": {
      "links": 6,
      "fixed": false,
@@ -1269,7 +1257,7 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 9836,
+    "pageH": 10256,
     "margins": {
      "left": 16,
      "right": 30
@@ -1279,7 +1267,7 @@
       "sel": "div.masthead",
       "tag": "div",
       "top": 100,
-      "height": 432,
+      "height": 496,
       "words": 0,
       "media": 4,
       "middle": 0,
@@ -1297,7 +1285,7 @@
      {
       "sel": "section.hero-text.wrap",
       "tag": "section",
-      "top": 532,
+      "top": 596,
       "height": 528,
       "words": 39,
       "media": 0,
@@ -1320,9 +1308,9 @@
      {
       "sel": "section#services.section.features",
       "tag": "section",
-      "top": 1101,
+      "top": 1165,
       "height": 1391,
-      "words": 138,
+      "words": 141,
       "media": 0,
       "middle": 0,
       "heading": {
@@ -1343,7 +1331,7 @@
      {
       "sel": "section#work.section.work",
       "tag": "section",
-      "top": 2492,
+      "top": 2556,
       "height": 3077,
       "words": 111,
       "media": 3,
@@ -1366,8 +1354,8 @@
      {
       "sel": "section#numbers.section.wrap",
       "tag": "section",
-      "top": 5569,
-      "height": 1159,
+      "top": 5633,
+      "height": 1605,
       "words": 17,
       "media": 1,
       "middle": 0,
@@ -1389,7 +1377,7 @@
      {
       "sel": "section#about.section.about",
       "tag": "section",
-      "top": 6728,
+      "top": 7237,
       "height": 1161,
       "words": 131,
       "media": 0,
@@ -1412,9 +1400,9 @@
      {
       "sel": "section#contact",
       "tag": "section",
-      "top": 7889,
+      "top": 8399,
       "height": 1592,
-      "words": 41,
+      "words": 42,
       "media": 4,
       "middle": 0,
       "heading": {
@@ -1435,20 +1423,20 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 9481,
-      "height": 355,
-      "words": 77,
+      "top": 9991,
+      "height": 266,
+      "words": 50,
       "media": 0,
-      "middle": 0,
+      "middle": 12,
       "heading": {
        "text": "Hightower Marketing",
        "size": 31,
        "tag": "p"
       },
       "left": 31,
-      "right": 109,
+      "right": 31,
       "textLeft": 31,
-      "textRight": 109,
+      "textRight": 31,
       "fullBleed": false,
       "footer": true,
       "hero": false,
@@ -1461,7 +1449,7 @@
      {
       "text": "Growth, run by an operator.",
       "size": 100,
-      "top": 682,
+      "top": 746,
       "firstScreen": true
      }
     ],
@@ -1493,16 +1481,16 @@
    "load": "load",
    "screens": 12,
    "filled": [
-    0.74,
-    0.52,
-    0.67,
-    0.63,
-    0.64,
-    0.77,
-    0.77,
+    0.7,
     0.54,
-    0.21,
-    1,
+    0.73,
+    0.56,
+    0.64,
+    0.7,
+    0.71,
+    0.48,
+    0.28,
+    0.97,
     1,
     1
    ],
@@ -1520,9 +1508,9 @@
      "h": 844
     },
     "page": {
-     "height": 9349,
+     "height": 9333,
      "screens": 11.1,
-     "words": 545,
+     "words": 523,
      "img": 13,
      "video": 0,
      "canvas": 0,
@@ -1536,14 +1524,14 @@
      "videoCount": 0,
      "uiPictures": 1,
      "pictureSamples": [
-      "high-street-columbus-ohio.jpg",
-      "columbus-ohio-statehouse-20220421132228.jpg",
-      "post-office-columbus-ohio-1932.jpg",
-      "columbus-ohio-skyline-original-image.webp",
-      "high-street-columbus-ohio.jpg",
-      "columbus-ohio-statehouse-20220421132212.jpg",
-      "columbus-ohio-skyline-original-image.webp",
-      "post-office-columbus-ohio-1932.jpg"
+      "work-hero-lifestyle.png",
+      "work-water-projector.jpg",
+      "work-dog-hoodie.jpg",
+      "work-hero-lifestyle.png",
+      "work-pet-nail-clipper.jpg",
+      "work-water-projector.jpg",
+      "work-pet-nail-clipper.jpg",
+      "work-question-lamp.jpg"
      ],
      "blendText": 0,
      "sideScrollers": 0,
@@ -1568,7 +1556,7 @@
      "align": "left",
      "position": "center",
      "widthRatio": 0.9,
-     "top": 588,
+     "top": 620,
      "tag": "h1",
      "kind": "heading"
     },
@@ -1597,7 +1585,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 588,
+      "top": 620,
       "tag": "h1",
       "kind": "heading"
      },
@@ -1618,7 +1606,7 @@
       "align": "right",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 1026,
+      "top": 1058,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1639,7 +1627,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.79,
-      "top": 3112,
+      "top": 3145,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1660,7 +1648,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.79,
-      "top": 3917,
+      "top": 3949,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1681,7 +1669,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.79,
-      "top": 4781,
+      "top": 4813,
       "tag": "h3",
       "kind": "heading"
      },
@@ -1702,7 +1690,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 5151,
+      "top": 5184,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1723,7 +1711,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.26,
-      "top": 5789,
+      "top": 5840,
       "tag": "span",
       "kind": "heading"
      },
@@ -1744,7 +1732,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.26,
-      "top": 5789,
+      "top": 5840,
       "tag": "span",
       "kind": "heading"
      },
@@ -1765,7 +1753,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 6182,
+      "top": 6233,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1786,7 +1774,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 7439,
+      "top": 7491,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1807,7 +1795,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 8332,
+      "top": 8383,
       "tag": "p",
       "kind": "statement"
      },
@@ -1828,7 +1816,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 8931,
+      "top": 8982,
       "tag": "p",
       "kind": "statement"
      }
@@ -1910,7 +1898,7 @@
      "sectionBgs": [
       {
        "color": "#ffffff",
-       "top": 1424,
+       "top": 1457,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1919,7 +1907,7 @@
       },
       {
        "color": "#0c0a09",
-       "top": 8256,
+       "top": 8307,
        "hsl": {
         "h": 20,
         "s": 0.14,
@@ -1928,7 +1916,7 @@
       },
       {
        "color": "#1c1917",
-       "top": 8887,
+       "top": 8938,
        "hsl": {
         "h": 24,
         "s": 0.1,
@@ -1939,19 +1927,19 @@
      "textColors": [
       {
        "color": "#1c1917",
-       "share": 0.57
-      },
-      {
-       "color": "#a8a29e",
-       "share": 0.19
+       "share": 0.6
       },
       {
        "color": "#78716c",
        "share": 0.16
       },
       {
+       "color": "#a8a29e",
+       "share": 0.15
+      },
+      {
        "color": "#fafaf9",
-       "share": 0.05
+       "share": 0.06
       },
       {
        "color": "#2a1c02",
@@ -2023,7 +2011,7 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 9349,
+    "pageH": 9333,
     "margins": {
      "left": 16,
      "right": 9
@@ -2033,7 +2021,7 @@
       "sel": "div.masthead",
       "tag": "div",
       "top": 100,
-      "height": 338,
+      "height": 370,
       "words": 0,
       "media": 0,
       "middle": 0,
@@ -2051,7 +2039,7 @@
      {
       "sel": "section.hero-text.wrap",
       "tag": "section",
-      "top": 437,
+      "top": 470,
       "height": 470,
       "words": 39,
       "media": 0,
@@ -2074,9 +2062,9 @@
      {
       "sel": "section#services.section.features",
       "tag": "section",
-      "top": 941,
+      "top": 974,
       "height": 1640,
-      "words": 138,
+      "words": 141,
       "media": 0,
       "middle": 0,
       "heading": {
@@ -2097,7 +2085,7 @@
      {
       "sel": "section#work.section.work",
       "tag": "section",
-      "top": 2582,
+      "top": 2614,
       "height": 2485,
       "words": 111,
       "media": 3,
@@ -2120,8 +2108,8 @@
      {
       "sel": "section#numbers.section.wrap",
       "tag": "section",
-      "top": 5067,
-      "height": 1030,
+      "top": 5100,
+      "height": 1049,
       "words": 17,
       "media": 1,
       "middle": 0,
@@ -2143,7 +2131,7 @@
      {
       "sel": "section#about.section.about",
       "tag": "section",
-      "top": 6097,
+      "top": 6148,
       "height": 1342,
       "words": 131,
       "media": 0,
@@ -2166,7 +2154,7 @@
      {
       "sel": "h2.section-title.rise",
       "tag": "h2",
-      "top": 7439,
+      "top": 7491,
       "height": 141,
       "words": 0,
       "media": 0,
@@ -2185,7 +2173,7 @@
      {
       "sel": "div.cta-photos",
       "tag": "div",
-      "top": 7581,
+      "top": 7632,
       "height": 675,
       "words": 0,
       "media": 3,
@@ -2204,9 +2192,9 @@
      {
       "sel": "div.cta-band",
       "tag": "div",
-      "top": 8256,
+      "top": 8307,
       "height": 631,
-      "words": 38,
+      "words": 39,
       "media": 1,
       "middle": 0,
       "heading": {
@@ -2227,9 +2215,9 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 8887,
-      "height": 462,
-      "words": 77,
+      "top": 8938,
+      "height": 395,
+      "words": 50,
       "media": 0,
       "middle": 0,
       "heading": {
@@ -2238,9 +2226,9 @@
        "tag": "p"
       },
       "left": 20,
-      "right": 28,
+      "right": 26,
       "textLeft": 20,
-      "textRight": 28,
+      "textRight": 26,
       "fullBleed": false,
       "footer": true,
       "hero": false,
@@ -2253,7 +2241,7 @@
      {
       "text": "Growth, run by an operator.",
       "size": 51,
-      "top": 588,
+      "top": 620,
       "firstScreen": true
      }
     ],
@@ -2298,13 +2286,6 @@
    "width": 1440,
    "message": "No video anywhere on the page.",
    "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
-  },
-  {
-   "level": "WARN",
-   "id": "measure",
-   "width": 1440,
-   "message": "Longest paragraph runs about 91 characters per line.",
-   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
   }
  ],
  "images": [
@@ -2314,7 +2295,8 @@
    "fold": "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/after/desktop-fold.jpg",
    "pages": [
     "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/after/desktop-page-01.jpg",
-    "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/after/desktop-page-02.jpg"
+    "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/after/desktop-page-02.jpg",
+    "/Users/ares.hmsgmail.com/projects/hms-site/.taste-skill/after/desktop-page-03.jpg"
    ],
    "film": []
   },
