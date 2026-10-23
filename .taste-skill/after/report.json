@@ -1,6 +1,6 @@
 {
  "url": "index.html",
- "at": "2026-10-23T18:14:53.699Z",
+ "at": "2026-10-23T18:20:09.820Z",
  "allow": [],
  "viewports": [
   {
@@ -243,7 +243,7 @@
       "kind": "heading"
      },
      {
-      "text": "12+",
+      "text": "20+",
       "words": 1,
       "chars": 3,
       "lines": 1,
@@ -772,7 +772,7 @@
       "media": 1,
       "middle": 36,
       "heading": {
-       "text": "12+",
+       "text": "20+",
        "size": 81,
        "tag": "span"
       },
@@ -926,15 +926,19 @@
       "n": 4
      },
      {
+      "x": 218,
+      "n": 2
+     },
+     {
       "x": 614,
       "n": 2
      },
      {
-      "x": 218,
+      "x": 602,
       "n": 1
      }
     ],
-    "leftBlocks": 25,
+    "leftBlocks": 27,
     "bodySize": 17,
     "stage": false,
     "explains": true,
@@ -965,8 +969,8 @@
     0.41,
     0.92,
     0.36,
-    0.29,
-    0.51,
+    0.23,
+    0.35,
     1
    ],
    "motion": {
@@ -983,7 +987,7 @@
      "h": 1024
     },
     "page": {
-     "height": 12736,
+     "height": 12700,
      "screens": 12.4,
      "words": 836,
      "img": 11,
@@ -1191,7 +1195,7 @@
       "kind": "heading"
      },
      {
-      "text": "12+",
+      "text": "20+",
       "words": 1,
       "chars": 3,
       "lines": 1,
@@ -1312,7 +1316,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 10292,
+      "top": 10256,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1333,7 +1337,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 10917,
+      "top": 10881,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1354,7 +1358,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.2,
-      "top": 12197,
+      "top": 12161,
       "tag": "div",
       "kind": "heading"
      },
@@ -1375,7 +1379,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 12515,
+      "top": 12479,
       "tag": "p",
       "kind": "statement"
      }
@@ -1434,7 +1438,7 @@
       "size": 115.2,
       "vw": 15,
       "font": "Playfair Display",
-      "text": "12+"
+      "text": "20+"
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -1469,7 +1473,7 @@
       },
       {
        "color": "#0c0a09",
-       "top": 11901,
+       "top": 11865,
        "hsl": {
         "h": 20,
         "s": 0.14,
@@ -1564,7 +1568,7 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 12736,
+    "pageH": 12700,
     "margins": {
      "left": 31,
      "right": 31
@@ -1803,7 +1807,7 @@
       "sel": "section#about.section.about",
       "tag": "section",
       "top": 9124,
-      "height": 1065,
+      "height": 1029,
       "words": 131,
       "media": 0,
       "middle": 0,
@@ -1825,7 +1829,7 @@
      {
       "sel": "section#faq.section.wrap",
       "tag": "section",
-      "top": 10189,
+      "top": 10153,
       "height": 727,
       "words": 173,
       "media": 0,
@@ -1848,7 +1852,7 @@
      {
       "sel": "section#contact",
       "tag": "section",
-      "top": 10917,
+      "top": 10881,
       "height": 1554,
       "words": 43,
       "media": 3,
@@ -1871,7 +1875,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 12471,
+      "top": 12435,
       "height": 266,
       "words": 50,
       "media": 0,
@@ -1905,14 +1909,14 @@
     "edges": [
      {
       "x": 31,
-      "n": 19
+      "n": 21
      },
      {
       "x": 61,
       "n": 6
      }
     ],
-    "leftBlocks": 25,
+    "leftBlocks": 27,
     "bodySize": 16,
     "stage": false,
     "explains": false,
@@ -1939,8 +1943,8 @@
     0.44,
     0.77,
     0.56,
-    0.44,
-    0.26
+    0.47,
+    0.37
    ],
    "motion": {
     "elements": 32,
@@ -1956,8 +1960,8 @@
      "h": 844
     },
     "page": {
-     "height": 12371,
-     "screens": 14.7,
+     "height": 12335,
+     "screens": 14.6,
      "words": 836,
      "img": 11,
      "video": 0,
@@ -2163,7 +2167,7 @@
       "kind": "heading"
      },
      {
-      "text": "12+",
+      "text": "20+",
       "words": 1,
       "chars": 3,
       "lines": 1,
@@ -2284,7 +2288,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 9903,
+      "top": 9867,
       "tag": "h2",
       "kind": "heading"
      },
@@ -2305,7 +2309,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 1,
-      "top": 10591,
+      "top": 10555,
       "tag": "h2",
       "kind": "heading"
      },
@@ -2326,7 +2330,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 11460,
+      "top": 11424,
       "tag": "p",
       "kind": "statement"
      },
@@ -2347,7 +2351,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.38,
-      "top": 11720,
+      "top": 11684,
       "tag": "div",
       "kind": "heading"
      },
@@ -2368,7 +2372,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 12021,
+      "top": 11985,
       "tag": "p",
       "kind": "statement"
      }
@@ -2427,7 +2431,7 @@
       "size": 58.5,
       "vw": 15,
       "font": "Playfair Display",
-      "text": "12+"
+      "text": "20+"
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -2462,7 +2466,7 @@
       },
       {
        "color": "#0c0a09",
-       "top": 11384,
+       "top": 11348,
        "hsl": {
         "h": 20,
         "s": 0.14,
@@ -2471,7 +2475,7 @@
       },
       {
        "color": "#1c1917",
-       "top": 11977,
+       "top": 11941,
        "hsl": {
         "h": 24,
         "s": 0.1,
@@ -2566,7 +2570,7 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 12371,
+    "pageH": 12335,
     "margins": {
      "left": 20,
      "right": 9
@@ -2813,7 +2817,7 @@
       "sel": "section#about.section.about",
       "tag": "section",
       "top": 8573,
-      "height": 1246,
+      "height": 1210,
       "words": 131,
       "media": 0,
       "middle": 0,
@@ -2835,7 +2839,7 @@
      {
       "sel": "section#faq.section.wrap",
       "tag": "section",
-      "top": 9819,
+      "top": 9783,
       "height": 748,
       "words": 72,
       "media": 0,
@@ -2858,7 +2862,7 @@
      {
       "sel": "div.cta-photos",
       "tag": "div",
-      "top": 10708,
+      "top": 10672,
       "height": 675,
       "words": 0,
       "media": 3,
@@ -2877,7 +2881,7 @@
      {
       "sel": "div.cta-band",
       "tag": "div",
-      "top": 11384,
+      "top": 11348,
       "height": 593,
       "words": 40,
       "media": 0,
@@ -2900,7 +2904,7 @@
      {
       "sel": "footer",
       "tag": "footer",
-      "top": 11977,
+      "top": 11941,
       "height": 395,
       "words": 50,
       "media": 0,
@@ -2923,7 +2927,7 @@
     ],
     "gaps": [
      {
-      "top": 10228,
+      "top": 10192,
       "height": 480
      }
     ],
@@ -2939,14 +2943,14 @@
     "edges": [
      {
       "x": 20,
-      "n": 14
+      "n": 16
      },
      {
       "x": 40,
       "n": 6
      }
     ],
-    "leftBlocks": 20,
+    "leftBlocks": 22,
     "bodySize": 16,
     "stage": false,
     "explains": false,
@@ -2981,7 +2985,7 @@
    "level": "WARN",
    "id": "blank-gap",
    "width": 390,
-   "message": "A 480px stretch at 10228px holds nothing.",
+   "message": "A 480px stretch at 10192px holds nothing.",
    "fix": "Check that it is a deliberate rest (once per page at most); otherwise close it to the normal section gap."
   },
   {

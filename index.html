@@ -142,7 +142,7 @@ ul{list-style:none}
 .chip b{display:block;font-size:19px;font-weight:600;font-family:'Playfair Display',serif}
 .chip span{display:block;font-size:14px;color:#d6d3d1;margin-top:4px;line-height:1.4}
 @media (max-width:768px){.chips-row{grid-template-columns:1fr 1fr;gap:16px}.chip b{font-size:17px}.chip span{font-size:13px}
-  .about .row{margin-top:48px!important}
+  .about .row{margin-top:48px!important} /* overrides inline margin-top:72px on phone */
   .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px}
   .about-para{margin-top:0}
   .section-title{margin-top:0}}
@@ -260,7 +260,7 @@ details[open] summary{color:var(--gold-deep)}
 .about-para strong{color:var(--gold);font-weight:600}
 .about .row+.row{margin-top:120px}
 .record{display:grid;grid-template-columns:minmax(0,320px) minmax(0,320px);gap:64px;justify-content:start;margin-top:8px}
-.record .col h4{font-size:14px;color:var(--ink);font-weight:600;margin-bottom:12px}
+.record .col h3{font-size:14px;color:var(--ink);font-weight:600;margin-bottom:12px}
 .record .col li{font-size:14px;color:var(--muted);padding:5px 0;display:flex;justify-content:space-between;gap:16px}
 .record .col li em{font-style:normal;color:var(--muted)}
 
@@ -317,7 +317,7 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
   .figure-tile .n{font-size:15vw}
   .about .row{display:block}
   .about-para{font-size:20px}
-  .facts{display:grid;grid-template-columns:1fr 1fr;margin:20px 0}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 24px}
   .record{grid-template-columns:1fr;gap:40px}
   .cta-photos{grid-template-columns:1fr 1fr}
   .cta-photos img:first-child{grid-column:1/3}
@@ -390,7 +390,7 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
       <div class="note rise"><b>Data enrichment</b>Public records parsed, cleaned and scored into one pipeline.</div>
     </div>
 
-    <div class="panel" data-ui aria-label="Live operations dashboard">
+    <div class="panel" data-ui aria-label="Live operations dashboard" role="region">
       <div class="panel-head">
         <div class="t">HMS Operations</div>
         <div class="s">Live snapshot, updated nightly</div>
@@ -473,7 +473,7 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
   <div class="stats-mosaic rise">
     <div class="photo"><img src="assets/work-hero-lifestyle.png" alt="Photon facial mask from the live storefront" loading="lazy"></div>
     <div class="tiles">
-      <div class="figure-tile tile-a"><span class="n">12+</span><span class="c">Local clients served since 2022</span></div>
+      <div class="figure-tile tile-a"><span class="n">20+</span><span class="c">Automations we run for ourselves</span></div>
       <div class="figure-tile tile-b"><span class="n">48h</span><span class="c">Average delivery time on campaign work</span></div>
     </div>
   </div>
@@ -515,8 +515,7 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
   <div class="row">
     <div class="facts"><div class="f"><div class="l">Record</div><div class="v">In practice</div></div></div>
     <div class="record">
-      <div class="col">
-        <h4>Where the work runs</h4>
+      <div class="col"><h3>Where the work runs</h3>
         <ul>
           <li>Own storefront · live <em>2026</em></li>
           <li>Blog pipeline · automated <em>2026</em></li>
@@ -524,8 +523,7 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
           <li>Supplier API sync · wired <em>2026</em></li>
         </ul>
       </div>
-      <div class="col">
-        <h4>How we work</h4>
+      <div class="col"><h3>How we work</h3>
         <ul>
           <li>Free first call, real audit <em>always</em></li>
           <li>Fixed-scope projects <em>default</em></li>
