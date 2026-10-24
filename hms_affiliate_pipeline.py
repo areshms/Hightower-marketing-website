@@ -63,6 +63,10 @@ DISCLOSURE_HTML = (
 def load_config() -> dict:
     if CONFIG_PATH.exists():
         cfg = json.loads(CONFIG_PATH.read_text())
+        # merge in any defaults added after the config was first written
+        for k, v in DEFAULT_CONFIG.items():
+            cfg.setdefault(k, v)
+        CONFIG_PATH.write_text(json.dumps(cfg, indent=2))
     else:
         cfg = dict(DEFAULT_CONFIG)
         CONFIG_PATH.write_text(json.dumps(cfg, indent=2))
@@ -187,7 +191,7 @@ a{{color:#b45309}}</style>
 </head>
 <body>
 <h1>{title}</h1>
-<p class="disclosure">{disclosure}</p>
+<p class="{disc_cls}">{disclosure}</p>
 {intro}
 <p>Looking for something else? See <a href="/products.html">the products we carry</a>,
 {pillar_link} or
@@ -280,10 +284,11 @@ def build_post(cfg, item, dry=False):
         desc=f"An operator's guide to {kw}: honest picks from a team that ships this category every week.",
         canonical=f"{cfg['site_base']}/blog/{slug}.html",
         jsonld=jsonld,
-        disclosure=hesc(cfg["ftc_disclosure"]),
+        disclosure=hesc(cfg["ftc_disclosure_amazon"]), disc_cls=cfg["disclosure_class"],  # swap to ftc_disclosure_ebay when a post carries EPN links
         amazon_line=hesc(cfg["amazon_disclosure"]),
-        intro=(f"<p>We run a real storefront and ship this category every week. This guide is built "
-               f"that hands-on experience — which items our staff keeps reaching for, and what customers tell us after buying — not a spec-sheet rewrite.</p>"),
+        intro=("<p>Our team runs a real storefront and ships this category every week. This guide is built on "
+               "that hands-on experience — which items our staff keeps reaching for, and what customers tell us "
+               "after buying — not a spec-sheet rewrite.</p>"),
         table="<table><tr><th>#</th><th>Pick</th><th>Best for</th><th>Price</th></tr>" + "\n".join(rows) + "</table>",
         picks="\n".join(picks),
         how_we_chose=("<p>Every pick has to clear three bars with our team: it earns a spot in our own "

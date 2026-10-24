@@ -8,7 +8,6 @@
   "gsc_token": "~/.hermes/google_token_gsc.json",
   "gsc_site": "sc-domain:hightower-marketing.com",
   "vertical": "pet",
-  "ftc_disclosure": "Affiliate disclosure: we participate in the Amazon Associates and eBay Partner Network programs. If you buy through links on this page, we may earn a commission at no extra cost to you.",
   "amazon_disclosure": "As an Amazon Associate I earn from qualifying purchases.",
   "disclosure_class": "affiliate-disclosure",
   "min_words": 1200,
@@ -27,5 +26,7 @@
       ],
       "pillar": "Home & Lighting Buying Guides"
     }
-  }
+  },
+  "ftc_disclosure_amazon": "Affiliate disclosure: we participate in the Amazon Associates program. If you buy through links on this page, we may earn a commission at no extra cost to you.",
+  "ftc_disclosure_ebay": "Affiliate disclosure: we participate in the eBay Partner Network. If you buy through links on this page, we may earn a commission at no extra cost to you."
 }
