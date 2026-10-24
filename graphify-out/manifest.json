@@ -276,9 +276,9 @@
     "semantic_hash": ""
   },
   "blog.html": {
-    "mtime": 1792395913.1897507,
-    "seen": 1792777162.933828,
-    "ast_hash": "a537d262ca97df1123ceb7cfe9034a9c",
+    "mtime": 1792823507.5423155,
+    "seen": 1792835777.43153,
+    "ast_hash": "23ab33387c1b857679b48b0c7c087a09",
     "semantic_hash": ""
   },
   "blog/ai-video-ads-columbus-ohio.html": {
@@ -324,9 +324,9 @@
     "semantic_hash": ""
   },
   "blog/product-photography-columbus-ohio.html": {
-    "mtime": 1792395893.4248238,
-    "seen": 1792777162.933831,
-    "ast_hash": "0daeca7c15aa235022de74225e756538",
+    "mtime": 1792812986.143723,
+    "seen": 1792823367.586198,
+    "ast_hash": "904b1791ccf78fc434563b847eddee26",
     "semantic_hash": ""
   },
   "blog/seo-columbus-ohio.html": {
@@ -426,9 +426,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1792784601.0970385,
-    "seen": 1792785047.0578291,
-    "ast_hash": "570aca6fd78277120eccdccf341c9f6c",
+    "mtime": 1792823507.5416057,
+    "seen": 1792835777.431545,
+    "ast_hash": "38f83e74258ad4ed2e644fe55d2c9a32",
     "semantic_hash": ""
   },
   "order-intake.html": {
@@ -462,9 +462,9 @@
     "semantic_hash": ""
   },
   "products.html": {
-    "mtime": 1792499043.2061944,
-    "seen": 1792777162.933842,
-    "ast_hash": "532da5a8da4dab06c8b6261bcf0890d2",
+    "mtime": 1792823243.8215208,
+    "seen": 1792823367.586266,
+    "ast_hash": "d9e02f68f197ae9a8e43e5a3976034ea",
     "semantic_hash": ""
   },
   "re-data-refinery-success.html": {
@@ -1446,27 +1446,27 @@
     "semantic_hash": ""
   },
   "vendor/hms-motion-full.js": {
-    "mtime": 1792784871.2339206,
-    "seen": 1792785047.0578098,
-    "ast_hash": "2f20aa84237611de00cc38e2de9726de",
+    "mtime": 1792785745.816887,
+    "seen": 1792823367.5861828,
+    "ast_hash": "b25b4101ddf60716da4b8db6c8fdf436",
     "semantic_hash": ""
   },
   "vendor/hms-motion-medium.js": {
-    "mtime": 1792784871.2334895,
-    "seen": 1792785047.0578098,
-    "ast_hash": "5958beef57a2220d7f834eb0eed9f8a9",
+    "mtime": 1792785866.3006282,
+    "seen": 1792823367.586184,
+    "ast_hash": "6440f40cf39404b1e10cc2f61c8c411c",
     "semantic_hash": ""
   },
   "index-full.html": {
-    "mtime": 1792784601.096241,
-    "seen": 1792785047.0578282,
-    "ast_hash": "97978e5f3c8aab75344fe6ed015e20f7",
+    "mtime": 1792785752.616065,
+    "seen": 1792823367.5862532,
+    "ast_hash": "cf40e393be5ec216a43e846c098d546b",
     "semantic_hash": ""
   },
   "index-medium.html": {
-    "mtime": 1792784601.0957675,
-    "seen": 1792785047.0578282,
-    "ast_hash": "d9fa94c031f45188c7dbef8c5b3c3412",
+    "mtime": 1792785752.6157916,
+    "seen": 1792823367.5862541,
+    "ast_hash": "2b0cc4905a7c452dc9393b69f248b4fd",
     "semantic_hash": ""
   },
   ".taste-skill/full/desktop-fold.jpg": {
@@ -1659,6 +1659,72 @@
     "mtime": 1792784537.41908,
     "seen": 1792785047.0578618,
     "ast_hash": "d141d020cfd58b62079fb3ab7c80b2e9",
+    "semantic_hash": ""
+  },
+  "affiliate_config.json": {
+    "mtime": 1792823354.3528702,
+    "seen": 1792823367.586163,
+    "ast_hash": "9e6e643450bd940ad5cc593e238686a4",
+    "semantic_hash": ""
+  },
+  "data/affiliate_opportunities.json": {
+    "mtime": 1792823354.9429436,
+    "seen": 1792823367.5861719,
+    "ast_hash": "60f1abaa5aea09b3a1086851422c4169",
+    "semantic_hash": ""
+  },
+  "data/affiliate_plan.json": {
+    "mtime": 1792823354.9490886,
+    "seen": 1792823367.5861719,
+    "ast_hash": "e5b890741dfee38dbcd906dc75600d01",
+    "semantic_hash": ""
+  },
+  "data/affiliate_seed.json": {
+    "mtime": 1792823229.730165,
+    "seen": 1792823367.5861728,
+    "ast_hash": "80954ff45980552e4408b93129837569",
+    "semantic_hash": ""
+  },
+  "hms_affiliate_pipeline.py": {
+    "mtime": 1792823354.271764,
+    "seen": 1792823367.586176,
+    "ast_hash": "368eefc0c5530f75a965786e69fa459b",
+    "semantic_hash": ""
+  },
+  "netlify/_worker.js": {
+    "mtime": 1792818395.7522168,
+    "seen": 1792823367.5861802,
+    "ast_hash": "b97074d7022d13c01a67713f2fcba797",
+    "semantic_hash": ""
+  },
+  "vendor/hms-motion-signature.js": {
+    "mtime": 1792800703.635247,
+    "seen": 1792823367.586185,
+    "ast_hash": "d93ffc8f7432b599e2470b58fc8cde3e",
+    "semantic_hash": ""
+  },
+  "blog/best-deshedding-tools-for-dogs.html": {
+    "mtime": 1792823354.9487536,
+    "seen": 1792823367.5861928,
+    "ast_hash": "8eeb6e03803a593f3464008d6c650795",
+    "semantic_hash": ""
+  },
+  "blog/best-dog-dental-care-products.html": {
+    "mtime": 1792823354.9471583,
+    "seen": 1792823367.586194,
+    "ast_hash": "4eb0313d04c7ee1e7762faec17f28e37",
+    "semantic_hash": ""
+  },
+  "blog/best-flea-and-tick-prevention-for-dogs.html": {
+    "mtime": 1792823354.9455984,
+    "seen": 1792823367.586195,
+    "ast_hash": "4328da4aa64a5c660290dd8403791efd",
+    "semantic_hash": ""
+  },
+  "index-signature.html": {
+    "mtime": 1792800713.4602349,
+    "seen": 1792823367.5862558,
+    "ast_hash": "c2acda792eb33c9cb4b9dcea3cc918cb",
     "semantic_hash": ""
   }
 }

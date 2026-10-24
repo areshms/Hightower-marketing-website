@@ -1,12 +1,12 @@
 {
-  "0": "render.py",
+  "0": "re",
   "1": "hms_blog_pipeline.py",
   "2": "lenis.min.js",
   "3": "gsap.min.js",
   "4": "ScrollTrigger.min.js",
   "5": "2. Pipeline Architecture",
   "6": "n",
-  "7": "link_mesh.py",
+  "7": "render.py",
   "8": "s",
   "9": "Cc",
   "10": "package.json",
@@ -25,12 +25,13 @@
   "23": "Mc",
   "24": "create-checkout.js",
   "25": "submit-order.js",
-  "26": "init",
+  "26": "startMotion",
   "27": "vercel.json",
   "28": "__init__.py",
   "29": "Vb",
   "30": "Wb",
   "31": "M",
-  "32": "g_oauth_capture.py",
-  "33": "Research: What high-converting AI automation agency websites have (2026-10-23)"
+  "32": "sitemap.py",
+  "33": "Research: What high-converting AI automation agency websites have (2026-10-23)",
+  "34": "fetch"
 }
