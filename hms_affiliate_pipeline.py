@@ -42,7 +42,7 @@ DEFAULT_CONFIG = {
     "gsc_token": "~/.hermes/google_token_gsc.json",
     "gsc_site": "sc-domain:hightower-marketing.com",
     "vertical": "pet",
-    "ftc_disclosure": "Affiliate disclosure: we participate in the Amazon Associates and eBay Partner Network programs. If you buy through links on this page, we may earn a commission at no extra cost to you.",
+    "ftc_disclosure_amazon": "Affiliate disclosure: we participate in the Amazon Associates program. If you buy through links on this page, we may earn a commission at no extra cost to you.",
     "amazon_disclosure": "As an Amazon Associate I earn from qualifying purchases.",
     "disclosure_class": "affiliate-disclosure",
     "min_words": 1200,
@@ -90,8 +90,13 @@ def stage_verify(cfg, dry=False):
     ]
     for rel, page in pages:
         html = page.read_text(errors="ignore")
-        has_aff = ("/go/" in html) or ("amzn.to" in html) or ("tag=" + cfg["amazon_tag"] in html)
-        has_disc = cfg["disclosure_class"] in html or "Amazon Associate" in html or "eBay Partner" in html
+        has_ebay = "/go/" in html
+        has_amzn = ("amzn.to" in html) or ("tag=" + cfg["amazon_tag"] in html)
+        has_aff = has_ebay or has_amzn
+        disc_cls = cfg["disclosure_class"] in html or "epn-disclosure" in html or "affiliate-disclosure" in html
+        disc_amzn = (not has_amzn) or ("Amazon Associate" in html)
+        disc_epn = (not has_ebay) or ("eBay Partner" in html or "EPN" in html)
+        has_disc = disc_cls and disc_amzn and disc_epn
         check(f"{rel}: affiliate links disclosed", not has_aff or has_disc,
               "add FTC/EPN/Amazon disclosure near links")
 
@@ -185,7 +190,7 @@ a{{color:#b45309}}</style>
 <p class="disclosure">{disclosure}</p>
 {intro}
 <p>Looking for something else? See <a href="/products.html">the products we carry</a>,
-our <a href="/blog/best-pet-2026.html">full pet gear guide</a>, or
+{pillar_link} or
 <a href="/services.html">how we help stores market themselves</a>.</p>
 <h2>Our picks at a glance</h2>
 {table}
@@ -254,12 +259,15 @@ def build_post(cfg, item, dry=False):
             "would put in a box for a family member. Your pet's specifics trump our rank order — start with the "
             "best-for column and you will not go wrong with any of the three.</p></div>")
     base_faqs = [
-        ("How did you pick these?", "We ship this category through our own storefront. Picks reflect what our team keeps re-ordering for the store and what customers tell us they regret."),
+        ("How did you pick these?", "We ship this category through our own storefront. Picks reflect what our team keeps re-ordering for the store and what customers tell us after buying."),
         ("Do you earn from these links?", "Yes — we participate in the Amazon Associates program and may earn a commission on qualifying purchases. It never changes the price you pay."),
         ("Are these prices current?", "Prices change often; the Amazon listing always shows the live price."),
     ]
     keyword_faqs = item.get("faqs", []) if isinstance(item, dict) else []
     all_faqs = list(keyword_faqs) + base_faqs
+    pillar_map = {"pet": '<a href="/blog/best-pet-2026.html">our full pet gear guide</a>,',
+                  "home": '<a href="/blog/best-home-lighting-2026.html">our home &amp; lighting guide</a>,'}
+    pillar_link = pillar_map.get(cfg["vertical"], "")
     faq = "\n".join(f"<h3>{hesc(q)}</h3><p>{hesc(a)}</p>" for q, a in all_faqs)
     jsonld = json.dumps({
         "@context": "https://schema.org", "@type": "BlogPosting",
@@ -269,41 +277,41 @@ def build_post(cfg, item, dry=False):
     })
     html = TEMPLATE_ROUNDUP.format(
         title=hesc(post_title),
-        desc=f"An operator's guide to {kw}: real sell-through data, return rates, and honest picks.",
+        desc=f"An operator's guide to {kw}: honest picks from a team that ships this category every week.",
         canonical=f"{cfg['site_base']}/blog/{slug}.html",
         jsonld=jsonld,
         disclosure=hesc(cfg["ftc_disclosure"]),
         amazon_line=hesc(cfg["amazon_disclosure"]),
         intro=(f"<p>We run a real storefront and ship this category every week. This guide is built "
-               f"from what actually sells, what comes back, and what our support inbox says — not a spec-sheet rewrite.</p>"),
+               f"that hands-on experience — which items our staff keeps reaching for, and what customers tell us after buying — not a spec-sheet rewrite.</p>"),
         table="<table><tr><th>#</th><th>Pick</th><th>Best for</th><th>Price</th></tr>" + "\n".join(rows) + "</table>",
         picks="\n".join(picks),
-        how_we_chose=("<p>Every pick has to clear three bars: sell-through in our own store, a return rate "
-                      "below the category average, and a support inbox that stays quiet. Products that fail "
-                      "any bar don't make the list, no matter how popular they are elsewhere.</p>"
+        how_we_chose=("<p>Every pick has to clear three bars with our team: it earns a spot in our own "
+                      "reorder rotation, customers don't come back confused or disappointed, and our staff "
+                      "would recommend it to a friend. Products that fail any bar don't make the list.</p>"
                       "<h3>The three bars, in detail</h3>"
-                      "<p><strong>1. Sell-through.</strong> We watch what actually leaves the shelf week over week. "
-                      "A product people reorder or recommend earns its slot; one that sits doesn't.</p>"
-                      "<p><strong>2. Return rate.</strong> When something comes back we log why. Picks with "
-                      "above-average return rates for the category get cut, even when the margin is good.</p>"
-                      "<p><strong>3. Support volume.</strong> Confused customers mean a confusing product. The "
-                      "quietest support inbox wins.</p>"
+                      "<p><strong>1. The reorder test.</strong> What our team buys again — for the store and "
+                      "for our own pets — earns a slot. One-time hype doesn't.</p>"
+                      "<p><strong>2. The after-sale test.</strong> We listen to what customers report after "
+                      "buying. Products that keep generating confusion or complaints don't get re-listed.</p>"
+                      "<p><strong>3. The friend test.</strong> Confused customers mean a confusing product; "
+                      "our team flags those fast. If we wouldn't recommend it to a friend, it's not on the list.</p>"
                       "<h3>How to use this list for your pet</h3>"
                       "<p>Start from the 'best for' column, not the rank. The #1 pick is the best all-rounder, "
                       "but your pet's size, coat, age, and any existing medication change the math. If two picks "
                       "look tied, buy the cheaper one first — every product here clears the quality bar, so the "
                       "decision is fit, not quality.</p>"
                       "<h3>Three mistakes we see constantly</h3>"
-                      "<p><strong>Buying for the breed, not the animal.</strong> Guides like ours rank all-rounders; "
-                      "your dog's actual size, coat, and temperament beat any list. A pick that's perfect for a 70lb "
-                      "shepherd can be useless for a 12lb terrier with the same 'problem'.</p>"
-                      "<p><strong>Switching too fast.</strong> Whatever category you're shopping, give a new product a "
-                      "fair trial window before judging it. Most pet products need consistency to show results, and "
-                      "bouncing between options in week one tells you nothing.</p>"
-                      "<p><strong>Ignoring the boring answer.</strong> The unglamorous pick — the plain brush, the basic "
-                      "chew, the toothpaste that just works — usually beats the gadget with the ad budget. We bias "
-                      "toward boring and proven in every list we publish.</p>"),
-        faq=faq,
+                      "<p><strong>Buying for the breed, not the animal.</strong> Guides like ours rank "
+                      "all-rounders; your dog's actual size, coat, and temperament beat any list. A pick that's "
+                      "perfect for a 70lb shepherd can be useless for a 12lb terrier with the same 'problem'.</p>"
+                      "<p><strong>Switching too fast.</strong> Whatever category you're shopping, give a new "
+                      "product a fair trial window before judging it. Most pet products need consistency to "
+                      "show results, and bouncing between options in week one tells you nothing.</p>"
+                      "<p><strong>Ignoring the boring answer.</strong> The unglamorous pick — the plain brush, "
+                      "the basic chew, the toothpaste that just works — usually beats the gadget with the ad "
+                      "budget. We bias toward boring and proven in every list we publish.</p>"),
+        faq=faq, pillar_link=pillar_link,
     )
     wc = word_count(html)
     if wc < cfg["min_words"]:

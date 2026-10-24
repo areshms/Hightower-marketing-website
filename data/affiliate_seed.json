@@ -1,0 +1,118 @@
+{
+  "queue": [
+    {
+      "keyword": "best flea and tick prevention for dogs",
+      "products": [
+        {
+          "title": "Seresto Flea Collar",
+          "asin": "B00WMMMHNM",
+          "best_for": "8-month set-and-forget protection",
+          "price_band": "ref-only",
+          "wrong_for": "Puppies under 7 weeks, or dogs that habitually chew collars \u2014 a chewable wins there.",
+          "why": "A collar people stick with: one application covers months, and our team keeps it on the reorder list because customers rarely come back with complaints."
+        },
+        {
+          "title": "NexGard Plus Chewable",
+          "asin": "B0DYLB3XGY",
+          "best_for": "Monthly chew with heartworm coverage",
+          "price_band": "ref-only",
+          "wrong_for": "Dogs already on other heartworm meds \u2014 doubling up is a vet conversation, not a shopping decision.",
+          "why": "Chew format wins for dogs that fight collars and for households where a monthly routine is easy; broadest coverage in one chew."
+        }
+      ],
+      "faqs": [
+        [
+          "What do vets actually recommend most for fleas?",
+          "Oral preventives (chews) and long-acting collars dominate vet recommendations because compliance is easy \u2014 the best preventive is the one you actually give on schedule. Whatever you pick, consistency beats brand."
+        ],
+        [
+          "Is a flea collar or chew better?",
+          "Chews win for dogs that swim or bathe often (no wash-off) and for collar-chewers. Collars win for set-and-forget households. Returns in this category usually come from wrong-format choices, not wrong brands."
+        ],
+        [
+          "How long until fleas are gone from my house?",
+          "Treating the pet is step one; the environment is step two. Wash bedding hot, vacuum thoroughly (including under furniture), and expect 2-3 weeks to fully break the cycle because eggs keep hatching."
+        ]
+      ]
+    },
+    {
+      "keyword": "best dog dental care products",
+      "products": [
+        {
+          "title": "Greenies Dental Chews",
+          "asin": "B000KEVF32",
+          "best_for": "Daily maintenance dogs treat as a snack",
+          "price_band": "ref-only",
+          "wrong_for": "Aggressive gulpers \u2014 a dog that swallows treats whole gets no dental benefit and a choking risk.",
+          "why": "The dental item our team re-orders most; compliance is the point \u2014 a chew the dog begs for gets given."
+        },
+        {
+          "title": "Petrodex Dog Toothpaste",
+          "asin": "B00025K0R6",
+          "best_for": "Direct brushing on a budget",
+          "price_band": "ref-only",
+          "wrong_for": "Owners with zero brushing patience \u2014 spend the money on chews instead; an unused tube helps nobody.",
+          "why": "The paste we point to with every toothbrush-kit question; poultry flavor wins the cooperation battle."
+        }
+      ],
+      "faqs": [
+        [
+          "Do dental chews actually work?",
+          "They help with plaque at the gum line and most dogs love them \u2014 that compliance is their superpower. They supplement brushing; nothing replaces the mechanical action of a toothbrush."
+        ],
+        [
+          "How often should I brush my dog's teeth?",
+          "Daily is the gold standard, 3x/week is realistic for most households, and something always beats nothing. Pair it with something the dog loves so it becomes routine, not battle."
+        ],
+        [
+          "When does my dog actually need a professional dental cleaning?",
+          "If you see brown tartar at the gum line, red gums, or bad breath that brushing doesn't fix, that's a vet conversation. Home care prevents; it doesn't reverse buildup."
+        ]
+      ]
+    },
+    {
+      "keyword": "best deshedding tools for dogs",
+      "products": [
+        {
+          "title": "FURminator deShedding Tool",
+          "asin": "B07MZDTHPV",
+          "best_for": "Heavy shedders (huskies, shepherds)",
+          "price_band": "ref-only",
+          "wrong_for": "Short-coated dogs \u2014 overkill; a slicker brush does the job for less.",
+          "why": "Moves the most fur per minute of anything our team has tried; the tool shedding-season households keep reaching for."
+        },
+        {
+          "title": "Hertzko Slicker Brush",
+          "asin": "B00ZGPI3OY",
+          "best_for": "Medium coats + budget pick",
+          "price_band": "ref-only",
+          "wrong_for": "Matted coats \u2014 brush or cut mats out gently first; a slicker over a mat just hurts.",
+          "why": "Self-cleaning button makes daily use realistic \u2014 the brush that actually stays in the drawer, not the back of it."
+        },
+        {
+          "title": "Earthbath Pet Shampoo",
+          "asin": "B00LNEDDLA",
+          "best_for": "Bath-day pairing for skin-sensitive dogs",
+          "price_band": "ref-only",
+          "wrong_for": "Medicated-skin needs \u2014 a vet-recommended medicated shampoo beats any cosmetic pick.",
+          "why": "Gentle enough that it survives picky buyers; the shampoo our team suggests when dogs have sensitive skin."
+        }
+      ],
+      "faqs": [
+        [
+          "How often should I deshed my dog?",
+          "Heavy shedders: 2-3 times a week during shedding season, weekly otherwise. Light coats: weekly brushing is plenty and doubles as a coat-health check."
+        ],
+        [
+          "Do deshedding tools work on short-haired dogs?",
+          "Yes \u2014 undercoat rakes and rubber curry-style tools pull dead undercoat from short coats too. The FURminator-class tools shine most on double coats; short-haired dogs do fine with simpler slickers."
+        ],
+        [
+          "Why does my dog shed more in spring?",
+          "Photoperiod triggers coat blow \u2014 longer daylight = winter coat release. It's normal, it's temporary, and it's exactly when the right tool saves your furniture."
+        ]
+      ]
+    }
+  ],
+  "posted": []
+}
