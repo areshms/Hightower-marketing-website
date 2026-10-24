@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>document.documentElement.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion');</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hightower Marketing Strategies: An operator's marketing practice in Columbus, Ohio</title>
+<meta name="description" content="Marketing, automation and e-commerce run by someone who actually runs the businesses. Columbus, Ohio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold-deep:#b45309;
+  --paper:#fafaf9;
+  --ink:#1c1917;
+  --ground:#292524;
+  --coal:#0c0a09;
+  --gold:#d97706;
+  --gold-bright:#f59e0b;
+  --muted:#78716c;
+  --soft:#a8a29e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  overflow-x:clip;
+  font-family:'Inter',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+::selection{background:var(--gold);color:#fff}
+
+/* ————— frame ————— */
+.wrap{max-width:1440px;margin:0 auto;padding-inline:clamp(20px,4vw,64px)}
+
+/* ————— type scale: 5 steps —————
+   display: clamp(56px,8vw,120px)
+   heading: 32–40px
+   lead: 20–24px
+   body: 17px
+   small: 13–14px */
+
+/* ————— motion tokens ————— */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hl-line span{transform:none!important;opacity:1!important}
+  .rise{opacity:1!important;transform:none!important}
+}
+.rise{transition:none}
+html.motion .rise{opacity:0;transform:translateY(24px)}
+.risehtml.motion .in{opacity:1;transform:none}
+@keyframes drift{from{transform:scale(1)}to{transform:scale(1.06)}}
+
+/* ————— header on the band ————— */
+.masthead{position:relative}
+.band{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  grid-template-rows:200px 200px;
+}
+.band img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.tile-gold{background:var(--gold)}
+.tile-coal{background:var(--coal)}
+.tile-ground{background:var(--ground)}
+.cell-2x1{grid-column:span 2}
+.cell-1x1{grid-column:span 1}
+.cell-2x2{grid-column:span 2;grid-row:span 2}
+.band .move{animation:drift 18s ease-in-out infinite alternate}
+.site-head{
+  position:absolute;top:0;left:0;right:0;z-index:5;
+  display:flex;align-items:stretch;height:64px;
+}
+.wordmark{
+  background:var(--ink);color:var(--paper);
+  display:flex;align-items:center;padding:0 28px;
+  font-family:'Playfair Display',serif;font-weight:700;font-size:20px;letter-spacing:.01em;
+}
+.wordmark em{font-style:normal;color:var(--gold-bright)}
+.head-tabs{
+  background:var(--gold-deep);
+  display:flex;align-items:center;gap:clamp(18px,3vw,44px);
+  padding:0 clamp(18px,3vw,44px);flex:0 0 auto;
+}
+.head-tabs a{color:#fff;font-size:14px;font-weight:500}
+.head-tabs a:hover,.head-tabs a:focus-visible{border-bottom:2px solid #fff;padding-bottom:2px}
+.head-cta{
+  margin-left:auto;display:flex;align-items:center;padding:0 44px;margin-right:14px;
+  background:var(--ink);color:var(--paper);
+  font-size:14px;font-weight:600;
+}
+.head-cta:hover,.head-cta:focus-visible{background:var(--gold-deep);color:#fff}
+
+/* ————— hero text ————— */
+.hero-text{padding:clamp(64px,9vh,110px) clamp(20px,4vw,64px) 0;position:relative}
+.standfirst{
+  max-width:30ch;font-size:20px;line-height:1.45;color:var(--ink);
+  position:absolute;left:clamp(20px,4vw,64px);top:clamp(64px,9vh,110px);
+}
+@media (max-width:768px){.hero-text{padding-top:32px}}
+
+.hl{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(48px,7.2vw,104px);
+  font-weight:600;line-height:.92;letter-spacing:-0.045em;
+  margin-left:42%;
+  color:var(--ink);
+}
+.hl-line{display:block;overflow:hidden}
+.hl-line span{display:block;transform:translateY(110%);animation:none}
+.hl-line:nth-child(2) span{animation-delay:.11s}
+@keyframes rise-line{to{transform:translateY(0)}}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:32px;margin:44px 0 0 42%}
+.btn{
+  display:inline-block;background:var(--ink);color:var(--paper);
+  font-weight:600;font-size:17px;padding:16px 32px;min-height:44px;
+  border:none;transition:background .25s ease,transform .25s ease;
+}
+.btn:hover,.btn:focus-visible{background:var(--gold-deep);color:#fff;transform:translateY(-2px)}
+.link-plain{font-size:17px;font-weight:600;border-bottom:2px solid var(--gold)}
+.link-plain:hover,.link-plain:focus-visible{color:var(--gold-deep)}
+.hero-foot{
+  display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-inline:clamp(20px,4vw,64px);margin-inline:calc(-1 * clamp(20px,4vw,64px));
+  margin:clamp(48px,7vh,84px) 0 clamp(28px,4vh,44px);
+  font-size:14px;color:var(--muted);
+}
+
+/* ————— sections ————— */
+.section{padding:clamp(72px,10vh,128px) clamp(20px,4vw,64px)}
+.section-title{
+  font-family:'Playfair Display',serif;font-weight:600;
+  font-size:clamp(30px,3.4vw,44px);letter-spacing:-0.02em;line-height:1.05;
+}
+
+/* proof chips — immediately after hero */
+.proof-chips{background:var(--ink);color:var(--paper);padding:26px clamp(20px,4vw,64px)}
+.chips-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.chip b{display:block;font-size:19px;font-weight:600;font-family:'Playfair Display',serif}
+.chip span{display:block;font-size:14px;color:#d6d3d1;margin-top:4px;line-height:1.4}
+@media (max-width:768px){.chips-row{grid-template-columns:1fr 1fr;gap:16px}.chip b{font-size:17px}.chip span{font-size:13px}
+  .about .row{margin-top:48px!important} /* overrides inline margin-top:72px on phone */
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px}
+  .about-para{margin-top:0}
+  .section-title{margin-top:0}}
+
+/* features — panel with margin notes */
+.features .grid{display:grid;grid-template-columns:1fr 420px 1fr;gap:clamp(24px,4vw,72px);margin-top:56px;align-items:stretch}
+
+.panel{
+  justify-self:center;align-self:stretch;
+  width:420px;background:#fff;
+  border:none;
+}
+.panel-head{background:var(--ink);color:var(--paper);padding:18px 22px}
+.panel-head .t{font-family:'Playfair Display',serif;font-size:20px;font-weight:600}
+.panel-head .s{font-size:14px;color:var(--soft);margin-top:2px}
+.panel-body{padding:24px 26px 28px}
+.stat-line{display:flex;justify-content:space-between;align-items:baseline;padding:15px 2px}
+.stat-line:last-child{padding-bottom:0}
+.stat-line .k{font-size:17px;color:var(--ink)}
+.stat-line .v{font-size:15px;color:var(--muted)}
+.grow-bar{margin:16px 2px 6px}
+.grow-bar .lbl{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:6px}
+.grow-bar .track{height:8px;background:#edebe8}
+.grow-bar .fill{height:8px;background:var(--gold);width:0;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.note{
+  font-size:17px;color:var(--ink);line-height:1.55;max-width:28ch;
+}
+.note b{display:block;font-size:20px;font-weight:600;margin-bottom:5px}
+.note-col-l{text-align:right}
+.note-col{display:flex;flex-direction:column;gap:56px;justify-content:center}
+.note-col-r .note:first-child{padding-top:48px}
+.note:focus{outline:2px solid var(--gold)}
+
+/* blog funnel */
+.notes-funnel{margin:clamp(64px,8vw,120px) auto 0;padding:32px clamp(20px,4vw,64px) 0;max-width:1440px}
+.notes-funnel .funnel-title{font-size:17px;letter-spacing:0;text-transform:none;color:var(--gold-deep);font-weight:600}
+.funnel-links{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:20px}
+.funnel-links a{font-size:17px;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:8px;line-height:1.35}
+.funnel-links a:hover{color:var(--gold-deep)}
+@media (max-width:900px){.funnel-links{grid-template-columns:1fr;gap:14px}.features .grid{display:block}}
+
+/* process */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:64px}
+.step{border-top:none;padding-top:0}
+.process-grid{counter-reset:step}
+.process-grid li{list-style:none}
+.step::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-family:'Playfair Display',serif;font-size:clamp(30px,3vw,44px);color:var(--gold);display:block;line-height:1}
+.step{border-top:none}
+.step b{display:block;font-size:20px;margin:14px 0 10px;font-weight:600}
+.step p{font-size:16px;color:var(--ink);line-height:1.55;max-width:34ch}
+@media (max-width:768px){.process-grid{grid-template-columns:1fr 1fr;gap:20px}.step p{max-width:none}}
+
+/* FAQ */
+.faq-list{margin-top:56px;column-gap:clamp(40px,6vw,96px)}
+@media (max-width:900px){.faq-list{columns:1}}
+details{border:none;padding:0;margin-bottom:8px;break-inside:avoid}
+@media (min-width:901px){.faq-list{columns:2}}
+summary{font-size:19px;font-weight:600;padding:18px 0;cursor:pointer;list-style:none;color:var(--ink)}
+summary::marker{display:none}
+summary::after{content:'+';float:right;font-size:24px;color:var(--gold);font-weight:400}
+details[open] summary::after{content:'–'}
+details p{font-size:16px;color:var(--muted);padding:0 0 20px;max-width:62ch;line-height:1.55}
+details[open] summary{color:var(--gold-deep)}
+
+/* pricing approach */
+.pricing-approach{margin:clamp(56px,8vw,96px) 0 0;padding-top:32px}
+.pricing-approach b{display:block;font-size:20px;font-weight:600;margin-bottom:8px}
+.pricing-approach p{font-size:17px;color:var(--muted);max-width:64ch;line-height:1.55}
+
+/* calculator */
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);margin-top:64px;align-items:center}
+.calc-form{background:#fff;padding:28px}
+.calc-form label{display:block;font-size:14px;font-weight:600;margin:18px 0 8px}
+.calc-form label:first-child{margin-top:0}
+.calc-form input[type=range]{width:100%;accent-color:var(--gold-deep)}
+.calc-form output{float:right;font-size:16px;font-weight:600;color:var(--gold-deep)}
+.calc-big{font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,72px);line-height:1;font-weight:600}
+.calc-big span{font-size:20px;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)}
+.calc-note{font-size:14px;color:var(--muted);max-width:44ch;margin:16px 0 24px;line-height:1.5}
+.calc-result .btn{display:inline-block}
+@media (max-width:768px){.calc-grid{grid-template-columns:1fr;gap:32px}}
+
+/* work — oversized visuals */
+.work{overflow:clip}
+.work-block{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end}
+.work-visual{grid-column:1/8;margin-left:calc(-1 * clamp(20px,4vw,64px));overflow:hidden;height:72svh;min-height:420px}
+.work-visual img{width:120%;max-width:none;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .5s ease}
+.work-block:hover .work-visual img{filter:grayscale(0) contrast(1)}
+.work-copy{grid-column:9/13}
+.work-copy h3{font-family:'Playfair Display',serif;font-size:clamp(26px,2.6vw,38px);font-weight:600;line-height:1.08;letter-spacing:-0.02em}
+.work-copy p{font-size:17px;color:var(--ink);line-height:1.6;margin-top:18px;max-width:38ch}
+.work-block + .work-block{margin-top:clamp(96px,14vh,170px)}
+.work-block:nth-of-type(2) .work-visual{height:52svh;min-height:340px}
+.work-block:nth-of-type(3) .work-visual{height:62svh;min-height:380px}
+
+/* stats — photo + two figure tiles */
+.stats-mosaic{display:grid;grid-template-columns:2fr 1fr;gap:0;margin-top:64px}
+.stats-mosaic .photo{position:relative;overflow:hidden;min-height:60vh}
+.stats-mosaic .photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.tiles{display:grid;grid-template-rows:1fr 1fr}
+.figure-tile{padding:36px;display:flex;flex-direction:column;justify-content:flex-start}
+.figure-tile .n{font-family:'Playfair Display',serif;font-size:clamp(48px,5.6vw,88px);font-weight:600;line-height:1;letter-spacing:-0.03em}
+.figure-tile .c{font-size:17px;line-height:1.4;margin-top:10px}
+.tile-a{background:var(--coal);color:var(--paper)}
+.tile-a .c{color:var(--soft)}
+.tile-b{background:var(--gold);color:#3b2502}
+.tile-b .c{color:#2a1c02}
+
+/* about — side facts, wide paragraph */
+.about .row{display:grid;grid-template-columns:160px 1fr;gap:0;padding:0 0 8px}
+.facts{display:flex;flex-direction:column;gap:20px}
+.facts .f .l{font-size:14px;color:var(--muted)}
+.facts .f .v{font-size:14px;color:var(--ink);font-weight:600;margin-top:3px}
+.about-para{font-size:clamp(20px,1.7vw,26px);line-height:1.4;letter-spacing:-0.005em;max-width:58ch}
+.about-para strong{color:var(--gold);font-weight:600}
+.about .row+.row{margin-top:120px}
+.record{display:grid;grid-template-columns:minmax(0,320px) minmax(0,320px);gap:64px;justify-content:start;margin-top:8px}
+.record .col h3{font-size:14px;color:var(--ink);font-weight:600;margin-bottom:12px}
+.record .col li{font-size:14px;color:var(--muted);padding:5px 0;display:flex;justify-content:space-between;gap:16px}
+.record .col li em{font-style:normal;color:var(--muted)}
+
+/* cta — photo strip + colour band */
+.cta-photos{display:grid;grid-template-columns:1fr 1fr 1fr}
+.cta-photos img{width:100%;height:40svh;min-height:260px;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.cta-band{background:var(--coal);color:var(--paper);padding:clamp(64px,9vh,110px) 0}
+.cta-inner{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end}
+.cta-statement{grid-column:1/8;font-size:clamp(24px,2.6vw,30px);line-height:1.3;font-weight:500;max-width:30ch}
+.cta-statement a{text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:4px;text-underline-offset:8px}
+.cta-statement a:hover,.cta-statement a:focus-visible{color:var(--gold-bright)}
+.cta-sub{grid-column:1/8;font-size:17px;color:var(--soft);margin-top:32px;max-width:52ch}
+.monogram{width:150px;height:150px;background:var(--gold-deep);color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:58px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
+.cta-person{grid-column:11/13;justify-self:end}
+.cta-person img{width:150px;height:188px;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.cta-person .who{font-size:14px;color:var(--soft);margin-top:10px;text-align:left}
+
+
+/* awwwards-style micro-interactions: letter roll + underline draw + fill press */
+@media (hover: hover) {
+  .head-tabs a { background: linear-gradient(currentColor 0 0) left bottom / 0% 2px no-repeat;
+    transition: background-size .45s cubic-bezier(.165,.84,.44,1); text-decoration: none; }
+  .head-tabs a:hover, .head-tabs a:focus-visible { background-size: 100% 2px; }
+  .funnel-links a { background: linear-gradient(var(--gold) 0 0) left bottom / 100% 2px no-repeat;
+    transition: background-size .4s cubic-bezier(.165,.84,.44,1); }
+  .funnel-links a:hover { background-size: 100% .35em; color: var(--gold-deep); }
+  .btn:active { transform: scale(.97); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .head-tabs a, .funnel-links a { transition: none; }
+}
+
+/* loader + curtain — variant D signature open */
+#loader{position:fixed;inset:0;z-index:200;background:var(--ink);color:var(--paper);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:22px;
+  visibility:hidden;opacity:0}
+html.motion #loader{visibility:visible;opacity:1}
+.loader-inner{display:flex;align-items:baseline;gap:18px;font-family:'Playfair Display',serif}
+.loader-name{font-size:clamp(20px,2.4vw,32px);font-weight:600;letter-spacing:-0.01em}
+.loader-count{font-size:clamp(48px,6vw,84px);font-weight:600;color:var(--gold);line-height:1;font-variant-numeric:tabular-nums}
+.loader-rule{width:min(320px,60vw);height:2px;background:rgba(250,250,249,.18)}
+.loader-fill{height:100%;width:0%;background:var(--gold)}
+html.is-loaded #loader{pointer-events:none}
+
+/* footer */
+footer{background:var(--ink);color:var(--soft);padding:44px 0 36px;font-size:14px}
+.foot-inner{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.foot-name{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,66px);font-weight:700;color:var(--paper);line-height:1;margin-bottom:26px;letter-spacing:-0.02em}
+footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
+
+/* ————— phone ————— */
+@media (max-width:768px){
+  body{font-size:17px}
+  .band{grid-template-columns:repeat(3,1fr);grid-template-rows:120px 120px}
+  .cell-2x1{grid-column:span 1}
+  .cell-2x2{grid-column:span 1;grid-row:span 1}
+  .site-head{position:static;height:auto;flex-wrap:wrap}
+  .head-tabs{order:3;width:100%;justify-content:space-around}
+  .wordmark{order:1}
+  .head-cta{order:2}
+  .wordmark{padding:14px 16px;font-size:16px}
+  .head-tabs{gap:14px;padding:14px 16px;font-size:13px;flex-wrap:wrap}
+  .head-tabs a{font-size:13px}
+  .head-cta{padding:14px 16px;font-size:13px}
+  .hero-text{padding-top:32px}
+  .standfirst{position:static;margin:0 0 20px;font-size:17px}
+  .hl{margin-left:0;font-size:13vw}
+  .hero-actions{margin-left:0}
+  .features .grid{display:block}
+  .panel{width:100%;margin:0 auto}
+  .note-col{display:block;text-align:left}
+  .note-col .note{margin:0 0 18px}
+  .note{position:static;text-align:left;max-width:none}
+  .work-visual img{width:100%}
+  .note b{margin-bottom:2px}
+  .work-block{display:block}
+  .work-visual{margin:0 0 20px;width:110%;height:auto;aspect-ratio:4/5}
+  .work-copy p{font-size:16px}
+  .stats-mosaic{grid-template-columns:1fr}
+  .tiles{grid-template-rows:none;grid-template-columns:1fr 1fr}
+  .figure-tile .n{font-size:15vw}
+  .about .row{display:block}
+  .about-para{font-size:20px}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 24px}
+  .record{grid-template-columns:1fr;gap:40px}
+  .cta-photos{grid-template-columns:1fr 1fr}
+  .cta-photos img:first-child{grid-column:1/3}
+  .cta-inner{display:block}
+  .monogram{width:150px;height:150px;background:var(--gold-deep);color:#fff;font-family:'Playfair Display',serif;font-weight:600;font-size:58px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
+.cta-person{margin-top:32px}
+  .cta-statement{font-size:23px}
+}
+</style>
+<noscript><style>.rise{opacity:1;transform:none}.hl-line span{transform:none;animation:none}</style></noscript>
+</head>
+<body>
+<div id="loader" role="status" aria-label="Loading">
+  <div class="loader-inner">
+    <span class="loader-name" data-loader-out>Hightower Marketing</span>
+    <span class="loader-count" data-loader-out data-loader-count>00</span>
+  </div>
+  <div class="loader-rule"><div class="loader-fill"></div></div>
+</div>
+
+
+<header class="site-head" id="top">
+  <a class="wordmark" href="/">Hightower <em>Marketing</em></a>
+  <nav class="head-tabs" aria-label="Primary">
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a href="#faq">FAQ</a>
+    <a href="#about">About</a>
+    <a href="blog.html">Notes</a>
+  </nav>
+  <a class="head-cta" href="contact.html">Book a free call</a>
+</header>
+
+<div class="masthead">
+  <div class="band" aria-hidden="true">
+    <img class="cell-2x1 move" src="assets/work-pet-nail-clipper.jpg" alt="">
+    <img class="cell-1x1" src="assets/work-nose-patches.jpg" alt="">
+    <div class="tile-gold cell-1x1"></div>
+    <img class="cell-1x1" src="assets/work-dog-hoodie.jpg" alt="">
+    <div class="tile-coal cell-2x2"></div>
+    <img class="cell-2x1" src="assets/work-question-lamp.jpg" alt="">
+    <div class="tile-ground cell-1x1"></div>
+  </div>
+</div>
+
+<section class="hero-text wrap">
+  <p class="standfirst rise" data-no-batch="1">An operator's marketing practice in Columbus, Ohio. We run real stores, bots and campaigns, then bring what worked to your business.</p>
+  <h1 class="hl">
+    <span class="hl-line"><span>Growth, run</span></span>
+    <span class="hl-line"><span>by an operator.</span></span>
+  </h1>
+  <div class="hero-actions rise" data-no-batch="1">
+    <a class="btn" href="contact.html">Book a free call</a>
+    <a class="link-plain" href="#work">See the work</a>
+  </div>
+  <div class="hero-foot">
+    <span>Founded 2022 · Columbus, Ohio</span>
+    <span>hello@hightower-marketing.com</span>
+  </div>
+</section>
+
+<section class="proof-chips" aria-label="Practice at a glance">
+  <div class="wrap chips-row">
+    <div class="chip"><b>Free audit first</b><span>fixed quote on scope after it</span></div>
+    <div class="chip"><b>Systems run 24/7</b><span>monitored, with a human check where it matters</span></div>
+    <div class="chip"><b>Our own machine</b><span>3 storefronts + a data refinery in production</span></div>
+    <div class="chip"><b>20+ automations live</b><span>publishing, pricing, fulfillment, alerts</span></div>
+  </div>
+</section>
+
+<section class="section features wrap" id="services">
+  <h2 class="section-title rise" style="text-align:right">What we run</h2>
+  <div class="grid">
+    <div class="note-col note-col-l">
+      <div class="note rise"><b>Storefront automation</b>Listings, pricing and tracking synced supplier-to-store, every day.</div>
+      <div class="note rise"><b>Content publishing</b>Keyword research to drafted, posted article without a person in the loop.</div>
+      <div class="note rise"><b>Data enrichment</b>Public records parsed, cleaned and scored into one pipeline.</div>
+    </div>
+
+    <div class="panel" data-ui aria-label="Live operations dashboard" role="region">
+      <div class="panel-head">
+        <div class="t">HMS Operations</div>
+        <div class="s">Live snapshot, updated nightly</div>
+      </div>
+      <div class="panel-body">
+        <div class="stat-line"><span class="k">Storefronts running</span><span class="v">eBay + Shopify + TikTok Shop</span></div>
+        <div class="stat-line"><span class="k">Listings live</span><span class="v">17 SKUs, synced from supplier API</span></div>
+        <div class="stat-line"><span class="k">Orders fulfilled</span><span class="v">First sale 10/19, tracked delivery</span></div>
+        <div class="stat-line"><span class="k">Content pipeline</span><span class="v">12 published, automated posting</span></div>
+        <div class="stat-line"><span class="k">Data refinery</span><span class="v">10,255 Ohio properties enriched</span></div>
+        <div class="stat-line"><span class="k">Campaign turnaround</span><span class="v">48 hours typical</span></div>
+        <div class="stat-line"><span class="k">Turnaround</span><span class="v">48 hours, brief to live</span></div>
+        <div class="grow-bar">
+          <div class="lbl"><span>Manual steps removed from the pipeline</span><span>100%</span></div>
+          <div class="track"><div class="fill" data-w="100"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-col note-col-r">
+      <div class="note rise"><b>What we automate first</b>Lead capture, order flow, reporting. Highest hours back, first.</div>
+      <div class="note rise"><b>Human where it counts</b>A person approves anything that touches your customer or your records.</div>
+      <div class="note rise"><b>Tool chain</b>Shopify · eBay · CJ · GSC · Playwright — wired together, no black box.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section work" id="work">
+  <div class="wrap">
+    <div class="work-block">
+      <div class="work-visual rise"><img src="assets/work-hero-lifestyle.png" alt="TrendLoop storefront hero product: LED photon facial mask, a live SKU with real buyers" loading="lazy"></div>
+      <div class="work-copy rise">
+        <h3>TrendLoop, a store built to run itself</h3>
+        <p>Before: product research, listing, pricing and order chasing done by hand. After: 17 SKUs across eBay, Shopify and TikTok Shop, inventory pulled nightly from the supplier's API, first tracked sale shipped 10 days after launch.</p>
+      </div>
+    </div>
+    <div class="work-block">
+      <div class="work-visual rise"><img src="assets/work-water-projector.jpg" alt="Water ripple projector, one of 17 live SKUs synced from supplier API" loading="lazy"></div>
+      <div class="work-copy rise">
+        <h3>A 10,255-property data refinery</h3>
+        <p>Before: county records browsed by hand, deal quality guessed. After: an 18-city engine scraping, enriching and scoring 10,255+ Ohio properties weekly, with a deal list waiting every Monday.</p>
+      </div>
+    </div>
+    <div class="work-block">
+      <div class="work-visual rise"><img src="assets/work-dog-hoodie.jpg" alt="Pet apparel from the storefront lineup, supplier-wired inventory" loading="lazy"></div>
+      <div class="work-copy rise">
+        <h3>12 posts, published while we sleep</h3>
+        <p>Before: content meant writing nights and weekends. After: keyword research, drafting, formatting and posting run on a schedule, indexed and verified through Google Search Console. Twelve posts and compounding, no one pressing publish.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="notes-funnel">
+    <b class="funnel-title">From the notebook</b>
+    <div class="funnel-links">
+      <a href="/blog/ai-video-ads-columbus-ohio.html">AI video ads: pricing, process &amp; results</a>
+      <a href="/blog/seo-columbus-ohio.html">SEO in Columbus: what actually ranks in 2026</a>
+      <a href="/blog/how-ai-is-changing-small-business-marketing.html">How AI is changing small business marketing</a>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="process">
+  <h2 class="section-title rise">From first call to a running system</h2>
+  <ol class="process-grid">
+    <li class="step rise"><b>Audit &amp; scope</b><p>Thirty minutes. We map the work you repeat every week and name the two or three where automation pays back first. Fixed quote after it.</p></li>
+    <li class="step rise"><b>Build &amp; connect</b><p>Workflows built against your real tools and real data, tested before anything touches production.</p></li>
+    <li class="step rise"><b>Launch &amp; monitor</b><p>Live, documented, and watched. You know what runs, when, and how to stop it.</p></li>
+    <li class="step rise"><b>Human approval</b><p>Anything that writes to your customers or your records waits for a person to click yes.</p></li>
+  </ol>
+
+  <div class="pricing-approach rise">
+    <b>How pricing runs</b>
+    <p>Fixed quote per workflow after the free audit — the price scales with how many systems the workflow touches, not with how long we can make a meeting. You see the number before any work starts.</p>
+  </div>
+</section>
+
+<section class="section wrap" id="numbers">
+  <h2 class="section-title rise">The record so far</h2>
+  <div class="stats-mosaic rise">
+    <div class="photo"><img src="assets/work-hero-lifestyle.png" alt="Photon facial mask from the live storefront" loading="lazy"></div>
+    <div class="tiles">
+      <div class="figure-tile tile-a"><span class="n">20+</span><span class="c">Automations we run for ourselves</span></div>
+      <div class="figure-tile tile-b"><span class="n">48h</span><span class="c">Average delivery time on campaign work</span></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section wrap" id="calculator">
+  <h2 class="section-title rise">What is that manual task costing you?</h2>
+  <div class="calc-grid">
+    <div class="calc-form" data-ui>
+      <label for="calc-hours">Hours of repetitive work, per week</label>
+      <input type="range" id="calc-hours" min="1" max="40" value="10" step="1">
+      <output id="calc-hours-out">10</output>
+      <label for="calc-rate">Loaded hourly cost, in dollars</label>
+      <input type="range" id="calc-rate" min="15" max="150" value="35" step="5">
+      <output id="calc-rate-out">35</output>
+      <label for="calc-share">Share the automation can take, percent</label>
+      <input type="range" id="calc-share" min="20" max="90" value="60" step="5">
+      <output id="calc-share-out">60</output>
+    </div>
+    <div class="calc-result">
+      <p class="calc-big"><output id="calc-year">$10,920</output> <span>per year</span></p>
+      <p class="calc-note">Estimate, before tax. Assumes the share you pick is honestly automatable — the free audit tells you which part really is. Not a quote.</p>
+      <a class="btn" href="contact.html">Get the free audit</a>
+    </div>
+  </div>
+</section>
+
+<section class="section about wrap" id="about">
+  <h2 class="section-title rise">Who answers</h2>
+  <div class="row" style="margin-top:72px">
+    <div class="facts">
+      <div class="f"><div class="l">Founded</div><div class="v">2022</div></div>
+      <div class="f"><div class="l">Based in</div><div class="v">Columbus, Ohio</div></div>
+      <div class="f"><div class="l">Practice</div><div class="v">Marketing · automation · e-commerce</div></div>
+    </div>
+    <p class="about-para">Most agencies advise. <strong>We operate.</strong> Hightower Marketing Strategies runs its own storefronts, pipelines and publications first, then brings the parts that actually worked to your business. No guesswork, no recycled playbooks. Every recommendation we make has already survived contact with real customers, real margins and real fulfillment deadlines. When you hire us, you get the operator, not an account layer.</p>
+  </div>
+  <div class="row">
+    <div class="facts"><div class="f"><div class="l">Record</div><div class="v">In practice</div></div></div>
+    <div class="record">
+      <div class="col"><h3>Where the work runs</h3>
+        <ul>
+          <li>Own storefront · live <em>2026</em></li>
+          <li>Blog pipeline · automated <em>2026</em></li>
+          <li>Property refinery · 18 cities <em>2026</em></li>
+          <li>Supplier API sync · wired <em>2026</em></li>
+        </ul>
+      </div>
+      <div class="col"><h3>How we work</h3>
+        <ul>
+          <li>Free first call, real audit <em>always</em></li>
+          <li>Fixed-scope projects <em>default</em></li>
+          <li>48h campaign turnaround <em>typical</em></li>
+          <li>You talk to the operator <em>always</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section wrap" id="faq">
+  <h2 class="section-title rise">Questions people ask</h2>
+  <div class="faq-list">
+    <details class="rise"><summary>How much does an automation cost?</summary><p>Scoped per workflow — the price depends on how many systems it touches. You see a fixed quote after the free audit, before anything is built.</p></details>
+    <details class="rise"><summary>Will an AI agent change my store or email my customers on its own?</summary><p>Not in what we build. Anything that writes to your customers or your records lands in a review queue that only a person can approve.</p></details>
+    <details class="rise"><summary>Which tools do you work with?</summary><p>Shopify, eBay, TikTok Shop, CJ Dropshipping, Google Search Console, Playwright. If it has an API, we can probably wire it.</p></details>
+    <details class="rise"><summary>How long until something is running?</summary><p>The audit is thirty minutes. First workflows typically go live within two weeks of a signed scope.</p></details>
+    <details class="rise"><summary>Do you run this stuff yourself, or just consult?</summary><p>We run it. Three storefronts, a 10,255-property data pipeline, and this site's own publishing flow are ours, in production, every day.</p></details>
+    <details class="rise"><summary>What if it breaks?</summary><p>Everything we build is monitored and documented, and you know how to stop it. Nothing runs that we cannot turn off.</p></details>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title rise wrap" style="padding-top:clamp(88px,13vh,160px)">Start the audit</h2>
+  <div class="cta-photos" aria-hidden="true">
+    <img src="assets/work-pet-nail-clipper.jpg" alt="" loading="lazy">
+    <img src="assets/work-water-projector.jpg" alt="" loading="lazy">
+    <img src="assets/work-pet-nail-clipper.jpg" alt="" loading="lazy">
+  </div>
+  <div class="cta-band">
+    <div class="wrap cta-inner">
+      <p class="cta-statement">Ready to grow without the guesswork? <a href="contact.html">Book a free call</a> and get a real audit of your marketing, not a pitch deck.</p>
+      <p class="cta-sub">Columbus, Ohio · hello@hightower-marketing.com · Replies within one business day.</p>
+      <div class="cta-person">
+        <div class="monogram" aria-hidden="true">BH</div>
+        <p class="who">Blake Hightower. You'll talk to me.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="foot-name">Hightower Marketing</p>
+    <div class="foot-inner">
+      <span>© 2026 Hightower Marketing Strategies LLC · Columbus, Ohio</span>
+      <span>
+        <a href="services.html">Services</a> · <a href="#work">Work</a> · <a href="about.html">About</a> · <a href="blog.html">Notes</a> · <a href="contact.html">Contact</a>
+      </span>
+      <span>Photography: The storefront, running live. Full notes below.</span>
+    </div>
+    <p style="margin-top:18px;font-size:14px;line-height:1.6;max-width:72ch">Product photography from the TrendLoop storefront and its supplier catalog, photographed for commerce. Numbers on this page come from our own live operations.</p>
+  </div>
+</footer>
+
+<script>
+// savings calculator
+(function(){
+  var h=document.getElementById('calc-hours'),r=document.getElementById('calc-rate'),
+      sh=document.getElementById('calc-share'),ho=document.getElementById('calc-hours-out'),
+      ro=document.getElementById('calc-rate-out'),so=document.getElementById('calc-share-out'),
+      yr=document.getElementById('calc-year');
+  if(!h||!r||!sh||!yr)return;
+  function upd(){var v=+h.value*(+r.value)*(+sh.value)*0.01*52;
+    ho.textContent=h.value;ro.textContent=r.value;so.textContent=sh.value;
+    yr.textContent='$'+Math.round(v).toLocaleString();}
+  if(!window.gsap){ [h,r,sh].forEach(function(el){el.addEventListener('input',upd);}); upd(); }
+})();
+// note hover -> panel focus
+document.querySelectorAll('.note').forEach(function(n){
+  n.addEventListener('mouseenter', function(){ document.querySelector('.panel').style.outline = '3px solid var(--gold)'; });
+  n.addEventListener('mouseleave', function(){ document.querySelector('.panel').style.outline = 'none'; });
+});
+// grow bar fallback (motion layer takes over when GSAP loads)
+var gb = document.querySelector('.grow-bar .fill');
+if(gb && !(window.gsap)) { setTimeout(function(){ gb.style.width = (gb.dataset.w||'100')+'%'; }, 400); }
+</script>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="vendor/hms-motion-signature.js"></script>
+</body>
+</html>
