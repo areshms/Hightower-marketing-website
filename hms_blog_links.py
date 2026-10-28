@@ -114,11 +114,12 @@ def ebay_inventory(hms_dir, map_path=None):
 # ------------------------------------------------------------------ matching
 # Curated topic phrases per stored eBay item — the ONLY way an item gets linked to
 # a post/product. Deterministic, auditable, zero API calls. An item with no entry
-# (or an empty list) is never auto-linked. '168822646525' is intentionally empty:
-# it duplicates the humidifier-projector item above it.
+# (or an empty list) is never auto-linked. 168787768538 was removed from eBay
+# (relisted as 168822646525, same CJ product/variant) — its /go/ slug was repointed
+# to the new item in _redirects (PRIME_AUDIT_1028 F1), so its link targets ride the
+# 168822646525 entry below.
 EBAY_PHRASES = {
     "168787768320": ["snowy night light", "snowy landscape", "snowy"],
-    "168787768538": ["humidifier projector", "projection humidifier", "humidifier"],
     "168787768579": ["deer night light", "deer"],
     "168787768643": ["rabbit night light", "rabbit"],
     "168787768677": ["solar fence", "fence light", "solar"],
@@ -134,7 +135,7 @@ EBAY_PHRASES = {
     "168801799238": ["cat plush", "cat pillow", "giant plush"],
     "168801812564": ["bear ears", "hooded scarf"],
     "168801982500": ["neck massager", "shoulder massager"],
-    "168822646525": [],  # duplicate of the humidifier-projector item — never auto-linked
+    "168822646525": ["humidifier projector", "projection humidifier", "humidifier"],
     "168822869199": ["heating pad", "period cramp", "pain relief"],
 }
 

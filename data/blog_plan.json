@@ -75,7 +75,7 @@
     {
       "type": "service_local",
       "service": "Product Photography",
-      "path": "/product-photography.html",
+      "path": "/services.html",
       "slug": "product-photography-columbus-ohio",
       "status": "posted",
       "date_published": "2026-10-19"
@@ -83,7 +83,7 @@
     {
       "type": "service_local",
       "service": "Social Media Management",
-      "path": "/social-media-management.html",
+      "path": "/services.html",
       "slug": "social-media-management-columbus-ohio",
       "status": "posted",
       "date_published": "2026-10-19"
@@ -91,7 +91,7 @@
     {
       "type": "service_local",
       "service": "Web Design",
-      "path": "/web-design.html",
+      "path": "/services.html",
       "slug": "web-design-columbus-ohio",
       "status": "posted",
       "date_published": "2026-10-19"
@@ -99,7 +99,7 @@
     {
       "type": "service_local",
       "service": "SEO",
-      "path": "/seo.html",
+      "path": "/services.html",
       "slug": "seo-columbus-ohio",
       "status": "posted",
       "date_published": "2026-10-19"
@@ -107,7 +107,7 @@
     {
       "type": "service_local",
       "service": "TikTok Ads Management",
-      "path": "/tiktok-ads.html",
+      "path": "/services.html",
       "slug": "tiktok-ads-management-columbus-ohio",
       "status": "posted",
       "date_published": "2026-10-19"
@@ -115,7 +115,7 @@
     {
       "type": "service_local",
       "service": "Email Marketing",
-      "path": "/email-marketing.html",
+      "path": "/services.html",
       "slug": "email-marketing-columbus-ohio",
       "status": "posted",
       "date_published": "2026-10-19"

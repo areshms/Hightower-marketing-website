@@ -61,15 +61,14 @@ SNAP_DURABLE = os.path.join(DIR, "data", "catalog_snapshot.json")
 SNAP_LEGACY = "/tmp/shopify_products.json"
 UGC_DIR = os.path.expanduser("~/projects/ugc-pipeline")
 
-# service pages for internal linking (from the nav):
+# internal-link targets for the post services footer — REAL repo pages only
+# (PRIME_AUDIT_1028 F2): the six standalone pages previously listed here
+# (/seo.html, /web-design.html, /product-photography.html, /social-media-management.html,
+# /tiktok-ads.html, /email-marketing.html) never existed (404 live) and are gone.
+# /contact is already linked in every post CTA (base_foot block below).
 SERVICES = [
+    ("Services", "/services.html"),
     ("AI Video Ads", "/ai-video-ads.html"),
-    ("Product Photography", "/product-photography.html"),
-    ("Social Media Management", "/social-media-management.html"),
-    ("Web Design", "/web-design.html"),
-    ("SEO", "/seo.html"),
-    ("TikTok Ads Management", "/tiktok-ads.html"),
-    ("Email Marketing", "/email-marketing.html"),
 ]
 
 # NOTE: iteration order = precedence. Pet checks FIRST so pet items never leak into
