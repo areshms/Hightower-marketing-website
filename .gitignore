@@ -7,3 +7,6 @@
 __pycache__/
 *.pyc
 
+# Live-catalog snapshot (regenerated each run; not source of truth)
+data/catalog_snapshot.json
+
