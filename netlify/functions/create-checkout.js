@@ -31,6 +31,16 @@ exports.handler = async (event) => {
                 mode: 'subscription',
                 project: 'RE-Data-Refinery',
                 recurring: { interval: 'month', interval_count: 1 }
+            },
+            // SB Grants Database monthly subscription
+            'grants-db-monthly': {
+                amount: 3000,
+                name: 'SB Grants Database — Monthly',
+                mode: 'subscription',
+                project: 'SB-Grants-Database',
+                recurring: { interval: 'month', interval_count: 1 },
+                success_url: `${baseUrl}/grants-db-success.html?success=true&session_id={CHECKOUT_SESSION_ID}`,
+                cancel_url: `${baseUrl}/grants-db.html?canceled=true`
             }
         };
 
@@ -48,8 +58,8 @@ exports.handler = async (event) => {
                 quantity: 1,
             }],
             mode: item.mode,
-            success_url: `${baseUrl}/re-data-refinery.html?success=true`,
-            cancel_url: `${baseUrl}/re-data-refinery.html?canceled=true`,
+            success_url: item.success_url || `${baseUrl}/re-data-refinery.html?success=true`,
+            cancel_url: item.cancel_url || `${baseUrl}/re-data-refinery.html?canceled=true`,
             customer_email: email || undefined,
             metadata: {
                 product: product,
@@ -64,8 +74,10 @@ exports.handler = async (event) => {
                 interval_count: item.recurring.interval_count
             };
             // Subscription success URL can include session_id if needed for webhook-free lookups
-            sessionParams.success_url = `${baseUrl}/re-data-refinery-success.html?success=true&session_id={CHECKOUT_SESSION_ID}`;
-            sessionParams.cancel_url = `${baseUrl}/re-data-refinery.html?canceled=true`;
+            if (!item.success_url) {
+                sessionParams.success_url = `${baseUrl}/re-data-refinery-success.html?success=true&session_id={CHECKOUT_SESSION_ID}`;
+            }
+            sessionParams.cancel_url = item.cancel_url || `${baseUrl}/re-data-refinery.html?canceled=true`;
         }
 
         const session = await stripe.checkout.sessions.create(sessionParams);
