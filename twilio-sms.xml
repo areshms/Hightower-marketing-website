@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+<!--
+  Inbound SMS to the HMS business line is archived in Twilio and relayed
+  to Blake via the ops API poller. No auto-reply on purpose.
+-->
+</Response>
