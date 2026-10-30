@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Find Federal Grants Your Small Business Is Eligible For — Hightower Marketing Strategies</title>
+    <meta name="description" content="Grants.gov mixes thousands of opportunities across every applicant type. Here is the filter chain that finds only the ones small businesses can actually win — and how we automated it.">
+    <link rel="canonical" href="https://www.hightower-marketing.com/blog/how-to-filter-grants-gov-for-small-business-grants.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hightower Marketing Strategies">
+    <meta property="og:title" content="How to Find Federal Grants Your Small Business Is Eligible For">
+    <meta property="og:description" content="Grants.gov mixes thousands of opportunities across every applicant type. Here is the filter chain that finds only the ones small businesses can actually win — and how we automated it.">
+    <meta property="og:url" content="https://www.hightower-marketing.com/blog/how-to-filter-grants-gov-for-small-business-grants.html">
+    <meta property="og:image" content="https://www.hightower-marketing.com/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Find Federal Grants Your Small Business Is Eligible For">
+    <meta name="twitter:description" content="Grants.gov mixes thousands of opportunities across every applicant type. Here is the filter chain that finds only the ones small businesses can actually win — and how we automated it.">
+    <meta name="twitter:image" content="https://www.hightower-marketing.com/og-cover.jpg">
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Find Federal Grants Your Small Business Is Eligible For",
+  "url": "https://www.hightower-marketing.com/blog/how-to-filter-grants-gov-for-small-business-grants.html",
+  "datePublished": "2026-10-30",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hightower Marketing Strategies",
+    "url": "https://www.hightower-marketing.com/"
+  },
+  "description": "Grants.gov mixes thousands of opportunities across every applicant type. Here is the filter chain that finds only the ones small businesses can actually win \u2014 and how we automated it."
+}
+    </script>
+    <link rel="stylesheet" href="/aos.css">
+    <script src="/aos.js"></script>
+    <script src="/vendor/lenis.min.js"></script>
+    <script src="/vendor/gsap.min.js"></script>
+    <script src="/vendor/ScrollTrigger.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0c0e12; color: #e8e8e3; font-family: Georgia, 'Times New Roman', serif; line-height: 1.75; font-size: 1.08rem; }
+        .chrome { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .container-wide { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        nav { background: rgba(12,14,18,0.92); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(212,175,55,0.12); }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+        .logo { color: #e8e8e3; text-decoration: none; font-size: 1.25rem; font-weight: 700; }
+        .logo span { color: #d4af37; }
+        .nav-links { list-style: none; display: flex; gap: 28px; }
+        .nav-links a { color: rgba(232,232,227,0.75); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: #d4af37; }
+        .nav-cta { background: #d4af37; color: #0c0e12; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .post-hero { padding: 80px 0 40px; }
+        .post-meta { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #d4af37; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 18px; }
+        h1 { font-size: clamp(1.9rem, 4.5vw, 2.8rem); font-weight: 800; line-height: 1.2; margin-bottom: 22px; }
+        .lede { font-size: 1.2rem; color: rgba(232,232,227,0.75); font-style: italic; margin-bottom: 44px; }
+        h2 { font-size: 1.5rem; color: #d4af37; margin: 52px 0 16px; font-weight: 700; }
+        h3 { font-size: 1.15rem; margin: 32px 0 12px; }
+        p { margin-bottom: 20px; color: rgba(232,232,227,0.9); }
+        ul, ol { margin: 0 0 20px 26px; color: rgba(232,232,227,0.9); }
+        li { margin-bottom: 10px; }
+        strong { color: #fff; }
+        .pull { border-left: 3px solid #d4af37; padding: 4px 0 4px 22px; margin: 36px 0; font-size: 1.15rem; color: #fff; font-style: italic; }
+        .cta-box { background: rgba(212,175,55,0.07); border: 1px solid rgba(212,175,55,0.25); border-radius: 14px; padding: 34px; margin: 60px 0; text-align: center; }
+        .cta-box h2 { margin-top: 0; color: #fff; }
+        .cta-box p { color: rgba(232,232,227,0.7); }
+        .btn-gold { display: inline-block; background: #d4af37; color: #0c0e12; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 10px; font-size: 1rem; }
+        .back-link { display: inline-block; margin-top: 50px; color: #d4af37; text-decoration: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.9rem; }
+        footer { border-top: 1px solid rgba(212,175,55,0.12); margin-top: 80px; padding: 40px 0; color: rgba(232,232,227,0.45); font-size: 0.85rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; text-align: center; }
+        @media (max-width: 768px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body class="chrome">
+    <nav>
+        <div class="container-wide">
+            <div class="nav-inner">
+                <a href="/" class="logo">Hightower <span>Marketing</span></a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/case-studies">Case Studies</a></li>
+                    <li><a href="/products">Shop</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+                <a href="/contact" class="nav-cta">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <article>
+        <div class="container">
+            
+<div class="post-hero">
+    <div class="post-meta">SB Grants Database · 2026-10-30 · 7 min read</div>
+    <h1>How to Find Federal Grants Your Small Business Is Eligible For</h1>
+    <div class="lede"><p>Most small-business owners give up on federal grants for the same reason: they open Grants.gov, type "small business," and get thousands of results — most of which their company could never legally win. The search bar is not the bottleneck. Filters are. This post walks through the filter chain we run weekly to surface the handful of opportunities genuinely open to small businesses, and how to become application-ready for them.</p></div>
+</div>
+
+<h2>Why raw Grants.gov search fails for small businesses</h2><p>Grants.gov aggregates thousands of live opportunities across federal agencies. The default keyword search does not distinguish between applicants: a National Science Foundation program open to universities, a state-matching program open to nonprofits, and a Small Business Innovation Research award open to for-profit companies all sit in the same list. Hours of reading later, the honest conclusion is that most "grants" you found were not for you at all.</p><p>The fix is mechanical rather than motivational: filter on the eligibility field, the status field, and the closing-date field in that order. Everything below assumes you have already cleared the paperwork that makes an application possible — more on that at the end.</p><h2>The five filters that separate real opportunities from noise</h2><h3>1. Eligibility first — one code matters most</h3><p>Every opportunity carries eligibility categories. For-profit companies appear under a few codes; the one you want for most small-business federal money is "Small businesses." Filtering by that code first removes the universities, nonprofits, and tribal entities that dominate raw results. For-profit, non-small businesses have their own separate code — worth knowing if you are on the edge of "small" by SBA standards.</p><h3>2. Status: posted only</h3><p>Opportunities exist as "posted," "forecast," and closed states. Forecast entries describe funding agencies expect to publish later — useful for planning a queue, not for applying today. If you are building an active pipeline, posted-only is the set you can act on now; if you are planning a quarter ahead, forecast entries tell you what is coming.</p><h3>3. Cost sharing before you fall in love</h3><p>A grant that requires you to match, say, 50% of the award is a very different deal from one that does not. Some programs demand documented cash on hand. Checking the cost-sharing flag before you read the full proposal saves the most expensive kind of wasted afternoon.</p><h3>4. The CFDA / program mapping</h3><p>Every federal grant runs under a program number (the CFDA number). It tells you what the money actually does — research, training, export, technical assistance — and it is how you group related opportunities when several agencies fund the same program.</p><h3>5. Closing dates you can survive</h3><p>Realistically, a small company needs two to six weeks to assemble an acceptable federal application. Filtering out anything closing inside that window leaves you opportunities you can actually pursue rather than opportunities you can only watch close.</p><h2>The paperwork that makes any of it possible</h2><p>Before chasing opportunities, clear the application-readiness chain. Register on <strong>SAM.gov</strong> (free — never pay for registration help) and keep it renewed. Get your EIN letter. Make your entity name, address, and bank statements match each other exactly across the IRS, your state filing, and your bank — mismatches are the quietest way to lose a federal application. Keep recent financial statements and a capability statement on file. Then submit at least 48 hours before the deadline; portal congestion and document errors are the classic way strong applications die.</p><p>The honest truth: this readiness chain, once complete, applies to nearly every federal grant you will ever apply for. It is a one-time project with an annual maintenance cost, not a per-grant chore.</p><h2>How we automated the whole scan</h2><p>We rebuilt this filter chain as a weekly refresh over the official Grants.gov API — the same source data, screened programmatically. The result is our <a href="/grants-db.html">SB Grants Database</a>: 162 live opportunities filtered to small-business eligibility, deadline-sorted, with plain-English eligibility notes, cost-share flags, CFDA program names, a direct link to each official listing, and a separate Readiness Playbook tab covering the paperwork sequence above. A new, larger scan runs every Monday morning; subscribers get the updated sheet, and anyone can join the free weekly digest of what is closing soon.</p><p>We also apply the same "build the data product we would use ourselves" approach to real estate: see our <a href="/re-data-refinery.html">scored Columbus and Ohio property data</a> for the investment lane.</p><h2>Bottom line</h2><p>Federal grants for small businesses are real, but the funnel is guarded by filters, not by luck. Run eligibility first, status second, cost-sharing third; clear your SAM.gov and paper-chain obligations before you write a word; and only chase opportunities with closing dates you can survive. If you would rather let the filters run themselves, that is exactly what the Grants sheet does every Monday — or <a href="/contact.html">reach out</a> and we will point you at the right starting filter.</p>
+
+<div class="cta-box">
+    <h2>Want this working for your business?</h2>
+    <p>Book a free 15-minute consultation. We'll look at what you have, name the fastest wins, and you leave with a plan whether you hire us or not.</p>
+    <a href="/grants-db.html" target="_self">SB Grants Database</a>
+</div>
+
+<a href="/blog" class="back-link">← Back to all posts</a>
+
+        </div>
+    </article>
+
+    <footer class="chrome">
+        <div class="container-wide">
+            <p>© 2026 Hightower Marketing Strategies · Columbus, Ohio</p>
+        </div>
+    </footer>
+    <script src="/hms-motion.js" defer></script>
+</body>
+</html>
