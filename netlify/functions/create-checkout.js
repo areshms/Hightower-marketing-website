@@ -39,8 +39,8 @@ exports.handler = async (event) => {
                 mode: 'subscription',
                 project: 'SB-Grants-Database',
                 recurring: { interval: 'month', interval_count: 1 },
-                success_url: `${baseUrl}/grants-db-success.html?success=true&session_id={CHECKOUT_SESSION_ID}`,
-                cancel_url: `${baseUrl}/grants-db.html?canceled=true`
+                success_url: '/grants-db-success.html?success=true&session_id={CHECKOUT_SESSION_ID}',
+                cancel_url: '/grants-db.html?canceled=true'
             }
         };
 
@@ -58,8 +58,8 @@ exports.handler = async (event) => {
                 quantity: 1,
             }],
             mode: item.mode,
-            success_url: item.success_url || `${baseUrl}/re-data-refinery.html?success=true`,
-            cancel_url: item.cancel_url || `${baseUrl}/re-data-refinery.html?canceled=true`,
+            success_url: item.success_url ? `${baseUrl}${item.success_url}` : `${baseUrl}/re-data-refinery.html?success=true`,
+            cancel_url: item.cancel_url ? `${baseUrl}${item.cancel_url}` : `${baseUrl}/re-data-refinery.html?canceled=true`,
             customer_email: email || undefined,
             metadata: {
                 product: product,
@@ -77,7 +77,7 @@ exports.handler = async (event) => {
             if (!item.success_url) {
                 sessionParams.success_url = `${baseUrl}/re-data-refinery-success.html?success=true&session_id={CHECKOUT_SESSION_ID}`;
             }
-            sessionParams.cancel_url = item.cancel_url || `${baseUrl}/re-data-refinery.html?canceled=true`;
+            sessionParams.cancel_url = item.cancel_url ? `${baseUrl}${item.cancel_url}` : `${baseUrl}/re-data-refinery.html?canceled=true`;
         }
 
         const session = await stripe.checkout.sessions.create(sessionParams);
