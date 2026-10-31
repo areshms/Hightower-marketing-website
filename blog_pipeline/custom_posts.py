@@ -7,11 +7,13 @@ sitemap (incl. adding grants-db.html as a static entry), commits and pushes.
 """
 from __future__ import annotations
 import sys
+import xml.etree.ElementTree as ET
 from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # repo root
 
+from blog_pipeline.config import REPO_ROOT
 from blog_pipeline.render import PostMeta, InternalLink, render_post, write_post
 from blog_pipeline.validate import validate_post, passes_gates
 from blog_pipeline.sitemap import update_sitemap
@@ -110,10 +112,9 @@ def main():
             print(f'  details: {pv}')
     sitemap = update_sitemap()
     # add newly-created static product pages (update_sitemap only preserves existing statics)
-    import xml.etree.ElementTree as ET
     ns = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
     ET.register_namespace('', ns['ns'])
-    sitemap_path = Path('sitemap.xml')
+    sitemap_path = REPO_ROOT / 'sitemap.xml'  # absolute: docstring says "or blog_pipeline/"
     tree = ET.parse(sitemap_path)
     locs = {l.text for l in tree.getroot().iter('{%s}loc' % ns['ns'])}
     for extra in ('/grants-db.html',):
@@ -121,6 +122,8 @@ def main():
         if url not in locs:
             u = ET.SubElement(tree.getroot(), 'url')
             ET.SubElement(u, 'loc').text = url
+            lastmod = ET.SubElement(u, 'lastmod')
+            lastmod.text = date.today().isoformat()
             tree.write(sitemap_path, xml_declaration=True, encoding='utf-8')
             print(f'sitemap: added {extra}')
     print(f'sitemap updated: {sitemap}')

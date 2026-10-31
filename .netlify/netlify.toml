@@ -2,7 +2,6 @@ functionsDirectory = "/Users/ares.hmsgmail.com/projects/hms-site/netlify/functio
 functionsDirectoryOrigin = "config-v1"
 headersOrigin = "config"
 plugins = []
-redirects = []
 
 [build]
 publish = "/Users/ares.hmsgmail.com/projects/hms-site"
@@ -33,3 +32,219 @@ for = "/*"
 [headers.values]
 X-Frame-Options = "DENY"
 X-XSS-Protection = "1; mode=block"
+
+[[redirects]]
+from = "/go/magic-snowy-landscape-night-lights"
+to = "https://www.ebay.com/itm/168787768320?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/projector-humidifier-student-dormitory-mute"
+to = "https://www.ebay.com/itm/168822646525?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/children-bedside-christmas-deer-night-light"
+to = "https://www.ebay.com/itm/168787768579?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/happy-rabbit-night-light"
+to = "https://www.ebay.com/itm/168787768643?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/solar-outdoor-garden-fence-decorative-wall-light"
+to = "https://www.ebay.com/itm/168787768677?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/timing-simulation-aroma-diffuser-usb-household-flame-humidif"
+to = "https://www.ebay.com/itm/168787770377?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/teddy-clothes-dog-hoodie"
+to = "https://www.ebay.com/itm/168787770484?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/2pc-creative-question-mark-shape-table-lamp-usb-three-color-"
+to = "https://www.ebay.com/itm/168787771005?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/pet-nail-clippers-cat-nail-clippers-pet-nails"
+to = "https://www.ebay.com/itm/168787771036?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/home-wireless-horn-flower-bluetooth-speaker"
+to = "https://www.ebay.com/itm/168787771066?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/star-moon-stainless-steel-ring-silver-no-7"
+to = "https://www.ebay.com/itm/168791136724?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/electric-shaver-private-men-and-women"
+to = "https://www.ebay.com/itm/168791263481?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/to-my-wife-love-letter-fleece-blanket-50x60"
+to = "https://www.ebay.com/itm/168797343969?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/i-am-enough-silicone-affirmation-bracelet"
+to = "https://www.ebay.com/itm/168797345207?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/creative-cat-big-pillow-black-70cm-giant-plush"
+to = "https://www.ebay.com/itm/168801799238?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/bear-ears-scarf-hat-bear-ears-beige"
+to = "https://www.ebay.com/itm/168801812564?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/neck-massager-hot-compress-shoulder-and-neck-massager-white"
+to = "https://www.ebay.com/itm/168801982500?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/go/portable-heating-pad-fast-period-cramps"
+to = "https://www.ebay.com/itm/168822869199?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]

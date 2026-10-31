@@ -3,3 +3,9 @@ hms blog pipeline — 2026-10-20T07:00:03
 catalog: 28 products live
 done: 0 posts rendered
 [2026-10-20 07:00:02] exit=0
+[2026-10-27 07:00:50] blog pipeline start
+hms blog pipeline — 2026-10-27T07:00:50
+    catalog fetch FAILED: HTTP Error 429: Too Many Requests
+catalog: 0 products live
+done: 0 posts rendered
+[2026-10-27 07:00:50] exit=0

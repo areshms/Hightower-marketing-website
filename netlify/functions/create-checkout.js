@@ -44,7 +44,8 @@ exports.handler = async (event) => {
             }
         };
 
-        const item = catalog[product] || catalog['video-pro'];
+        const item = catalog[product];
+  if (!item) return { statusCode: 400, body: JSON.stringify({ error: `Unknown product: ${product}` }) };
         const baseUrl = process.env.URL || 'https://hightower-marketing.com';
 
         let sessionParams = {
