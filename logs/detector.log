@@ -1,0 +1,4 @@
+[2026-10-31 15:18:25] error (retries next tick): f-string expression part cannot include a backslash (hms_blog_pipeline.py, line 372)
+[2026-10-31 15:18:42] [catalog] admin api OK: 29 products live
+[2026-10-31 15:18:47] [catalog] admin api OK: 29 products live
+[2026-10-31 15:18:47] NEW PRODUCT: cordless-heated-waist-belt-pad-portable-usb-heating-belt-3-heat-levels -> joined category post best-gifts-cozy-2026
