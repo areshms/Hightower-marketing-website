@@ -33,8 +33,11 @@ for p in sorted(SITE.rglob("*.html")):
         noindex += 1
         continue
     new = text[: m.end()] + "\n    " + SNIPPET + text[m.end():]
-    p.write_text(new)
-    injected.append(p.relative_to(SITE).as_posix())
+    try:
+        p.write_text(new)
+        injected.append(p.relative_to(SITE).as_posix())
+    except OSError as e:
+        print(f"  !! write failed for {p.name}: {str(e)[:80]}")
 
 ads = SITE / "ads.txt"
 already = ads.exists() and "pub-4655953013932674" in ads.read_text()
