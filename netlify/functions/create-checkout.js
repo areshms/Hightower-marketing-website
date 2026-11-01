@@ -27,7 +27,7 @@ exports.handler = async (event) => {
             // RE Data Refinery monthly subscription
             're-data-refinery-monthly': {
                 amount: 30000,
-                name: 'RE Data Refinery — Columbus OH Monthly Sheet Access',
+                name: 'RE Data Refinery — Ohio 18-City Sheet Access (Monthly)',
                 mode: 'subscription',
                 project: 'RE-Data-Refinery',
                 recurring: { interval: 'month', interval_count: 1 }
