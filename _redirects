@@ -1,4 +1,11 @@
 # /go/ attribution layer — site->eBay click tracking (added 2026-10-20)
+# NOTE (2026-11-01): a 404!-rules block was removed - Netlify redirects require a
+# 'to' field (404! without one fails parsing) and 404! does not beat existing files.
+# The publish wall is the STAGED rsync in ~/.hermes/scripts/cash_buyers_refresh.sh:
+# www deploys come from /tmp/hms-netlify-stage, which EXCLUDES *.py, logs/, data/,
+# tooling jsons, .prev/.tmp. Keep it the single deploy route for www.
+# (twilio-*.xml and g-auth.html stay servable on purpose: live Twilio webhooks +
+# Google verification.)
 /go/magic-snowy-landscape-night-lights https://www.ebay.com/itm/168787768320?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go 302!
 /go/projector-humidifier-student-dormitory-mute https://www.ebay.com/itm/168822646525?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go 302!
 /go/children-bedside-christmas-deer-night-light https://www.ebay.com/itm/168787768579?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go 302!
@@ -17,13 +24,3 @@
 /go/bear-ears-scarf-hat-bear-ears-beige https://www.ebay.com/itm/168801812564?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go 302!
 /go/neck-massager-hot-compress-shoulder-and-neck-massager-white https://www.ebay.com/itm/168801982500?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go 302!
 /go/portable-heating-pad-fast-period-cramps https://www.ebay.com/itm/168822869199?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go 302!
-# 2026-11-01 r1 audit (prime #2): publish="." exposed tooling source/logs to the web.
-# Internal files — never serve. Legit .json refs in HTML are runtime fetches to
-# netlify functions (unaffected). Sitemap/og/CSV/pages stay servable.
-/*.py               404!
-/*.json             404!
-/logs/*             404!
-/tokens/*           404!
-/.env*              404!
-/*.prev             404!
-/*.tmp              404!
