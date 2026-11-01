@@ -10,3 +10,5 @@ __pycache__/
 # Live-catalog snapshot (regenerated each run; not source of truth)
 data/catalog_snapshot.json
 
+*.csv.prev
+*.tmp
