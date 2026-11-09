@@ -24,3 +24,56 @@
 /go/bear-ears-scarf-hat-bear-ears-beige https://www.ebay.com/itm/168801812564?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go 302!
 /go/neck-massager-hot-compress-shoulder-and-neck-massager-white https://www.ebay.com/itm/168801982500?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go 302!
 /go/portable-heating-pad-fast-period-cramps https://www.ebay.com/itm/168822869199?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=8034856&toolid=10050&customid=hms-go 302!
+
+# --- Consolidate extensionless dup URLs -> canonical .html (GSC 2026-11-09) ---
+# Netlify pretty-urls serves /about AND /about.html at 200; Google picked the
+# extensionless form ("Duplicate, Google chose different canonical than user").
+# Force-redirect every extensionless variant to the .html canonical. # = force: beats pretty-url virtual files.
+/about /about.html 301!
+/ai-video-ads /ai-video-ads.html 301!
+/ai-website-builder /ai-website-builder.html 301!
+/automation-services /automation-services.html 301!
+/blog /blog.html 301!
+/case-studies /case-studies.html 301!
+/cash-buyers /cash-buyers.html 301!
+/checkout-video /checkout-video.html 301!
+/contact-success /contact-success.html 301!
+/contact /contact.html 301!
+/data-removal /data-removal.html 301!
+/digital-strategy /digital-strategy.html 301!
+/g-auth /g-auth.html 301!
+/grants-db-success /grants-db-success.html 301!
+/grants-db /grants-db.html 301!
+/index-full /index-full.html 301!
+/index-medium /index-medium.html 301!
+/index-signature /index-signature.html 301!
+/index /index.html 301!
+/order-intake /order-intake.html 301!
+/order-success /order-success.html 301!
+/overlook-templates /overlook-templates.html 301!
+/pet-portraits /pet-portraits.html 301!
+/portfolio /portfolio.html 301!
+/privacy /privacy.html 301!
+/products /products.html 301!
+/re-data-refinery-success /re-data-refinery-success.html 301!
+/re-data-refinery /re-data-refinery.html 301!
+/services /services.html 301!
+/terms /terms.html 301!
+/blog/ai-video-ads-columbus-ohio /blog/ai-video-ads-columbus-ohio.html 301!
+/blog/best-beauty-grooming-2026 /blog/best-beauty-grooming-2026.html 301!
+/blog/best-deshedding-tools-for-dogs /blog/best-deshedding-tools-for-dogs.html 301!
+/blog/best-dog-dental-care-products /blog/best-dog-dental-care-products.html 301!
+/blog/best-flea-and-tick-prevention-for-dogs /blog/best-flea-and-tick-prevention-for-dogs.html 301!
+/blog/best-gifts-cozy-2026 /blog/best-gifts-cozy-2026.html 301!
+/blog/best-home-lighting-2026 /blog/best-home-lighting-2026.html 301!
+/blog/best-pet-2026 /blog/best-pet-2026.html 301!
+/blog/email-marketing-columbus-ohio /blog/email-marketing-columbus-ohio.html 301!
+/blog/how-ai-is-changing-small-business-marketing /blog/how-ai-is-changing-small-business-marketing.html 301!
+/blog/how-to-filter-grants-gov-for-small-business-grants /blog/how-to-filter-grants-gov-for-small-business-grants.html 301!
+/blog/how-we-score-ohio-properties-for-flips-wholesale-and-rentals /blog/how-we-score-ohio-properties-for-flips-wholesale-and-rentals.html 301!
+/blog/product-photography-columbus-ohio /blog/product-photography-columbus-ohio.html 301!
+/blog/seo-columbus-ohio /blog/seo-columbus-ohio.html 301!
+/blog/social-media-management-columbus-ohio /blog/social-media-management-columbus-ohio.html 301!
+/blog/tiktok-ads-management-columbus-ohio /blog/tiktok-ads-management-columbus-ohio.html 301!
+/blog/web-design-columbus-ohio /blog/web-design-columbus-ohio.html 301!
+/index.html / 301!
