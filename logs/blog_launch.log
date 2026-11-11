@@ -9,3 +9,31 @@ hms blog pipeline — 2026-10-27T07:00:50
 catalog: 0 products live
 done: 0 posts rendered
 [2026-10-27 07:00:50] exit=0
+[2026-11-03 07:00:35] blog pipeline start
+[2026-11-03T07:00:35] [run] pipeline start
+hms blog pipeline — 2026-11-03T07:00:35
+[2026-11-03T07:00:35] [links] affiliate config: tag=hightowermark-20, stored eBay items=19
+[2026-11-03T07:00:35] [catalog] start
+[2026-11-03T07:00:36] [catalog] admin api OK: 29 products live
+[2026-11-03T07:00:36] [catalog] done in 1.0s
+[2026-11-03T07:00:36] [catalog] catalog ready: 29 products
+[2026-11-03T07:00:36] [run] done: 0 posts rendered, 0 failed
+[2026-11-03T07:00:36] [run] elapsed 1.0s
+[2026-11-03 07:00:35] exit=0
+OK: staged deploy live (hmsopenclaw)
+[2026-11-03 07:00:35] direct-deploy exit=0
+indexnow: submitted 4 url(s) OK
+[2026-11-10 07:00:29] blog pipeline start
+[2026-11-10T07:00:29] [run] pipeline start
+hms blog pipeline — 2026-11-10T07:00:29
+[2026-11-10T07:00:29] [links] affiliate config: tag=hightowermark-20, stored eBay items=19
+[2026-11-10T07:00:29] [catalog] start
+[2026-11-10T07:00:30] [catalog] admin api OK: 29 products live
+[2026-11-10T07:00:30] [catalog] done in 1.0s
+[2026-11-10T07:00:30] [catalog] catalog ready: 29 products
+[2026-11-10T07:00:30] [run] done: 0 posts rendered, 0 failed
+[2026-11-10T07:00:30] [run] elapsed 1.0s
+[2026-11-10 07:00:29] exit=0
+OK: staged deploy live (hmsopenclaw)
+[2026-11-10 07:00:29] direct-deploy exit=0
+indexnow: submitted 4 url(s) OK
