@@ -86,6 +86,7 @@ footer .fine{margin-top:10px}
     <input id="p-end" list="plan-cities" placeholder="End city (e.g. Dallas)" style="padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--bg-elevated);color:var(--text);width:46%;min-width:180px">
     <button id="p-go" style="padding:10px 18px;border-radius:8px;border:0;background:var(--accent);color:#1c1917;font-weight:600;cursor:pointer">Plan stops</button>
   </form>
+  <div id="saved-routes" style="margin-top:10px;display:none;align-items:center;gap:6px;flex-wrap:wrap"></div>
   <datalist id="plan-cities">
     <option value="Los Angeles"></option><option value="Bakersfield"></option><option value="Fresno"></option><option value="Sacramento"></option><option value="San Jose"></option><option value="Oakland"></option><option value="San Diego"></option><option value="Las Vegas"></option><option value="Phoenix"></option><option value="Tucson"></option><option value="Flagstaff"></option><option value="Albuquerque"></option><option value="El Paso"></option><option value="Las Cruces"></option><option value="Van Horn"></option><option value="Midland"></option><option value="Amarillo"></option><option value="Abilene"></option><option value="Dallas"></option><option value="Fort Worth"></option><option value="Oklahoma City"></option><option value="Tulsa"></option><option value="Joplin"></option><option value="Springfield"></option><option value="St Louis"></option><option value="Effingham"></option><option value="Chicago"></option><option value="Indianapolis"></option><option value="Columbus"></option><option value="Cleveland"></option><option value="Cincinnati"></option><option value="Detroit"></option><option value="Kansas City"></option><option value="Wichita"></option><option value="Omaha"></option><option value="Des Moines"></option><option value="Minneapolis"></option><option value="Denver"></option><option value="Salt Lake City"></option><option value="Boise"></option><option value="Portland"></option><option value="Seattle"></option><option value="Memphis"></option><option value="Nashville"></option><option value="Louisville"></option><option value="Atlanta"></option><option value="Charlotte"></option><option value="Jacksonville"></option><option value="Orlando"></option><option value="Tampa"></option><option value="New Orleans"></option><option value="Houston"></option><option value="San Antonio"></option><option value="Austin"></option><option value="Little Rock"></option><option value="Laredo"></option>
   </datalist>
@@ -143,6 +144,52 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
   var go = document.getElementById('p-go'),
       out = document.getElementById('plan-out');
   var lastPlan = null;
+  var SAVED_KEY = 'hms-saved-routes';
+  function savedRoutes() {
+    try { return JSON.parse(localStorage.getItem(SAVED_KEY) || '[]'); } catch (e) { return []; }
+  }
+  function saveRoute(start, end) {
+    var arr = savedRoutes();
+    var entry = { s: start, e: end, t: Date.now() };
+    if (!arr.some(function (x) { return (x.s + '|' + x.e) === (start + '|' + end); })) {
+      arr.unshift(entry);
+      try { localStorage.setItem(SAVED_KEY, JSON.stringify(arr.slice(0, 12))); } catch (e) {}
+    }
+    renderSaved();
+  }
+  function chipStyle() { return "padding:5px 10px;border-radius:14px;border:1px solid var(--border);background:var(--bg-elevated);color:var(--text);font-size:12.5px;cursor:pointer"; }
+  function chipXStyle() { return "padding:5px 7px;border-radius:14px;border:1px solid var(--border);background:var(--bg-elevated);color:var(--muted);font-size:12px;cursor:pointer"; }
+  function renderSaved() {
+    var box = document.getElementById('saved-routes');
+    var arr = savedRoutes();
+    if (!arr.length) { box.style.display = 'none'; box.innerHTML = ''; return; }
+    var html = "<span style='font-size:12px;color:var(--muted)'>Saved routes:</span> ";
+    arr.forEach(function (x, i) {
+      var label = x.s + " → " + x.e;
+      html += "<span style='display:inline-flex;gap:4px;align-items:center;margin:2px 4px 2px 0'>" +
+        "<button class='saved-load' data-s=\"" + x.s.replace(/"/g, '') + "\" data-e=\"" + x.e.replace(/"/g, '') + "\" style='" + chipStyle() + "'>" + label + "</button>" +
+        "<button class='saved-del' data-i='" + i + "' style='" + chipXStyle() + "' title='Remove' aria-label='Remove " + label + "'>×</button></span>";
+    });
+    box.innerHTML = html;
+    box.style.display = 'flex';
+    box.querySelectorAll('.saved-load').forEach(function (b) {
+      b.addEventListener('click', function () {
+        document.getElementById('p-start').value = b.getAttribute('data-s');
+        document.getElementById('p-end').value = b.getAttribute('data-e');
+        go.click();
+      });
+    });
+    box.querySelectorAll('.saved-del').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var i = parseInt(b.getAttribute('data-i'), 10);
+        var arr2 = savedRoutes();
+        arr2.splice(i, 1);
+        try { localStorage.setItem(SAVED_KEY, JSON.stringify(arr2)); } catch (e) {}
+        renderSaved();
+      });
+    });
+  }
+  renderSaved();
   function fmt(km) { var mi = Math.round(km * KM_TO_MI * 10) / 10; return km + " km · " + mi + " mi"; }
   function card(d) {
     if (d.arrival) {
@@ -177,7 +224,8 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
         "<button class='lot-rep' data-lot='" + lotId + "' data-v='open' style='padding:3px 10px;border-radius:6px;border:1px solid var(--border);background:var(--bg-elevated);color:#15803d;cursor:pointer'>Report open</button>";
       var cnt = (loadLotStats(p.name));
       if (cnt.you) html += "<span style='margin-left:8px;opacity:.75'>you: " + (cnt.full || 0) + " full / " + (cnt.open || 0) + " open</span>";
-      html += "</div></div>";
+      html += "</div>";
+      html += "<div class='stop-meta' data-crowd-lot='" + lotId + "' style='margin-left:14px;display:none'></div></div>";
     }
     return html + "</div>";
   }
@@ -188,6 +236,46 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
     s[verdict === 'full' ? 'full' : 'open'] = (s[verdict === 'full' ? 'full' : 'open'] || 0) + 1;
     s.you = 1;
     try { localStorage.setItem(lotKey(name), JSON.stringify(s)); } catch (e) {}
+    try {
+      fetch('/.netlify/functions/lot_reports', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ lot: name, verdict: verdict })
+      }).catch(function () {});
+    } catch (e) {}
+  }
+  function fetchCrowdCounts(stops, done) {
+    if (!stops || !stops.length) return done({});
+    try {
+      fetch('/.netlify/functions/lot_reports?lots=' + encodeURIComponent(stops.slice(0, 24).join('|')))
+        .then(function (r) { return r.ok ? r.json() : { lots: {} }; })
+        .then(function (j) { done(j.lots || {}); })
+        .catch(function () { done({}); });
+    } catch (e) { done({}); }
+  }
+  function slugLot(name) {
+    return String(name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80);
+  }
+  function fetchCrowdCounts(stops, done) {
+    if (!stops || !stops.length) return done({});
+    try {
+      fetch('/.netlify/functions/lot_reports?lots=' + encodeURIComponent(stops.slice(0, 24).join('|')))
+        .then(function (r) { return r.ok ? r.json() : { lots: {} }; })
+        .then(function (j) { done(j.lots || {}); })
+        .catch(function () { done({}); });
+    } catch (e) { done({}); }
+  }
+  function applyCrowdBadges(counts) {
+    document.querySelectorAll('[data-crowd-lot]').forEach(function (el) {
+      var c = counts[slugLot(el.getAttribute('data-crowd-lot'))];
+      if (!c || !c.total) return;
+      var bits = [];
+      if (c.full) bits.push(c.full + ' full');
+      if (c.open) bits.push(c.open + ' open');
+      if (!bits.length) return;
+      el.textContent = '👥 community: ' + bits.join(' · ') + ' (last 7 days)';
+      el.style.display = 'block';
+    });
   }
   function wireLotReports() {
     document.querySelectorAll('.lot-rep').forEach(function (b) {
@@ -346,6 +434,9 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
         if (dl) dl.addEventListener('click', exportCsv);
         wireReceipts(r.j);
         wireLotReports();
+        saveRoute(r.j.start, r.j.end);
+        var planLotNames = (r.j.days || []).map(function (d) { return d.primary_stop && d.primary_stop.name; }).filter(Boolean).filter(function (n, i, a) { return a.indexOf(n) === i; });
+        fetchCrowdCounts(planLotNames, applyCrowdBadges);
         var mr = document.getElementById('maps-route');
         if (mr) mr.href = googleRoute(r.j);
       })

@@ -98,7 +98,7 @@ exports.handler = async (event) => {
                 });
                 const mailReq = https.request({
                     hostname: 'api.agentmail.to',
-                    path: '/v0/inboxes/hightower-marketing-outreach%40agentmail.to/messages', method: 'POST',
+                    path: '/v0/inboxes/hightower-marketing-outreach%40agentmail.to/messages/send', method: 'POST',
                     headers: { 'Authorization': 'Bearer ' + process.env.AGENTMAIL_API_KEY,
                                'Accept': 'application/json',
                                'Content-Type': 'application/json',
