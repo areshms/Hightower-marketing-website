@@ -1,3 +1,4 @@
+const https = require('https');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async (event) => {
@@ -59,7 +60,7 @@ exports.handler = async (event) => {
                 quantity: 1,
             }],
             mode: item.mode,
-            success_url: item.success_url ? `${baseUrl}${item.success_url}` : `${baseUrl}/re-data-refinery.html?success=true`,
+            success_url: item.success_url ? `${baseUrl}${item.success_url}` : (item.mode === 'subscription' ? `${baseUrl}/re-data-refinery-success.html?success=true&session_id={CHECKOUT_SESSION_ID}` : `${baseUrl}/order-success.html?session_id={CHECKOUT_SESSION_ID}`),
             cancel_url: item.cancel_url ? `${baseUrl}${item.cancel_url}` : `${baseUrl}/re-data-refinery.html?canceled=true`,
             customer_email: email || undefined,
             metadata: {
@@ -82,6 +83,32 @@ exports.handler = async (event) => {
         }
 
         const session = await stripe.checkout.sessions.create(sessionParams);
+
+        // Sale notify (fire-and-forget, never blocks checkout): AgentMail -> ares.hms@icloud.com
+        if (item.project === 'RE-Data-Refinery' || item.project === 'SB-Grants-Database') {
+            try {
+                const buyer = email || (session.customer_email || 'not provided at checkout');
+                const mailBody = JSON.stringify({
+                    to: ['ares.hms@icloud.com'],
+                    subject: 'SALE: ' + item.project + ' subscription started',
+                    text: 'A buyer just started: ' + item.name + '\n' +
+                        'Buyer email: ' + buyer + '\n' +
+                        'Stripe session: ' + session.id + '\n' +
+                        'Deliver sheet access within one business day. Verify payment in the Stripe dashboard.'
+                });
+                const mailReq = https.request({
+                    hostname: 'api.agentmail.to',
+                    path: '/v0/inboxes/hightower-marketing-outreach%40agentmail.to/messages', method: 'POST',
+                    headers: { 'Authorization': 'Bearer ' + process.env.AGENTMAIL_API_KEY,
+                               'Accept': 'application/json',
+                               'Content-Type': 'application/json',
+                               'Content-Length': Buffer.byteLength(mailBody) },
+                    timeout: 5000 }, () => {});
+                mailReq.on('error', () => {});
+                mailReq.on('timeout', () => mailReq.destroy());
+                mailReq.end(mailBody);
+            } catch (e) { /* notification must never break checkout */ }
+        }
 
         return { statusCode: 200, headers, body: JSON.stringify({ url: session.url }) };
     } catch (error) {

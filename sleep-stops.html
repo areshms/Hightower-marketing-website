@@ -158,6 +158,11 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
     (d.backups_if_full || []).forEach(function (b) {
       html += "<div class='stop-meta' style='margin-left:14px'>If full: " + b.name + " · " + fmt(b.distance_km) + "</div>";
     });
+    if (p) {
+      html += "<div class='stop-meta' style='margin-left:14px'>Open in " +
+        "<a href='https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(p.name + ' , OH') target=_blank rel=noopener>Google Maps</a>" +
+        " · <a href='https://maps.apple.com/?q=' + encodeURIComponent(p.name) target=_blank rel=noopener>Apple Maps</a></div>";
+    }
     if (d.weather) {
       var w = d.weather;
       html += "<div class='stop-meta'>Tonight near the reset: " + w.tonight_high_f + "° / " + w.tonight_low_f + "° F" +
@@ -205,6 +210,13 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
                  rec.amount != null ? rec.amount : "", rec.hasImage ? "yes" : ""]);
     });
     return rows.map(function (r) { return r.join(","); }).join("\n");
+  }
+  function googleRoute(plan) {
+    var stops = [];
+    (plan.days || []).forEach(function (d) { if (d.primary_stop && d.primary_stop.name) stops.push(d.primary_stop.name); });
+    var q = 'origin=' + encodeURIComponent(plan.start + ' , OH') + '&destination=' + encodeURIComponent(plan.end + ' , OH') + '&travelmode=driving';
+    if (stops.length) q += '&waypoints=' + encodeURIComponent(stops.slice(0, 8).join(' | '));
+    return 'https://www.google.com/maps/dir/?api=1&' + q;
   }
   function exportCsv() {
     if (!lastPlan) return;
@@ -319,7 +331,8 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
             " · est. per-diem deduction $" + tx.deductible_total_usd.toFixed(2) +
             " ($" + tx.deductible_per_night_usd.toFixed(2) + "/night = 80% of the $" + tx.per_diem_rate_usd + " IRS transportation rate)" +
             "<br><span style='opacity:.75'>" + tx.caveat + "</span></div>" +
-            "<button id='ledger-dl' style='margin-top:8px;padding:8px 14px;border-radius:8px;border:0;background:var(--accent);color:#1c1917;font-weight:600;cursor:pointer'>Export ledger CSV</button></div>";
+            "<button id='ledger-dl' style='margin-top:8px;padding:8px 14px;border-radius:8px;border:0;background:var(--accent);color:#1c1917;font-weight:600;cursor:pointer'>Export ledger CSV</button>" +
+            " <a id='maps-route' style='margin-top:8px;padding:8px 14px;border-radius:8px;border:0;background:#0b57d0;color:#fff;font-weight:600;cursor:pointer;display:inline-block;margin-left:6px' target=_blank rel=noopener>Route in Google Maps</a></div>";
         }
         html += receiptSection(r.j);
         out.innerHTML = html;
@@ -333,6 +346,8 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
         if (dl) dl.addEventListener('click', exportCsv);
         wireReceipts(r.j);
         wireLotReports();
+        var mr = document.getElementById('maps-route');
+        if (mr) mr.href = googleRoute(r.j);
       })
       .catch(function () { out.innerHTML = "<p class='note'>Planner temporarily unavailable — try again.</p>"; });
   });
