@@ -78,6 +78,20 @@ footer .fine{margin-top:10px}
               <div class='real-head'>featured partner stops</div><div class='stop'><div class='stop-name'>Pilot Flying J San Jose</div><div class='stop-meta'></div></div><div class='stop'><div class='stop-name'>Love's Travel Stop San Jose</div><div class='stop-meta'></div></div><div class='stop'><div class='stop-name'>Motel 6 San Jose</div><div class='stop-meta'></div></div><div class='real-head'>live-mapped stops nearby</div><div class='stop'><div class='stop-name'>Truck parking</div><div class='stop-meta'>5.6 km from San Jose, CA · OpenStreetMap</div></div><div class='stop'><div class='stop-name'>Truck parking</div><div class='stop-meta'>6.2 km from San Jose, CA · OpenStreetMap</div></div><div class='stop'><div class='stop-name'>Truck parking</div><div class='stop-meta'>7.6 km from San Jose, CA · OpenStreetMap</div></div>
             </div></div>
 
+<h2>Plan a route</h2>
+<div class="card plan-card">
+  <p class="note" style="margin:0 0 12px">Paste a city-to-city run — the planner applies FMCSA 11/14/30/70 logic and finds live-mapped stops for each nightly 10-hour reset, plus a backup if the first lot is full.</p>
+  <form id="plan-form" onsubmit="return false;">
+    <input id="p-start" list="plan-cities" placeholder="Start city (e.g. Los Angeles)" style="padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--bg-elevated);color:var(--text);width:46%;min-width:180px">
+    <input id="p-end" list="plan-cities" placeholder="End city (e.g. Dallas)" style="padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--bg-elevated);color:var(--text);width:46%;min-width:180px">
+    <button id="p-go" style="padding:10px 18px;border-radius:8px;border:0;background:var(--accent);color:#1c1917;font-weight:600;cursor:pointer">Plan stops</button>
+  </form>
+  <datalist id="plan-cities">
+    <option value="Los Angeles"></option><option value="Bakersfield"></option><option value="Fresno"></option><option value="Sacramento"></option><option value="San Jose"></option><option value="Oakland"></option><option value="San Diego"></option><option value="Las Vegas"></option><option value="Phoenix"></option><option value="Tucson"></option><option value="Flagstaff"></option><option value="Albuquerque"></option><option value="El Paso"></option><option value="Las Cruces"></option><option value="Van Horn"></option><option value="Midland"></option><option value="Amarillo"></option><option value="Abilene"></option><option value="Dallas"></option><option value="Fort Worth"></option><option value="Oklahoma City"></option><option value="Tulsa"></option><option value="Joplin"></option><option value="Springfield"></option><option value="St Louis"></option><option value="Effingham"></option><option value="Chicago"></option><option value="Indianapolis"></option><option value="Columbus"></option><option value="Cleveland"></option><option value="Cincinnati"></option><option value="Detroit"></option><option value="Kansas City"></option><option value="Wichita"></option><option value="Omaha"></option><option value="Des Moines"></option><option value="Minneapolis"></option><option value="Denver"></option><option value="Salt Lake City"></option><option value="Boise"></option><option value="Portland"></option><option value="Seattle"></option><option value="Memphis"></option><option value="Nashville"></option><option value="Louisville"></option><option value="Atlanta"></option><option value="Charlotte"></option><option value="Jacksonville"></option><option value="Orlando"></option><option value="Tampa"></option><option value="New Orleans"></option><option value="Houston"></option><option value="San Antonio"></option><option value="Austin"></option><option value="Little Rock"></option><option value="Laredo"></option>
+  </datalist>
+  <div id="plan-out" style="margin-top:14px"></div>
+</div>
+
 <h2>Booking partners</h2>
 <div class="grid">
             <div class="card aff-card">
@@ -116,5 +130,49 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
   <p class="fine">Park/stops data © OpenStreetMap contributors (ODbL). State rest-area data: NY DOT (open data). Nationwide stop counts include truck parking, truck fuel stops, and highway rest areas.</p>
 </footer>
 </div>
+
+<script>
+(function () {
+  var go = document.getElementById('p-go'),
+      out = document.getElementById('plan-out');
+  function card(d) {
+    if (d.arrival) {
+      return "<div class='stop'><div class='stop-name'>Day " + d.day + ": arrive " + d.arrival +
+             "</div><div class='stop-meta'>driving " + d.driving_final + " h of the 11 h limit — no reset needed</div></div>";
+    }
+    var p = d.primary_stop;
+    var html = "<div class='stop'><div class='stop-name'>Day " + d.day + ": 10-hr reset " + d.reset_near + "</div>";
+    html += p
+      ? "<div class='stop-meta'>Primary: " + p.name + " · " + p.distance_km + " km" +
+        (p.amenity_type ? " · " + p.amenity_type.replace('_', ' ') : "") + "</div>"
+      : "<div class='stop-meta'>No mapped stop within 50 km — the planner keeps the plan honest</div>";
+    (d.backups_if_full || []).forEach(function (b) {
+      html += "<div class='stop-meta' style='margin-left:14px'>If full: " + b.name + " · " + b.distance_km + " km</div>";
+    });
+    return html + "</div>";
+  }
+  go.addEventListener('click', function () {
+    var s = document.getElementById('p-start').value.trim(),
+        e = document.getElementById('p-end').value.trim();
+    if (!s || !e) { out.innerHTML = "<p class='note'>Enter both cities.</p>"; return; }
+    out.innerHTML = "<p class='note'>Planning — driving clock checking…</p>";
+    fetch('/.netlify/functions/plan_route?start=' + encodeURIComponent(s) + '&end=' + encodeURIComponent(e))
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (r) {
+        if (!r.ok) {
+          var hint = r.j && r.j.hint
+            ? 'City not in the index yet. Supported now: ' + r.j.supported.split(', ').slice(0, 12).join(', ') + '…'
+            : ((r.j && r.j.error) || 'try again');
+          out.innerHTML = "<p class='note'>" + hint + "</p>";
+          return;
+        }
+        out.innerHTML = "<p class='note'>" + r.j.start + " → " + r.j.end + " — " + r.j.distance_km +
+          " km. " + r.j.method + ".</p>" + (r.j.days || []).map(card).join('');
+      })
+      .catch(function () { out.innerHTML = "<p class='note'>Planner temporarily unavailable — try again.</p>"; });
+  });
+})();
+</script>
+
 </body>
 </html>
