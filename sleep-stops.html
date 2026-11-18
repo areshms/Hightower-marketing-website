@@ -158,7 +158,40 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
     (d.backups_if_full || []).forEach(function (b) {
       html += "<div class='stop-meta' style='margin-left:14px'>If full: " + b.name + " · " + fmt(b.distance_km) + "</div>";
     });
+    if (d.weather) {
+      var w = d.weather;
+      html += "<div class='stop-meta'>Tonight near the reset: " + w.tonight_high_f + "° / " + w.tonight_low_f + "° F" +
+        (w.precip_chance_pct != null ? " · " + w.precip_chance_pct + "% rain" : "") +
+        " <span style='opacity:.6'>(Open-Meteo forecast, tonights high/low)</span></div>";
+    }
+    if (p) {
+      var lotId = p.name.replace(/['"\\\\]/g, '');
+      html += "<div class='stop-meta' style='margin-left:14px'>Is " + p.name +
+        " <span style='display:inline-flex;gap:6px;margin-left:6px'>" +
+        "<button class='lot-rep' data-lot='" + lotId + "' data-v='full' style='padding:3px 10px;border-radius:6px;border:1px solid var(--border);background:var(--bg-elevated);color:#b91c1c;cursor:pointer'>Report full</button>" +
+        "<button class='lot-rep' data-lot='" + lotId + "' data-v='open' style='padding:3px 10px;border-radius:6px;border:1px solid var(--border);background:var(--bg-elevated);color:#15803d;cursor:pointer'>Report open</button>";
+      var cnt = (loadLotStats(p.name));
+      if (cnt.you) html += "<span style='margin-left:8px;opacity:.75'>you: " + (cnt.full || 0) + " full / " + (cnt.open || 0) + " open</span>";
+      html += "</div></div>";
+    }
     return html + "</div>";
+  }
+  function lotKey(name) { return 'hms-lot-' + name.toLowerCase().slice(0, 60); }
+  function loadLotStats(name) { try { return JSON.parse(localStorage.getItem(lotKey(name)) || '{}'); } catch (e) { return {}; } }
+  function saveLot(name, verdict) {
+    var s = loadLotStats(name);
+    s[verdict === 'full' ? 'full' : 'open'] = (s[verdict === 'full' ? 'full' : 'open'] || 0) + 1;
+    s.you = 1;
+    try { localStorage.setItem(lotKey(name), JSON.stringify(s)); } catch (e) {}
+  }
+  function wireLotReports() {
+    document.querySelectorAll('.lot-rep').forEach(function (b) {
+      b.addEventListener('click', function () {
+        saveLot(b.getAttribute('data-lot'), b.getAttribute('data-v'));
+        location.hash = '';
+        document.getElementById('p-go').click();
+      });
+    });
   }
   function csvRows(plan) {
     var rows = [["driver","night_no","location","stay_type","km","mi","receipt_status","per_diem_deductible_usd","receipt_amount_usd","has_receipt_image"]];
@@ -290,9 +323,16 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
         }
         html += receiptSection(r.j);
         out.innerHTML = html;
+        if (r.j.weekly_note) {
+          var wnote = document.createElement('div');
+          wnote.className = 'stop';
+          wnote.innerHTML = "<div class='stop-name'>Weekly clock</div><div class='stop-meta'>" + r.j.weekly_note + "</div>";
+          out.insertBefore(wnote, out.childNodes[out.childNodes.length]);
+        }
         var dl = document.getElementById('ledger-dl');
         if (dl) dl.addEventListener('click', exportCsv);
         wireReceipts(r.j);
+        wireLotReports();
       })
       .catch(function () { out.innerHTML = "<p class='note'>Planner temporarily unavailable — try again.</p>"; });
   });

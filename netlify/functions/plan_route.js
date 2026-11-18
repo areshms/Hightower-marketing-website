@@ -101,6 +101,33 @@ function findStops(spaces, lat, lon, radiusKm, limit) {
   return picks;
 }
 
+
+function fetch_weather(lat, lon, timeoutMs = 8000) {
+  return new Promise((resolve) => {
+    const url = 'https://api.open-meteo.com/v1/forecast?latitude=' + lat.toFixed(3) + '&longitude=' + lon.toFixed(3) +
+      '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&temperature_unit=fahrenheit&forecast_days=1';
+    const req = https.get(url, { headers: { 'User-Agent': 'HMS-Truckscan/0.1' }, timeout: timeoutMs }, (res) => {
+      if (res.statusCode >= 400) { res.resume(); return resolve(null); }
+      let body = '';
+      res.on('data', (c) => (body += c));
+      res.on('end', () => {
+        try {
+          const j = JSON.parse(body);
+          const d = j.daily || {};
+          const tmin = (d.temperature_2m_min || [])[0];
+          const tmax = (d.temperature_2m_max || [])[0];
+          const pp = (d.precipitation_probability_max || [])[0];
+          if (tmin == null || tmax == null) return resolve(null);
+          resolve({ tonight_low_f: Math.round(tmin), tonight_high_f: Math.round(tmax),
+                    precip_chance_pct: pp == null ? null : Math.round(pp) });
+        } catch (e) { resolve(null); }
+      });
+    });
+    req.on('timeout', () => { req.destroy(); resolve(null); });
+    req.on('error', () => resolve(null));
+  });
+}
+
 const RESP = (code, obj) => ({
   statusCode: code,
   headers: { 'content-type': 'application/json', 'cache-control': 'max-age=300' },
@@ -140,8 +167,10 @@ exports.handler = async (event) => {
   const legs = buildLegs(kmTotal, A, B);
   const days = [];
   let drive = 0.0, win = 0.0, i = 1; // leg 0 = current position (start city)
+  let dayBrk = 0.0; // 30-min-break minutes accumulated within the current day
   let cur = { lat: A.lat, lon: A.lon, name: A.name };
   const nights = [];
+  let tripHours = 0.0; // drive + window per day, for the 70-hr/8-day pacing note
 
   let made = [];
   while (i < legs.length) {
@@ -150,6 +179,7 @@ exports.handler = async (event) => {
     if (!made.some((e) => e.event === '30_min_break') && drive + hrs >= BREAK_AT_H && drive < DRIVE_LIMIT_H) {
       made.push({ event: '30_min_break' });
       win += BREAK_MIN_H;
+      dayBrk += BREAK_MIN_H;
     }
     if (drive + hrs > DRIVE_LIMIT_H || win + hrs > WINDOW_LIMIT_H) {
       const picks = findStops(spaces, cur.lat, cur.lon, RESET_RADIUS_KM, 1 + BACKUPS);
@@ -159,7 +189,9 @@ exports.handler = async (event) => {
                                       amenity_type: picks[0].amenity_type, source: picks[0].source } : null;
       const backupsOut = picks.slice(1, 1 + BACKUPS).map((b) => ({
         name: b.name, distance_km: b.distance_km, distance_mi: b.distance_mi, source: b.source }));
+      const wx = await fetch_weather(cur.lat, cur.lon);
       nights.push(1);
+      tripHours += drive + dayBrk; // day's elapsed on-duty hours (driving + break minutes)
       days.push({
         day: days.length + 1,
         reset_near: nearestCityName(cur.lat, cur.lon),
@@ -167,8 +199,11 @@ exports.handler = async (event) => {
         primary_stop: primaryOut,
         backups_if_full: backupsOut,
         vacancy_note: picks[0] ? 'alternates ranked by distance; live vacancy is a commercial data source — the planner falls back to the next-closest stop' : null,
+        weather: wx,
+        hours_this_day: Number((drive + dayBrk).toFixed(2)),
       });
-      drive = 0.0; win = 0.0; made = [];
+      made = [];
+      drive = 0.0; win = 0.0; dayBrk = 0.0;
       continue; // re-process this leg on the fresh day
     }
     drive += hrs; win += hrs;
@@ -177,9 +212,14 @@ exports.handler = async (event) => {
     i += 1;
   }
   days.push({ day: days.length + 1, arrival: B.name, driving_final: Number(drive.toFixed(1)),
-              window_final: Number(win.toFixed(1)) });
+              window_final: Number((drive + dayBrk).toFixed(2)) });
 
+  // 70-hr/8-day pacing (approximation on trip hours; honest, not legal advice)
   const nightsAway = nights.length;
+  let weekly_note = null;
+  if (nightsAway >= 3 && tripHours >= 60) {
+    weekly_note = 'Trip hours are pacing past the 70-hour/8-day window - plan a 34-hour restart before the next run';
+  }
   const perNight = Math.round(PER_DIEM_LOWER48_USD * PER_DIEM_DEDUCTIBLE_SHARE * 100) / 100;
 
   return RESP(200, {
@@ -187,6 +227,8 @@ exports.handler = async (event) => {
     distance_km: kmTotal,
     distance_mi: Math.round(kmTotal * KM_TO_MI),
     method: 'FMCSA 11/14/30/70 logic, closest live-mapped stops per reset',
+    trip_hours: Number(tripHours.toFixed(1)),
+    weekly_note,
     nights,
     tax_summary: nightsAway > 0 ? {
       nights_away: nightsAway,
