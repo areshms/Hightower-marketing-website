@@ -40,7 +40,12 @@ const CITIES = [
 ];
 
 const AVG_SPEED_KMH = 100.0, DRIVE_LIMIT_H = 11.0, WINDOW_LIMIT_H = 14.0,
-      BREAK_AT_H = 8.0, BREAK_MIN_H = 0.5, RESET_RADIUS_KM = 50.0, BACKUPS = 2;
+      BREAK_AT_H = 8.0, BREAK_MIN_H = 0.5, RESET_RADIUS_KM = 50.0, BACKUPS = 2,
+      KM_TO_MI = 0.621371;
+
+// IRS Notice 26-60: special transportation-industry per diem (2026-10-01 onward)
+const PER_DIEM_LOWER48_USD = 80.0, PER_DIEM_DEDUCTIBLE_SHARE = 0.80;
+const TAX_CAVEAT = 'est. only — IRS special transportation rate x 80% for owner-operators; not tax advice';
 
 function hav(lat1, lon1, lat2, lon2) {
   const r = Math.PI / 180;
@@ -136,6 +141,7 @@ exports.handler = async (event) => {
   const days = [];
   let drive = 0.0, win = 0.0, i = 1; // leg 0 = current position (start city)
   let cur = { lat: A.lat, lon: A.lon, name: A.name };
+  const nights = [];
 
   let made = [];
   while (i < legs.length) {
@@ -147,14 +153,19 @@ exports.handler = async (event) => {
     }
     if (drive + hrs > DRIVE_LIMIT_H || win + hrs > WINDOW_LIMIT_H) {
       const picks = findStops(spaces, cur.lat, cur.lon, RESET_RADIUS_KM, 1 + BACKUPS);
+      picks.forEach((p) => { p.distance_mi = Math.round(p.distance_km * KM_TO_MI * 10) / 10; });
+      const primaryOut = picks[0] ? { name: picks[0].name, distance_km: picks[0].distance_km,
+                                      distance_mi: picks[0].distance_mi,
+                                      amenity_type: picks[0].amenity_type, source: picks[0].source } : null;
+      const backupsOut = picks.slice(1, 1 + BACKUPS).map((b) => ({
+        name: b.name, distance_km: b.distance_km, distance_mi: b.distance_mi, source: b.source }));
+      nights.push(1);
       days.push({
         day: days.length + 1,
         reset_near: nearestCityName(cur.lat, cur.lon),
         events: made,
-        primary_stop: picks[0] ? { name: picks[0].name, distance_km: picks[0].distance_km,
-                                   amenity_type: picks[0].amenity_type, source: picks[0].source } : null,
-        backups_if_full: picks.slice(1, 1 + BACKUPS).map((b) => ({
-          name: b.name, distance_km: b.distance_km, source: b.source })),
+        primary_stop: primaryOut,
+        backups_if_full: backupsOut,
         vacancy_note: picks[0] ? 'alternates ranked by distance; live vacancy is a commercial data source — the planner falls back to the next-closest stop' : null,
       });
       drive = 0.0; win = 0.0; made = [];
@@ -168,9 +179,23 @@ exports.handler = async (event) => {
   days.push({ day: days.length + 1, arrival: B.name, driving_final: Number(drive.toFixed(1)),
               window_final: Number(win.toFixed(1)) });
 
+  const nightsAway = nights.length;
+  const perNight = Math.round(PER_DIEM_LOWER48_USD * PER_DIEM_DEDUCTIBLE_SHARE * 100) / 100;
+
   return RESP(200, {
-    start: A.name, end: B.name, distance_km: kmTotal,
+    start: A.name, end: B.name,
+    distance_km: kmTotal,
+    distance_mi: Math.round(kmTotal * KM_TO_MI),
     method: 'FMCSA 11/14/30/70 logic, closest live-mapped stops per reset',
+    nights,
+    tax_summary: nightsAway > 0 ? {
+      nights_away: nightsAway,
+      per_diem_rate_usd: PER_DIEM_LOWER48_USD,
+      deductible_share: PER_DIEM_DEDUCTIBLE_SHARE,
+      deductible_per_night_usd: perNight,
+      deductible_total_usd: Math.round(perNight * nightsAway * 100) / 100,
+      caveat: TAX_CAVEAT,
+    } : null,
     days,
   });
 };
