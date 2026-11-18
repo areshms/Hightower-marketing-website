@@ -134,6 +134,12 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
 <script>
 (function () {
   var KM_TO_MI = 0.621371;
+  (function loadTesseract() {
+    var s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js';
+    s.async = true;
+    document.head.appendChild(s);
+  })();
   var go = document.getElementById('p-go'),
       out = document.getElementById('plan-out');
   var lastPlan = null;
@@ -155,13 +161,15 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
     return html + "</div>";
   }
   function csvRows(plan) {
-    var rows = [["driver","night_no","location","stay_type","km","mi","receipt_status","per_diem_deductible_usd"]];
+    var rows = [["driver","night_no","location","stay_type","km","mi","receipt_status","per_diem_deductible_usd","receipt_amount_usd","has_receipt_image"]];
     var n = 0;
     plan.days.forEach(function (d) {
       if (d.arrival || !d.primary_stop) { if (!d.arrival) { n += 1; rows.push(["driver-1", n, "no mapped stop within radius", "unmapped", "", "", "n/a", "64.00"]); } return; }
       n += 1;
       var p = d.primary_stop;
-      rows.push(["driver-1", n, p.name, p.amenity_type || "unmapped", p.distance_km, p.distance_mi, "pending", "64.00"]);
+      var rec = (loadReceipts(lastPlan) || {})[n] || {};
+      rows.push(["driver-1", n, p.name, p.amenity_type || "unmapped", p.distance_km, p.distance_mi, "pending", "64.00",
+                 rec.amount != null ? rec.amount : "", rec.hasImage ? "yes" : ""]);
     });
     return rows.map(function (r) { return r.join(","); }).join("\n");
   }
@@ -173,6 +181,85 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
     a.download = "truckscan-ledger-" + lastPlan.start + "-" + lastPlan.end + ".csv";
     a.click();
     URL.revokeObjectURL(a.href);
+  }
+  function ledgerKey(plan) {
+    return 'hms-ledger-' + plan.start + '-' + plan.end + '-' + plan.distance_km;
+  }
+  function loadReceipts(plan) {
+    try { return JSON.parse(localStorage.getItem(ledgerKey(plan)) || '{}'); } catch (e) { return {}; }
+  }
+  function saveReceipts(plan, recs) {
+    try { localStorage.setItem(ledgerKey(plan), JSON.stringify(recs)); } catch (e) {}
+  }
+  function parseTotal(ocrText) {
+    if (!ocrText) return null;
+    var m = ocrText.match(/(?:total|balance due|amount due)\D{0,20}\$?([0-9]{1,5}\.[0-9]{2})/i);
+    if (m) return parseFloat(m[1]);
+    var all = ocrText.match(/\$\s?([0-9]{1,5}\.[0-9]{2})/g);
+    if (all && all.length) {
+      var nums = all.map(function (s) { return parseFloat(s.replace('$', '')); }).filter(Number.isFinite);
+      if (nums.length) return Math.max.apply(null, nums);
+    }
+    return null;
+  }
+  function receiptSection(plan) {
+    var recs = loadReceipts(plan);
+    var html = "<div class='stop'><div class='stop-name'>Receipts</div>";
+    var any = false;
+    (plan.days || []).forEach(function (d, idx) {
+      if (d.arrival) return;
+      any = true;
+      var n = d.day;
+      var rec = recs[n] || {};
+      html += "<div class='stop-meta' style='margin-left:14px'>Night " + n +
+        ": <input type='file' accept='image/*' data-night='" + n + "' class='rcpt-file' style='max-width:170px'> " +
+        "<input type='text' inputmode='decimal' placeholder='amount $' value='" + (rec.amount != null ? rec.amount : '') +
+        "' data-night='" + n + "' class='rcpt-amt' style='width:80px;padding:4px 6px;border-radius:6px;border:1px solid var(--border);background:var(--bg-elevated);color:var(--text)'>" +
+        (rec.hasImage ? " 📷" : "") + (rec.amount != null ? " $" + rec.amount : "") + "</div>";
+    });
+    if (!any) html += "<div class='stop-meta'>Plan a route first — receipts attach per night.</div>";
+    html += "<div class='stop-meta' style='opacity:.75'>Receipts (photo or amount) save to this browser and ride the CSV export. OCR reads the total off clear receipt photos; type it if the scan misses.</div></div>";
+    return html;
+  }
+  function wireReceipts(plan) {
+    var recs = loadReceipts(plan), toSave = false;
+    document.querySelectorAll('.rcpt-amt').forEach(function (inp) {
+      var n = inp.getAttribute('data-night');
+      inp.addEventListener('change', function () {
+        var v = parseFloat(inp.value);
+        var recs2 = loadReceipts(plan);
+        recs2[n] = Object.assign({}, recs2[n] || {}, Number.isFinite(v) ? { amount: v } : { amount: null });
+        saveReceipts(plan, recs2);
+        extractOcr(plan, n);
+      });
+    });
+    document.querySelectorAll('.rcpt-file').forEach(function (f) {
+      f.addEventListener('change', function () {
+        if (!f.files || !f.files[0]) return;
+        var night = f.getAttribute('data-night');
+        var recs2 = loadReceipts(plan);
+        recs2[night] = Object.assign({}, recs2[night] || {}, { hasImage: true, fileName: f.files[0].name.slice(0, 40) });
+        saveReceipts(plan, recs2);
+        toSave = true;
+        extractOcr(plan, night, f.files[0]);
+      });
+    });
+  }
+  function extractOcr(plan, night, file) {
+    var recs2 = loadReceipts(plan);
+    function finish(txt) {
+      var amt = parseTotal(txt);
+      var recs3 = loadReceipts(plan);
+      recs3[night] = Object.assign({}, recs3[night] || {});
+      if (amt != null && (recs3[night].amount == null)) { recs3[night].amount = amt; }
+      saveReceipts(plan, recs3);
+      var inp = document.querySelector(".rcpt-amt[data-night='" + night + "']");
+      if (inp && recs3[night].amount != null) inp.value = recs3[night].amount;
+    }
+    if (!file || !window.Tesseract) { /* lazy-load then none: manual amount wins */ return; }
+    window.Tesseract.recognize(file, 'eng', { logger: function () {} }).then(function (r) {
+      finish(r.data.text || '');
+    }).catch(function () { finish(null); });
   }
   go.addEventListener('click', function () {
     var s = document.getElementById('p-start').value.trim(),
@@ -201,9 +288,11 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
             "<br><span style='opacity:.75'>" + tx.caveat + "</span></div>" +
             "<button id='ledger-dl' style='margin-top:8px;padding:8px 14px;border-radius:8px;border:0;background:var(--accent);color:#1c1917;font-weight:600;cursor:pointer'>Export ledger CSV</button></div>";
         }
+        html += receiptSection(r.j);
         out.innerHTML = html;
         var dl = document.getElementById('ledger-dl');
         if (dl) dl.addEventListener('click', exportCsv);
+        wireReceipts(r.j);
       })
       .catch(function () { out.innerHTML = "<p class='note'>Planner temporarily unavailable — try again.</p>"; });
   });
