@@ -1147,10 +1147,14 @@
         var bounds = [];
         MAP_POINTS.forEach(function (p) {
             var price = p.p ? ('$' + p.p.toLocaleString()) : 'Ask';
+            var esc = function (v) {                     // county-record strings are hostile input
+                return String(v == null ? '' : v).replace(/&/g, '&amp;')
+                     .replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            };
             var html =
                 '<div class="refinery-popup">' +
-                '<b>' + p.a + '</b><br>' +
-                '<span style="color:#9ca3af;">' + p.city + ' &middot; ' + price + (p.d != null ? ' &middot; ' + p.d + ' DOM' : '') + '</span><br>' +
+                '<b>' + esc(p.a) + '</b><br>' +
+                '<span style="color:#9ca3af;">' + esc(p.city) + ' &middot; ' + price + (p.d != null ? ' &middot; ' + p.d + ' DOM' : '') + '</span><br>' +
                 (p.f ? 'Flip <span class="mp">' + p.f + '</span>&nbsp; ' : '') +
                 (p.w ? 'Wholesale <span class="wv">' + p.w + '</span>&nbsp; ' : '') +
                 (p.t ? '&nbsp;<span style="color:#ef4444;font-weight:700;">Tax-delinquent</span>' : '') +

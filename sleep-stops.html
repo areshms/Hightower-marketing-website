@@ -295,15 +295,6 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
       }).catch(function () {});
     } catch (e) {}
   }
-  function fetchCrowdCounts(stops, done) {
-    if (!stops || !stops.length) return done({});
-    try {
-      fetch('/.netlify/functions/lot_reports?lots=' + encodeURIComponent(stops.slice(0, 24).join('|')))
-        .then(function (r) { return r.ok ? r.json() : { lots: {} }; })
-        .then(function (j) { done(j.lots || {}); })
-        .catch(function () { done({}); });
-    } catch (e) { done({}); }
-  }
   function slugLot(name) {
     return String(name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80);
   }
@@ -524,12 +515,18 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
             r: { c: '#16a34a', label: 'Rest area' },
             p: { c: '#60a5fa', label: 'Truck parking' }
         };
+        var esc = function (v) {                     // third-party names are hostile input
+            return String(v == null ? '' : v).replace(/&/g, '&amp;')
+                 .replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        };
         var group = L.featureGroup().addTo(map);
         STOPS.forEach(function (s) {
-            L.circleMarker([s[0], s[1]], { radius: 3, weight: 0.5, color: '#111', opacity: 0.55, fillColor: STYLE[s[2]].c, fillOpacity: 0.85 })
-             .bindPopup('<div class="stops-popup"><b>' + s[3] + '</b><br>' +
-                '<span class="' + s[2] + '">' + STYLE[s[2]].label + '</span>' +
-                ' · <span class="sp">' + (s[4] || '?') + ' truck spaces</span></div>')
+            var code = (s[2] === 'f' || s[2] === 'r') ? s[2] : 'p';   // hostile fallback
+            var st = STYLE[code];
+            L.circleMarker([s[0], s[1]], { radius: 3, weight: 0.5, color: '#111', opacity: 0.55, fillColor: st.c, fillOpacity: 0.85 })
+             .bindPopup('<div class="stops-popup"><b>' + esc(s[3]) + '</b><br>' +
+                '<span class="' + code + '">' + st.label + '</span>' +
+                ' · <span class="sp">' + esc(s[4] || '?') + ' truck spaces</span></div>')
              .addTo(group);
         });
         map.fitBounds(group.getBounds(), { padding: [16, 16] });
