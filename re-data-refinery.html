@@ -356,6 +356,39 @@
             margin-bottom: 16px;
         }
 
+        /* Deal map */
+        .map-legend {
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            margin: 18px auto 14px;
+            font-size: 13.5px;
+            color: var(--text-muted);
+        }
+        .map-legend .dot {
+            display: inline-block;
+            width: 9px; height: 9px;
+            border-radius: 50%;
+            margin-right: 7px;
+            vertical-align: middle;
+        }
+        .map-legend .dot.hot { background: #16a34a; }
+        .map-legend .dot.solid { background: var(--accent-gold); }
+        .map-legend .dot.value { background: #60a5fa; }
+        .refinery-map {
+            height: 500px;
+            border-radius: 14px;
+            border: 1px solid rgba(217, 119, 6, 0.25);
+            overflow: hidden;
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+        }
+        @media (max-width: 640px) { .refinery-map { height: 380px; } }
+        .leaflet-popup-content { font-family: 'Inter', sans-serif; }
+        .refinery-popup b { font-size: 14.5px; }
+        .refinery-popup .mp { color: #16a34a; font-weight: 700; }
+        .refinery-popup .wv { color: #facc15; font-weight: 700; }
+        .refinery-popup .cta a { color: var(--accent-gold); font-weight: 600; text-decoration: none; }
+
         .section h2 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(32px, 4vw, 48px);
@@ -807,6 +840,25 @@
         </div>
     </section>
 
+    <section class="section section-alt" id="deal-map">
+        <div class="wrap">
+            <p class="section-label" style="text-align:center;">Live deal map</p>
+            <h2 style="text-align:center;">See where the deals are.</h2>
+            <p class="section-subtitle" style="text-align:center;max-width:640px;margin-inline:auto;">
+                A sample of what's in the sheet right now — strongest flip /
+                wholesale signals across our cities, plotted live from public
+                county records. The full sheet goes 10x deeper: every scored
+                property, taxes, owners, and buyer history.
+            </p>
+            <div class="map-legend">
+                <span><i class="dot hot"></i> Flip score 70+</span>
+                <span><i class="dot solid"></i> Flip 40-69</span>
+                <span><i class="dot value"></i> Value add</span>
+            </div>
+            <div id="refinery-map" class="refinery-map"></div>
+        </div>
+    </section>
+
     <section class="section section-alt" id="what-you-get">
         <div class="container">
             <p class="section-label">What's inside</p>
@@ -1067,6 +1119,47 @@
                 AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
             }
         });
+    </script>
+
+    <script src="/map-points.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.min.css" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script>
+    (function () {
+        if (typeof window.L === 'undefined' || typeof window.MAP_POINTS === 'undefined') return;
+        var map = L.map('refinery-map', { scrollWheelZoom: false }).setView([40.05, -82.6], 8);
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+            subdomains: 'abcd', maxZoom: 19
+        }).addTo(map);
+
+        function colorOf(p) {
+            if ((p.f || 0) >= 70) return '#16a34a';            // hot flip
+            if ((p.f || 0) >= 40) return '#d97706';            // solid flip
+            return '#60a5fa';                                   // value add
+        }
+
+        var bounds = [];
+        MAP_POINTS.forEach(function (p) {
+            var price = p.p ? ('$' + p.p.toLocaleString()) : 'Ask';
+            var html =
+                '<div class="refinery-popup">' +
+                '<b>' + p.a + '</b><br>' +
+                '<span style="color:#9ca3af;">' + p.city + ' &middot; ' + price + (p.d != null ? ' &middot; ' + p.d + ' DOM' : '') + '</span><br>' +
+                (p.f ? 'Flip <span class="mp">' + p.f + '</span>&nbsp; ' : '') +
+                (p.w ? 'Wholesale <span class="wv">' + p.w + '</span>&nbsp; ' : '') +
+                (p.t ? '&nbsp;<span style="color:#ef4444;font-weight:700;">Tax-delinquent</span>' : '') +
+                '<div class="cta" style="margin-top:6px;"><a href="#pricing">Get the full sheet &rarr;</a></div>' +
+                '</div>';
+            L.circleMarker([p.lat, p.lng], {
+                radius: 6.5, weight: 1, color: '#1c1917', opacity: 0.9,
+                fillColor: colorOf(p), fillOpacity: 0.85
+            }).bindPopup(html).addTo(map);
+            bounds.push([p.lat, p.lng]);
+        });
+        if (bounds.length) map.fitBounds(bounds, { padding: [28, 28] });
+    })();
     </script>
 </body>
 </html>
