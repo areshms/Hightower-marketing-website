@@ -191,6 +191,14 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
   }
   renderSaved();
   function fmt(km) { var mi = Math.round(km * KM_TO_MI * 10) / 10; return km + " km · " + mi + " mi"; }
+  var M6_CLICK = 'https://www.awltovhc.com/click-8125786-17198227?url=';
+  function m6Link(place) {
+    return M6_CLICK + encodeURIComponent('https://www.motel6.com/en/search.html?q=' + place);
+  }
+  function m6Anchor(place, label) {
+    return "<a href='" + m6Link(place) + "' target=_blank rel='noopener sponsored'>" +
+           (label || ('Motel 6 near ' + place)) + "</a>";
+  }
   function card(d) {
     if (d.arrival) {
       return "<div class='stop'><div class='stop-name'>Day " + d.day + ": arrive " + d.arrival +
@@ -208,7 +216,8 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
     if (p) {
       html += "<div class='stop-meta' style='margin-left:14px'>Open in " +
         "<a href='https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(p.name + ' , OH') target=_blank rel=noopener>Google Maps</a>" +
-        " · <a href='https://maps.apple.com/?q=' + encodeURIComponent(p.name) target=_blank rel=noopener>Apple Maps</a></div>";
+        " · <a href='https://maps.apple.com/?q=' + encodeURIComponent(p.name) target=_blank rel=noopener>Apple Maps</a>" +
+        " · 🛏️ " + m6Anchor(p.name, 'Motel 6 nearby') + "</div>";
     }
     if (d.weather) {
       var w = d.weather;
@@ -410,8 +419,12 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
           return;
         }
         lastPlan = r.j;
+        var firstStop = (r.j.days || []).map(function(d){ return d.primary_stop; }).filter(Boolean)[0];
+        var m6strip = "<div class='stop' style='border-color:#f59e0b'><div class='stop-name'>Skip the recliner tonight</div><div class='stop-meta'>Park free at the lot, then sleep in a real bed — Motel 6 near " +
+          (firstStop ? firstStop.name : r.j.end) +
+          " · pet-friendly · rooms from ~$40 · " + m6Anchor(firstStop ? firstStop.name : r.j.end, 'Book a Motel 6 near this stop') + "</div></div>";
         var html = "<p class='note'>" + r.j.start + " → " + r.j.end + " — " + fmt(r.j.distance_km) +
-          ". " + r.j.method + ".</p>" + (r.j.days || []).map(card).join('');
+          ". " + r.j.method + ".</p>" + (r.j.days || []).map(card).join('') + m6strip;
         var tx = r.j.tax_summary;
         if (tx) {
           html += "<div class='stop'><div class='stop-name'>Dispatcher ledger</div><div class='stop-meta'>" +
