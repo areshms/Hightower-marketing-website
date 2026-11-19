@@ -40,6 +40,39 @@ h2{font-family:'Playfair Display',serif;font-size:26px;margin:56px 0 18px}
 footer{margin-top:70px;padding:34px 0;border-top:1px solid var(--border)}
 footer p{color:var(--muted);font-size:12.5px;max-width:860px}
 footer .fine{margin-top:10px}
+  .legend-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 6px 0 10px;
+    font-size: 13.5px;
+    color: #94a3b8;
+  }
+  .legend-strip .dot {
+    display: inline-block;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .legend-strip .dot.fuel { background: #d97706; }
+  .legend-strip .dot.area { background: #16a34a; }
+  .legend-strip .dot.park { background: #60a5fa; }
+  .stops-map {
+    height: 460px;
+    border-radius: 14px;
+    border: 1px solid rgba(245, 158, 11, 0.28);
+    overflow: hidden;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  }
+  @media (max-width: 640px) { .stops-map { height: 340px; } }
+  .osm-dark .leaflet-tile {
+    filter: invert(1) hue-rotate(180deg) brightness(0.92) contrast(0.88) saturate(0.65);
+  }
+  .leaflet-popup-content { font-family: inherit; font-size: 13px; }
+  .stops-popup .sp { color: #f59e0b; font-weight: 700; }
+  .stops-popup .ct { color: #166534; font-weight: 700; }
+  .stops-popup .pk { color: #60a5fa; font-weight: 700; }
 </style>
 </head>
 <body>
@@ -59,6 +92,15 @@ footer .fine{margin-top:10px}
   </div>
   <p class="note">FMCSA §395.1 — incl. split-berth relief. Informational, not legal advice.</p>
 </section>
+
+<h2>The national map</h2>
+<div class="legend-strip">
+  <span><i class="dot fuel"></i> Truck fuel &amp; rest stop</span>
+  <span><i class="dot area"></i> Rest area</span>
+  <span><i class="dot park"></i> Truck parking</span>
+</div>
+<div id="stops-map" class="stops-map"></div>
+<p class="note" style="opacity:.7">7,211 stops from OpenStreetMap (ODbL) + USDOT rest-area data. Click a dot for the site, route, and truck spaces. Plan your route above to get HOS resets per night.</p>
 
 <h2>Starter corridors (California)</h2>
 <div class="grid">
@@ -459,5 +501,39 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
 })();
 </script>
 
+    <script src="/assets/stops-points.js"></script>
+    <link rel="stylesheet" href="/assets/leaflet/leaflet.css"/>
+    <script src="/assets/leaflet/leaflet.js"></script>
+    <script>
+    (function () {
+        if (typeof window.L === 'undefined' || typeof STOPS === 'undefined') return;
+        var map = L.map('stops-map', {
+            scrollWheelZoom: false,
+            preferCanvas: true,                 // 7.2k dots need canvas, not SVG
+            maxCanvasSize: 4096
+        }).setView([39.5, -98.35], 4);
+        map.getContainer().classList.add('osm-dark');
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> (ODbL) + USDOT',
+            maxZoom: 18
+        }).addTo(map);
+
+        var STYLE = {
+            f: { c: '#d97706', label: 'Truck fuel &amp; rest stop' },
+            r: { c: '#16a34a', label: 'Rest area' },
+            p: { c: '#60a5fa', label: 'Truck parking' }
+        };
+        var group = L.featureGroup().addTo(map);
+        STOPS.forEach(function (s) {
+            L.circleMarker([s[0], s[1]], { radius: 3, weight: 0.5, color: '#111', opacity: 0.55, fillColor: STYLE[s[2]].c, fillOpacity: 0.85 })
+             .bindPopup('<div class="stops-popup"><b>' + s[3] + '</b><br>' +
+                '<span class="' + s[2] + '">' + STYLE[s[2]].label + '</span>' +
+                ' · <span class="sp">' + (s[4] || '?') + ' truck spaces</span></div>')
+             .addTo(group);
+        });
+        map.fitBounds(group.getBounds(), { padding: [16, 16] });
+    })();
+    </script>
 </body>
 </html>
