@@ -420,11 +420,12 @@ the showers, parking, and 72-ft clearance long-haul rigs need.</p>
         }
         lastPlan = r.j;
         var firstStop = (r.j.days || []).map(function(d){ return d.primary_stop; }).filter(Boolean)[0];
-        var m6strip = "<div class='stop' style='border-color:#f59e0b'><div class='stop-name'>Skip the recliner tonight</div><div class='stop-meta'>Park free at the lot, then sleep in a real bed — Motel 6 near " +
-          (firstStop ? firstStop.name : r.j.end) +
-          " · pet-friendly · rooms from ~$40 · " + m6Anchor(firstStop ? firstStop.name : r.j.end, 'Book a Motel 6 near this stop') + "</div></div>";
         var html = "<p class='note'>" + r.j.start + " → " + r.j.end + " — " + fmt(r.j.distance_km) +
-          ". " + r.j.method + ".</p>" + (r.j.days || []).map(card).join('') + m6strip;
+          ". " + r.j.method + ".</p>" + (r.j.days || []).map(card).join('');
+        if (firstStop) {
+          html += "<div class='stop' style='border-left:3px solid #f59e0b;padding-left:12px'><div class='stop-name'>Skip the recliner tonight</div><div class='stop-meta'>Park free at the lot, then sleep in a real bed — Motel 6 near " +
+            firstStop.name + " · pet-friendly · rooms from ~$40 · " + m6Anchor(firstStop.name, 'Book a Motel 6 near this stop') + "</div></div>";
+        }
         var tx = r.j.tax_summary;
         if (tx) {
           html += "<div class='stop'><div class='stop-name'>Dispatcher ledger</div><div class='stop-meta'>" +
