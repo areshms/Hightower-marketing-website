@@ -288,8 +288,7 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
 /* ————— phone ————— */
 @media (max-width:768px){
   .site-head{height:auto;flex-wrap:wrap}
-  .head-tabs{order:3;width:100%;justify-content:space-around;padding:12px 16px;gap:12px}
-  .head-tabs a{font-size:13px}
+  .head-tabs{order:3;width:100%;justify-content:center;padding:12px 16px;gap:8px;flex-wrap:wrap}
   .wordmark{order:1;padding:14px 16px;font-size:16px}
   .head-cta{order:2;padding:14px 16px;font-size:13px}
   .hero-sentence{font-size:13vw;max-width:none}
@@ -305,6 +304,8 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
   .step p{max-width:none}
   .work-block{display:block}
   .work-visual{margin:0 0 16px;height:auto;aspect-ratio:4/5;width:110%}
+  .work-visual[data-ui]{height:auto;width:100%;aspect-ratio:auto}
+  .work-visual[data-ui] > div{height:auto;min-height:300px}
   .work-visual img{width:100%}
   .work-copy p{font-size:16px}
   .stats-mosaic{grid-template-columns:1fr}
@@ -444,14 +445,37 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
       </div>
     </div>
     <div class="work-block">
-      <div class="work-visual rise"><img src="assets/work-water-projector.jpg" alt="Water ripple projector, one of 17 live SKUs synced from supplier API" loading="lazy"></div>
+      <div class="work-visual rise" data-ui>
+        <div style="background:var(--coal);color:var(--paper);height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:clamp(32px,5vw,64px);text-align:center">
+          <div style="font-family:'Playfair Display',serif;font-size:clamp(48px,6vw,80px);font-weight:700;line-height:1;color:var(--gold-bright);letter-spacing:-0.03em">10,255</div>
+          <div style="font-size:clamp(16px,1.3vw,20px);color:var(--soft);margin-top:8px">Ohio properties scored weekly</div>
+          <div style="display:flex;gap:clamp(24px,3vw,48px);margin-top:clamp(24px,3vh,40px);flex-wrap:wrap;justify-content:center">
+            <div><div style="font-family:'Playfair Display',serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;color:var(--gold)">18</div><div style="font-size:13px;color:var(--soft);margin-top:4px">Cities</div></div>
+            <div><div style="font-family:'Playfair Display',serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;color:var(--gold)">48h</div><div style="font-size:13px;color:var(--soft);margin-top:4px">Turnaround</div></div>
+            <div><div style="font-family:'Playfair Display',serif;font-size:clamp(28px,2.8vw,42px);font-weight:600;color:var(--gold)">County</div><div style="font-size:13px;color:var(--soft);margin-top:4px">GIS sources</div></div>
+          </div>
+          <div style="font-size:13px;color:var(--soft);margin-top:clamp(16px,2vh,24px)">Pipeline: scrape &rarr; enrich &rarr; score &rarr; deliver</div>
+        </div>
+      </div>
       <div class="work-copy rise">
         <h3>A 10,255-property data refinery</h3>
         <p><strong>Before:</strong> county records browsed by hand, deal quality guessed. <strong>After:</strong> 18-city engine scraping, enriching and scoring 10,255+ Ohio properties weekly, deal list ready every Monday.</p>
       </div>
     </div>
     <div class="work-block">
-      <div class="work-visual rise"><img src="assets/work-dog-hoodie.jpg" alt="Pet apparel from the storefront lineup, supplier-wired inventory" loading="lazy"></div>
+      <div class="work-visual rise" data-ui>
+        <div style="background:var(--coal);color:var(--paper);height:100%;display:flex;flex-direction:column;justify-content:center;padding:clamp(32px,5vw,64px)">
+          <div style="font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,56px);font-weight:700;line-height:1;color:var(--gold-bright);letter-spacing:-0.02em">12&nbsp;posts</div>
+          <div style="font-size:clamp(16px,1.3vw,20px);color:var(--soft);margin-top:12px">Indexed through Google Search Console</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(24px,3vh,40px)">
+            <div><div style="font-size:13px;color:var(--muted)">Keyword research</div><div style="font-size:13px;color:var(--soft);margin-top:2px">Automated</div></div>
+            <div><div style="font-size:13px;color:var(--soft)">Drafting</div><div style="font-size:13px;color:var(--gold);margin-top:2px">Pipeline</div></div>
+            <div><div style="font-size:13px;color:var(--soft)">Publishing</div><div style="font-size:13px;color:var(--gold);margin-top:2px">Scheduled</div></div>
+            <div><div style="font-size:13px;color:var(--soft)">Verify</div><div style="font-size:13px;color:var(--gold);margin-top:2px">GSC</div></div>
+          </div>
+          <div style="font-size:13px;color:var(--soft);margin-top:clamp(16px,2vh,24px)">No one presses publish</div>
+        </div>
+      </div>
       <div class="work-copy rise">
         <h3>12 posts, published while we sleep</h3>
         <p><strong>Before:</strong> content meant writing nights and weekends. <strong>After:</strong> keyword research, drafting, formatting and posting on a schedule, indexed and verified through Google Search Console. No one pressing publish.</p>
@@ -472,7 +496,7 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
 <section class="section wrap" id="stats">
   <h2 class="section-title rise">The record so far</h2>
   <div class="stats-mosaic rise">
-    <div class="photo"><img src="assets/work-question-lamp.jpg" alt="Question mark lamp from the storefront" loading="lazy"></div>
+    <div class="photo"><img src="assets/columbus-ohio-skyline-original-image.webp" alt="Columbus, Ohio skyline — our home market" loading="lazy"></div>
     <div class="tiles">
       <div class="figure-tile tile-a"><span class="n">20+</span><span class="c">Automations running for ourselves and clients</span></div>
       <div class="figure-tile tile-b"><span class="n">48h</span><span class="c">Average delivery on campaign work, brief to live</span></div>
@@ -541,9 +565,9 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
 
 <section id="contact">
   <div class="cta-photos" aria-hidden="true">
-    <img src="assets/work-pet-nail-clipper.jpg" alt="" loading="lazy">
-    <img src="assets/work-water-projector.jpg" alt="" loading="lazy">
-    <img src="assets/work-nose-patches.jpg" alt="" loading="lazy">
+    <img src="assets/post-office-columbus-ohio-1932.jpg" alt="" loading="lazy">
+    <img src="assets/columbus-ohio-statehouse-20220421132212.jpg" alt="" loading="lazy">
+    <img src="assets/columbus-ohio-statehouse-20220421132228.jpg" alt="" loading="lazy">
   </div>
   <div class="cta-band">
     <div class="wrap cta-inner">
@@ -566,7 +590,7 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
         <a href="contact.html">Services</a> &middot; <a href="#work">Work</a> &middot; <a href="#about">About</a> &middot; <a href="blog.html">Notes</a> &middot; <a href="sleep-stops.html">TruckerScan</a> &middot; <a href="herbal-health.html">Herbal Health</a> &middot; <a href="contact.html">Contact</a>
       </span>
     </div>
-    <p class="foot-credits">Product photography from the TrendLoop storefront and its supplier catalog. Columbus imagery: &ldquo;Capitol Square aerial 01&rdquo; by Jsjessee, CC BY-SA 2.0 &middot; &ldquo;Rich Street Bridge, Columbus, Ohio 01&rdquo; by &#x2E;EM, CC BY-SA 4.0 &middot; &ldquo;High Street - Columbus, Ohio&rdquo; by pasa47, CC BY 2.0 &middot; &ldquo;Columbus, Ohio, skyline&rdquo; by Carol M Highsmith, CC0 &middot; &ldquo;Post Office, Columbus, Ohio (1932)&rdquo; public domain. Numbers from our own live operations.</p>
+    <p class="foot-credits">Columbus imagery: &ldquo;Capitol Square aerial 01&rdquo; by Jsjessee, CC BY-SA 2.0 &middot; &ldquo;Rich Street Bridge, Columbus, Ohio 01&rdquo; by &#x2E;EM, CC BY-SA 4.0 &middot; &ldquo;High Street - Columbus, Ohio&rdquo; by pasa47, CC BY 2.0 &middot; &ldquo;Columbus, Ohio, skyline&rdquo; by Carol M Highsmith, CC0 &middot; &ldquo;Post Office, Columbus, Ohio (1932)&rdquo; public domain &middot; &ldquo;Columbus - Ohio Statehouse&rdquo; by Riis2602, CC BY-SA 4.0. Product photography from the TrendLoop storefront and its supplier catalog. Numbers from our own live operations.</p>
   </div>
 </footer>
 

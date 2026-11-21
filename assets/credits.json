@@ -112,5 +112,53 @@
    "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
   ],
   "saved": "2026-10-23T16:47:51.134Z"
+ },
+ {
+  "file": "assets/rich-street-bridge-columbus-ohio-01.jpg",
+  "media": "image",
+  "ref": "commons:90947837",
+  "title": "Rich Street Bridge, Columbus, Ohio 01",
+  "creator": "Ɱ",
+  "creatorUrl": null,
+  "date": "2020-04-21",
+  "license": "CC BY-SA 4.0",
+  "licenseCode": "by-sa",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "creditRequired": true,
+  "page": "https://commons.wikimedia.org/wiki/File:Rich_Street_Bridge,_Columbus,_Ohio_01.jpg",
+  "via": "Wikimedia Commons",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Rich_Street_Bridge%2C_Columbus%2C_Ohio_01.jpg/1920px-Rich_Street_Bridge%2C_Columbus%2C_Ohio_01.jpg",
+  "width": 1920,
+  "height": 1440,
+  "bytes": 889910,
+  "credit": "\"Rich Street Bridge, Columbus, Ohio 01\" by Ɱ, CC BY-SA 4.0, via Wikimedia Commons",
+  "notes": [
+   "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
+  ],
+  "saved": "2026-11-21T20:01:46.385Z"
+ },
+ {
+  "file": "assets/capitol-square-aerial-01.jpg",
+  "media": "image",
+  "ref": "openverse:6514c806-fb83-4abd-87f0-be0a4b651e59",
+  "title": "Capitol Square aerial 01",
+  "creator": "Jsjessee",
+  "creatorUrl": null,
+  "date": null,
+  "license": "CC BY-SA 2.0",
+  "licenseCode": "by-sa",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "creditRequired": true,
+  "page": "https://commons.wikimedia.org/w/index.php?curid=106067669",
+  "via": "Wikimedia Commons",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Capitol_Square_aerial_01.jpg/1920px-Capitol_Square_aerial_01.jpg",
+  "width": 1920,
+  "height": 1080,
+  "bytes": 739479,
+  "credit": "\"Capitol Square aerial 01\" by Jsjessee, CC BY-SA 2.0, via Wikimedia Commons",
+  "notes": [
+   "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
+  ],
+  "saved": "2026-11-21T20:01:57.636Z"
  }
 ]
