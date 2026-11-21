@@ -67,6 +67,7 @@ ul{list-style:none}
   display:flex;align-items:stretch;height:64px;
   position:relative;z-index:10;
   background:var(--ink);
+  padding-inline:clamp(20px,4vw,64px);
 }
 .wordmark{
   background:var(--ink);color:var(--paper);
@@ -90,7 +91,7 @@ ul{list-style:none}
 /* ————— hero ————— */
 .hero{
   position:relative;overflow:clip;
-  padding:clamp(64px,10vh,120px) 0;
+  padding:clamp(64px,10vh,120px) clamp(20px,4vw,64px);
 }
 .hero-sentence{
   display:flex;flex-wrap:wrap;align-items:baseline;
@@ -138,10 +139,13 @@ ul{list-style:none}
   display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
   margin-top:clamp(48px,6vh,72px);
   font-size:14px;color:var(--muted);
+  padding-inline:clamp(20px,4vw,64px);
+  margin-inline:calc(-1 * clamp(20px,4vw,64px));
 }
 
 /* ————— sections ————— */
 .section{padding:clamp(64px,9vh,120px) 0}
+.section.wrap{padding-inline:clamp(20px,4vw,64px)}
 .section-title{
   font-family:'Playfair Display',serif;font-weight:600;
   font-size:clamp(30px,3.4vw,44px);letter-spacing:-0.02em;line-height:1.05;
@@ -158,7 +162,8 @@ ul{list-style:none}
 
 /* ——— who we are ——— */
 .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,4vw,64px);margin-top:48px;align-items:start}
-.who-text p{font-size:clamp(17px,1.3vw,20px);line-height:1.55;color:var(--ink);max-width:56ch}
+.who-text{padding-inline:clamp(16px,2vw,32px) 0}
+.who-text p{font-size:clamp(17px,1.3vw,20px);line-height:1.55;color:var(--ink);max-width:52ch}
 .who-text p + p{margin-top:20px}
 .who-text strong{color:var(--gold-deep);font-weight:600}
 .who-pics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -171,13 +176,13 @@ ul{list-style:none}
   background:var(--surface);border:none;
   padding:28px 24px 32px;
   display:flex;flex-direction:column;
-  transition:transform .25s ease,box-shadow .25s ease;
+  transition:transform .25s ease;
 }
 .serv-card:hover,.serv-card:focus-visible{
   transform:translateY(-4px);
-  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  background:var(--touch);
 }
-.serv-card .ico{font-size:28px;margin-bottom:14px;color:var(--gold-deep)}
+.serv-card .ico{font-size:16px;margin-bottom:12px;color:var(--gold-deep);font-weight:700;letter-spacing:.12em;border:2px solid var(--gold);display:inline-block;padding:4px 10px;border-radius:4px}
 .serv-card h3{font-size:19px;font-weight:600;margin-bottom:8px}
 .serv-card p{font-size:15px;color:var(--muted);line-height:1.5;flex:1}
 .serv-card .serv-link{
@@ -204,13 +209,14 @@ ul{list-style:none}
 
 /* ——— process ——— */
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:56px;counter-reset:step}
-.process-grid li{list-style:none}
-.step::before{
-  counter-increment:step;content:counter(step,decimal-leading-zero);
-  font-family:'Playfair Display',serif;font-size:clamp(28px,2.8vw,42px);color:var(--gold);display:block;line-height:1
+.process-grid li{list-style:none;position:relative;padding-top:clamp(28px,2.8vw,42px)}
+.process-grid li::before{
+  counter-increment:step;content:counter(step);
+  font-family:'Playfair Display',serif;font-size:clamp(28px,2.8vw,42px);color:var(--gold);line-height:1;
+  position:absolute;top:0;left:0;
 }
 .step b{display:block;font-size:19px;margin:12px 0 8px;font-weight:600}
-.step p{font-size:16px;color:var(--ink);line-height:1.55;max-width:34ch}
+.step p{font-size:16px;color:var(--ink);line-height:1.55;max-width:32ch}
 .pricing-note{
   margin-top:48px;padding-top:24px;
 }
@@ -382,37 +388,37 @@ footer a:hover,footer a:focus-visible{color:var(--gold-bright)}
   <h2 class="section-title rise">What we do</h2>
   <div class="serv-grid">
     <div class="serv-card rise">
-      <div class="ico">&#9881;</div>
+      <div class="ico">AUT</div>
       <h3>Automation &amp; workflows</h3>
       <p>Custom pipelines connecting your tools&mdash;Shopify, eBay, GSC, CJ, email. We map the work you repeat, build the automation, and keep a human in the loop where it counts. Fixed quote after a free audit.</p>
       <a class="serv-link" href="contact.html">Book an audit &#8594;</a>
     </div>
     <div class="serv-card rise">
-      <div class="ico">&#9654;</div>
+      <div class="ico">CON</div>
       <h3>Content &amp; SEO publishing</h3>
       <p>Keyword research to drafted, posted article without a person pressing publish. Our own blog runs this way&mdash;indexed through Google Search Console, 12 posts and compounding.</p>
       <a class="serv-link" href="blog.html">Read the blog &#8594;</a>
     </div>
     <div class="serv-card rise">
-      <div class="ico">&#9783;</div>
+      <div class="ico">DAT</div>
       <h3>Data enrichment &amp; pipelines</h3>
       <p>Public records parsed, cleaned and scored into one pipeline. 10,255 Ohio properties enriched across 18 cities, delivered weekly. Built for real estate wholesalers and investors.</p>
       <a class="serv-link" href="contact.html">Learn more &#8594;</a>
     </div>
     <div class="serv-card rise">
-      <div class="ico">&#127974;</div>
+      <div class="ico">TRK</div>
       <h3>TruckerScan Sleep Copilot</h3>
       <p>HOS-aware sleep-stop planning for long-haul drivers. FMCSA 11/14/30/70 clock logic, CA-corridor routes with truck-stop and hotel booking links. Free, no account needed.</p>
       <a class="serv-link" href="sleep-stops.html">Try TruckerScan &#8594;</a>
     </div>
     <div class="serv-card rise">
-      <div class="ico">&#127918;</div>
+      <div class="ico">RP</div>
       <h3>GTA VI RP servers</h3>
       <p>Building roleplay server infrastructure for the GTA VI community. Custom frameworks, moderation tools and player onboarding&mdash;designed for serious RP communities.</p>
       <a class="serv-link" href="gta-vi-rp.html">Server details &#8594;</a>
     </div>
     <div class="serv-card rise">
-      <div class="ico">&#127758;</div>
+      <div class="ico">LOC</div>
       <h3>Local marketing &amp; SEO</h3>
       <p>Columbus-area business marketing with real local knowledge. Our Hocking Hills tourism pilot is the live case study&mdash;local SEO, content, and automated outreach for Ohio businesses.</p>
       <a class="serv-link" href="contact.html">Get Columbus marketing &#8594;</a>
